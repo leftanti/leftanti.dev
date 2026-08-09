@@ -134,6 +134,20 @@ export function normalisePath(pathname: string): string {
 }
 
 /**
+ * Where a section's entries live: its listing route, or `/<key>` for a
+ * collection with no landing page (Notes). Entry URLs and the header's section
+ * lookup both go through here so the two can never disagree.
+ */
+export function sectionBasePath(section: Section): string {
+  return section.route ?? `/${section.key}`;
+}
+
+/** The canonical URL for one entry in a section. */
+export function entryHref(section: Section, id: string): string {
+  return `${sectionBasePath(section)}/${id}`;
+}
+
+/**
  * The section that owns a URL path, or null for pages that are chrome rather
  * than content — home, about, resources, tags, 404.
  *
@@ -149,7 +163,7 @@ export function sectionForPath(pathname: string): Section | null {
 
   return (
     SECTIONS.find((section) => {
-      const base = section.route ?? `/${section.key}`;
+      const base = sectionBasePath(section);
       return path === base || path.startsWith(`${base}/`);
     }) ?? null
   );

@@ -2,69 +2,18 @@
 /**
  * Home — the unified timeline. There is no blog section; this is it.
  *
- * STAGE 1: the entries below are hardcoded placeholders that exist purely to
- * show the theme across several sections and several shapes of metadata.
- * Stage 2 replaces PLACEHOLDER_ITEMS with a merge of every content collection
- * whose schema has a date. The rest of this page stays as it is.
+ * Every dated entry across every collection, merged and sorted newest first.
+ * The merge lives in lib/timeline.ts and is driven by sections.ts, so adding a
+ * collection puts it on this page without editing anything here.
  */
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Timeline from '../components/Timeline.astro';
-import { byDateDesc, type TimelineItem } from '../lib/timeline';
+import { getTimelineItems } from '../lib/timeline';
 
 const INTRO =
   'Detection engineering, KQL, and threat hunting notes for Microsoft Sentinel and Defender. Everything here is written to be copied, adapted, and tuned against your own data.';
 
-const PLACEHOLDER_ITEMS: TimelineItem[] = [
-  {
-    section: 'kql',
-    title: 'Detecting OAuth device code phishing',
-    href: '/kql/oauth-device-code-phishing',
-    date: new Date('2026-08-04'),
-    tags: [
-      { label: 'SigninLogs', href: '/tags/signinlogs' },
-      { label: 'T1528', href: '/tags/t1528' },
-    ],
-  },
-  {
-    section: 'rules',
-    title: 'Impossible travel that survives contact with a VPN estate',
-    href: '/rules/impossible-travel-watchlist-suppression',
-    date: new Date('2026-07-28'),
-    tags: [
-      { label: 'SigninLogs', href: '/tags/signinlogs' },
-      { label: 'T1078', href: '/tags/t1078' },
-      { label: 'medium', href: '/tags/medium' },
-    ],
-  },
-  {
-    section: 'hunting',
-    title: 'Where persistence hides in Entra app registrations',
-    href: '/hunting/entra-app-registration-persistence',
-    date: new Date('2026-07-19'),
-    tags: [
-      { label: 'AuditLogs', href: '/tags/auditlogs' },
-      { label: 'T1098', href: '/tags/t1098' },
-    ],
-  },
-  {
-    // No data table, no ATT&CK technique — a cheat sheet has neither, and the
-    // component renders only what it is given.
-    section: 'cheatsheets',
-    title: 'BTL2 — network forensics reference',
-    href: '/cheatsheets/btl2-network-forensics',
-    date: new Date('2026-07-06'),
-    tags: [{ label: 'BTL2', href: '/tags/btl2' }],
-  },
-  {
-    // No tags at all — the metadata line is just the date.
-    section: 'notes',
-    title: 'Why I stopped writing 500-line analytics rules',
-    href: '/notes/against-long-analytics-rules',
-    date: new Date('2026-06-22'),
-  },
-];
-
-const items = [...PLACEHOLDER_ITEMS].sort(byDateDesc);
+const items = await getTimelineItems();
 ---
 
 <BaseLayout title="leftanti" description={INTRO}>
