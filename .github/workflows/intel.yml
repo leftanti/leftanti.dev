@@ -1,8 +1,15 @@
 # Refresh the threat intel digest.
 #
 # Runs every six hours, regenerates src/data/intel.json, and commits it only if
-# it actually changed. That commit is what triggers the normal Pages deploy —
-# this workflow never deploys anything itself.
+# it actually changed. When it did change, it then calls the deploy workflow.
+#
+# WHY IT CALLS DEPLOY RATHER THAN LEAVING IT TO THE PUSH
+# A commit made with the built-in GITHUB_TOKEN does not fire other workflows.
+# GitHub does this on purpose, so a workflow that commits cannot trigger itself
+# in a loop. The consequence here is that the digest would refresh in the
+# repository every six hours and never once reach the published site. So the
+# deploy is invoked explicitly, as a reusable workflow, which needs no personal
+# access token and no extra secret.
 #
 # NOTE: GitHub disables scheduled workflows on a repository with no activity for
 # around 60 days. If the digest goes stale, that is almost always why. Any push
@@ -32,12 +39,16 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
+
+    outputs:
+      # Whether there is anything worth deploying.
+      changed: ${{ steps.commit.outputs.changed }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
@@ -57,9 +68,11 @@ jobs:
       # The script exits non-zero if every feed was unreachable, so reaching
       # this step means at least one source answered.
       - name: Commit if the digest changed
+        id: commit
         run: |
           if git diff --quiet -- src/data/intel.json; then
             echo "No change to src/data/intel.json — nothing to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
@@ -68,3 +81,16 @@ jobs:
           git add src/data/intel.json
           git commit -m "Refresh threat intel digest"
           git push
+
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+  # Only when there is something new. Deploying an unchanged site every six
+  # hours would burn Actions minutes and fill the deployment history with noise.
+  deploy:
+    needs: refresh
+    if: needs.refresh.outputs.changed == 'true'
+    uses: ./.github/workflows/deploy.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

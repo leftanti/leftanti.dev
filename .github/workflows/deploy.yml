@@ -1,0 +1,76 @@
+# Build the site and publish it to GitHub Pages.
+#
+# Runs on every push to main, on demand, and — importantly — when the intel
+# refresh calls it. See the `workflow_call` trigger below for why that matters.
+
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+
+  # Lets you redeploy from the Actions tab without pushing anything.
+  workflow_dispatch:
+
+  # Makes this workflow callable by another one in this repo.
+  #
+  # The intel refresh commits with the built-in GITHUB_TOKEN, and GitHub
+  # deliberately does not fire workflows for such commits — otherwise a
+  # workflow that commits could trigger itself forever. Without this the digest
+  # would refresh in the repository every six hours and never reach the site.
+  # .github/workflows/intel.yml calls this job directly instead.
+  workflow_call:
+
+permissions:
+  contents: read
+  # Both required by actions/deploy-pages.
+  pages: write
+  id-token: write
+
+# One deployment at a time. `cancel-in-progress: false` because cancelling a
+# half-finished Pages deployment can leave the site in a mixed state; a queued
+# run is better than an interrupted one.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    env:
+      # Required by CLAUDE.md: no telemetry, from anywhere, including CI.
+      ASTRO_TELEMETRY_DISABLED: '1'
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          # Check out the branch head rather than the commit that triggered
+          # this run. When the intel refresh calls this workflow it has just
+          # pushed a new commit, and the triggering SHA still points at the
+          # state before it — so the default would build the previous digest
+          # and the refresh would appear to do nothing.
+          ref: ${{ github.ref_name }}
+
+      # Installs dependencies, runs `astro build`, and uploads dist/ as the
+      # Pages artifact. Fonts, icons and the intel digest are all committed, so
+      # there is nothing to generate here beyond the build itself.
+      - name: Build
+        uses: withastro/action@v6
+        with:
+          node-version: 24
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Publish to Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
