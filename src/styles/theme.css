@@ -63,9 +63,14 @@
   --section-posts: #8a918e;        /* Notes           — grey    */
 
   /* ------------------------------------------------------------------
-     4. CODE BLOCK PALETTE
+     4. CODE BLOCKS
      Deliberately cool and near-monochrome so syntax highlighting never
-     competes with the section hues above. Wired to Shiki in a later stage.
+     competes with the section hues above.
+
+     These are the real Shiki theme: src/config/code-theme.mjs maps token
+     scopes to these variables and nothing else, so highlighted markup on the
+     built site contains no colour values at all. Retune here and every code
+     block follows.
      ------------------------------------------------------------------ */
 
   --code-bg: #101315;
@@ -78,6 +83,21 @@
   --code-function: #bcc6cf;
   --code-operator: #7f8b93;
   --code-punctuation: #6e787f;
+
+  /* Code block chrome and metrics. */
+  --code-fs: 0.8125rem;       /* 13px — dense enough for long pipelines   */
+  --code-lh: 1.65;
+  --code-pad-x: 1rem;         /* 16px */
+  --code-pad-y: 0.875rem;     /* 14px */
+  --code-inline-fs: 0.875em;  /* relative, so inline code tracks its line */
+  --code-inline-bg: #171a1c;
+
+  /* The copy button. Sits inside the block, quiet until hovered. */
+  --copy-text: #6e787f;
+  --copy-text-active: #c4ccd1;
+  --copy-bg: #171b1e;
+  --copy-border: #232a2e;
+  --copy-inset: 0.5rem;       /* 8px from the block's top-right corner */
 
   /* ------------------------------------------------------------------
      5. TYPEFACES

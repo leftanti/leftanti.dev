@@ -1,6 +1,6 @@
 ---
 /**
- * TimelineEntry — the site's signature component.
+ * QueryLines — the site's signature component.
  *
  * Renders one entry as a miniature KQL query. The section name sits where a
  * Sentinel table name would go, the title is piped off it, and the metadata is
@@ -9,6 +9,13 @@
  *   KqlLibrary
  *   | Detecting OAuth device code phishing
  *   //| 2026-08-04  [SigninLogs] [T1528]
+ *
+ * Used in two places, and deliberately only defined once:
+ *   - `as="link"`   a row in a timeline, title links to the entry
+ *   - `as="title"`  the heading of that entry's own page, title is plain text
+ *
+ * They share this file because the alignment below is load-bearing and a second
+ * copy of it would drift the first time either was touched.
  *
  * ALIGNMENT (the part that breaks if you touch it carelessly):
  * the `|` line and the `//|` line both start at the same left edge. `//`
@@ -27,22 +34,62 @@ import TagPill from './TagPill.astro';
 
 interface Props extends TimelineItem {
   /** Heading level for the title, so page heading hierarchy stays correct. */
-  headingLevel?: 2 | 3;
+  headingLevel?: 1 | 2 | 3;
+
+  /**
+   * `row` for a timeline row, `heading` for the entry's own page heading —
+   * a page's own title is not a link to itself.
+   *
+   * Deliberately not named `as`: that is a TypeScript keyword, and using it in
+   * the props destructure below stops Astro binding this interface to
+   * Astro.props at all, silently leaving every prop typed `any`.
+   */
+  variant?: 'row' | 'heading';
+
+  /** Turns the section name into a link to its listing. Off in timelines. */
+  linkSection?: boolean;
 }
 
-const { section: sectionKey, title, href, date, tags = [], headingLevel = 2 } = Astro.props;
+const {
+  section: sectionKey,
+  title,
+  href,
+  date,
+  tags = [],
+  headingLevel = 2,
+  variant = 'row',
+  linkSection = false,
+} = Astro.props;
 
 const section = getSection(sectionKey);
-const Heading = `h${headingLevel}` as 'h2' | 'h3';
+const Heading = `h${headingLevel}` as 'h1' | 'h2' | 'h3';
 const hasMeta = Boolean(date) || tags.length > 0;
 ---
 
 <article class="entry" style={`--section-color: var(${section.colorVar});`}>
-  <p class="entry__table">{section.name}</p>
+  {
+    linkSection && section.route ? (
+      <p class="entry__table">
+        <a class="entry__table-link" href={section.route}>
+          {section.name}
+        </a>
+      </p>
+    ) : (
+      <p class="entry__table">{section.name}</p>
+    )
+  }
 
   <Heading class="entry__row">
     <span class="glyph glyph--pipe" aria-hidden="true">|</span>
-    <a class="entry__title" href={href}>{title}</a>
+    {
+      variant === 'row' ? (
+        <a class="entry__title" href={href}>
+          {title}
+        </a>
+      ) : (
+        <span class="entry__title">{title}</span>
+      )
+    }
   </Heading>
 
   {
@@ -51,7 +98,11 @@ const hasMeta = Boolean(date) || tags.length > 0;
         <span class="glyph glyph--mark" aria-hidden="true">//</span>
         <span class="glyph glyph--pipe-comment" aria-hidden="true">|</span>
         <span class="entry__meta">
-          {date && <time class="entry__date" datetime={date.toISOString()}>{formatDate(date)}</time>}
+          {date && (
+            <time class="entry__date" datetime={date.toISOString()}>
+              {formatDate(date)}
+            </time>
+          )}
           {tags.length > 0 && (
             <span class="entry__tags">
               {tags.map((tag) => (
@@ -82,6 +133,18 @@ const hasMeta = Boolean(date) || tags.length > 0;
     letter-spacing: var(--ls-normal);
     color: var(--section-color);
     max-width: none;
+  }
+
+  .entry__table-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .entry__table-link:hover {
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    text-decoration-thickness: var(--underline-thickness);
+    text-underline-offset: var(--underline-offset);
   }
 
   /* --- Lines 2 and 3: the pipe stages ---------------------------------- */
@@ -136,7 +199,13 @@ const hasMeta = Boolean(date) || tags.length > 0;
     text-wrap: pretty;
   }
 
-  .entry__title:hover {
+  /* The page's own heading carries more weight than a row in a list. */
+  h1.entry__row .entry__title {
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-semibold);
+  }
+
+  a.entry__title:hover {
     text-decoration: underline;
     text-decoration-color: var(--text-comment);
     text-decoration-thickness: var(--underline-thickness);

@@ -1,0 +1,110 @@
+---
+/**
+ * CodeCopy — adds a copy-to-clipboard button to every code block on the page.
+ *
+ * This is one of only two places the site ships client JS, and the whole script
+ * is below. Include it once on any page that renders markdown.
+ *
+ * The buttons are injected at runtime rather than rendered into the HTML on
+ * purpose: a button that cannot work without JavaScript is worse than no button
+ * at all. With JS off you get a plain, selectable code block and no dead
+ * control. Nothing else on the page depends on this script running.
+ */
+---
+
+<script>
+  // Astro bundles this; it ships as a module script with no dependencies.
+  const COPIED_MS = 1600;
+
+  function label(button: HTMLButtonElement, text: string, done: boolean) {
+    button.textContent = text;
+    button.dataset.state = done ? 'done' : 'idle';
+    button.setAttribute('aria-label', done ? 'Copied to clipboard' : 'Copy code to clipboard');
+  }
+
+  function attach(pre: HTMLPreElement) {
+    // The markdown pipeline emits <pre><code>. Anything else is not a code
+    // block and is left alone.
+    const code = pre.querySelector('code');
+    if (!code || pre.dataset.copyReady === 'true') return;
+    pre.dataset.copyReady = 'true';
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'code-copy';
+    label(button, 'copy', false);
+
+    button.addEventListener('click', async () => {
+      const text = code.textContent ?? '';
+      try {
+        await navigator.clipboard.writeText(text);
+        label(button, 'copied', true);
+      } catch {
+        // Clipboard access is refused on insecure origins and by some
+        // privacy settings. Say so rather than silently doing nothing.
+        label(button, 'blocked', false);
+      }
+      window.setTimeout(() => label(button, 'copy', false), COPIED_MS);
+    });
+
+    // The button is positioned against this wrapper, so the code can scroll
+    // horizontally underneath without dragging the button out of view.
+    const shell = document.createElement('div');
+    shell.className = 'code-shell';
+    pre.replaceWith(shell);
+    shell.append(pre, button);
+  }
+
+  function init() {
+    // Scoped to rendered markdown; nothing else on the site has code blocks.
+    document.querySelectorAll<HTMLPreElement>('.prose pre').forEach(attach);
+  }
+
+  // The script is a module, so it runs deferred — the DOM is already parsed.
+  init();
+</script>
+
+<style is:global>
+  .code-shell {
+    position: relative;
+  }
+
+  .code-copy {
+    position: absolute;
+    inset-block-start: var(--copy-inset);
+    inset-inline-end: var(--copy-inset);
+
+    font-family: var(--font-mono);
+    font-size: var(--fs-micro);
+    line-height: var(--lh-snug);
+    letter-spacing: var(--ls-wide);
+
+    color: var(--copy-text);
+    background-color: var(--copy-bg);
+    border: var(--stroke) solid var(--copy-border);
+    border-radius: var(--radius-pill);
+    padding: var(--pill-pad-y) var(--pill-pad-x);
+    cursor: pointer;
+
+    /* Quiet until the block is hovered, but always reachable by keyboard. */
+    opacity: 0;
+  }
+
+  .code-shell:hover .code-copy,
+  .code-copy:focus-visible,
+  .code-copy[data-state='done'] {
+    opacity: 1;
+  }
+
+  .code-copy:hover,
+  .code-copy[data-state='done'] {
+    color: var(--copy-text-active);
+  }
+
+  /* Touch has no hover, so the control would otherwise be unreachable. */
+  @media (hover: none) {
+    .code-copy {
+      opacity: 1;
+    }
+  }
+</style>

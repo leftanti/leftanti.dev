@@ -1,0 +1,88 @@
+---
+/**
+ * EntryLayout — the page for a single entry, whatever collection it came from.
+ *
+ * Every detail page is a thin wrapper around this. Adding a collection must
+ * never mean writing a new one-off page template, so anything that varies
+ * between collections is a prop here, not a fork.
+ *
+ * The header reuses QueryLines, the same component the timeline rows use, so an
+ * entry's page opens with the exact query idiom it was listed under and the
+ * pipe alignment is defined in precisely one place.
+ *
+ * `density` is the one real layout difference. Cheat sheets are recall
+ * material — dense, table-heavy, minimal prose — and read badly at long-form
+ * measure and rhythm.
+ */
+import BaseLayout from './BaseLayout.astro';
+import QueryLines from '../components/QueryLines.astro';
+import CodeCopy from '../components/CodeCopy.astro';
+import { getSection, sectionBasePath } from '../config/sections';
+import type { TimelineItem } from '../lib/timeline';
+
+import '../styles/prose.css';
+
+interface Props {
+  /** The entry, in the same shape the timeline renders. */
+  item: TimelineItem;
+
+  /** Meta description for the document head. */
+  description: string;
+
+  /** Long-form write-up, or dense recall material. */
+  density?: 'prose' | 'dense';
+}
+
+const { item, description, density = 'prose' } = Astro.props;
+
+const section = getSection(item.section);
+const backHref = sectionBasePath(section);
+---
+
+<BaseLayout title={item.title} description={description}>
+  <article class="entry-page">
+    <header class="entry-page__header">
+      <QueryLines {...item} headingLevel={1} variant="heading" linkSection={true} />
+    </header>
+
+    <div class:list={['prose', density === 'dense' && 'prose--dense']}>
+      <slot />
+    </div>
+
+    <footer class="entry-page__footer">
+      <a class="entry-page__back" href={backHref}>
+        <span aria-hidden="true">//</span> back to {section.navLabel}
+      </a>
+    </footer>
+  </article>
+
+  <CodeCopy />
+</BaseLayout>
+
+<style>
+  .entry-page__header {
+    margin-block-end: var(--space-3xl);
+    padding-block-end: var(--space-xl);
+    border-block-end: var(--stroke) solid var(--border-faint);
+  }
+
+  .entry-page__footer {
+    margin-block-start: var(--space-4xl);
+    padding-block-start: var(--space-xl);
+    border-block-start: var(--stroke) solid var(--border-faint);
+  }
+
+  .entry-page__back {
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    color: var(--text-comment);
+    text-decoration: none;
+  }
+
+  .entry-page__back:hover {
+    color: var(--text-dim);
+    text-decoration: underline;
+    text-decoration-thickness: var(--underline-thickness);
+    text-underline-offset: var(--underline-offset);
+  }
+</style>

@@ -1,0 +1,182 @@
+---
+/**
+ * SectionLayout — a section's landing page, whatever collection it lists.
+ *
+ * Every listing page is a thin wrapper around this. Two optional behaviours
+ * cover what the sections actually need:
+ *
+ *   showTags   a "filter by" row of every pill used in this section, linking
+ *              to its tag page. Browsing KQL by data table is the whole point
+ *              of that library.
+ *
+ *   groupBy    splits the list under subheadings — cheat sheets group by
+ *              certification, because that is how you revise.
+ *
+ * Adding a collection means copying a five-line wrapper, not writing a page.
+ */
+import BaseLayout from './BaseLayout.astro';
+import Timeline from '../components/Timeline.astro';
+import TagPill from '../components/TagPill.astro';
+import type { Section } from '../config/sections';
+import { collectTags, type TimelineItem } from '../lib/timeline';
+
+interface Props {
+  section: Section;
+  items: TimelineItem[];
+
+  /** Show the row of tag links above the list. */
+  showTags?: boolean;
+
+  /**
+   * Group entries under subheadings. Returns the group name for an entry, or
+   * null to place it under `ungroupedLabel`.
+   */
+  groupBy?: (item: TimelineItem) => string | null;
+
+  /** Heading for entries `groupBy` returned null for. */
+  ungroupedLabel?: string;
+}
+
+const {
+  section,
+  items,
+  showTags = false,
+  groupBy,
+  ungroupedLabel = 'Other',
+} = Astro.props;
+
+const tags = showTags ? collectTags(items) : [];
+
+// Insertion order is preserved, and items arrive newest-first, so groups come
+// out ordered by their most recent entry.
+const groups = new Map<string, TimelineItem[]>();
+if (groupBy) {
+  for (const item of items) {
+    const key = groupBy(item) ?? ungroupedLabel;
+    const bucket = groups.get(key);
+    if (bucket) bucket.push(item);
+    else groups.set(key, [item]);
+  }
+}
+
+const count = items.length;
+const countLabel = `${count} ${count === 1 ? 'entry' : 'entries'}`;
+---
+
+<BaseLayout title={section.name} description={section.blurb}>
+  <header class="listing__header" style={`--section-color: var(${section.colorVar});`}>
+    <h1 class="listing__title">{section.name}</h1>
+    <p class="listing__blurb">{section.blurb}</p>
+  </header>
+
+  {
+    tags.length > 0 && (
+      <nav class="listing__tags" aria-label="Filter by tag">
+        <span class="listing__tags-label" aria-hidden="true">
+          //| filter
+        </span>
+        <span class="listing__tags-list">
+          {tags.map((tag) => (
+            <TagPill label={tag.label} href={tag.href} />
+          ))}
+        </span>
+      </nav>
+    )
+  }
+
+  <p class="listing__count"><span aria-hidden="true">//</span> {countLabel}</p>
+
+  {
+    groupBy ? (
+      groups.size === 0 ? (
+        <p class="listing__empty">Nothing here yet.</p>
+      ) : (
+        [...groups.entries()].map(([name, groupItems]) => (
+          <section class="listing__group">
+            <h2 class="listing__group-title">{name}</h2>
+            <Timeline items={groupItems} headingLevel={3} />
+          </section>
+        ))
+      )
+    ) : (
+      <Timeline items={items} headingLevel={2} emptyMessage="Nothing here yet." />
+    )
+  }
+</BaseLayout>
+
+<style>
+  .listing__header {
+    margin-block-end: var(--space-2xl);
+  }
+
+  .listing__title {
+    font-family: var(--font-mono);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-medium);
+    letter-spacing: var(--ls-normal);
+    color: var(--section-color);
+  }
+
+  .listing__blurb {
+    margin-block-start: var(--space-md);
+    max-width: var(--measure);
+    font-family: var(--font-sans);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--text-dim);
+  }
+
+  .listing__tags {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: var(--timeline-meta-gap);
+    margin-block-end: var(--space-xl);
+    padding-block: var(--space-md);
+    border-block: var(--stroke) solid var(--border-faint);
+  }
+
+  .listing__tags-label {
+    flex: none;
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    line-height: var(--lh-snug);
+    color: var(--text-comment);
+    user-select: none;
+  }
+
+  .listing__tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--pill-gap);
+  }
+
+  .listing__count {
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    line-height: var(--lh-snug);
+    color: var(--text-comment);
+    margin-block-end: var(--space-xl);
+  }
+
+  .listing__group {
+    margin-block-end: var(--space-3xl);
+  }
+
+  .listing__group-title {
+    font-family: var(--font-mono);
+    font-size: var(--fs-mark);
+    font-weight: var(--fw-medium);
+    letter-spacing: var(--ls-wide);
+    color: var(--text-dim);
+    margin-block-end: var(--space-lg);
+    padding-block-end: var(--space-xs);
+    border-block-end: var(--stroke) solid var(--border-faint);
+  }
+
+  .listing__empty {
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    color: var(--text-comment);
+  }
+</style>

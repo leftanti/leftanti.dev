@@ -1,11 +1,11 @@
 ---
 /**
- * Timeline — a list of TimelineEntry rows.
+ * Timeline — a list of QueryLines rows.
  *
  * Used by the home page, section listing pages, and tag pages. Callers pass
  * already-sorted items; this component only handles layout.
  */
-import TimelineEntry from './TimelineEntry.astro';
+import QueryLines from './QueryLines.astro';
 import type { TimelineItem } from '../lib/timeline';
 
 interface Props {
@@ -25,7 +25,7 @@ const { items, headingLevel = 2, emptyMessage = 'No entries yet.' } = Astro.prop
     <ol class="timeline" role="list">
       {items.map((item) => (
         <li class="timeline__item">
-          <TimelineEntry {...item} headingLevel={headingLevel} />
+          <QueryLines {...item} headingLevel={headingLevel} />
         </li>
       ))}
     </ol>

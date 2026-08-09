@@ -1,0 +1,24 @@
+---
+/**
+ * /cheatsheets — study references, grouped by certification.
+ *
+ * The only listing that groups. `cert` is the first pill on a cheat sheet, so
+ * the group name comes straight off the entry rather than needing the raw
+ * frontmatter re-read here.
+ */
+import SectionLayout from '../../layouts/SectionLayout.astro';
+import { getSection } from '../../config/sections';
+import { getSectionItems, type TimelineItem } from '../../lib/timeline';
+
+const section = getSection('cheatsheets');
+const items = await getSectionItems(section);
+
+const certOf = (item: TimelineItem) => item.tags?.[0]?.label ?? null;
+---
+
+<SectionLayout
+  section={section}
+  items={items}
+  groupBy={certOf}
+  ungroupedLabel="Ungrouped"
+/>

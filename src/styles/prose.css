@@ -1,0 +1,273 @@
+/* ==========================================================================
+   prose.css — styles for rendered markdown.
+
+   Markdown HTML comes out of <Content />, which Astro's scoped styles cannot
+   reach, so these rules are global and namespaced under .prose instead.
+   Reads exclusively from theme.css. No literal colours or measurements here.
+
+   Two densities:
+     .prose            long-form write-ups — queries, hunts, detections, notes
+     .prose--dense     cheat sheets — table-heavy recall material, minimal prose
+   ========================================================================== */
+
+.prose {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--text-dim);
+}
+
+/* Body copy stays at a readable measure. Tables and code deliberately do not —
+   they get the full column, and scroll inside themselves when wider. */
+.prose > p,
+.prose > ul,
+.prose > ol,
+.prose > blockquote {
+  max-width: var(--measure);
+}
+
+/* --- Headings ----------------------------------------------------------- */
+
+.prose > h2,
+.prose > h3,
+.prose > h4 {
+  color: var(--text);
+  max-width: var(--measure);
+}
+
+.prose > h2 {
+  font-size: var(--fs-h2);
+  margin-block: var(--space-3xl) var(--space-lg);
+}
+
+.prose > h3 {
+  font-size: var(--fs-h3);
+  margin-block: var(--space-2xl) var(--space-md);
+}
+
+.prose > h4 {
+  font-size: var(--fs-body);
+  margin-block: var(--space-xl) var(--space-sm);
+}
+
+/* Never open a page with a stacked gap under the entry header. */
+.prose > :first-child {
+  margin-block-start: 0;
+}
+
+/* --- Body ---------------------------------------------------------------- */
+
+.prose p {
+  margin-block: var(--space-lg);
+}
+
+.prose strong {
+  color: var(--text);
+  font-weight: var(--fw-semibold);
+}
+
+.prose em {
+  font-style: italic;
+}
+
+/* --- Lists --------------------------------------------------------------- */
+
+.prose ul,
+.prose ol {
+  margin-block: var(--space-lg);
+  padding-inline-start: var(--space-xl);
+}
+
+.prose ul {
+  list-style: none;
+}
+
+.prose ol {
+  list-style: decimal;
+}
+
+.prose li {
+  margin-block: var(--space-sm);
+  padding-inline-start: var(--space-xs);
+}
+
+.prose ol li::marker {
+  color: var(--text-comment);
+  font-family: var(--font-mono);
+  font-size: var(--fs-meta);
+}
+
+/* A hyphen rather than a bullet — it reads as a comment marker, which suits a
+   page whose other list idiom is a commented-out pipe stage. */
+.prose ul > li {
+  position: relative;
+}
+
+.prose ul > li::before {
+  content: '-';
+  position: absolute;
+  inset-inline-start: calc(var(--space-lg) * -1);
+  color: var(--comment-mark);
+  font-family: var(--font-mono);
+}
+
+.prose li > ul,
+.prose li > ol {
+  margin-block: var(--space-sm);
+}
+
+/* --- Links --------------------------------------------------------------- */
+
+.prose a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-decoration-thickness: var(--underline-thickness);
+  text-underline-offset: var(--underline-offset);
+}
+
+.prose a:hover {
+  text-decoration-color: currentColor;
+}
+
+/* --- Tables -------------------------------------------------------------- */
+
+/* `display: block` gives a wide table its own horizontal scroll container, so
+   a dense cheat sheet never pushes the page sideways. Column alignment across
+   thead and tbody survives because both stay inside one anonymous table box. */
+.prose table {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin-block: var(--space-xl);
+  font-size: var(--fs-meta);
+  line-height: var(--lh-snug);
+}
+
+.prose thead {
+  border-block-end: var(--stroke) solid var(--border);
+}
+
+.prose th {
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-tiny);
+  letter-spacing: var(--ls-wide);
+  text-align: start;
+  white-space: nowrap;
+}
+
+.prose th,
+.prose td {
+  padding: var(--space-sm) var(--space-lg) var(--space-sm) 0;
+  vertical-align: baseline;
+}
+
+.prose tbody tr {
+  border-block-end: var(--stroke) solid var(--border-faint);
+}
+
+.prose tbody tr:last-child {
+  border-block-end: 0;
+}
+
+/* --- Code ---------------------------------------------------------------- */
+
+.prose :not(pre) > code {
+  font-family: var(--font-mono);
+  font-size: var(--code-inline-fs);
+  color: var(--code-text);
+  background-color: var(--code-inline-bg);
+  border: var(--hairline) solid var(--code-border);
+  border-radius: var(--radius-pill);
+  padding: var(--space-3xs) var(--space-2xs);
+  white-space: nowrap;
+}
+
+/* The block itself. Shiki sets the background and every token colour from
+   var(--code-*), so nothing here names a colour that Shiki also names. */
+.prose pre {
+  font-size: var(--code-fs);
+  line-height: var(--code-lh);
+  border: var(--stroke) solid var(--code-border);
+  border-radius: var(--radius-block);
+  padding: var(--code-pad-y) var(--code-pad-x);
+  margin-block: var(--space-xl);
+
+  /* Long queries scroll rather than wrap. A wrapped KQL pipeline is unreadable
+     and unsafe to copy by eye. */
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.prose pre code {
+  font-family: var(--font-mono);
+  background: none;
+  border: 0;
+  padding: 0;
+  white-space: inherit;
+}
+
+/* --- Rules and quotes ---------------------------------------------------- */
+
+.prose blockquote {
+  margin-block: var(--space-xl);
+  padding-inline-start: var(--space-lg);
+  border-inline-start: var(--stroke) solid var(--border);
+  color: var(--text-fainter);
+}
+
+.prose hr {
+  margin-block: var(--space-3xl);
+}
+
+/* --- Dense variant: cheat sheets ----------------------------------------- */
+
+/* Recall material, not reading material. Tighter rhythm, headings that scan as
+   labels rather than chapter openings, and no prose measure limiting the
+   tables that are the actual content. */
+.prose--dense {
+  line-height: var(--lh-snug);
+}
+
+.prose--dense > h2 {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mark);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-wide);
+  color: var(--text);
+  margin-block: var(--space-2xl) var(--space-md);
+  padding-block-end: var(--space-xs);
+  border-block-end: var(--stroke) solid var(--border-faint);
+  max-width: none;
+}
+
+.prose--dense > h3 {
+  font-size: var(--fs-body);
+  margin-block: var(--space-xl) var(--space-sm);
+}
+
+.prose--dense p {
+  margin-block: var(--space-md);
+}
+
+.prose--dense table {
+  margin-block: var(--space-md);
+}
+
+.prose--dense th,
+.prose--dense td {
+  padding-block: var(--space-xs);
+}
+
+.prose--dense ul,
+.prose--dense ol {
+  margin-block: var(--space-md);
+}
+
+.prose--dense li {
+  margin-block: var(--space-2xs);
+}

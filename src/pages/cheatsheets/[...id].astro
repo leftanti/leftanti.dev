@@ -1,0 +1,38 @@
+---
+/**
+ * /cheatsheets/<id> — one study reference.
+ *
+ * Identical to every other detail wrapper except for `density="dense"`, which
+ * is the whole difference between recall material and a write-up: tighter
+ * rhythm, label-style headings, tables given the full column width.
+ */
+import type { CollectionEntry } from 'astro:content';
+import { getCollection, render } from 'astro:content';
+import EntryLayout from '../../layouts/EntryLayout.astro';
+import { getSection } from '../../config/sections';
+import { isPublished, itemForEntry } from '../../lib/timeline';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('cheatsheets');
+  return entries
+    .filter((entry) => isPublished(entry.data))
+    .map((entry) => ({ params: { id: entry.id }, props: { entry } }));
+}
+
+interface Props {
+  entry: CollectionEntry<'cheatsheets'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const section = getSection('cheatsheets');
+---
+
+<EntryLayout
+  item={itemForEntry(section, entry)}
+  description={entry.data.description}
+  density="dense"
+>
+  <Content />
+</EntryLayout>

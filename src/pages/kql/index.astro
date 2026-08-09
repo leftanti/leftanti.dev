@@ -1,0 +1,17 @@
+---
+/**
+ * /kql — the KQL library listing.
+ *
+ * A thin wrapper, and it must stay that way. Everything it does lives in
+ * SectionLayout; the only decisions here are which section to list and whether
+ * to show the tag filter row.
+ */
+import SectionLayout from '../../layouts/SectionLayout.astro';
+import { getSection } from '../../config/sections';
+import { getSectionItems } from '../../lib/timeline';
+
+const section = getSection('kql');
+const items = await getSectionItems(section);
+---
+
+<SectionLayout section={section} items={items} showTags={true} />

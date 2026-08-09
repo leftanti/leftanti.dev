@@ -1,0 +1,34 @@
+---
+/**
+ * /notes/<id> — one note.
+ *
+ * Notes have no listing page by design (`route: null` in sections.ts); they
+ * surface only in the home timeline. This detail route still exists, because
+ * the timeline has to link somewhere.
+ */
+import type { CollectionEntry } from 'astro:content';
+import { getCollection, render } from 'astro:content';
+import EntryLayout from '../../layouts/EntryLayout.astro';
+import { getSection } from '../../config/sections';
+import { isPublished, itemForEntry } from '../../lib/timeline';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('notes');
+  return entries
+    .filter((entry) => isPublished(entry.data))
+    .map((entry) => ({ params: { id: entry.id }, props: { entry } }));
+}
+
+interface Props {
+  entry: CollectionEntry<'notes'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+
+const section = getSection('notes');
+---
+
+<EntryLayout item={itemForEntry(section, entry)} description={entry.data.description}>
+  <Content />
+</EntryLayout>
