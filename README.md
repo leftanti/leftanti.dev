@@ -222,7 +222,7 @@ Everything below is done once, by hand, and cannot be scripted from here.
 Public, so GitHub Pages works without a paid plan. Then:
 
 ```bash
-git remote add origin https://github.com/<your-username>/leftanti.dev.git
+git remote add origin https://github.com/leftanti/leftanti.dev.git
 git push -u origin main
 ```
 
@@ -278,10 +278,32 @@ Then one CNAME so `www` redirects to the apex:
 
 | Type | Name | Value |
 | --- | --- | --- |
-| CNAME | `www` | `<your-username>.github.io` |
+| CNAME | `www` | `leftanti.github.io` |
 
-> Replace `<your-username>` with your actual GitHub username — it is the only
-> value here that is specific to you.
+#### If the domain is on Cloudflare
+
+**Set every one of those records to "DNS only" — the grey cloud, not the orange
+one.** This is the single thing most likely to go wrong.
+
+With the proxy on, Cloudflare answers for the domain instead of GitHub. GitHub
+then cannot validate the domain, so it never issues a certificate and *Enforce
+HTTPS* stays greyed out forever. If Cloudflare's SSL/TLS mode is also left on
+"Flexible", the site enters a redirect loop, because Cloudflare talks to GitHub
+over HTTP while GitHub redirects everything to HTTPS.
+
+DNS only avoids all of it. You lose nothing worth having here: Pages already
+serves from a CDN, and the site is static and tiny.
+
+Cloudflare also supports CNAME flattening, so unusually you *can* put a CNAME
+at the apex and it will resolve — it returns A records behind the scenes. It
+works, and it tracks GitHub's IPs automatically if they ever change. The
+explicit A and AAAA records above are still what GitHub documents, and they are
+easier to reason about when something breaks.
+
+**Email on the same domain does not conflict.** MX and TXT records at `@` sit
+alongside A records without any trouble, so Cloudflare Email Routing or any
+other provider is fine. The only thing you cannot have at `@` on a normal DNS
+host is a CNAME — and on Cloudflare, flattening even makes that work.
 
 ### 5. Turn on HTTPS
 

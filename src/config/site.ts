@@ -26,8 +26,8 @@ export const SITE = {
    * Set `email` to a handle-based alias on the domain, e.g. hello@leftanti.dev,
    * and `github` to the full profile URL. Never a real name in either.
    */
-  github: null as string | null,
-  email: null as string | null,
+  github: 'https://github.com/leftanti' as string | null,
+  email: 'hello@leftanti.dev' as string | null,
 
   /**
    * Entries per page on the home timeline. Page one stays at `/`; later pages
