@@ -15,12 +15,6 @@ pnpm-debug.log*
 .env
 .env.production
 
-# kept locally for Claude Code to read automatically, deliberately not public.
-# Sync these across devices via NAS/file-sync if needed — safe for loose files
-# like these, never safe for the .git folder itself.
-CLAUDE.md
-BUILD_PROMPT.md
-
 # editors / OS
 # .claude/launch.json is shared dev config and IS committed; the .local
 # settings file is a per-machine permission allowlist and is not.
