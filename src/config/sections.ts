@@ -112,8 +112,8 @@ export const SECTIONS: Section[] = [
  * route into it lands on a single tag page first.
  */
 export const UTILITY_NAV: { label: string; route: string }[] = [
-  { label: 'tags', route: '/tags' },
   { label: 'resources', route: '/resources' },
+  { label: 'tags', route: '/tags' },
   { label: 'about', route: '/about' },
 ];
 
