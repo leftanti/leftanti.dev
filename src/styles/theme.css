@@ -62,6 +62,38 @@
   --section-intel: #a09a8c;        /* IntelDigest     — sand    */
   --section-posts: #8a918e;        /* Notes           — grey    */
 
+  /* Resource categories deliberately add no colours of their own. Each one
+     borrows the hue of the section it relates to — the KQL references category
+     is the same green as KqlLibrary — so a hue keeps meaning one subject across
+     the whole site instead of a second palette competing with the first.
+
+     The mapping is data, not code: it lives in src/data/resources.json as a
+     colorVar per category. Nothing here needs changing to re-map one. */
+
+  /* ------------------------------------------------------------------
+     3b. INTEL KINDS
+     What a digest item IS, which is more useful at a glance than who
+     published it. Each kind owns one hue, on the same two things a section
+     colours: the label and the pipe glyph.
+
+     Not coloured by source, for two reasons. There are eleven feeds and ten
+     hues, so it does not fit; and a hue would then mean both a section and a
+     vendor, which is exactly what the palette rule forbids.
+
+     These four were the unclaimed spares, renamed on being claimed as
+     docs/palette.md instructs. That leaves no reserve: the palette is now at
+     capacity, and a new section would need a hue derived against the
+     constraints in that document.
+
+     The fifth kind, `other`, wears --section-intel — the section's own hue,
+     for items that cleared the gate without fitting a category.
+     ------------------------------------------------------------------ */
+
+  --intel-ioc: #5fa4a6;        /* 182deg — indicators, the actionable set  */
+  --intel-exploited: #bd7a84;  /* 351deg — red end, for confirmed in-the-wild */
+  --intel-campaign: #9a8ac2;   /* 257deg — named actors and campaigns      */
+  --intel-technique: #9aa87a;  /*  78deg — new and shifting tradecraft     */
+
   /* ------------------------------------------------------------------
      4. CODE BLOCKS
      Deliberately cool and near-monochrome so syntax highlighting never

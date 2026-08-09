@@ -1,0 +1,70 @@
+# Refresh the threat intel digest.
+#
+# Runs every six hours, regenerates src/data/intel.json, and commits it only if
+# it actually changed. That commit is what triggers the normal Pages deploy —
+# this workflow never deploys anything itself.
+#
+# NOTE: GitHub disables scheduled workflows on a repository with no activity for
+# around 60 days. If the digest goes stale, that is almost always why. Any push
+# to the repo re-enables it; there is nothing to repair.
+
+name: Refresh intel
+
+on:
+  schedule:
+    # Every six hours, at 07 past, to stay off the busy top of the hour where
+    # scheduled runs queue behind everybody else's.
+    - cron: '7 */6 * * *'
+
+  # Lets you run it by hand from the Actions tab, which is the quickest way to
+  # confirm it works without waiting for a slot.
+  workflow_dispatch:
+
+# Only the commit needs write access. Nothing else here touches the repo.
+permissions:
+  contents: write
+
+# A long fetch must never overlap with the next scheduled run.
+concurrency:
+  group: refresh-intel
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      # `npm ci` needs the lockfile only; the fetch script's one dependency is
+      # a dev dependency, so a production-only install would not have it.
+      - name: Install dependencies
+        run: npm ci
+        env:
+          ASTRO_TELEMETRY_DISABLED: '1'
+
+      - name: Fetch feeds
+        run: npm run intel
+        env:
+          ASTRO_TELEMETRY_DISABLED: '1'
+
+      # The script exits non-zero if every feed was unreachable, so reaching
+      # this step means at least one source answered.
+      - name: Commit if the digest changed
+        run: |
+          if git diff --quiet -- src/data/intel.json; then
+            echo "No change to src/data/intel.json — nothing to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/intel.json
+          git commit -m "Refresh threat intel digest"
+          git push

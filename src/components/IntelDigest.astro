@@ -1,0 +1,87 @@
+---
+/**
+ * IntelDigest — the digest list, shared by /intel and every /intel/<kind> view.
+ *
+ * LINKS OUT, ALWAYS. A headline, a source, a timestamp, and a short snippet.
+ * The full article stays where its author put it.
+ *
+ * Rows are coloured by *kind*, not by source. Eleven feeds against ten hues
+ * does not fit, and a per-source hue would mean green stood for both KqlLibrary
+ * and some vendor — which is the one thing the palette rule forbids. What an
+ * item is tells you more at a glance than who published it anyway.
+ *
+ * The source still leads each row, as the table name.
+ */
+import QueryLines from './QueryLines.astro';
+import { intelKind } from '../config/intel-kinds.mjs';
+
+interface IntelItem {
+  id: string;
+  title: string;
+  url: string;
+  source: string;
+  published: string;
+  summary: string;
+  kind: string;
+  matched: string[];
+}
+
+interface Props {
+  items: IntelItem[];
+  emptyMessage?: string;
+}
+
+const { items, emptyMessage = 'Nothing here yet.' } = Astro.props;
+
+/** `2026-08-09 08:43` — a digest needs the time, unlike a dated entry. */
+function stamp(iso: string): string {
+  return new Date(iso).toISOString().slice(0, 16).replace('T', ' ');
+}
+---
+
+{
+  items.length === 0 ? (
+    <p class="digest__empty">{emptyMessage}</p>
+  ) : (
+    <ol class="digest" role="list">
+      {items.map((item) => {
+        const kind = intelKind(item.kind);
+        return (
+          <li>
+            <QueryLines
+              tableName={item.source}
+              accent={`var(${kind.colorVar})`}
+              title={item.title}
+              href={item.url}
+              meta={`${stamp(item.published)} UTC`}
+              description={item.summary}
+              tags={[
+                { label: kind.label.toLowerCase(), href: `/intel/${kind.key}` },
+                ...item.matched.slice(0, 2).map((label) => ({ label })),
+              ]}
+              headingLevel={2}
+              external={true}
+            />
+          </li>
+        );
+      })}
+    </ol>
+  )
+}
+
+<style>
+  .digest {
+    display: flex;
+    flex-direction: column;
+    gap: var(--timeline-entry-gap);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .digest__empty {
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    color: var(--text-comment);
+  }
+</style>

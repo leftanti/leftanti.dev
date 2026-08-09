@@ -104,8 +104,15 @@ export const SECTIONS: Section[] = [
   },
 ];
 
-/** Neutral nav links — pages that are not content sections and carry no hue. */
+/**
+ * Neutral nav links — pages that are not content sections and carry no hue.
+ *
+ * `tags` belongs here rather than being reachable only by clicking a pill:
+ * without a nav link the tag index has no entry point at all, since every
+ * route into it lands on a single tag page first.
+ */
 export const UTILITY_NAV: { label: string; route: string }[] = [
+  { label: 'tags', route: '/tags' },
   { label: 'resources', route: '/resources' },
   { label: 'about', route: '/about' },
 ];

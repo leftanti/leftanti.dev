@@ -1,0 +1,92 @@
+---
+/**
+ * /tags/<slug> — everything carrying one tag.
+ *
+ * Entries here come from every collection, so each row keeps its table name:
+ * unlike a section listing, which section an entry belongs to is exactly the
+ * information you want on a mixed list.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Timeline from '../../components/Timeline.astro';
+import { getTagIndex, type TagGroup } from '../../lib/timeline';
+
+export async function getStaticPaths() {
+  const tags = await getTagIndex();
+  return tags.map((tag) => ({ params: { tag: tag.slug }, props: { tag } }));
+}
+
+interface Props {
+  tag: TagGroup;
+}
+
+const { tag } = Astro.props;
+
+const count = tag.items.length;
+const countLabel = `${count} ${count === 1 ? 'entry' : 'entries'}`;
+---
+
+<BaseLayout
+  title={tag.label}
+  description={`Everything on leftanti.dev tagged ${tag.label} — ${countLabel}.`}
+>
+  <header class="page-head">
+    <h1 class="page-head__title">{tag.label}</h1>
+    <p class="page-head__sub">
+      <span aria-hidden="true">//</span> {countLabel} tagged <code>{tag.label}</code>
+    </p>
+  </header>
+
+  <Timeline items={tag.items} headingLevel={2} />
+
+  <footer class="page-foot">
+    <a class="page-foot__back" href="/tags">
+      <span aria-hidden="true">//</span> all tags
+    </a>
+  </footer>
+</BaseLayout>
+
+<style>
+  .page-head {
+    margin-block-end: var(--space-2xl);
+  }
+
+  .page-head__title {
+    font-family: var(--font-mono);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-medium);
+    letter-spacing: var(--ls-normal);
+    color: var(--text);
+  }
+
+  .page-head__sub {
+    margin-block-start: var(--space-sm);
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    line-height: var(--lh-snug);
+    color: var(--text-comment);
+  }
+
+  .page-head__sub code {
+    color: var(--text-fainter);
+  }
+
+  .page-foot {
+    margin-block-start: var(--space-4xl);
+    padding-block-start: var(--space-xl);
+    border-block-start: var(--stroke) solid var(--border-faint);
+  }
+
+  .page-foot__back {
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    color: var(--text-comment);
+    text-decoration: none;
+  }
+
+  .page-foot__back:hover {
+    color: var(--text-dim);
+    text-decoration: underline;
+    text-decoration-thickness: var(--underline-thickness);
+    text-underline-offset: var(--underline-offset);
+  }
+</style>

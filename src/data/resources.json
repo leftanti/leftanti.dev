@@ -1,0 +1,176 @@
+[
+  {
+    "id": "threat-intel",
+    "order": 1,
+    "title": "ThreatIntel",
+    "colorVar": "--section-intel",
+    "blurb": "What is actually being exploited, and who is doing it.",
+    "links": [
+      {
+        "title": "CISA Known Exploited Vulnerabilities Catalog",
+        "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+        "note": "The list that matters when everything is critical"
+      },
+      {
+        "title": "MSRC Security Update Guide",
+        "url": "https://msrc.microsoft.com/update-guide",
+        "note": "Microsoft advisories, filterable and with a usable API"
+      },
+      {
+        "title": "Microsoft Security Blog",
+        "url": "https://www.microsoft.com/en-us/security/blog/",
+        "note": "Threat actor write-ups, usually with hunting queries attached"
+      },
+      {
+        "title": "The DFIR Report",
+        "url": "https://thedfirreport.com/",
+        "note": "Full intrusion walkthroughs with timelines and detections"
+      }
+    ]
+  },
+  {
+    "id": "kql-references",
+    "order": 2,
+    "title": "KqlReferences",
+    "colorVar": "--section-kql",
+    "blurb": "Language docs and schema references worth keeping open in a tab.",
+    "links": [
+      {
+        "title": "Kusto Query Language documentation",
+        "url": "https://learn.microsoft.com/en-us/kusto/query/",
+        "note": "The authoritative reference for operators and functions"
+      },
+      {
+        "title": "KQL quick reference",
+        "url": "https://learn.microsoft.com/en-us/kusto/query/kql-quick-reference",
+        "note": "One page, most of what you reach for day to day"
+      },
+      {
+        "title": "Defender XDR advanced hunting schema",
+        "url": "https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-schema-tables",
+        "note": "Every table and column, which beats guessing at field names"
+      },
+      {
+        "title": "Microsoft Sentinel community repo",
+        "url": "https://github.com/Azure/Azure-Sentinel",
+        "note": "Hunting queries and rule templates to read rather than deploy"
+      }
+    ]
+  },
+  {
+    "id": "detection-engineering",
+    "order": 3,
+    "title": "DetectionEngineering",
+    "colorVar": "--section-rules",
+    "blurb": "Frameworks and rule sets for writing detections that survive review.",
+    "links": [
+      {
+        "title": "MITRE ATT&CK",
+        "url": "https://attack.mitre.org/",
+        "note": "The shared vocabulary, and the coverage map"
+      },
+      {
+        "title": "Sigma",
+        "url": "https://github.com/SigmaHQ/sigma",
+        "note": "Vendor-neutral detection rules, convertible to KQL"
+      },
+      {
+        "title": "Atomic Red Team",
+        "url": "https://github.com/redcanaryco/atomic-red-team",
+        "note": "Small tests per technique, for proving a detection actually fires"
+      },
+      {
+        "title": "Alerting and Detection Strategy framework",
+        "url": "https://github.com/palantir/alerting-detection-strategy-framework",
+        "note": "A structure for documenting why a detection exists"
+      }
+    ]
+  },
+  {
+    "id": "dfir",
+    "order": 4,
+    "title": "Dfir",
+    "colorVar": "--section-hunting",
+    "blurb": "Forensics and incident response tooling.",
+    "links": [
+      {
+        "title": "Eric Zimmerman's tools",
+        "url": "https://ericzimmerman.github.io/",
+        "note": "Windows artefact parsers, the standard set"
+      },
+      {
+        "title": "Velociraptor",
+        "url": "https://docs.velociraptor.app/",
+        "note": "Endpoint visibility and hunting at scale, with its own query language"
+      },
+      {
+        "title": "Volatility",
+        "url": "https://volatilityfoundation.org/",
+        "note": "Memory forensics"
+      },
+      {
+        "title": "SANS posters and cheat sheets",
+        "url": "https://www.sans.org/posters/",
+        "note": "Free reference material, printable and genuinely useful"
+      }
+    ]
+  },
+  {
+    "id": "training",
+    "order": 5,
+    "title": "TrainingAndCerts",
+    "colorVar": "--section-cheatsheets",
+    "blurb": "Hands-on practice, weighted towards blue team.",
+    "links": [
+      {
+        "title": "Blue Team Labs Online",
+        "url": "https://blueteamlabs.online/",
+        "note": "Investigation challenges against real artefacts"
+      },
+      {
+        "title": "LetsDefend",
+        "url": "https://letsdefend.io/",
+        "note": "SOC analyst workflow practice in a simulated queue"
+      },
+      {
+        "title": "TryHackMe",
+        "url": "https://tryhackme.com/",
+        "note": "Broad, beginner-friendly, useful for filling gaps"
+      },
+      {
+        "title": "Microsoft SC-200",
+        "url": "https://learn.microsoft.com/en-us/credentials/certifications/security-operations-analyst/",
+        "note": "The Sentinel and Defender certification path"
+      }
+    ]
+  },
+  {
+    "id": "tools",
+    "order": 6,
+    "title": "Tools",
+    "colorVar": "--section-posts",
+    "blurb": "Things to paste an artefact into at two in the morning.",
+    "links": [
+      {
+        "title": "CyberChef",
+        "url": "https://gchq.github.io/CyberChef/",
+        "note": "Decode, deobfuscate, and convert anything"
+      },
+      {
+        "title": "VirusTotal",
+        "url": "https://www.virustotal.com/",
+        "note": "Hash and file reputation. Mind what you upload"
+      },
+      {
+        "title": "urlscan.io",
+        "url": "https://urlscan.io/",
+        "note": "Detonate a URL and see what it serves"
+      },
+      {
+        "title": "jwt.io",
+        "url": "https://jwt.io/",
+        "note": "Decode a token when a sign-in log stops making sense"
+      }
+    ]
+  }
+]

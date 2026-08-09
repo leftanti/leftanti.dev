@@ -23,6 +23,10 @@ No CDNs, no Google Fonts, no analytics, no embeds, no external scripts or styles
 
 Dark, near-black, monospace-forward. The chrome is neutral. **Each section owns exactly one muted hue**, used only for its section name, its pipe glyph, its nav link, and the header logo on its pages. Nothing else on the page is coloured.
 
+**A hue means one subject, everywhere.** Resource categories on `/resources` are coloured, but they add no colours — each borrows the hue of the section it relates to, so the KQL references category is the same green as `KqlLibrary`. They wear it in exactly the two places a section does: the category name and its pipe glyphs. The mapping is data (`colorVar` in `src/data/resources.json`), never hardcoded in a template. Adding a seventh hue for a category would break the scheme; map it to an existing section instead.
+
+**Four unclaimed hues** (`--spare-*`) sit in `theme.css` for sections that do not exist yet, referenced by nothing until claimed. [docs/palette.md](docs/palette.md) is the full reference: what every hue means, where colour is allowed to appear, the steps to add a section or a resource category, and the contrast and separation constraints a new hue must satisfy. **Read it before adding or retuning any colour.**
+
 Banned everywhere: gradients, glow, glitch effects, matrix rain, and all animation — the single exception being one blinking block cursor.
 
 Mono for section names, nav, metadata, code, and the site mark. Sans for entry titles and body copy. Body copy ~70ch max. Nothing below 10px.
@@ -63,6 +67,8 @@ Everything published is built from scratch on the owner's own time and infrastru
 ## Client-side JS
 
 Only where a feature genuinely needs it: code-block copy buttons, and a theme toggle if one is ever built. Nothing else ships JS.
+
+Reach for native HTML before scripting. The collapsible categories on `/resources` are `<details>`/`<summary>`, so that page ships **zero** JavaScript and still expands, takes keyboard focus, and announces its own state. Copy buttons are the only genuine exception, and they are injected at runtime so no dead control renders when JS is off.
 
 ## Environment
 

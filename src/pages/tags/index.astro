@@ -1,0 +1,104 @@
+---
+/**
+ * /tags — every tag on the site, busiest first.
+ *
+ * Kept separate from /resources on purpose: resources are other people's work
+ * linked outward, tags are navigation through this site's own content. Mixing
+ * them would make both harder to scan.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTagIndex } from '../../lib/timeline';
+
+const DESCRIPTION = 'Every data table, ATT&CK technique, severity, certification, and keyword used across the site.';
+
+const tags = await getTagIndex();
+---
+
+<BaseLayout title="Tags" description={DESCRIPTION}>
+  <header class="page-head">
+    <h1 class="page-head__title">Tags</h1>
+    <p class="page-head__sub">
+      <span aria-hidden="true">//</span> {tags.length} tags across every collection, busiest first
+    </p>
+  </header>
+
+  {
+    tags.length === 0 ? (
+      <p class="empty">No tags yet.</p>
+    ) : (
+      <ul class="tags" role="list">
+        {tags.map((tag) => (
+          <li>
+            <a class="tag" href={`/tags/${tag.slug}`}>
+              <span class="tag__label">{tag.label}</span>
+              <span class="tag__count">{tag.items.length}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    )
+  }
+</BaseLayout>
+
+<style>
+  .page-head {
+    margin-block-end: var(--space-2xl);
+  }
+
+  .page-head__title {
+    font-family: var(--font-mono);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-medium);
+    letter-spacing: var(--ls-normal);
+    color: var(--text);
+  }
+
+  .page-head__sub {
+    margin-block-start: var(--space-sm);
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    line-height: var(--lh-snug);
+    color: var(--text-comment);
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--pill-gap);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* Same hairline outline as a metadata pill — a tag looks like a tag
+     wherever it appears. The count is the only addition. */
+  .tag {
+    display: inline-flex;
+    align-items: baseline;
+    gap: var(--space-sm);
+    font-family: var(--font-mono);
+    font-size: var(--fs-micro);
+    line-height: var(--lh-snug);
+    letter-spacing: var(--ls-wide);
+    color: var(--text-fainter);
+    border: var(--hairline) solid var(--border);
+    border-radius: var(--radius-pill);
+    padding: var(--space-2xs) var(--space-sm);
+    text-decoration: none;
+  }
+
+  .tag:hover {
+    color: var(--text-dim);
+    border-color: var(--text-comment);
+  }
+
+  .tag__count {
+    color: var(--comment-mark);
+  }
+
+  .empty {
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    color: var(--text-comment);
+  }
+</style>

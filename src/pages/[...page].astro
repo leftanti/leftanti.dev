@@ -1,0 +1,155 @@
+---
+/**
+ * Home — the unified timeline. There is no blog section; this is it.
+ *
+ * Every dated entry across every collection, merged and sorted newest first.
+ * The merge lives in lib/timeline.ts and is driven by sections.ts, so adding a
+ * collection puts it on this page without editing anything here.
+ *
+ * PAGINATION
+ * `[...page]` is a rest parameter, which matches an empty path as well as a
+ * numbered one. That keeps page one at `/` — the home URL never changes — with
+ * later pages at `/2`, `/3`, and so on. Page size is in src/config/site.ts.
+ *
+ * Below the page size this file behaves exactly as an unpaginated page would:
+ * `lastPage` is 1 and the pager renders nothing at all.
+ */
+import type { GetStaticPaths } from 'astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Timeline from '../components/Timeline.astro';
+import { getTimelineItems, type TimelineItem } from '../lib/timeline';
+import { SITE } from '../config/site';
+
+const INTRO =
+  'Detection engineering, KQL, and threat hunting notes for Microsoft Sentinel and Defender. Everything here is written to be copied, adapted, and tuned against your own data.';
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const items = await getTimelineItems();
+  return paginate(items, { pageSize: SITE.timelinePageSize });
+}) satisfies GetStaticPaths;
+
+interface Props {
+  page: {
+    data: TimelineItem[];
+    currentPage: number;
+    lastPage: number;
+    url: { prev?: string | undefined; next?: string | undefined };
+  };
+}
+
+const { page } = Astro.props;
+
+const isFirst = page.currentPage === 1;
+
+// Page one is the site's front door and carries the site name. Later pages say
+// which page they are, so a search result for page 3 is not indistinguishable
+// from the home page.
+const title = isFirst ? SITE.name : `Page ${page.currentPage}`;
+const description = isFirst
+  ? INTRO
+  : `${INTRO} Page ${page.currentPage} of ${page.lastPage}.`;
+---
+
+<BaseLayout title={title} description={description}>
+  <h1 class="visually-hidden">leftanti — detection engineering notes</h1>
+
+  {isFirst && <p class="intro">{INTRO}</p>}
+
+  <p class="timeline-label">
+    <span aria-hidden="true">//</span>
+    {
+      isFirst
+        ? 'everything, newest first'
+        : `page ${page.currentPage} of ${page.lastPage}, newest first`
+    }
+  </p>
+
+  <Timeline items={page.data} headingLevel={2} />
+
+  {
+    page.lastPage > 1 && (
+      <nav class="pager" aria-label="Timeline pages">
+        {page.url.prev ? (
+          <a class="pager__link" href={page.url.prev} rel="prev">
+            <span aria-hidden="true">//</span> newer
+          </a>
+        ) : (
+          <span class="pager__spacer" />
+        )}
+
+        <span class="pager__position">
+          {page.currentPage} / {page.lastPage}
+        </span>
+
+        {page.url.next ? (
+          <a class="pager__link" href={page.url.next} rel="next">
+            older <span aria-hidden="true">//</span>
+          </a>
+        ) : (
+          <span class="pager__spacer" />
+        )}
+      </nav>
+    )
+  }
+</BaseLayout>
+
+<style>
+  .intro {
+    max-width: var(--measure);
+    font-family: var(--font-sans);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--text-dim);
+    margin-block-end: var(--space-3xl);
+  }
+
+  .timeline-label {
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    line-height: var(--lh-snug);
+    color: var(--text-comment);
+    margin-block-end: var(--space-xl);
+  }
+
+  .pager {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-lg);
+    margin-block-start: var(--space-4xl);
+    padding-block-start: var(--space-xl);
+    border-block-start: var(--stroke) solid var(--border-faint);
+  }
+
+  /* Keeps the position centred when only one direction is available. */
+  .pager__spacer {
+    flex: 1;
+  }
+
+  .pager__link {
+    flex: 1;
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    color: var(--text-comment);
+    text-decoration: none;
+  }
+
+  .pager__link[rel='next'] {
+    text-align: end;
+  }
+
+  .pager__link:hover {
+    color: var(--text-dim);
+    text-decoration: underline;
+    text-decoration-thickness: var(--underline-thickness);
+    text-underline-offset: var(--underline-offset);
+  }
+
+  .pager__position {
+    flex: none;
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    color: var(--comment-mark);
+    white-space: nowrap;
+  }
+</style>

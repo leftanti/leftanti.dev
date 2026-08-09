@@ -29,10 +29,18 @@
  * the entry has no value for them; nothing renders empty.
  */
 import { getSection } from '../config/sections';
-import { formatDate, type TimelineItem } from '../lib/timeline';
+import { formatDate, type TimelineTag } from '../lib/timeline';
 import TagPill from './TagPill.astro';
 
-interface Props extends TimelineItem {
+interface Props {
+  /** Section key — supplies the table name and the hue. */
+  section?: string;
+
+  title: string;
+  href: string;
+  date?: Date;
+  tags?: TimelineTag[];
+
   /** Heading level for the title, so page heading hierarchy stays correct. */
   headingLevel?: 1 | 2 | 3;
 
@@ -46,8 +54,36 @@ interface Props extends TimelineItem {
    */
   variant?: 'row' | 'heading';
 
-  /** Turns the section name into a link to its listing. Off in timelines. */
+  /** Turns the table name into a link to the section listing. */
   linkSection?: boolean;
+
+  /**
+   * Hide the table-name line. Set on section listings, where the page's own
+   * heading is the table name and every row would otherwise repeat it. The
+   * rows then pipe off that heading and the page reads as one query.
+   */
+  showTable?: boolean;
+
+  /** Table name override — a group name on a listing, a resource category. */
+  tableName?: string;
+
+  /** Accent for the table name and pipe. Defaults to the section hue. */
+  accent?: string;
+
+  /**
+   * Plain metadata text, used in place of a date. Rendered `nowrap`, like a
+   * date is — keep it short. Anything sentence-length belongs in `description`.
+   */
+  meta?: string;
+
+  /**
+   * A wrapping line beneath the metadata, in the same column. For a snippet or
+   * a one-line summary, which would otherwise force the metadata row to scroll.
+   */
+  description?: string;
+
+  /** Outbound link: opens in a new tab and drops the referrer. */
+  external?: boolean;
 }
 
 const {
@@ -59,31 +95,48 @@ const {
   headingLevel = 2,
   variant = 'row',
   linkSection = false,
+  showTable = true,
+  tableName,
+  accent,
+  meta,
+  description,
+  external = false,
 } = Astro.props;
 
-const section = getSection(sectionKey);
+const section = sectionKey ? getSection(sectionKey) : null;
+
+const tableLabel = tableName ?? section?.name ?? '';
+
+// Anything without a section is chrome rather than content, so it stays
+// neutral — only sections own a hue.
+const accentColor = accent ?? (section ? `var(${section.colorVar})` : 'var(--text-dim)');
+
 const Heading = `h${headingLevel}` as 'h1' | 'h2' | 'h3';
-const hasMeta = Boolean(date) || tags.length > 0;
+const hasMeta = Boolean(date) || Boolean(meta) || Boolean(description) || tags.length > 0;
+const externalAttrs = external
+  ? { target: '_blank', rel: 'noopener noreferrer' }
+  : {};
 ---
 
-<article class="entry" style={`--section-color: var(${section.colorVar});`}>
+<article class="entry" style={`--section-color: ${accentColor};`}>
   {
-    linkSection && section.route ? (
-      <p class="entry__table">
-        <a class="entry__table-link" href={section.route}>
-          {section.name}
-        </a>
-      </p>
-    ) : (
-      <p class="entry__table">{section.name}</p>
-    )
+    showTable &&
+      (linkSection && section?.route ? (
+        <p class="entry__table">
+          <a class="entry__table-link" href={section.route}>
+            {tableLabel}
+          </a>
+        </p>
+      ) : (
+        <p class="entry__table">{tableLabel}</p>
+      ))
   }
 
   <Heading class="entry__row">
     <span class="glyph glyph--pipe" aria-hidden="true">|</span>
     {
       variant === 'row' ? (
-        <a class="entry__title" href={href}>
+        <a class="entry__title" href={href} {...externalAttrs}>
           {title}
         </a>
       ) : (
@@ -103,6 +156,7 @@ const hasMeta = Boolean(date) || tags.length > 0;
               {formatDate(date)}
             </time>
           )}
+          {meta && <span class="entry__date">{meta}</span>}
           {tags.length > 0 && (
             <span class="entry__tags">
               {tags.map((tag) => (
@@ -110,6 +164,7 @@ const hasMeta = Boolean(date) || tags.length > 0;
               ))}
             </span>
           )}
+          {description && <span class="entry__note">{description}</span>}
         </span>
       </p>
     )
@@ -231,5 +286,20 @@ const hasMeta = Boolean(date) || tags.length > 0;
     display: flex;
     flex-wrap: wrap;
     gap: var(--pill-gap);
+  }
+
+  /* Takes a whole row of the metadata column, so it sits under the date rather
+     than beside it, and wraps — unlike .entry__date, which is nowrap because a
+     date should never break. Sentence-length text here would otherwise push the
+     row wider than the page. */
+  .entry__note {
+    flex-basis: 100%;
+    max-width: var(--measure);
+    margin-block-start: var(--space-3xs);
+    font-family: var(--font-mono);
+    font-size: var(--fs-tiny);
+    line-height: var(--lh-snug);
+    color: var(--text-comment);
+    white-space: normal;
   }
 </style>

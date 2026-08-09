@@ -1,0 +1,117 @@
+---
+/**
+ * /intel/<kind> — the digest filtered to one classification.
+ *
+ * A real page rather than a client-side filter, so it can be bookmarked and
+ * shared. /intel/ioc is the one that matters most in practice: everything
+ * carrying indicators, in one list, to work through when building a block list.
+ *
+ * Only kinds that currently have items get a page. A route rendering "nothing
+ * here" would be a dead link from nowhere.
+ */
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import IntelDigest from '../../components/IntelDigest.astro';
+import { INTEL_KINDS } from '../../config/intel-kinds.mjs';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('intel');
+  const items = entries.map((entry) => entry.data);
+
+  return INTEL_KINDS.map((kind) => ({
+    kind,
+    items: items
+      .filter((item) => item.kind === kind.key)
+      .sort((a, b) => new Date(b.published).getTime() - new Date(a.published).getTime()),
+  }))
+    .filter((group) => group.items.length > 0)
+    .map((group) => ({ params: { kind: group.kind.key }, props: group }));
+}
+
+interface Props {
+  kind: (typeof INTEL_KINDS)[number];
+  items: Awaited<ReturnType<typeof getCollection<'intel'>>>[number]['data'][];
+}
+
+const { kind, items } = Astro.props;
+
+const count = items.length;
+const countLabel = `${count} ${count === 1 ? 'item' : 'items'}`;
+const sources = [...new Set(items.map((i) => i.source))];
+---
+
+<BaseLayout title={`Intel — ${kind.label}`} description={kind.blurb}>
+  <header class="head" style={`--kind-color: var(${kind.colorVar});`}>
+    <h1 class="head__title">{kind.label}</h1>
+    <p class="head__blurb">{kind.blurb}</p>
+  </header>
+
+  <p class="meta">
+    <span aria-hidden="true">//</span> {countLabel} from {sources.length} sources
+  </p>
+  <p class="meta meta--tight">
+    <span aria-hidden="true">//</span> headlines only — every link goes to the original
+  </p>
+
+  <IntelDigest items={items} />
+
+  <footer class="foot">
+    <a class="foot__back" href="/intel">
+      <span aria-hidden="true">//</span> all intel
+    </a>
+  </footer>
+</BaseLayout>
+
+<style>
+  .head {
+    margin-block-end: var(--space-2xl);
+  }
+
+  .head__title {
+    font-family: var(--font-mono);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-medium);
+    letter-spacing: var(--ls-normal);
+    color: var(--kind-color);
+  }
+
+  .head__blurb {
+    margin-block-start: var(--space-md);
+    max-width: var(--measure);
+    font-family: var(--font-sans);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--text-dim);
+  }
+
+  .meta {
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    line-height: var(--lh-snug);
+    color: var(--text-comment);
+  }
+
+  .meta--tight {
+    margin-block-end: var(--timeline-line-gap);
+  }
+
+  .foot {
+    margin-block-start: var(--space-4xl);
+    padding-block-start: var(--space-xl);
+    border-block-start: var(--stroke) solid var(--border-faint);
+  }
+
+  .foot__back {
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    color: var(--text-comment);
+    text-decoration: none;
+  }
+
+  .foot__back:hover {
+    color: var(--text-dim);
+    text-decoration: underline;
+    text-decoration-thickness: var(--underline-thickness);
+    text-underline-offset: var(--underline-offset);
+  }
+</style>

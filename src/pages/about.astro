@@ -1,0 +1,120 @@
+---
+/**
+ * /about — who publishes this, and under what boundaries.
+ *
+ * Deliberately short and free of personal detail. The handle is the identity;
+ * there is nothing here that a real name could be recovered from.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../config/site';
+
+import '../styles/prose.css';
+
+const DESCRIPTION =
+  'Detection engineering, KQL, and threat hunting notes, published under the handle leftanti.';
+---
+
+<BaseLayout title="About" description={DESCRIPTION}>
+  <header class="page-head">
+    <h1 class="page-head__title">About</h1>
+    <p class="page-head__sub"><span aria-hidden="true">//</span> the handle, the scope, the boundaries</p>
+  </header>
+
+  <div class="prose">
+    <h2>The handle</h2>
+
+    <p>
+      A <code>leftanti</code> join returns the rows on the left that have no match on the
+      right — what is there when you subtract everything accounted for. That is most of
+      detection work: not finding the thing that matches, but noticing what is left once
+      everything explainable has been removed.
+    </p>
+
+    <p>
+      The site mark draws it literally. Two overlapping circles, the left one filled with
+      the intersection cut away, the right one outlined and empty.
+    </p>
+
+    <h2>The scope</h2>
+
+    <p>
+      Notes on detection engineering, KQL, and threat hunting, mostly against Microsoft
+      Sentinel and Defender. Queries are written to be copied, adapted, and tuned against
+      your own data — not deployed as-is. Every threshold here is a starting point, and
+      every one of them is wrong for somebody's tenant.
+    </p>
+
+    <p>
+      There is no comments section, no newsletter, and no tracking. The site makes no
+      requests to anything other than its own origin: no fonts from a CDN, no analytics,
+      no embeds.
+    </p>
+
+    <h2>The boundaries</h2>
+
+    <p>
+      All content is my own, published in a personal capacity. Everything here is built
+      from scratch on my own time and infrastructure — nothing derives from any employer's
+      or client's environment.
+    </p>
+
+    <p>
+      Table names, techniques, and thresholds in examples are generic or invented. Where a
+      query references a watchlist or a lookup, that is an illustration of a pattern rather
+      than a description of a real one.
+    </p>
+
+    {
+      /* Rendered only for contact routes that actually exist. With neither set
+         the whole section is omitted rather than showing a dead link — see
+         src/config/site.ts. */
+      (SITE.github || SITE.email) && (
+        <Fragment>
+          <h2>Contact</h2>
+
+          <ul>
+            {SITE.email && (
+              <li>
+                <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+              </li>
+            )}
+            {SITE.github && (
+              <li>
+                <a href={SITE.github} rel="me noopener noreferrer" target="_blank">
+                  {SITE.github.replace('https://', '')}
+                </a>
+              </li>
+            )}
+          </ul>
+
+          <p>
+            Corrections are welcome, particularly on the tuning notes — those are the parts
+            most likely to be wrong outside the environment they were written against.
+          </p>
+        </Fragment>
+      )
+    }
+  </div>
+</BaseLayout>
+
+<style>
+  .page-head {
+    margin-block-end: var(--space-2xl);
+  }
+
+  .page-head__title {
+    font-family: var(--font-mono);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-medium);
+    letter-spacing: var(--ls-normal);
+    color: var(--text);
+  }
+
+  .page-head__sub {
+    margin-block-start: var(--space-sm);
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    line-height: var(--lh-snug);
+    color: var(--text-comment);
+  }
+</style>

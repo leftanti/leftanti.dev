@@ -1,0 +1,149 @@
+---
+/**
+ * /intel — the filtered threat intel digest, newest first.
+ *
+ * Everything here comes from src/data/intel.json, written by
+ * scripts/fetch-intel.mjs and committed by a scheduled workflow every six
+ * hours. Nothing on this page is authored, which is why IntelDigest is marked
+ * `inTimeline: false` in sections.ts — external headlines do not belong in a
+ * timeline of things I wrote, nor in the feed.
+ *
+ * The filter row links to /intel/<kind>. Those are real pages rather than a
+ * client-side filter, so a view can be bookmarked and shared — which is the
+ * point of /intel/ioc, the one you work through when building a block list.
+ */
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import IntelDigest from '../../components/IntelDigest.astro';
+import { getSection } from '../../config/sections';
+import { INTEL_KINDS } from '../../config/intel-kinds.mjs';
+
+const section = getSection('intel');
+
+const entries = await getCollection('intel');
+const items = entries
+  .map((entry) => entry.data)
+  .sort((a, b) => new Date(b.published).getTime() - new Date(a.published).getTime());
+
+const counts = new Map<string, number>();
+for (const item of items) counts.set(item.kind, (counts.get(item.kind) ?? 0) + 1);
+
+const sources = [...new Set(items.map((i) => i.source))];
+const newest = items[0]?.published;
+
+function stamp(iso: string): string {
+  return new Date(iso).toISOString().slice(0, 16).replace('T', ' ');
+}
+---
+
+<BaseLayout title={section.name} description={section.blurb}>
+  <header class="head" style={`--section-color: var(${section.colorVar});`}>
+    <h1 class="head__title">{section.name}</h1>
+    <p class="head__blurb">{section.blurb}</p>
+  </header>
+
+  <nav class="filters" aria-label="Filter by kind">
+    <span class="filters__label" aria-hidden="true">//| filter</span>
+    <span class="filters__list">
+      {
+        INTEL_KINDS.filter((kind) => counts.get(kind.key)).map((kind) => (
+          <a class="filters__link" href={`/intel/${kind.key}`} style={`--kind-color: var(${kind.colorVar});`}>
+            {kind.label.toLowerCase()} <span class="filters__count">{counts.get(kind.key)}</span>
+          </a>
+        ))
+      }
+    </span>
+  </nav>
+
+  <p class="meta">
+    <span aria-hidden="true">//</span> {items.length} items from {sources.length} sources{
+      newest && ` · newest ${stamp(newest)} UTC`
+    }
+  </p>
+  <p class="meta meta--tight">
+    <span aria-hidden="true">//</span> headlines only — every link goes to the original
+  </p>
+
+  <IntelDigest items={items} emptyMessage="Nothing yet. Run `npm run intel`, or wait for the workflow." />
+</BaseLayout>
+
+<style>
+  .head {
+    margin-block-end: var(--space-2xl);
+  }
+
+  .head__title {
+    font-family: var(--font-mono);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-medium);
+    letter-spacing: var(--ls-normal);
+    color: var(--section-color);
+  }
+
+  .head__blurb {
+    margin-block-start: var(--space-md);
+    max-width: var(--measure);
+    font-family: var(--font-sans);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--text-dim);
+  }
+
+  .filters {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: var(--timeline-meta-gap);
+    margin-block-end: var(--space-xl);
+    padding-block: var(--space-md);
+    border-block: var(--stroke) solid var(--border-faint);
+  }
+
+  .filters__label {
+    flex: none;
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    line-height: var(--lh-snug);
+    color: var(--text-comment);
+    user-select: none;
+  }
+
+  .filters__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--pill-gap);
+  }
+
+  /* The kind's own hue, so the filter row doubles as the colour key. */
+  .filters__link {
+    font-family: var(--font-mono);
+    font-size: var(--fs-micro);
+    line-height: var(--lh-snug);
+    letter-spacing: var(--ls-wide);
+    color: var(--kind-color);
+    border: var(--hairline) solid var(--border);
+    border-radius: var(--radius-pill);
+    padding: var(--pill-pad-y) var(--pill-pad-x);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .filters__link:hover {
+    border-color: currentColor;
+  }
+
+  .filters__count {
+    color: var(--comment-mark);
+  }
+
+  .meta {
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    line-height: var(--lh-snug);
+    color: var(--text-comment);
+  }
+
+  .meta--tight {
+    margin-block-end: var(--timeline-line-gap);
+  }
+</style>

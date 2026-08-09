@@ -9,8 +9,19 @@
  *              to its tag page. Browsing KQL by data table is the whole point
  *              of that library.
  *
- *   groupBy    splits the list under subheadings — cheat sheets group by
- *              certification, because that is how you revise.
+ *   groupBy    puts a grouping value where the section name would go — cheat
+ *              sheets show `BTL2`, because that is how you revise.
+ *
+ * THE TABLE NAME ON A LISTING
+ * Repeating the section name on every row is noise on a page that already
+ * says it. So:
+ *
+ *   ungrouped   rows carry no table name at all. The page heading is the
+ *               table name and the rows pipe off it, which makes the whole
+ *               listing read as one query.
+ *
+ *   grouped     each row's table name is its group value, and the pill that
+ *               would repeat that value is dropped.
  *
  * Adding a collection means copying a five-line wrapper, not writing a page.
  */
@@ -48,15 +59,29 @@ const {
 const tags = showTags ? collectTags(items) : [];
 
 // Insertion order is preserved, and items arrive newest-first, so groups come
-// out ordered by their most recent entry.
-const groups = new Map<string, TimelineItem[]>();
+// out ordered by their most recent entry, and entries stay newest-first inside
+// each one.
+let rows = items;
+
 if (groupBy) {
+  const groups = new Map<string, TimelineItem[]>();
+
   for (const item of items) {
-    const key = groupBy(item) ?? ungroupedLabel;
-    const bucket = groups.get(key);
+    const name = groupBy(item) ?? ungroupedLabel;
+    const bucket = groups.get(name);
     if (bucket) bucket.push(item);
-    else groups.set(key, [item]);
+    else groups.set(name, [item]);
   }
+
+  rows = [...groups.entries()].flatMap(([name, groupItems]) =>
+    groupItems.map((item) => ({
+      ...item,
+      // The group value takes the table name slot.
+      tableName: name,
+      // …which makes a pill repeating it redundant.
+      tags: (item.tags ?? []).filter((tag) => tag.label !== name),
+    }))
+  );
 }
 
 const count = items.length;
@@ -84,24 +109,18 @@ const countLabel = `${count} ${count === 1 ? 'entry' : 'entries'}`;
     )
   }
 
-  <p class="listing__count"><span aria-hidden="true">//</span> {countLabel}</p>
+  <!-- On an ungrouped listing this is the last comment line before the pipe
+       stages, so it hugs the list and the page reads as one query. -->
+  <p class:list={['listing__count', !groupBy && 'listing__count--tight']}>
+    <span aria-hidden="true">//</span> {countLabel}
+  </p>
 
-  {
-    groupBy ? (
-      groups.size === 0 ? (
-        <p class="listing__empty">Nothing here yet.</p>
-      ) : (
-        [...groups.entries()].map(([name, groupItems]) => (
-          <section class="listing__group">
-            <h2 class="listing__group-title">{name}</h2>
-            <Timeline items={groupItems} headingLevel={3} />
-          </section>
-        ))
-      )
-    ) : (
-      <Timeline items={items} headingLevel={2} emptyMessage="Nothing here yet." />
-    )
-  }
+  <Timeline
+    items={rows}
+    headingLevel={2}
+    showTable={Boolean(groupBy)}
+    emptyMessage="Nothing here yet."
+  />
 </BaseLayout>
 
 <style>
@@ -159,19 +178,8 @@ const countLabel = `${count} ${count === 1 ? 'entry' : 'entries'}`;
     margin-block-end: var(--space-xl);
   }
 
-  .listing__group {
-    margin-block-end: var(--space-3xl);
-  }
-
-  .listing__group-title {
-    font-family: var(--font-mono);
-    font-size: var(--fs-mark);
-    font-weight: var(--fw-medium);
-    letter-spacing: var(--ls-wide);
-    color: var(--text-dim);
-    margin-block-end: var(--space-lg);
-    padding-block-end: var(--space-xs);
-    border-block-end: var(--stroke) solid var(--border-faint);
+  .listing__count--tight {
+    margin-block-end: var(--timeline-line-gap);
   }
 
   .listing__empty {

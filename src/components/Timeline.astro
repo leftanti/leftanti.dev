@@ -13,9 +13,19 @@ interface Props {
   headingLevel?: 2 | 3;
   /** Shown in place of the list when there is nothing to render. */
   emptyMessage?: string;
+  /**
+   * Show each row's table name. Off on section listings, where one table name
+   * sits above the list and every row pipes off it.
+   */
+  showTable?: boolean;
 }
 
-const { items, headingLevel = 2, emptyMessage = 'No entries yet.' } = Astro.props;
+const {
+  items,
+  headingLevel = 2,
+  emptyMessage = 'No entries yet.',
+  showTable = true,
+} = Astro.props;
 ---
 
 {
@@ -25,7 +35,7 @@ const { items, headingLevel = 2, emptyMessage = 'No entries yet.' } = Astro.prop
     <ol class="timeline" role="list">
       {items.map((item) => (
         <li class="timeline__item">
-          <QueryLines {...item} headingLevel={headingLevel} />
+          <QueryLines {...item} headingLevel={headingLevel} showTable={showTable} />
         </li>
       ))}
     </ol>

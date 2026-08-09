@@ -17,7 +17,7 @@
  * src/content/config.ts location is deprecated — do not move it back.
  */
 import { defineCollection } from 'astro:content';
-import { glob } from 'astro/loaders';
+import { file, glob } from 'astro/loaders';
 // Imported from zod directly rather than re-exported from astro:content, which
 // forwards the deprecated `zod/v4` subpath and makes every schema line below
 // report a deprecation hint. Same zod instance either way.
@@ -110,5 +110,86 @@ const notes = defineCollection({
   schema: base,
 });
 
+/**
+ * Curated external links, all of them in one file: src/data/resources.json.
+ *
+ * Not a section and not authored content — it has no date, so it never reaches
+ * the timeline or the feed. Adding a link is a row in that file; adding a
+ * category is an object in it. Nothing else changes.
+ */
+const resources = defineCollection({
+  loader: file('./src/data/resources.json'),
+  schema: z.strictObject({
+    id: z.string().min(1),
+
+    /**
+     * Display order. The loader hands entries back sorted by id, not in the
+     * order they appear in the file, so without this the page would be
+     * alphabetical whatever the JSON looks like.
+     */
+    order: z.number().int().positive(),
+
+    /** PascalCase — it sits where a table name would go, like a section does. */
+    title: z.string().min(1),
+
+    /**
+     * The CSS custom property holding this category's hue, e.g. `--section-kql`.
+     *
+     * Categories borrow section hues rather than defining new ones, so a colour
+     * keeps meaning one subject everywhere on the site. Validated as a custom
+     * property name so a typo fails the build instead of rendering an entry
+     * with no colour at all.
+     */
+    colorVar: z
+      .string()
+      .regex(/^--[a-z][a-z0-9-]*$/, 'colorVar must be a CSS custom property, e.g. --section-kql'),
+
+    blurb: z.string().min(1),
+
+    links: z
+      .array(
+        z.strictObject({
+          title: z.string().min(1),
+          url: z.url('resource url must be absolute, e.g. https://example.com'),
+          /** Short reason it is worth opening. Optional. */
+          note: z.string().optional(),
+        })
+      )
+      .min(1, 'a category with no links should be deleted, not left empty'),
+  }),
+});
+
+/**
+ * The threat intel digest, written by scripts/fetch-intel.mjs and committed by
+ * a scheduled workflow. Never hand-edited.
+ *
+ * Validated like everything else so a malformed write fails the build loudly
+ * rather than rendering a page of blanks. Deliberately strict: if the script
+ * starts emitting a field this does not know about, that is worth finding out.
+ *
+ * Only ever a headline, a source, a timestamp, and a trimmed snippet. The page
+ * links out; it never reproduces an article.
+ */
+const intel = defineCollection({
+  loader: file('./src/data/intel.json'),
+  schema: z.strictObject({
+    id: z.string().min(1),
+    title: z.string().min(1),
+    url: z.url(),
+    source: z.string().min(1),
+    published: z.iso.datetime(),
+    summary: z.string(),
+
+    /** Classification key from src/config/intel-kinds.mjs. Drives colour and filtering. */
+    kind: z.string().min(1),
+
+    /** What the filter scored it, kept so tuning can be reasoned about. */
+    score: z.number(),
+
+    /** Which allowlist terms it matched. Shown as pills on the page. */
+    matched: z.array(z.string()),
+  }),
+});
+
 /** Keys here must match the `key` of the matching entry in sections.ts. */
-export const collections = { kql, hunting, rules, cheatsheets, notes };
+export const collections = { kql, hunting, rules, cheatsheets, notes, resources, intel };

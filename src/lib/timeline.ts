@@ -31,6 +31,13 @@ export interface TimelineItem {
 
   /** Up to three tags. Optional and frequently absent. */
   tags?: TimelineTag[];
+
+  /**
+   * Overrides the table name for this row. Section listings use it to put the
+   * grouping value where the section name would go — on /cheatsheets a row
+   * reads `BTL2` rather than `CheatSheets`, which the page already says.
+   */
+  tableName?: string;
 }
 
 /** Newest first. Undated entries sort to the end, then alphabetically. */
@@ -174,6 +181,76 @@ export async function getSectionItems(section: Section): Promise<TimelineItem[]>
 export async function getTimelineItems(): Promise<TimelineItem[]> {
   const perSection = await Promise.all(TIMELINE_SECTIONS.map(getSectionItems));
   return perSection.flat().sort(byDateDesc);
+}
+
+/**
+ * Every tag an entry carries — the typed metadata plus the free-form keywords.
+ *
+ * Deliberately not the same as `pillsFor`. Pills are capped at three because
+ * the metadata line has to stay readable; tag pages must cover everything, or
+ * a pill could link to a page that was never generated.
+ */
+function allTagsFor(data: EntryFrontmatter): string[] {
+  return [
+    ...(data.dataTable ?? []),
+    ...(data.technique ?? []),
+    ...(data.severity ? [data.severity] : []),
+    ...(data.cert ? [data.cert] : []),
+    ...data.tags,
+  ];
+}
+
+export interface TagGroup {
+  /** Display label, as first written in frontmatter. */
+  label: string;
+  /** URL segment. */
+  slug: string;
+  /** Entries carrying this tag, newest first. */
+  items: TimelineItem[];
+}
+
+/**
+ * Every tag on the site with the entries that carry it, busiest first.
+ *
+ * Keyed by slug rather than label so that two labels which normalise to the
+ * same URL segment share one page instead of colliding into two routes.
+ */
+export async function getTagIndex(): Promise<TagGroup[]> {
+  const bySlug = new Map<string, TagGroup>();
+
+  for (const section of TIMELINE_SECTIONS) {
+    const entries = await getCollection(section.key as CollectionKey);
+
+    for (const entry of entries) {
+      const data = entry.data as EntryFrontmatter;
+      if (!isPublished(data)) continue;
+
+      const item = toTimelineItem(section, entry.id, data);
+
+      for (const label of allTagsFor(data)) {
+        const slug = tagSlug(label);
+        if (!slug) continue;
+
+        let group = bySlug.get(slug);
+        if (!group) {
+          group = { label, slug, items: [] };
+          bySlug.set(slug, group);
+        }
+
+        // An entry can reach the same tag twice — say a technique that is also
+        // listed as a free-form keyword. Show it once.
+        if (!group.items.some((existing) => existing.href === item.href)) {
+          group.items.push(item);
+        }
+      }
+    }
+  }
+
+  for (const group of bySlug.values()) group.items.sort(byDateDesc);
+
+  return [...bySlug.values()].sort(
+    (a, b) => b.items.length - a.items.length || a.label.localeCompare(b.label)
+  );
 }
 
 /**

@@ -1,0 +1,221 @@
+---
+/**
+ * /resources — curated external links, grouped into collapsible categories.
+ *
+ * Everything on this page comes from src/data/resources.json. Adding a link is
+ * a row in that file; adding a category is an object in it. This page never
+ * needs editing to add either.
+ *
+ * COLLAPSING
+ * Built on native <details>/<summary>, so the expanding costs no JavaScript,
+ * works with the keyboard, and announces its own expanded state to a screen
+ * reader. This page therefore still ships zero client JS, unlike the entry
+ * pages which ship the copy button.
+ *
+ * Categories start closed: the point of the page is to stay scannable as the
+ * list grows, and a collapsed category still shows its name, its count, and
+ * what is inside it. To open one by default, add the `open` attribute.
+ *
+ * Rendered in the site's own idiom: the category name sits where a table name
+ * goes and each link is piped off it.
+ *
+ * COLOUR
+ * A category carries a hue on exactly the two things a section colours — its
+ * name and its pipe glyphs — and nothing else. The hue is not a new one: each
+ * category borrows the colour of the section it relates to, so green still
+ * means KQL and mauve still means detection engineering wherever you meet it.
+ * The mapping is data, in resources.json, not code.
+ */
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import QueryLines from '../components/QueryLines.astro';
+
+const DESCRIPTION =
+  'Curated external links for threat intel, KQL, detection engineering, DFIR, training, and tooling.';
+
+// The loader returns entries sorted by id, so the authored order in the JSON
+// is restored here from the explicit `order` field.
+const categories = (await getCollection('resources')).sort((a, b) => a.data.order - b.data.order);
+
+/** `https://www.cisa.gov/known-…` -> `cisa.gov` */
+function domainOf(url: string): string {
+  return new URL(url).hostname.replace(/^www\./, '');
+}
+
+/** `cisa.gov — the list that matters` — the domain first, so it scans. */
+function metaFor(url: string, note?: string): string {
+  const domain = domainOf(url);
+  return note ? `${domain} — ${note}` : domain;
+}
+
+const linkCount = categories.reduce((n, c) => n + c.data.links.length, 0);
+---
+
+<BaseLayout title="Resources" description={DESCRIPTION}>
+  <header class="page-head">
+    <h1 class="page-head__title">Resources</h1>
+    <p class="page-head__sub">
+      <span aria-hidden="true">//</span> {linkCount} links in {categories.length} categories, all of
+      them somebody else's work
+    </p>
+  </header>
+
+  <div class="categories">
+    {
+      categories.map((category) => (
+        <details class="category" style={`--category-color: var(${category.data.colorVar});`}>
+          <summary class="category__summary">
+            <span class="category__head">
+              <span class="category__marker" aria-hidden="true" />
+              <span class="category__name">{category.data.title}</span>
+              <span class="category__count">{category.data.links.length}</span>
+            </span>
+            <span class="category__blurb">
+              <span aria-hidden="true">//</span> {category.data.blurb}
+            </span>
+          </summary>
+
+          <ol class="category__links" role="list">
+            {category.data.links.map((link) => (
+              <li>
+                <QueryLines
+                  showTable={false}
+                  accent={`var(${category.data.colorVar})`}
+                  title={link.title}
+                  href={link.url}
+                  meta={metaFor(link.url, link.note)}
+                  headingLevel={3}
+                  external={true}
+                />
+              </li>
+            ))}
+          </ol>
+        </details>
+      ))
+    }
+  </div>
+</BaseLayout>
+
+<style>
+  .page-head {
+    margin-block-end: var(--space-2xl);
+  }
+
+  .page-head__title {
+    font-family: var(--font-mono);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-medium);
+    letter-spacing: var(--ls-normal);
+    color: var(--text);
+  }
+
+  .page-head__sub {
+    margin-block-start: var(--space-sm);
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    line-height: var(--lh-snug);
+    color: var(--text-comment);
+    max-width: var(--measure);
+  }
+
+  .categories {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .category {
+    border-block-start: var(--stroke) solid var(--border-faint);
+    padding-block: var(--space-lg);
+  }
+
+  .category:last-child {
+    border-block-end: var(--stroke) solid var(--border-faint);
+  }
+
+  /* The whole two-line block is the click target. */
+  .category__summary {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
+    cursor: pointer;
+
+    /* Drop the native disclosure triangle in favour of the marker below,
+       which is mono and matches the rest of the page's furniture. */
+    list-style: none;
+  }
+
+  .category__summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .category__head {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-sm);
+  }
+
+  /* `+` closed, `-` open. Both are one mono cell, so the name never shifts.
+     No rotation, no transition — the site animates nothing but the cursor. */
+  .category__marker {
+    flex: none;
+    font-family: var(--font-mono);
+    font-size: var(--fs-mark);
+    line-height: var(--lh-snug);
+    color: var(--comment-mark);
+  }
+
+  .category__marker::before {
+    content: '+';
+  }
+
+  .category[open] .category__marker::before {
+    content: '-';
+  }
+
+  /* The category's hue, on the name — the same place a section wears its own.
+     Set inline on the <details> above, from the data file. */
+  .category__name {
+    font-family: var(--font-mono);
+    font-size: var(--fs-mark);
+    font-weight: var(--fw-medium);
+    line-height: var(--lh-snug);
+    color: var(--category-color);
+  }
+
+  .category__summary:hover .category__name {
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    text-decoration-thickness: var(--underline-thickness);
+    text-underline-offset: var(--underline-offset);
+  }
+
+  .category__count {
+    font-family: var(--font-mono);
+    font-size: var(--fs-micro);
+    line-height: var(--lh-snug);
+    color: var(--text-fainter);
+    border: var(--hairline) solid var(--border);
+    border-radius: var(--radius-pill);
+    padding: var(--pill-pad-y) var(--pill-pad-x);
+  }
+
+  /* Indented to clear the marker cell, so it lines up under the name. */
+  .category__blurb {
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    line-height: var(--lh-snug);
+    color: var(--text-comment);
+    padding-inline-start: calc(var(--fs-mark) + var(--space-sm));
+    max-width: var(--measure);
+  }
+
+  .category__links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    margin: 0;
+    padding-block-start: var(--space-lg);
+    padding-inline-start: calc(var(--fs-mark) + var(--space-sm));
+    list-style: none;
+  }
+</style>

@@ -17,7 +17,7 @@
 import BaseLayout from './BaseLayout.astro';
 import QueryLines from '../components/QueryLines.astro';
 import CodeCopy from '../components/CodeCopy.astro';
-import { getSection, sectionBasePath } from '../config/sections';
+import { getSection } from '../config/sections';
 import type { TimelineItem } from '../lib/timeline';
 
 import '../styles/prose.css';
@@ -36,7 +36,12 @@ interface Props {
 const { item, description, density = 'prose' } = Astro.props;
 
 const section = getSection(item.section);
-const backHref = sectionBasePath(section);
+
+// A section with no listing page — Notes — has nowhere of its own to go back
+// to, so its entries return to the timeline they surfaced on. Linking to
+// `/<key>` here would 404, because that route is never generated.
+const backHref = section.route ?? '/';
+const backLabel = section.route ? `back to ${section.navLabel}` : 'back to the timeline';
 ---
 
 <BaseLayout title={item.title} description={description}>
@@ -51,7 +56,7 @@ const backHref = sectionBasePath(section);
 
     <footer class="entry-page__footer">
       <a class="entry-page__back" href={backHref}>
-        <span aria-hidden="true">//</span> back to {section.navLabel}
+        <span aria-hidden="true">//</span> {backLabel}
       </a>
     </footer>
   </article>
