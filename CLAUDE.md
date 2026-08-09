@@ -32,8 +32,8 @@ Mono for section names, nav, metadata, code, and the site mark. Sans for entry t
 A left anti join rendered literally: two overlapping circles, the left one filled with the intersection masked out, the right one an unfilled outline in `--comment-mark`.
 
 - **One shared SVG component.** Never redrawn inline anywhere.
-- The filled shape uses `fill="currentColor"` so the header mark **inherits the current section's colour**, falling back to `--text` on the home page and any page without a section.
-- **Canonical brand green is `--brand` (`#6fae94`)** — used for `favicon.svg`, the apple-touch-icon, and OG images, i.e. anywhere the site is represented externally. This deliberately matches `--section-kql`; that overlap is intended, not a bug.
+- The filled shape uses `fill="currentColor"` so the header mark **inherits the current section's colour**, falling back to **`--brand`** on the home page and any page without a section. The mark is never neutral — it is the site's own identity, not chrome, which is why it is the one coloured thing on a page that has no section.
+- **Canonical brand green is `--brand` (`#6fae94`)** — the header mark wherever no section owns the page, plus `favicon.svg`, the apple-touch-icon, and OG images. Anywhere the site represents itself rather than a section. This deliberately matches `--section-kql`; that overlap is intended, not a bug, and it is why the mark looks the same on the home page as on `/kql`.
 
 ## The timeline pattern
 

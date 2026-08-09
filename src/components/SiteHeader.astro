@@ -86,11 +86,15 @@ const currentSection = sectionForPath(path);
 
     /* The logo's only colour source: its filled shape is `currentColor`, so
        it takes this. --mark-color is set inline above on section pages;
-       everywhere else this falls through to --text. It has to live on the
-       anchor rather than on the SVG, because Astro scopes component styles
-       and a rule written here cannot reach inside LogoMark. The wordmark and
-       the cursor set their own colours, so this reaches the logo alone. */
-    color: var(--mark-color, var(--text));
+       everywhere else this falls through to --brand, so the mark reads as
+       the site's own rather than going neutral. --brand and --section-kql
+       are the same green, so home and /kql look identical here by design.
+
+       This has to live on the anchor rather than on the SVG, because Astro
+       scopes component styles and a rule written here cannot reach inside
+       LogoMark. The wordmark and the cursor set their own colours, so this
+       reaches the logo alone. */
+    color: var(--mark-color, var(--brand));
   }
 
   .mark__word {
