@@ -1,0 +1,121 @@
+---
+/**
+ * 404 — served by GitHub Pages for any path that does not exist.
+ *
+ * No config needed: Pages looks for /404.html, which this becomes.
+ *
+ * The page states the problem as the join the site is named after. A left anti
+ * join returns the rows on the left with no match on the right, so asking for
+ * a path that does not exist returns exactly one row — the one you asked for.
+ * That is the whole idea of the site, and it is the only page where it is also
+ * literally what happened.
+ *
+ * The requested path is deliberately not shown. A static site serves one
+ * 404.html for every missing URL, so printing the path would need client-side
+ * JavaScript, and this is not one of the two places that earns any.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import QueryLines from '../components/QueryLines.astro';
+import { NAV_SECTIONS } from '../config/sections';
+
+import '../styles/prose.css';
+
+const DESCRIPTION = 'That page does not exist.';
+---
+
+<BaseLayout title="404" description={DESCRIPTION}>
+  <div class="notfound">
+    <QueryLines
+      tableName="NotFound"
+      title="404"
+      href="/"
+      variant="heading"
+      headingLevel={1}
+      meta="1 row returned"
+      showTable={true}
+    />
+
+    <div class="prose notfound__body">
+      <p>
+        There is no page at that path. It may have been renamed, it may have been a
+        typo, or it may never have existed — this site is new enough that all three
+        are plausible.
+      </p>
+
+      <pre><code>{`RequestedPaths
+| join kind=leftanti SitePages on Path
+| project Path
+//| 1 row — the one you asked for`}</code></pre>
+
+      <p>
+        A left anti join returns what is on the left with no match on the right. Ask
+        for a page that does not exist and it returns exactly one row. The site is
+        named after this; today it is also what happened.
+      </p>
+    </div>
+
+    <nav class="notfound__nav" aria-label="Go somewhere real">
+      <span class="notfound__nav-label" aria-hidden="true">//| try</span>
+      <span class="notfound__nav-list">
+        <a href="/">home</a>
+        {NAV_SECTIONS.map((section) => <a href={section.route}>{section.navLabel}</a>)}
+        <a href="/tags">tags</a>
+      </span>
+    </nav>
+  </div>
+</BaseLayout>
+
+<style>
+  .notfound__body {
+    margin-block-start: var(--space-2xl);
+  }
+
+  /* Shiki never sees this block — it is written directly rather than coming
+     from markdown — so it carries no token colours, only the block chrome.
+     That is correct here: it is an illustration, not a query to copy. */
+  .notfound__body pre {
+    background-color: var(--code-bg);
+    color: var(--code-comment);
+  }
+
+  .notfound__nav {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: var(--timeline-meta-gap);
+    margin-block-start: var(--space-3xl);
+    padding-block-start: var(--space-xl);
+    border-block-start: var(--stroke) solid var(--border-faint);
+  }
+
+  .notfound__nav-label {
+    flex: none;
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    line-height: var(--lh-snug);
+    color: var(--text-comment);
+    user-select: none;
+  }
+
+  .notfound__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--nav-gap);
+  }
+
+  .notfound__nav-list a {
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    line-height: var(--lh-snug);
+    letter-spacing: var(--ls-wide);
+    color: var(--text-dim);
+    text-decoration: none;
+  }
+
+  .notfound__nav-list a:hover {
+    color: var(--text);
+    text-decoration: underline;
+    text-decoration-thickness: var(--underline-thickness);
+    text-underline-offset: var(--underline-offset);
+  }
+</style>

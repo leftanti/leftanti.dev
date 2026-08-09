@@ -209,6 +209,49 @@ export interface TagGroup {
   items: TimelineItem[];
 }
 
+export interface FeedItem {
+  title: string;
+  description: string;
+  link: string;
+  pubDate: Date;
+  categories: string[];
+}
+
+/**
+ * Everything authored, newest first, in the shape the RSS feed needs.
+ *
+ * Driven by TIMELINE_SECTIONS like the timeline is, which is what keeps the
+ * external intel headlines out of the feed for free: IntelDigest is marked
+ * `inTimeline: false`, so it never reaches this. Syndicating other people's
+ * headlines under this site's name would be wrong regardless of the config.
+ *
+ * Built from the collections rather than from TimelineItem because a feed
+ * needs a description, and the timeline deliberately does not carry one —
+ * adding it there would put a summary under every row on the home page.
+ */
+export async function getFeedItems(): Promise<FeedItem[]> {
+  const perSection = await Promise.all(
+    TIMELINE_SECTIONS.map(async (section) => {
+      const entries = await getCollection(section.key as CollectionKey);
+
+      return entries
+        .filter((entry) => isPublished(entry.data as EntryFrontmatter))
+        .map((entry) => {
+          const data = entry.data as EntryFrontmatter;
+          return {
+            title: data.title,
+            description: data.description,
+            link: entryHref(section, entry.id),
+            pubDate: data.date,
+            categories: [section.name, ...data.tags],
+          };
+        });
+    })
+  );
+
+  return perSection.flat().sort((a, b) => b.pubDate.getTime() - a.pubDate.getTime());
+}
+
 /**
  * Every tag on the site with the entries that carry it, busiest first.
  *

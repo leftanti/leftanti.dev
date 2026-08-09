@@ -1,0 +1,6 @@
+# Everything here is meant to be read and indexed.
+User-agent: *
+Allow: /
+
+# Written at build time by @astrojs/sitemap.
+Sitemap: https://leftanti.dev/sitemap-index.xml

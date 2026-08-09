@@ -1,10 +1,18 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 import codeTheme from './src/config/code-theme.mjs';
 
 // https://astro.build/config
 export default defineConfig({
+  integrations: [
+    // Writes /sitemap-index.xml at build time from the generated routes, using
+    // the `site` value below. Mostly earns its place for the tag pages, which
+    // are reachable only through pills and would otherwise be crawled last.
+    sitemap(),
+  ],
+
   markdown: {
     shikiConfig: {
       // Every colour in this theme is a var(--code-*) reference, so highlighted
