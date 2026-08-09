@@ -82,6 +82,17 @@ const CONFIG = {
     { name: 'Huntress', url: 'https://www.huntress.com/blog/rss.xml', maxAge: 90, iocSource: true },
     { name: 'SANS ISC', url: 'https://isc.sans.edu/rssfeed_full.xml', maxAge: 45, iocSource: true },
 
+    { name: 'Fortinet', url: 'https://feeds.fortinet.com/fortinet/blog/threat-research', maxAge: 90, iocSource: true },
+    { name: 'Proofpoint', url: 'https://www.proofpoint.com/us/rss.xml', maxAge: 90, iocSource: true },
+    { name: 'Elastic Security Labs', url: 'https://www.elastic.co/security-labs/rss/feed.xml', maxAge: 120, iocSource: true },
+    { name: 'Check Point Research', url: 'https://research.checkpoint.com/feed/', maxAge: 90, iocSource: true },
+    { name: 'Zscaler ThreatLabz', url: 'https://www.zscaler.com/blogs/feeds/security-research', maxAge: 90, iocSource: true },
+    { name: 'Cybereason', url: 'https://www.cybereason.com/blog/rss.xml', maxAge: 120, iocSource: true },
+    { name: 'ESET Research', url: 'https://feeds.feedburner.com/eset/blog', maxAge: 90, iocSource: true },
+    { name: 'Rapid7', url: 'https://blog.rapid7.com/rss/', maxAge: 90, iocSource: true },
+    // Small, pure signal: pcaps and indicator dumps, nothing else.
+    { name: 'Malware Traffic Analysis', url: 'https://www.malware-traffic-analysis.net/blog-entries.rss', maxAge: 120, iocSource: true },
+
     // Breaking coverage. Left on the default window: these publish daily, and
     // a wide window here would let old news outrank today's on score.
     { name: 'BleepingComputer', url: 'https://www.bleepingcomputer.com/feed/' },
@@ -318,6 +329,44 @@ const CONFIG = {
   /** Per-feed network timeout. A slow feed must not hang the whole run. */
   timeoutMs: 15000,
 
+  /**
+   * ARTICLE SCAN — how an item earns the `ioc` classification.
+   *
+   * Without this, "carries indicators" is only ever a guess from the publisher
+   * and the 220-character snippet, and it guesses wrong in both directions: a
+   * Securelist post with no indicators at all was labelled as having them,
+   * while the feed text never mentions the indicator table a DFIR Report post
+   * always ends with.
+   *
+   * So each candidate's article is fetched once and counted for real: hashes,
+   * defanged URLs and domains, addresses, and an explicit indicators heading.
+   * `iocSource` on a feed is now only a fallback for when the fetch fails.
+   *
+   * Results are cached against the previous run's data file, so a steady state
+   * only fetches genuinely new articles. Turn `enabled` off to fall back to the
+   * old publisher-level guess and skip the network entirely.
+   */
+  articleScan: {
+    enabled: true,
+
+    /**
+     * Weighted evidence needed to call an article indicator-bearing. Hashes and
+     * defanged strings count one each, an explicit "Indicators of Compromise"
+     * heading counts three. Addresses are reported but never counted, because
+     * a version string like 1.2.3.4 is indistinguishable from an IPv4.
+     *
+     * Measured against real posts: DFIR Report scored 49 and 13, Microsoft
+     * Security 26 and 23, while Securelist and Unit 42 posts scored 0.
+     */
+    minEvidence: 3,
+
+    timeoutMs: 20000,
+    /** Pause between article fetches. These are other people's servers. */
+    delayMs: 350,
+    /** Skip anything implausibly large rather than parse megabytes of it. */
+    maxBytes: 3_000_000,
+  },
+
   /** Sent so feed owners can see who is polling them. */
   userAgent: 'leftanti.dev-intel/1.0 (+https://leftanti.dev)',
 };
@@ -393,21 +442,144 @@ function matches(term, haystack) {
 }
 
 /**
- * Which kind an item is. First match wins; the last kind is the fallback.
- * `iocSource` is a property of the publisher, so it is passed in rather than
- * read out of the text.
+ * Bumped whenever the scanning logic changes.
+ *
+ * Cached counts from a previous run are only reused when their version matches
+ * this one. Without it, changing how indicators are counted would leave every
+ * already-seen article carrying numbers produced by the old rules, and the
+ * change would appear to have done nothing.
  */
-function classify(title, summary, isIocSource) {
+const SCAN_VERSION = 2;
+
+/** Patterns that betray an actual indicator list rather than prose about one. */
+const INDICATOR_PATTERNS = {
+  sha256: /\b[a-fA-F0-9]{64}\b/g,
+  sha1: /\b[a-fA-F0-9]{40}\b/g,
+  md5: /\b[a-fA-F0-9]{32}\b/g,
+  defanged: /hxxps?:|\[\.\]|\[:\]|\(\.\)/g,
+  heading: /indicators? of compromise/gi,
+};
+
+/**
+ * Dotted quads, bounded so a longer sequence cannot match. Without the
+ * lookaround, "1.2.3.4.5" yields a false hit on its first four octets, which
+ * is how version strings and build numbers get counted as addresses.
+ */
+const IPV4 = /(?<![\d.])(?:\d{1,3}\.){3}\d{1,3}(?![\d.])/g;
+
+/**
+ * Whether a dotted quad is an address somebody could actually block.
+ *
+ * Everything reserved is rejected — private ranges, loopback, link-local,
+ * CGNAT, multicast, and the documentation ranges. Those turn up constantly in
+ * write-ups as examples and lab addresses, and blocking one would at best do
+ * nothing and at worst break the network it was pasted into.
+ */
+function isBlockableIPv4(value) {
+  const parts = value.split('.').map(Number);
+  if (parts.length !== 4) return false;
+  if (parts.some((p) => !Number.isInteger(p) || p < 0 || p > 255)) return false;
+
+  const [a, b] = parts;
+  if (a === 0) return false;                             // this network
+  if (a === 10) return false;                            // RFC1918
+  if (a === 127) return false;                           // loopback
+  if (a === 100 && b >= 64 && b <= 127) return false;    // CGNAT
+  if (a === 169 && b === 254) return false;              // link-local
+  if (a === 172 && b >= 16 && b <= 31) return false;     // RFC1918
+  if (a === 192 && b === 168) return false;              // RFC1918
+  if (a === 192 && b === 0) return false;                // IETF protocol, TEST-NET-1
+  if (a === 198 && (b === 18 || b === 19)) return false; // benchmarking
+  if (a === 198 && b === 51) return false;               // TEST-NET-2
+  if (a === 203 && b === 0) return false;                // TEST-NET-3
+  if (a >= 224) return false;                            // multicast, reserved, broadcast
+
+  return true;
+}
+
+/**
+ * Distinct blockable addresses in a page.
+ *
+ * The text is refanged first, because an indicator table writes 8.8.8[.]8 and
+ * the whole point of defanging is that it does not look like an address.
+ * Counted distinct, since a single address repeated across a table, a chart,
+ * and a paragraph is still one line in a block list.
+ */
+function blockableAddresses(text) {
+  const refanged = text.replace(/\[\.\]|\(\.\)|\{\.\}/g, '.');
+  const found = new Set();
+  for (const match of refanged.match(IPV4) || []) {
+    if (isBlockableIPv4(match)) found.add(match);
+  }
+  return found.size;
+}
+
+/**
+ * Fetches one article and counts the indicators in it.
+ *
+ * Scripts and styles are stripped first: a minified bundle is full of 32 and
+ * 64 character hex strings that look exactly like hashes and are not.
+ */
+async function scanArticle(url) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), CONFIG.articleScan.timeoutMs);
+
+  try {
+    const response = await fetch(url, {
+      signal: controller.signal,
+      headers: { 'user-agent': CONFIG.userAgent, accept: 'text/html,*/*' },
+      redirect: 'follow',
+    });
+    if (!response.ok) return null;
+
+    const html = await response.text();
+    if (html.length > CONFIG.articleScan.maxBytes) return null;
+
+    const text = html
+      .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+      .replace(/<style[\s\S]*?<\/style>/gi, ' ');
+
+    const count = (re) => (text.match(re) || []).length;
+
+    const hashes = count(INDICATOR_PATTERNS.sha256) + count(INDICATOR_PATTERNS.sha1) + count(INDICATOR_PATTERNS.md5);
+    const defanged = count(INDICATOR_PATTERNS.defanged);
+    const heading = count(INDICATOR_PATTERNS.heading) > 0;
+
+    // Distinct, public, non-reserved. Now that reserved ranges and version
+    // strings are excluded this is reliable enough to score — and it is the
+    // number that matters most in practice, because addresses are what gets
+    // copied out of a report and turned into a block.
+    const addresses = blockableAddresses(text);
+
+    const evidence = hashes + defanged + addresses + (heading ? 3 : 0);
+
+    return { v: SCAN_VERSION, hashes, defanged, addresses, heading, evidence };
+  } catch {
+    return null;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+/**
+ * Which kind an item is. First match wins; the last kind is the fallback.
+ *
+ * `hasIndicators` is the measured result of scanning the article, or the
+ * publisher-level guess when the scan was skipped or failed.
+ */
+function classify(title, summary, hasIndicators) {
   const both = `${title} ${summary}`;
 
   for (const kind of CONFIG.kinds) {
-    if (kind.fromIocSources && isIocSource) return kind.key;
+    if (kind.fromIocSources && hasIndicators) return kind.key;
     if (kind.match?.some((term) => matches(term, both))) return kind.key;
     if (!kind.match && !kind.fromIocSources) return kind.key;
   }
 
   return CONFIG.kinds[CONFIG.kinds.length - 1].key;
 }
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 /**
  * Stable id, derived from the article URL so the same story keeps the same id
@@ -563,7 +735,9 @@ async function main() {
           source: feed.name,
           published: valid ? published.toISOString() : new Date().toISOString(),
           summary,
-          kind: classify(item.title, summary, Boolean(feed.iocSource)),
+          // Classification is deferred until after the caps, so only the items
+          // that actually reach the page get their article fetched.
+          iocSource: Boolean(feed.iocSource),
           score: result.total,
           // Shown as pills on the page: why this item is here, in its own
           // words. Capped at three so the metadata line stays readable.
@@ -617,15 +791,62 @@ async function main() {
   // every DFIR Report and Red Canary item while keeping middling news. The
   // whole reason those feeds are on the list is that their write-ups are worth
   // more than the day's headlines.
-  const items = deduped
-    .slice(0, CONFIG.maxItems)
-    .sort((a, b) => new Date(b.published) - new Date(a.published));
+  const shortlist = deduped.slice(0, CONFIG.maxItems);
+
+  // Reuse the previous run's indicator counts. In a steady state almost every
+  // item is already known, so a run fetches only the genuinely new articles.
+  const previous = await readFile(OUT_FILE, 'utf8').catch(() => null);
+  const cache = new Map();
+  if (previous) {
+    try {
+      for (const old of JSON.parse(previous)) {
+        // Counts produced by an older scanner are discarded, not reused.
+        if (old.indicators?.v === SCAN_VERSION) {
+          cache.set(canonicalUrl(old.url), old.indicators);
+        }
+      }
+    } catch {
+      // A corrupt file is not worth failing over; it just means no cache.
+    }
+  }
+
+  let scanned = 0;
+  let cached = 0;
+  let failed = 0;
+
+  for (const item of shortlist) {
+    const key = canonicalUrl(item.url);
+    let indicators = cache.get(key) ?? null;
+
+    if (indicators) {
+      cached++;
+    } else if (CONFIG.articleScan.enabled) {
+      indicators = await scanArticle(item.url);
+      if (indicators) scanned++;
+      else failed++;
+      await sleep(CONFIG.articleScan.delayMs);
+    }
+
+    // Measured evidence when the scan worked; the publisher-level guess only
+    // when it did not, so a blocked or slow site still classifies sensibly.
+    const hasIndicators = indicators
+      ? indicators.evidence >= CONFIG.articleScan.minEvidence
+      : item.iocSource;
+
+    item.kind = classify(item.title, item.summary, hasIndicators);
+    item.indicators = indicators ?? null;
+    delete item.iocSource;
+  }
+
+  console.log(
+    `\narticles: ${scanned} scanned, ${cached} from cache, ${failed} unreadable (fell back to publisher)`
+  );
+
+  const items = shortlist.sort((a, b) => new Date(b.published) - new Date(a.published));
 
   // `generated` deliberately excluded from the file: it would change on every
   // run and produce a commit even when no story changed.
   const next = JSON.stringify(items, null, 2) + '\n';
-
-  const previous = await readFile(OUT_FILE, 'utf8').catch(() => null);
   await mkdir(dirname(OUT_FILE), { recursive: true });
   await writeFile(OUT_FILE, next);
 

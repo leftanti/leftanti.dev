@@ -37,7 +37,7 @@ export const INTEL_KINDS = [
     label: 'Indicators',
     colorVar: '--intel-ioc',
     blurb:
-      'Write-ups carrying indicators — hashes, domains, addresses, C2 infrastructure. The material a block list is built from.',
+      'Reports whose articles were checked and found to contain indicators. Counts are measured, not guessed: open a report, read it, take the addresses. Verify every one before it goes anywhere near a block list — a count is evidence a report is worth your time, not that an address is hostile.',
     // Publisher-level, not text-level: a DFIR Report post always ends in an
     // indicator table whether or not its RSS snippet says so.
     fromIocSources: true,

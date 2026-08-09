@@ -24,6 +24,30 @@ interface IntelItem {
   summary: string;
   kind: string;
   matched: string[];
+  indicators: {
+    v: number;
+    hashes: number;
+    defanged: number;
+    addresses: number;
+    heading: boolean;
+    evidence: number;
+  } | null;
+}
+
+/**
+ * How much there is to harvest, in one pill. Counts come from scanning the
+ * linked article, so this says what is actually in it rather than guessing
+ * from the publisher — which is the difference between a report worth opening
+ * for a block list and one that merely reads like it might be.
+ */
+function indicatorPill(indicators: IntelItem['indicators']): string | null {
+  if (!indicators) return null;
+  const parts: string[] = [];
+  // Addresses lead: they are the thing that gets copied out and blocked, so
+  // the count is what decides whether a report is worth opening today.
+  if (indicators.addresses > 0) parts.push(`${indicators.addresses} ip`);
+  if (indicators.hashes > 0) parts.push(`${indicators.hashes} hashes`);
+  return parts.length > 0 ? parts.join(' · ') : null;
 }
 
 interface Props {
@@ -57,7 +81,10 @@ function stamp(iso: string): string {
               description={item.summary}
               tags={[
                 { label: kind.label.toLowerCase(), href: `/intel/${kind.key}` },
-                ...item.matched.slice(0, 2).map((label) => ({ label })),
+                ...(indicatorPill(item.indicators)
+                  ? [{ label: indicatorPill(item.indicators)! }]
+                  : []),
+                ...item.matched.slice(0, 1).map((label) => ({ label })),
               ]}
               headingLevel={2}
               external={true}

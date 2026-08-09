@@ -183,6 +183,24 @@ const intel = defineCollection({
     /** Classification key from src/config/intel-kinds.mjs. Drives colour and filtering. */
     kind: z.string().min(1),
 
+    /**
+     * Measured indicator content of the linked article, or null when it could
+     * not be read. `evidence` is the weighted total the `ioc` classification
+     * is decided on; `addresses` is reported but never scored, since a version
+     * string is indistinguishable from an IPv4 by pattern.
+     */
+    indicators: z
+      .strictObject({
+        /** Scanner version. Stale counts are re-scanned rather than reused. */
+        v: z.number().int().positive(),
+        hashes: z.number().int().nonnegative(),
+        defanged: z.number().int().nonnegative(),
+        addresses: z.number().int().nonnegative(),
+        heading: z.boolean(),
+        evidence: z.number().int().nonnegative(),
+      })
+      .nullable(),
+
     /** What the filter scored it, kept so tuning can be reasoned about. */
     score: z.number(),
 
