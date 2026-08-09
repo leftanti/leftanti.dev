@@ -1,0 +1,29 @@
+/* ==========================================================================
+   fonts.css — self-hosted @font-face declarations.
+
+   The .woff2 files live in public/fonts/ and are committed to the repo.
+   They are copied out of the @fontsource-variable packages by:
+
+       npm run fonts
+
+   Nothing here reaches the network beyond this site's own origin. There is no
+   Google Fonts link, no CDN, and no external stylesheet anywhere on the site.
+   ========================================================================== */
+
+/* Mono — structure: section names, nav, metadata, code, the site mark. */
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 100 800;
+  font-display: swap;
+  src: url('/fonts/jetbrains-mono.woff2') format('woff2');
+}
+
+/* Sans — prose: entry titles and long-form body copy. */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/inter.woff2') format('woff2');
+}

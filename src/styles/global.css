@@ -1,0 +1,182 @@
+/* ==========================================================================
+   global.css — reset and base element styles.
+   Reads exclusively from theme.css. No literal colours or measurements here.
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* Keep the root at the browser's own font-size so rem values in theme.css
+     respect the reader's settings. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  min-height: 100vh;
+  /* Grey-on-near-black renders too heavy with subpixel AA. */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* --- Headings ----------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-sans);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--text);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
+h4 {
+  font-size: var(--fs-body);
+}
+
+/* --- Prose -------------------------------------------------------------- */
+
+p {
+  max-width: var(--measure);
+}
+
+/* --- Links -------------------------------------------------------------- */
+
+a {
+  color: inherit;
+  text-decoration-color: var(--border);
+  text-decoration-thickness: var(--underline-thickness);
+  text-underline-offset: var(--underline-offset);
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+/* --- Focus -------------------------------------------------------------- */
+
+:focus-visible {
+  outline: var(--focus-ring-width) solid var(--focus-ring-color);
+  outline-offset: var(--focus-ring-offset);
+  border-radius: var(--radius-pill);
+}
+
+::selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+/* --- Rules -------------------------------------------------------------- */
+
+hr {
+  border: 0;
+  border-top: var(--stroke) solid var(--border-faint);
+  margin-block: var(--space-2xl);
+}
+
+/* --- Inline code -------------------------------------------------------- */
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-mono);
+}
+
+/* --- Layout primitive --------------------------------------------------- */
+
+.shell {
+  width: 100%;
+  max-width: var(--layout-max);
+  margin-inline: auto;
+  padding-inline: var(--layout-pad-x);
+}
+
+@media (max-width: 34rem) {
+  .shell {
+    padding-inline: var(--layout-pad-x-narrow);
+  }
+}
+
+/* --- Screen-reader-only ------------------------------------------------- */
+
+.visually-hidden:not(:focus):not(:active) {
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+/* --- Motion ------------------------------------------------------------- */
+
+/* The blinking cursor is the only animation on the site; it still yields to
+   a reader who has asked for reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,113 @@
+---
+/**
+ * BaseLayout — the document shell for every page.
+ *
+ * Loads the three stylesheets in order (theme → fonts → global) and preloads
+ * the two self-hosted font files. Every request this page makes is to its own
+ * origin: no CDN, no Google Fonts, no analytics, no embeds.
+ */
+import '../styles/theme.css';
+import '../styles/fonts.css';
+import '../styles/global.css';
+
+import SiteHeader from '../components/SiteHeader.astro';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+
+const SITE_NAME = 'leftanti';
+const pageTitle = title === SITE_NAME ? title : `${title} — ${SITE_NAME}`;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preload" href="/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+
+    <meta name="color-scheme" content="dark" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="shell page">
+      <SiteHeader />
+      <main id="main" class="page__main">
+        <slot />
+      </main>
+      <footer class="page__footer">
+        <p class="page__footer-text">
+          <span aria-hidden="true">//</span> built and hosted from scratch. no trackers, no third-party
+          requests.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<style>
+  .page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .page__main {
+    flex: 1;
+    padding-block: var(--space-3xl);
+  }
+
+  .page__footer {
+    border-block-start: var(--stroke) solid var(--border-faint);
+    padding-block: var(--space-xl) var(--space-3xl);
+  }
+
+  .page__footer-text {
+    font-family: var(--font-mono);
+    font-size: var(--fs-tiny);
+    line-height: var(--lh-snug);
+    color: var(--text-comment);
+    max-width: var(--measure);
+  }
+
+  .skip-link {
+    position: absolute;
+    inset-block-start: var(--space-sm);
+    inset-inline-start: var(--space-sm);
+    z-index: 1;
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    color: var(--text);
+    background-color: var(--bg-raised);
+    border: var(--stroke) solid var(--border);
+    border-radius: var(--radius-block);
+    padding: var(--space-sm) var(--space-md);
+    text-decoration: none;
+    transform: translateY(-200%);
+  }
+
+  .skip-link:focus-visible {
+    transform: none;
+  }
+</style>

@@ -1,0 +1,90 @@
+---
+/**
+ * LogoMark — the site's logo. A left anti join, drawn literally.
+ *
+ *   ( ( ) )   two overlapping circles
+ *
+ * The LEFT circle is filled with the intersection cut away: the rows that have
+ * no match on the right, which is what a left anti join returns. The RIGHT
+ * circle is an unfilled outline — present as context, never selected.
+ *
+ * THIS IS THE ONLY PLACE THE MARK IS DRAWN. Never paste this SVG anywhere
+ * else; import the component. Header, favicon, and OG images are the mark's
+ * only appearances, and the latter two are hand-maintained copies because
+ * neither can read CSS (see public/favicon.svg).
+ *
+ * COLOUR
+ *   The filled shape is `fill="currentColor"`, so the mark takes the colour of
+ *   whatever contains it. SiteHeader sets that to the current section's hue,
+ *   falling back to --text on the home page and any page without a section.
+ *   The outline is always --comment-mark — it is chrome, not content.
+ *
+ * GEOMETRY
+ *   The cut-out is done with a clip path rather than a mask so that no colour
+ *   value — not even black and white — appears in this file. The clip path is
+ *   the whole viewBox with the right circle subtracted via `clip-rule="evenodd"`:
+ *   points inside both the box and the circle are crossed twice, so they fall
+ *   outside the clip.
+ *
+ *   The cut circle's radius is the outline's radius plus half its stroke, so
+ *   the fill stops exactly at the outer edge of the outline. The two shapes
+ *   meet with no overlap and no seam.
+ *
+ *   Circle centres are at x=7.75 and x=15.75 rather than round numbers so that
+ *   the drawn extent — which includes the outline's stroke on the right but
+ *   nothing on the left — sits centred in the 24×16 box.
+ */
+interface Props {
+  /**
+   * Accessible name. Omit when the mark sits next to a visible text label, as
+   * it does in the header — then it renders as decorative.
+   */
+  title?: string | undefined;
+  class?: string | undefined;
+}
+
+const { title, class: className } = Astro.props;
+
+// Document-unique: a page may render the mark more than once.
+const clipId = `anti-join-${crypto.randomUUID().slice(0, 8)}`;
+---
+
+<svg
+  class:list={['logo', className]}
+  viewBox="0 0 24 16"
+  xmlns="http://www.w3.org/2000/svg"
+  role={title ? 'img' : undefined}
+  aria-label={title}
+  aria-hidden={title ? undefined : 'true'}
+  focusable="false"
+>
+  <clipPath id={clipId} clipPathUnits="userSpaceOnUse">
+    <path
+      clip-rule="evenodd"
+      d="M0 0 H24 V16 H0 Z M22.25 8 A6.5 6.5 0 0 1 9.25 8 A6.5 6.5 0 0 1 22.25 8 Z"
+    ></path>
+  </clipPath>
+
+  <!-- Left table, minus the matches. This is the join. -->
+  <circle cx="7.75" cy="8" r="6" fill="currentColor" clip-path={`url(#${clipId})`}></circle>
+
+  <!-- Right table: outlined, never filled. -->
+  <circle
+    cx="15.75"
+    cy="8"
+    r="6"
+    fill="none"
+    stroke="var(--comment-mark)"
+    stroke-width="1"></circle>
+</svg>
+
+<style>
+  .logo {
+    display: block;
+    height: var(--logo-height);
+    /* The viewBox is 3:2 and height drives width, so the box never distorts. */
+    width: auto;
+    flex: none;
+    overflow: visible;
+  }
+</style>

@@ -1,0 +1,37 @@
+---
+/**
+ * TagPill — a hairline-outlined tag. Never filled, never coloured.
+ * Renders as a link when `href` is given, otherwise as plain text.
+ */
+interface Props {
+  label: string;
+  href?: string | undefined;
+}
+
+const { label, href } = Astro.props;
+const Element = href ? 'a' : 'span';
+---
+
+<Element class="pill" href={href}>{label}</Element>
+
+<style>
+  .pill {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: var(--fs-micro);
+    line-height: var(--lh-snug);
+    letter-spacing: var(--ls-wide);
+    color: var(--text-fainter);
+    background: none;
+    border: var(--hairline) solid var(--border);
+    border-radius: var(--radius-pill);
+    padding: var(--pill-pad-y) var(--pill-pad-x);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  a.pill:hover {
+    color: var(--text-dim);
+    border-color: var(--text-comment);
+  }
+</style>

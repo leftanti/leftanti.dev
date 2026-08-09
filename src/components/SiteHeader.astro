@@ -1,0 +1,175 @@
+---
+/**
+ * SiteHeader — the logo, the site mark, and the top nav.
+ *
+ * Section links carry their section's hue, and so does the logo on that
+ * section's pages. That plus the timeline's table name and pipe glyph are the
+ * only coloured things on any page. Utility links (resources, about) are
+ * chrome and stay neutral, as does the logo on pages with no section.
+ *
+ * All nav entries come from src/config/sections.ts. Never add a link here.
+ */
+import LogoMark from './LogoMark.astro';
+import { NAV_SECTIONS, UTILITY_NAV, normalisePath, sectionForPath } from '../config/sections';
+
+const path = normalisePath(Astro.url.pathname);
+const isCurrent = (route: string) => path === route || path.startsWith(`${route}/`);
+
+// Null on the home page and anywhere else without a section, which leaves the
+// logo on its --text fallback.
+const currentSection = sectionForPath(path);
+---
+
+<header class="masthead">
+  <a
+    class="mark"
+    href="/"
+    style={currentSection ? `--mark-color: var(${currentSection.colorVar});` : undefined}
+    aria-current={path === '/' ? 'page' : undefined}
+  >
+    <LogoMark />
+    <span class="mark__word"
+      ><span class="mark__path" aria-hidden="true">~/</span><span class="mark__name">leftanti</span
+      ><span class="mark__cursor" aria-hidden="true"></span></span
+    >
+  </a>
+
+  <nav class="nav" aria-label="Sections">
+    <ul class="nav__list" role="list">
+      {
+        NAV_SECTIONS.map((section) => (
+          <li>
+            <a
+              class="nav__link nav__link--section"
+              href={section.route}
+              style={`--section-color: var(${section.colorVar});`}
+              aria-current={isCurrent(section.route!) ? 'page' : undefined}
+            >
+              {section.navLabel}
+            </a>
+          </li>
+        ))
+      }
+      {
+        UTILITY_NAV.map((item) => (
+          <li>
+            <a
+              class="nav__link nav__link--utility"
+              href={item.route}
+              aria-current={isCurrent(item.route) ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .masthead {
+    display: flex;
+    flex-direction: column;
+    gap: var(--header-gap);
+    padding-block-start: var(--layout-pad-y);
+  }
+
+  /* --- Site mark -------------------------------------------------------- */
+
+  .mark {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--logo-gap);
+    text-decoration: none;
+
+    /* The logo's only colour source: its filled shape is `currentColor`, so
+       it takes this. --mark-color is set inline above on section pages;
+       everywhere else this falls through to --text. It has to live on the
+       anchor rather than on the SVG, because Astro scopes component styles
+       and a rule written here cannot reach inside LogoMark. The wordmark and
+       the cursor set their own colours, so this reaches the logo alone. */
+    color: var(--mark-color, var(--text));
+  }
+
+  .mark__word {
+    font-family: var(--font-mono);
+    font-size: var(--fs-mark);
+    font-weight: var(--fw-medium);
+    line-height: var(--lh-flat);
+    letter-spacing: var(--ls-normal);
+  }
+
+  .mark__path {
+    color: var(--text-fainter);
+  }
+
+  .mark__name {
+    color: var(--text);
+  }
+
+  /* The single blinking block cursor — the only animation on the site. */
+  .mark__cursor {
+    display: inline-block;
+    width: var(--cursor-width);
+    height: var(--cursor-height);
+    margin-inline-start: var(--space-3xs);
+    vertical-align: text-bottom;
+    background-color: var(--cursor-color);
+    animation: cursor-blink var(--cursor-blink-duration) step-end infinite;
+  }
+
+  @keyframes cursor-blink {
+    0%,
+    50% {
+      opacity: 1;
+    }
+    50.01%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mark__cursor {
+      animation: none;
+      opacity: 1;
+    }
+  }
+
+  /* --- Nav -------------------------------------------------------------- */
+
+  .nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--nav-gap);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav__link {
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    line-height: var(--lh-snug);
+    letter-spacing: var(--ls-wide);
+    text-decoration: none;
+  }
+
+  .nav__link--section {
+    color: var(--section-color);
+  }
+
+  .nav__link--utility {
+    color: var(--text-dim);
+  }
+
+  .nav__link:hover,
+  .nav__link[aria-current='page'] {
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    text-decoration-thickness: var(--underline-thickness);
+    text-underline-offset: var(--nav-underline-offset);
+  }
+</style>

@@ -1,0 +1,97 @@
+---
+/**
+ * Home — the unified timeline. There is no blog section; this is it.
+ *
+ * STAGE 1: the entries below are hardcoded placeholders that exist purely to
+ * show the theme across several sections and several shapes of metadata.
+ * Stage 2 replaces PLACEHOLDER_ITEMS with a merge of every content collection
+ * whose schema has a date. The rest of this page stays as it is.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Timeline from '../components/Timeline.astro';
+import { byDateDesc, type TimelineItem } from '../lib/timeline';
+
+const INTRO =
+  'Detection engineering, KQL, and threat hunting notes for Microsoft Sentinel and Defender. Everything here is written to be copied, adapted, and tuned against your own data.';
+
+const PLACEHOLDER_ITEMS: TimelineItem[] = [
+  {
+    section: 'kql',
+    title: 'Detecting OAuth device code phishing',
+    href: '/kql/oauth-device-code-phishing',
+    date: new Date('2026-08-04'),
+    tags: [
+      { label: 'SigninLogs', href: '/tags/signinlogs' },
+      { label: 'T1528', href: '/tags/t1528' },
+    ],
+  },
+  {
+    section: 'rules',
+    title: 'Impossible travel that survives contact with a VPN estate',
+    href: '/rules/impossible-travel-watchlist-suppression',
+    date: new Date('2026-07-28'),
+    tags: [
+      { label: 'SigninLogs', href: '/tags/signinlogs' },
+      { label: 'T1078', href: '/tags/t1078' },
+      { label: 'medium', href: '/tags/medium' },
+    ],
+  },
+  {
+    section: 'hunting',
+    title: 'Where persistence hides in Entra app registrations',
+    href: '/hunting/entra-app-registration-persistence',
+    date: new Date('2026-07-19'),
+    tags: [
+      { label: 'AuditLogs', href: '/tags/auditlogs' },
+      { label: 'T1098', href: '/tags/t1098' },
+    ],
+  },
+  {
+    // No data table, no ATT&CK technique — a cheat sheet has neither, and the
+    // component renders only what it is given.
+    section: 'cheatsheets',
+    title: 'BTL2 — network forensics reference',
+    href: '/cheatsheets/btl2-network-forensics',
+    date: new Date('2026-07-06'),
+    tags: [{ label: 'BTL2', href: '/tags/btl2' }],
+  },
+  {
+    // No tags at all — the metadata line is just the date.
+    section: 'notes',
+    title: 'Why I stopped writing 500-line analytics rules',
+    href: '/notes/against-long-analytics-rules',
+    date: new Date('2026-06-22'),
+  },
+];
+
+const items = [...PLACEHOLDER_ITEMS].sort(byDateDesc);
+---
+
+<BaseLayout title="leftanti" description={INTRO}>
+  <h1 class="visually-hidden">leftanti — detection engineering notes</h1>
+
+  <p class="intro">{INTRO}</p>
+
+  <p class="timeline-label"><span aria-hidden="true">//</span> everything, newest first</p>
+
+  <Timeline items={items} headingLevel={2} />
+</BaseLayout>
+
+<style>
+  .intro {
+    max-width: var(--measure);
+    font-family: var(--font-sans);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--text-dim);
+    margin-block-end: var(--space-3xl);
+  }
+
+  .timeline-label {
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    line-height: var(--lh-snug);
+    color: var(--text-comment);
+    margin-block-end: var(--space-xl);
+  }
+</style>

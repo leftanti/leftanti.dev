@@ -1,0 +1,166 @@
+---
+/**
+ * TimelineEntry — the site's signature component.
+ *
+ * Renders one entry as a miniature KQL query. The section name sits where a
+ * Sentinel table name would go, the title is piped off it, and the metadata is
+ * a commented-out pipe stage below:
+ *
+ *   KqlLibrary
+ *   | Detecting OAuth device code phishing
+ *   //| 2026-08-04  [SigninLogs] [T1528]
+ *
+ * ALIGNMENT (the part that breaks if you touch it carelessly):
+ * the `|` line and the `//|` line both start at the same left edge. `//`
+ * occupies the first two character cells, so the comment line's pipe lands
+ * exactly two glyphs right of the title line's pipe — the same shift you get
+ * when you comment a line out in an editor. This only holds while every glyph
+ * on both lines shares --font-mono and --fs-pipe. Do not give the `//` or
+ * either `|` its own font-size.
+ *
+ * Every metadata field is optional. Rows and pills are omitted entirely when
+ * the entry has no value for them; nothing renders empty.
+ */
+import { getSection } from '../config/sections';
+import { formatDate, type TimelineItem } from '../lib/timeline';
+import TagPill from './TagPill.astro';
+
+interface Props extends TimelineItem {
+  /** Heading level for the title, so page heading hierarchy stays correct. */
+  headingLevel?: 2 | 3;
+}
+
+const { section: sectionKey, title, href, date, tags = [], headingLevel = 2 } = Astro.props;
+
+const section = getSection(sectionKey);
+const Heading = `h${headingLevel}` as 'h2' | 'h3';
+const hasMeta = Boolean(date) || tags.length > 0;
+---
+
+<article class="entry" style={`--section-color: var(${section.colorVar});`}>
+  <p class="entry__table">{section.name}</p>
+
+  <Heading class="entry__row">
+    <span class="glyph glyph--pipe" aria-hidden="true">|</span>
+    <a class="entry__title" href={href}>{title}</a>
+  </Heading>
+
+  {
+    hasMeta && (
+      <p class="entry__row entry__row--comment">
+        <span class="glyph glyph--mark" aria-hidden="true">//</span>
+        <span class="glyph glyph--pipe-comment" aria-hidden="true">|</span>
+        <span class="entry__meta">
+          {date && <time class="entry__date" datetime={date.toISOString()}>{formatDate(date)}</time>}
+          {tags.length > 0 && (
+            <span class="entry__tags">
+              {tags.map((tag) => (
+                <TagPill label={tag.label} href={tag.href} />
+              ))}
+            </span>
+          )}
+        </span>
+      </p>
+    )
+  }
+</article>
+
+<style>
+  .entry {
+    display: flex;
+    flex-direction: column;
+    gap: var(--timeline-line-gap);
+  }
+
+  /* --- Line 1: the table name ------------------------------------------ */
+
+  .entry__table {
+    font-family: var(--font-mono);
+    font-size: var(--fs-mark);
+    font-weight: var(--fw-medium);
+    line-height: var(--lh-snug);
+    letter-spacing: var(--ls-normal);
+    color: var(--section-color);
+    max-width: none;
+  }
+
+  /* --- Lines 2 and 3: the pipe stages ---------------------------------- */
+
+  .entry__row {
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+    max-width: none;
+  }
+
+  /* Every glyph in the gutter shares one font and one size. That is what
+     keeps the two pipes exactly two character cells apart. */
+  .glyph {
+    flex: none;
+    font-family: var(--font-mono);
+    font-size: var(--fs-pipe);
+    font-weight: var(--fw-normal);
+    line-height: var(--lh-snug);
+    user-select: none;
+  }
+
+  .glyph--pipe {
+    color: var(--section-color);
+  }
+
+  .glyph--mark {
+    color: var(--comment-mark);
+  }
+
+  .glyph--pipe-comment {
+    color: var(--pipe-comment);
+  }
+
+  /* --- The content that follows each pipe ------------------------------ */
+
+  /* Identical offset on both rows, so the text columns stay a clean two
+     cells apart rather than drifting. */
+  .entry__title,
+  .entry__meta {
+    margin-inline-start: var(--timeline-pipe-gap);
+  }
+
+  .entry__title {
+    font-family: var(--font-sans);
+    font-size: var(--fs-title);
+    font-weight: var(--fw-medium);
+    line-height: var(--lh-tight);
+    letter-spacing: var(--ls-tight);
+    color: var(--text);
+    text-decoration: none;
+    text-wrap: pretty;
+  }
+
+  .entry__title:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--text-comment);
+    text-decoration-thickness: var(--underline-thickness);
+    text-underline-offset: var(--underline-offset);
+  }
+
+  .entry__meta {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: var(--timeline-meta-gap);
+  }
+
+  .entry__date {
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    line-height: var(--lh-snug);
+    color: var(--text-comment);
+    white-space: nowrap;
+  }
+
+  .entry__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--pill-gap);
+  }
+</style>

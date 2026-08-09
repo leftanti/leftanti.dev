@@ -1,0 +1,225 @@
+/* ==========================================================================
+   theme.css — the only file with literal colour, size, and spacing values.
+   ==========================================================================
+
+   Everything visual on leftanti.dev is tuned from here. No other file in the
+   codebase contains a hex colour or a raw px/rem measurement; components read
+   these custom properties and nothing else.
+
+   Sizes are in rem so they scale with the browser's font-size setting.
+   1rem = 16px by default, and the px equivalent is noted after each value.
+   Floor for anything readable is 0.625rem / 10px — do not go below it.
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------
+     1. CHROME COLOUR
+     Neutral, near-black, faintly green. This is everything that is not a
+     content section: backgrounds, rules, and the four tiers of text.
+     ------------------------------------------------------------------ */
+
+  --bg: #0f100f;              /* page background                          */
+  --bg-raised: #141615;       /* cards, wells, anything lifted off --bg   */
+  --border: #262927;          /* visible dividers                         */
+  --border-faint: #1f2220;    /* barely-there dividers                    */
+
+  --text: #eceeed;            /* primary reading text, entry titles       */
+  --text-dim: #8a918e;        /* secondary text, neutral nav links        */
+  --text-fainter: #6b726f;    /* tag pill text, tertiary labels           */
+  --text-comment: #565c59;    /* metadata dates — "commented out" text    */
+  --comment-mark: #3f4441;    /* the `//` glyphs specifically             */
+  --pipe-comment: #4a504d;    /* the `|` on a commented metadata line     */
+
+  /* ------------------------------------------------------------------
+     2. BRAND
+     The one green that represents the site from the outside: favicon,
+     apple-touch-icon, OG images. Anywhere the site is shown somewhere
+     that cannot read this file, the value below is what gets copied.
+
+     It is the same green as --section-kql on purpose — KQL is the house
+     speciality — but the two are kept as separate values so tuning the
+     KQL section hue does not silently change the brand. Change this and
+     you must retune public/favicon.svg by hand; nothing else can.
+     ------------------------------------------------------------------ */
+
+  --brand: #6fae94;
+
+  /* ------------------------------------------------------------------
+     3. SECTION COLOUR
+     One muted hue per content section. A section's hue appears in exactly
+     three places: its name in the timeline, its `|` pipe glyph, and its
+     nav link — plus the header mark on that section's pages. Nothing else
+     on the page is ever coloured.
+
+     Adding a section: add the variable here, then add the entry in
+     src/config/sections.ts. Templates never name a colour directly.
+     ------------------------------------------------------------------ */
+
+  --section-kql: #6fae94;          /* KqlLibrary      — green (see --brand) */
+  --section-hunting: #c08a5e;      /* ThreatHunting   — amber   */
+  --section-rules: #b07f9c;        /* AnalyticsRules  — mauve   */
+  --section-cheatsheets: #7ea3c4;  /* CheatSheets     — blue    */
+  --section-intel: #a09a8c;        /* IntelDigest     — sand    */
+  --section-posts: #8a918e;        /* Notes           — grey    */
+
+  /* ------------------------------------------------------------------
+     4. CODE BLOCK PALETTE
+     Deliberately cool and near-monochrome so syntax highlighting never
+     competes with the section hues above. Wired to Shiki in a later stage.
+     ------------------------------------------------------------------ */
+
+  --code-bg: #101315;
+  --code-border: #1c2124;
+  --code-text: #c4ccd1;
+  --code-comment: #59636a;
+  --code-keyword: #93a9c4;
+  --code-string: #a7b4bd;
+  --code-number: #b2bac1;
+  --code-function: #bcc6cf;
+  --code-operator: #7f8b93;
+  --code-punctuation: #6e787f;
+
+  /* ------------------------------------------------------------------
+     5. TYPEFACES
+     Mono carries the structure: section names, nav, metadata, code, the
+     site mark. Sans carries the prose: entry titles and body copy.
+     Both are self-hosted from /public/fonts — no external requests.
+     ------------------------------------------------------------------ */
+
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas,
+    "DejaVu Sans Mono", monospace;
+  --font-sans: "Inter", ui-sans-serif, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+
+  /* ------------------------------------------------------------------
+     6. TYPE SCALE
+     ------------------------------------------------------------------ */
+
+  --fs-nano: 0.625rem;        /* 10px — hard floor, nothing smaller       */
+  --fs-micro: 0.6875rem;      /* 11px — tag pills                         */
+  --fs-tiny: 0.75rem;         /* 12px — captions                          */
+  --fs-meta: 0.8125rem;       /* 13px — nav, dates, pipe glyphs           */
+  --fs-mark: 0.875rem;        /* 14px — site mark, section names          */
+  --fs-body: 1rem;            /* 16px — body copy                         */
+  --fs-title: 1.0625rem;      /* 17px — entry titles in the timeline      */
+  --fs-h3: 1.125rem;          /* 18px                                     */
+  --fs-h2: 1.3125rem;         /* 21px                                     */
+  --fs-h1: 1.625rem;          /* 26px                                     */
+
+  /* The pipe glyph size. The `|` on the title line and the `|` on the
+     metadata line MUST share this value or the two-cell offset breaks. */
+  --fs-pipe: var(--fs-meta);
+
+  --fw-normal: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  --lh-flat: 1;               /* single glyphs, pipes                     */
+  --lh-tight: 1.35;           /* headings, timeline titles                */
+  --lh-snug: 1.5;             /* metadata rows, nav                       */
+  --lh-body: 1.7;             /* long-form prose                          */
+
+  --ls-tight: -0.01em;        /* sans headings                            */
+  --ls-normal: 0;
+  --ls-wide: 0.02em;          /* small mono labels                        */
+
+  /* ------------------------------------------------------------------
+     7. SPACING SCALE
+     ------------------------------------------------------------------ */
+
+  --space-3xs: 0.125rem;      /*  2px */
+  --space-2xs: 0.25rem;       /*  4px */
+  --space-xs: 0.375rem;       /*  6px */
+  --space-sm: 0.5rem;         /*  8px */
+  --space-md: 0.75rem;        /* 12px */
+  --space-lg: 1rem;           /* 16px */
+  --space-xl: 1.5rem;         /* 24px */
+  --space-2xl: 2rem;          /* 32px */
+  --space-3xl: 3rem;          /* 48px */
+  --space-4xl: 4rem;          /* 64px */
+  --space-5xl: 6rem;          /* 96px */
+
+  /* ------------------------------------------------------------------
+     8. LAYOUT
+     ------------------------------------------------------------------ */
+
+  --measure: 70ch;            /* max width of long-form prose             */
+  --layout-max: 48rem;        /* 768px — outer content column             */
+  --layout-pad-x: 1.5rem;     /* 24px — gutter on wide screens            */
+  --layout-pad-x-narrow: 1rem;/* 16px — gutter on phones                  */
+  --layout-pad-y: 2.5rem;     /* 40px — space above the header            */
+
+  --bp-narrow: 34rem;         /* 544px — single breakpoint for the site   */
+
+  /* ------------------------------------------------------------------
+     9. BORDERS, RADII, RULES
+     ------------------------------------------------------------------ */
+
+  --hairline: 0.5px;          /* tag pill outline — deliberately sub-pixel */
+  --stroke: 1px;              /* normal borders and dividers               */
+  --radius-pill: 3px;
+  --radius-block: 4px;
+
+  /* ------------------------------------------------------------------
+     10. TIMELINE — the site's signature component
+     ------------------------------------------------------------------ */
+
+  --timeline-entry-gap: 1.75rem;  /* 28px — vertical rhythm between entries */
+  --timeline-line-gap: 0.1875rem; /*  3px — between the three stacked lines */
+
+  /* Distance from a pipe glyph to the text that follows it. Applied
+     identically on the title line and the metadata line, so the text
+     columns stay a consistent two cells apart. Roughly one mono cell. */
+  --timeline-pipe-gap: 0.5rem;
+
+  /* Gap between the date and the first tag pill. */
+  --timeline-meta-gap: 0.625rem;
+
+  /* ------------------------------------------------------------------
+     11. TAG PILLS
+     Hairline outline, no fill, ever.
+     ------------------------------------------------------------------ */
+
+  --pill-pad-x: 0.375rem;     /* 6px */
+  --pill-pad-y: 0.0625rem;    /* 1px */
+  --pill-gap: 0.3125rem;      /* 5px between adjacent pills */
+
+  /* ------------------------------------------------------------------
+     12. HEADER AND NAV
+     ------------------------------------------------------------------ */
+
+  --header-gap: 1.25rem;      /* 20px between the mark and the nav      */
+  --nav-gap: 1.125rem;        /* 18px between nav links                 */
+  --nav-underline-offset: 0.25rem;
+
+  /* The logo. Its viewBox is 3:2, so height drives width. Kept a shade
+     taller than --fs-mark so the circles read as tall as the wordmark's
+     ascenders rather than its x-height. */
+  --logo-height: 1rem;        /* 16px tall → 24px wide                  */
+  --logo-gap: 0.5rem;         /*  8px between the logo and the wordmark */
+
+  /* ------------------------------------------------------------------
+     13. FOCUS AND INTERACTION
+     Focus must always be visible — it is part of the contract, not decoration.
+     ------------------------------------------------------------------ */
+
+  --focus-ring-color: var(--text);
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 3px;
+
+  --selection-bg: #2a2f2c;
+  --selection-text: var(--text);
+
+  --underline-offset: 0.15em;
+  --underline-thickness: 1px;
+
+  /* ------------------------------------------------------------------
+     14. THE CURSOR
+     The only animation permitted anywhere on the site.
+     ------------------------------------------------------------------ */
+
+  --cursor-width: 0.5em;
+  --cursor-height: 1.05em;
+  --cursor-color: var(--text-dim);
+  --cursor-blink-duration: 1.2s;
+}
