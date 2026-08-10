@@ -1,5 +1,71 @@
 [
   {
+    "id": "69c185128b03",
+    "title": "New StormEncryptor ransomware used by former Medusa affiliate",
+    "url": "https://www.bleepingcomputer.com/news/security/new-stormencryptor-ransomware-used-by-former-medusa-affiliate/",
+    "source": "BleepingComputer",
+    "published": "2026-08-10T17:42:00.000Z",
+    "summary": "A financially motivated threat actor previously associated with the Medusa ransomware operation is now deploying a new ransomware strain called StormEncryptor. [...]",
+    "score": 10,
+    "matched": [
+      "threat actor",
+      "affiliate",
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "76122533065e",
+    "title": "China-Linked Hackers Deploy New StormEncryptor Ransomware, Likely via N-central Flaw",
+    "url": "https://thehackernews.com/2026/08/china-linked-hackers-deploy-new.html",
+    "source": "The Hacker News",
+    "published": "2026-08-10T16:38:37.000Z",
+    "summary": "Microsoft has disclosed that Storm-1175, a financially motivated threat actor linked to China, has deployed a previously undocumented ransomware strain called StormEncryptor. The use of StormEncryptor marks a shift from…",
+    "score": 10,
+    "matched": [
+      "threat actor",
+      "ransomware"
+    ],
+    "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "5410ff3c840f",
+    "title": "DeadLock ransomware: Breaking down a Rust-based encryptor with decentralized recovery infrastructure",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/08/10/deadlock-ransomware-breaking-down-a-rust-based-encryptor-with-decentralized-recovery-infrastructure/",
+    "source": "Microsoft Security",
+    "published": "2026-08-10T15:00:00.000Z",
+    "summary": "Microsoft Threat Intelligence examines DeadLock ransomware, an emerging financially motivated operation distinguished by its use of decentralized infrastructure to support victim communications, negotiations, and data…",
+    "score": 6,
+    "matched": [
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 7,
+      "defanged": 11,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 22
+    }
+  },
+  {
     "id": "388fd0baa20e",
     "title": "CISA: SonicWall SMA1000 flaws now exploited by ransomware gangs",
     "url": "https://www.bleepingcomputer.com/news/security/cisa-sonicwall-sma1000-flaws-now-exploited-by-ransomware-gangs/",
@@ -18,6 +84,27 @@
       "addresses": 1,
       "heading": false,
       "evidence": 3
+    }
+  },
+  {
+    "id": "47a4afa26530",
+    "title": "#StopRansomware: Gunra Ransomware",
+    "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-222a",
+    "source": "CISA",
+    "published": "2026-08-10T12:00:00.000Z",
+    "summary": "Advisory at a Glance Title #StopRansomware: Gunra Ransomware Original Publication August 10, 2026 Executive Summary Gunra is a ransomware-as-a-service (RaaS) used by affiliates to target government, critical…",
+    "score": 6,
+    "matched": [
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 8,
+      "defanged": 25,
+      "addresses": 17,
+      "heading": true,
+      "evidence": 53
     }
   },
   {
@@ -221,72 +308,6 @@
     }
   },
   {
-    "id": "68c2af062da5",
-    "title": "ClickFix attack pushes macOS infostealer for crypto theft attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/clickfix-attack-pushes-macos-infostealer-for-crypto-theft-attacks/",
-    "source": "BleepingComputer",
-    "published": "2026-08-06T22:37:17.000Z",
-    "summary": "A Go-based malware delivered in ClickFix attacks targeting macOS users is stealing cryptocurrency assets, browser-stored passwords, Apple Keychain data, and cached credentials. [...]",
-    "score": 8,
-    "matched": [
-      "malware",
-      "infostealer",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
-    "id": "f02ebc568bdd",
-    "title": "Ransomware Moves up the Org Chart: Managers Are Prime Targets",
-    "url": "https://www.zscaler.com/blogs/security-research/ransomware-moves-org-chart-managers-are-prime-targets",
-    "source": "Zscaler ThreatLabz",
-    "published": "2026-08-06T13:50:10.000Z",
-    "summary": "When a ransomware attack makes headlines, attention usually turns to the organization that was breached, the systems encrypted, data stolen, and disruption or ransom demand that followed. Less, if anything, is revealed…",
-    "score": 6,
-    "matched": [
-      "breached",
-      "ransomware"
-    ],
-    "kind": "other",
-    "indicators": {
-      "v": 2,
-      "hashes": 1,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 2
-    }
-  },
-  {
-    "id": "e0232f32abe2",
-    "title": "Ransom Cartel Creator Gets 16 Years in Prison for Operating Ransomware-as-a-Service",
-    "url": "https://thehackernews.com/2026/08/ransom-cartel-creator-gets-16-years-in.html",
-    "source": "The Hacker News",
-    "published": "2026-08-06T07:19:54.000Z",
-    "summary": "A federal judge in Alexandria, Virginia, sentenced Maksim Silnikau to 16 years in prison on August 5 for creating and running Ransom Cartel, the ransomware-as-a-service operation he stood up in 2021. Between 2021 and…",
-    "score": 6,
-    "matched": [
-      "ransomware"
-    ],
-    "kind": "other",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
     "id": "98c630944da4",
     "title": "Over 250 ClickFix Domains Use Browser Fingerprinting to Hide macOS Malware Lures",
     "url": "https://thehackernews.com/2026/08/over-250-clickfix-domains-use-browser.html",
@@ -340,29 +361,6 @@
     "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-63077 JetBrains TeamCity Deserialization of Untrusted Data Vulnerability…",
     "score": 10,
     "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "cadf3defd1a8",
-    "title": "CISA Flags Langflow RCE, Tomcat, and N-central Flaws as Actively Exploited",
-    "url": "https://thehackernews.com/2026/08/cisa-flags-langflow-rce-tomcat-and-n.html",
-    "source": "The Hacker News",
-    "published": "2026-08-05T07:40:39.000Z",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA), on August 5, 2026, added three flaws to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation in the wild. The list…",
-    "score": 18,
-    "matched": [
-      "actively exploited",
-      "in the wild",
       "known exploited"
     ],
     "kind": "exploited",
