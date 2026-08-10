@@ -1,5 +1,27 @@
 [
   {
+    "id": "5a71a6b25d74",
+    "title": "Critical Progress LoadMaster flaw now actively exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-progress-loadmaster-flaw-exploited-in-attacks/",
+    "source": "BleepingComputer",
+    "published": "2026-08-10T09:49:37.000Z",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) warned that hackers are exploiting a critical-severity Progress Kemp LoadMaster command injection vulnerability. [...]",
+    "score": 10,
+    "matched": [
+      "actively exploited",
+      "exploited in"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 4,
+      "heading": false,
+      "evidence": 6
+    }
+  },
+  {
     "id": "bb61cbf6cb78",
     "title": "Metabase Zero-Day Exploited in Wild Allows Admin Access Without Authentication",
     "url": "https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html",
@@ -614,27 +636,6 @@
       "addresses": 2,
       "heading": false,
       "evidence": 27
-    }
-  },
-  {
-    "id": "c8eaf1b464ec",
-    "title": "HelloNet campaign: new malicious modules launched through the ViPNet update system",
-    "url": "https://securelist.com/tr/hellonet-vipnet/120700/",
-    "source": "Securelist",
-    "published": "2026-07-16T13:05:56.000Z",
-    "summary": "We identified targeted infection attempts against large Russian organizations using the ViPNet update system (a software suite for creating secure networks).",
-    "score": 8,
-    "matched": [
-      "campaign"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 18,
-      "defanged": 4,
-      "addresses": 4,
-      "heading": true,
-      "evidence": 29
     }
   },
   {
