@@ -5,7 +5,7 @@ description: Groups failed Entra sign-ins by source address and application to s
 tags: [entra, identity, password-spray]
 dataTable: SigninLogs
 technique: T1110.003
-draft: true
+draft: flase
 ---
 
 Password spraying looks nothing like brute force in the logs. Brute force is many

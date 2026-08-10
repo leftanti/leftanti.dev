@@ -4,7 +4,7 @@ date: 2026-07-06
 description: Ports, protocol tells, and the Wireshark and tcpdump filters worth having in muscle memory for the network forensics section of BTL2.
 tags: [btl2, network, wireshark, pcap]
 cert: BTL2
-draft: true
+draft: false
 ---
 
 Recall material, not a tutorial. Everything here is standard protocol behaviour.
