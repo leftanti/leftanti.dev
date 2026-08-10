@@ -1,5 +1,26 @@
 [
   {
+    "id": "388fd0baa20e",
+    "title": "CISA: SonicWall SMA1000 flaws now exploited by ransomware gangs",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-sonicwall-sma1000-flaws-now-exploited-by-ransomware-gangs/",
+    "source": "BleepingComputer",
+    "published": "2026-08-10T14:34:32.000Z",
+    "summary": "CISA has confirmed that ransomware gangs have begun exploiting two recently patched SonicWall SMA1000 vulnerabilities, including a maximum-severity server-side request forgery (SSRF) flaw. [...]",
+    "score": 6,
+    "matched": [
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
     "id": "5a71a6b25d74",
     "title": "Critical Progress LoadMaster flaw now actively exploited in attacks",
     "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-progress-loadmaster-flaw-exploited-in-attacks/",
@@ -352,28 +373,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "361feaf14309",
-    "title": "QuickFox Supply Chain Attack Delivers FDMTP Backdoor via Trojanized Windows Installer",
-    "url": "https://thehackernews.com/2026/08/quickfox-supply-chain-attack-delivers.html",
-    "source": "The Hacker News",
-    "published": "2026-08-05T05:47:19.000Z",
-    "summary": "Cybersecurity researchers have disclosed what has been described as a \"long-standing supply chain attack\" on QuickFox, a virtual private network (VPN) and network acceleration tool designed for overseas Chinese users.…",
-    "score": 12,
-    "matched": [
-      "backdoor",
-      "supply chain"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 2,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
     }
   },
   {
