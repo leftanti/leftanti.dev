@@ -5,7 +5,7 @@ description: A hunt for credentials quietly added to existing service principals
 tags: [entra, persistence, service-principals]
 dataTable: AuditLogs
 technique: T1098.001
-draft: flase
+draft: false
 ---
 
 Resetting a compromised account's password feels like closure. It is not, if the

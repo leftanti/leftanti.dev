@@ -3,7 +3,7 @@ title: Why I stopped writing 500-line analytics rules
 date: 2026-06-22
 description: Long detections feel thorough and behave badly. What actually goes wrong when one rule tries to cover six behaviours, and what to do instead.
 tags: [detection-engineering, opinion]
-draft: flase
+draft: false
 ---
 
 There is a stage in detection engineering where the obvious move is to make the

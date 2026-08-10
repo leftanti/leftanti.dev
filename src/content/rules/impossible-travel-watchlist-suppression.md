@@ -6,7 +6,7 @@ tags: [entra, identity, watchlists, false-positives]
 dataTable: SigninLogs
 technique: T1078.004
 severity: medium
-draft: flase
+draft: false
 ---
 
 Every impossible-travel detection works on day one and drowns by week two. The
