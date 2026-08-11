@@ -1,5 +1,71 @@
 [
   {
+    "id": "30ec4f4434e6",
+    "title": "Microsoft August 2026 Patch Tuesday fixes 400 flaws, 3 zero-days",
+    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/",
+    "source": "BleepingComputer",
+    "published": "2026-08-11T18:08:50.000Z",
+    "summary": "Today is Microsoft's August 2026 Patch Tuesday, and with it comes security updates for a massive 400 flaws, including one actively exploited and two publicly disclosed zero-day vulnerabilities. [...]",
+    "score": 8,
+    "matched": [
+      "actively exploited",
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "870dff2b21df",
+    "title": "Shattering the Dream – When a Job Offer Becomes a Zero-Day Attack",
+    "url": "https://research.checkpoint.com/2026/shattering-the-dream-when-a-job-offer-becomes-a-zero-day-attack/",
+    "source": "Check Point Research",
+    "published": "2026-08-11T17:30:00.000Z",
+    "summary": "Key Points Introduction Since early 2026, Check Point Research has tracked a wave of the Operation Dream Job campaign. This wave primarily targeted the defense sector worldwide, with a particular emphasis on companies…",
+    "score": 10,
+    "matched": [
+      "zero-day",
+      "campaign"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 41,
+      "defanged": 5,
+      "addresses": 2,
+      "heading": false,
+      "evidence": 48
+    }
+  },
+  {
+    "id": "cfe1a7d09642",
+    "title": "DeadLock Ransomware Uses Polygon Smart Contracts to Make Extortion Infra Harder to Disrupt",
+    "url": "https://thehackernews.com/2026/08/deadlock-ransomware-uses-polygon-smart.html",
+    "source": "The Hacker News",
+    "published": "2026-08-11T16:35:27.000Z",
+    "summary": "The ransomware group known as DeadLock has been observed using decentralized infrastructure to facilitate victim communications and data leak operations in a bid to improve operational resilience. \"Its recovery…",
+    "score": 6,
+    "matched": [
+      "extortion",
+      "ransomware"
+    ],
+    "kind": "other",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 1,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 2
+    }
+  },
+  {
     "id": "bccd5e20a2e2",
     "title": "CISA: Microsoft SharePoint flaw now exploited in ransomware attacks",
     "url": "https://www.bleepingcomputer.com/news/security/cisa-microsoft-sharepoint-flaw-now-exploited-in-ransomware-attacks/",
@@ -109,29 +175,6 @@
     }
   },
   {
-    "id": "69c185128b03",
-    "title": "New StormEncryptor ransomware used by former Medusa affiliate",
-    "url": "https://www.bleepingcomputer.com/news/security/new-stormencryptor-ransomware-used-by-former-medusa-affiliate/",
-    "source": "BleepingComputer",
-    "published": "2026-08-10T17:42:00.000Z",
-    "summary": "A financially motivated threat actor previously associated with the Medusa ransomware operation is now deploying a new ransomware strain called StormEncryptor. [...]",
-    "score": 10,
-    "matched": [
-      "threat actor",
-      "affiliate",
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
     "id": "76122533065e",
     "title": "China-Linked Hackers Deploy New StormEncryptor Ransomware, Likely via N-central Flaw",
     "url": "https://thehackernews.com/2026/08/china-linked-hackers-deploy-new.html",
@@ -172,27 +215,6 @@
       "addresses": 1,
       "heading": true,
       "evidence": 22
-    }
-  },
-  {
-    "id": "388fd0baa20e",
-    "title": "CISA: SonicWall SMA1000 flaws now exploited by ransomware gangs",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-sonicwall-sma1000-flaws-now-exploited-by-ransomware-gangs/",
-    "source": "BleepingComputer",
-    "published": "2026-08-10T14:34:32.000Z",
-    "summary": "CISA has confirmed that ransomware gangs have begun exploiting two recently patched SonicWall SMA1000 vulnerabilities, including a maximum-severity server-side request forgery (SSRF) flaw. [...]",
-    "score": 6,
-    "matched": [
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
     }
   },
   {
@@ -327,28 +349,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "98c630944da4",
-    "title": "Over 250 ClickFix Domains Use Browser Fingerprinting to Hide macOS Malware Lures",
-    "url": "https://thehackernews.com/2026/08/over-250-clickfix-domains-use-browser.html",
-    "source": "The Hacker News",
-    "published": "2026-08-05T18:44:31.000Z",
-    "summary": "A macOS ClickFix operation spanning more than 250 front-end domains now fingerprints visitors before deciding whether to show them a malware lure, a change Microsoft Threat Intelligence tracked on infrastructure it had…",
-    "score": 8,
-    "matched": [
-      "malware",
-      "ClickFix"
-    ],
-    "kind": "technique",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 2,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 2
     }
   },
   {
