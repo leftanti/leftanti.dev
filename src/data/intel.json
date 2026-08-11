@@ -1,5 +1,92 @@
 [
   {
+    "id": "bccd5e20a2e2",
+    "title": "CISA: Microsoft SharePoint flaw now exploited in ransomware attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-microsoft-sharepoint-flaw-now-exploited-in-ransomware-attacks/",
+    "source": "BleepingComputer",
+    "published": "2026-08-11T12:12:16.000Z",
+    "summary": "CISA confirmed today that ransomware gangs have begun abusing a high-severity Microsoft SharePoint remote code execution vulnerability, which has been flagged as actively exploited since early July. [...]",
+    "score": 11,
+    "matched": [
+      "actively exploited",
+      "exploited in",
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "0f135c6567b4",
+    "title": "Head Mare APT is exploiting vulnerabilities in an unpatched TrueConf server to deliver PhantomCore and PhantomGraph to video conference participants",
+    "url": "https://securelist.com/tr/head-mare-targets-trueconf-server-with-phantomcore/120988/",
+    "source": "Securelist",
+    "published": "2026-08-11T12:00:55.000Z",
+    "summary": "Kaspersky experts have discovered malicious TrueConf software installers. The Head Mare APT group uses them to deliver the PhantomCore and PhantomGraph backdoors to target systems by exploiting vulnerabilities in an…",
+    "score": 6,
+    "matched": [
+      "APT"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 56,
+      "defanged": 15,
+      "addresses": 5,
+      "heading": true,
+      "evidence": 79
+    }
+  },
+  {
+    "id": "dfa8011fdfb0",
+    "title": "US and South Korea warn of Gunra ransomware targeting govt agencies",
+    "url": "https://www.bleepingcomputer.com/news/security/us-warns-of-gunra-ransomware-attacks-against-government-critical-infrastructure/",
+    "source": "BleepingComputer",
+    "published": "2026-08-11T09:47:06.000Z",
+    "summary": "U.S. federal agencies and South Korea's National Policy Agency warned government and critical infrastructure organizations worldwide to secure their systems against Gunra ransomware attacks. [...]",
+    "score": 6,
+    "matched": [
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "f13cf8c4cf50",
+    "title": "Gunra Ransomware Exploits Fortinet and Schneider Electric Flaws to Breach Networks",
+    "url": "https://thehackernews.com/2026/08/gunra-ransomware-exploits-fortinet-and.html",
+    "source": "The Hacker News",
+    "published": "2026-08-11T09:16:24.000Z",
+    "summary": "Cybersecurity and intelligence agencies from South Korea and the U.S. warned of Gunra ransomware attacks targeting critical infrastructure sectors and organizations across the world. Targets of these attacks include…",
+    "score": 6,
+    "matched": [
+      "breach",
+      "ransomware"
+    ],
+    "kind": "other",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "d8778e688813",
     "title": "BdThemes Supply Chain Attack Poisons JSON to Create Rogue WordPress Admins",
     "url": "https://thehackernews.com/2026/08/bdthemes-supply-chain-attack-poisons.html",
@@ -109,49 +196,6 @@
     }
   },
   {
-    "id": "47a4afa26530",
-    "title": "#StopRansomware: Gunra Ransomware",
-    "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-222a",
-    "source": "CISA",
-    "published": "2026-08-10T12:00:00.000Z",
-    "summary": "Advisory at a Glance Title #StopRansomware: Gunra Ransomware Original Publication August 10, 2026 Executive Summary Gunra is a ransomware-as-a-service (RaaS) used by affiliates to target government, critical…",
-    "score": 6,
-    "matched": [
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 8,
-      "defanged": 25,
-      "addresses": 17,
-      "heading": true,
-      "evidence": 53
-    }
-  },
-  {
-    "id": "5a71a6b25d74",
-    "title": "Critical Progress LoadMaster flaw now actively exploited in attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-progress-loadmaster-flaw-exploited-in-attacks/",
-    "source": "BleepingComputer",
-    "published": "2026-08-10T09:49:37.000Z",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) warned that hackers are exploiting a critical-severity Progress Kemp LoadMaster command injection vulnerability. [...]",
-    "score": 10,
-    "matched": [
-      "actively exploited",
-      "exploited in"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 4,
-      "heading": false,
-      "evidence": 6
-    }
-  },
-  {
     "id": "bb61cbf6cb78",
     "title": "Metabase Zero-Day Exploited in Wild Allows Admin Access Without Authentication",
     "url": "https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html",
@@ -171,29 +215,6 @@
       "defanged": 0,
       "addresses": 0,
       "heading": true,
-      "evidence": 3
-    }
-  },
-  {
-    "id": "7e4cf2dba25a",
-    "title": "Metabase SQLi zero-day exploited in customer data-theft attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/",
-    "source": "BleepingComputer",
-    "published": "2026-08-07T20:14:46.000Z",
-    "summary": "A critical Metabase SQL injection vulnerability was exploited in zero-day attacks to breach customer instances in data theft attacks, known to impact Framework and Tally. [...]",
-    "score": 6,
-    "matched": [
-      "exploited in",
-      "zero-day",
-      "breach"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
       "evidence": 3
     }
   },
@@ -262,27 +283,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 1
-    }
-  },
-  {
-    "id": "57be033d94d6",
-    "title": "AI-Assisted HTTP Terminator Finds Novel HTTP Desync Techniques and Apache Zero-Day",
-    "url": "https://thehackernews.com/2026/08/ai-assisted-http-terminator-finds-novel.html",
-    "source": "The Hacker News",
-    "published": "2026-08-07T10:09:54.000Z",
-    "summary": "PortSwigger says HTTP Terminator, an artificial intelligence (AI)-assisted research system built by James Kettle, generated and proved new HTTP desynchronization techniques after exploring 30,000 candidate desync…",
-    "score": 6,
-    "matched": [
-      "zero-day"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
     }
   },
   {
