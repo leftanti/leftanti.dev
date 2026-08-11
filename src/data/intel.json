@@ -308,6 +308,28 @@
     }
   },
   {
+    "id": "f02ebc568bdd",
+    "title": "Ransomware Moves up the Org Chart: Managers Are Prime Targets",
+    "url": "https://www.zscaler.com/blogs/security-research/ransomware-moves-org-chart-managers-are-prime-targets",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-08-06T13:50:10.000Z",
+    "summary": "When a ransomware attack makes headlines, attention usually turns to the organization that was breached, the systems encrypted, data stolen, and disruption or ransom demand that followed. Less, if anything, is revealed…",
+    "score": 6,
+    "matched": [
+      "breached",
+      "ransomware"
+    ],
+    "kind": "other",
+    "indicators": {
+      "v": 2,
+      "hashes": 1,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 2
+    }
+  },
+  {
     "id": "98c630944da4",
     "title": "Over 250 ClickFix Domains Use Browser Fingerprinting to Hide macOS Malware Lures",
     "url": "https://thehackernews.com/2026/08/over-250-clickfix-domains-use-browser.html",
@@ -764,29 +786,6 @@
       "addresses": 3,
       "heading": false,
       "evidence": 110
-    }
-  },
-  {
-    "id": "9631efcfa4e0",
-    "title": "Vidar Stealer Unmasked: Code Signing Abuse, Go Loaders and File Inflation",
-    "url": "https://unit42.paloaltonetworks.com/vidar-stealer-xmrig-miner-campaign-analysis/",
-    "source": "Unit 42",
-    "published": "2026-07-07T22:00:21.000Z",
-    "summary": "A cybercrime campaign combined a loader-as-a-service framework and DLL sideloading via a Go-compiled fake MpClient.dll, a novel evasion layer combination. The post Vidar Stealer Unmasked: Code Signing Abuse, Go Loaders…",
-    "score": 8,
-    "matched": [
-      "campaign",
-      "stealer",
-      "loader"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 107,
-      "defanged": 17,
-      "addresses": 4,
-      "heading": true,
-      "evidence": 131
     }
   },
   {
