@@ -1,5 +1,47 @@
 [
   {
+    "id": "c4b078befb2f",
+    "title": "Adobe Patches Three CVSS 10.0 ColdFusion and Campaign Classic Flaws",
+    "url": "https://thehackernews.com/2026/08/adobe-patches-three-cvss-100-coldfusion.html",
+    "source": "The Hacker News",
+    "published": "2026-08-12T11:13:03.000Z",
+    "summary": "Adobe has shipped updates to address multiple critical security vulnerabilities impacting ColdFusion, Commerce, and Campaign Classic that, if successfully exploited, could result in arbitrary code execution and…",
+    "score": 8,
+    "matched": [
+      "campaign"
+    ],
+    "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "c819a7722ce2",
+    "title": "New Microsoft Defender 'ShieldBreak' zero-day grants SYSTEM privileges",
+    "url": "https://www.bleepingcomputer.com/news/security/new-microsoft-defender-shieldbreak-zero-day-grants-system-privileges/",
+    "source": "BleepingComputer",
+    "published": "2026-08-12T10:15:22.000Z",
+    "summary": "Nightmare Eclipse has released a new Microsoft Defender zero-day exploit named \"ShieldBreak\" after Microsoft released the August 2026 Patch Tuesday security updates. [...]",
+    "score": 14,
+    "matched": [
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
     "id": "a94072d6a3a8",
     "title": "ShieldBreak Zero-Day PoC Claims Microsoft Defender Patch Bypass With SYSTEM Access",
     "url": "https://thehackernews.com/2026/08/shieldbreak-zero-day-poc-claims.html",
@@ -40,27 +82,6 @@
       "addresses": 11,
       "heading": false,
       "evidence": 11
-    }
-  },
-  {
-    "id": "6bf5ac12cc20",
-    "title": "DeadLock ransomware uses blockchain to resist infrastructure takedown",
-    "url": "https://www.bleepingcomputer.com/news/security/deadlock-ransomware-uses-blockchain-to-resist-infrastructure-takedown/",
-    "source": "BleepingComputer",
-    "published": "2026-08-11T22:15:22.000Z",
-    "summary": "The DeadLock ransomware operation is using a decentralized infrastructure that relies on blockchain-backed services to protect its communication with victims and data-leak activity. [...]",
-    "score": 6,
-    "matched": [
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
     }
   },
   {
@@ -149,29 +170,6 @@
       "addresses": 2,
       "heading": false,
       "evidence": 48
-    }
-  },
-  {
-    "id": "bccd5e20a2e2",
-    "title": "CISA: Microsoft SharePoint flaw now exploited in ransomware attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-microsoft-sharepoint-flaw-now-exploited-in-ransomware-attacks/",
-    "source": "BleepingComputer",
-    "published": "2026-08-11T12:12:16.000Z",
-    "summary": "CISA confirmed today that ransomware gangs have begun abusing a high-severity Microsoft SharePoint remote code execution vulnerability, which has been flagged as actively exploited since early July. [...]",
-    "score": 11,
-    "matched": [
-      "actively exploited",
-      "exploited in",
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
     }
   },
   {
