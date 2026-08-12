@@ -1,5 +1,70 @@
 [
   {
+    "id": "6bf5ac12cc20",
+    "title": "DeadLock ransomware uses blockchain to resist infrastructure takedown",
+    "url": "https://www.bleepingcomputer.com/news/security/deadlock-ransomware-uses-blockchain-to-resist-infrastructure-takedown/",
+    "source": "BleepingComputer",
+    "published": "2026-08-11T22:15:22.000Z",
+    "summary": "The DeadLock ransomware operation is using a decentralized infrastructure that relies on blockchain-backed services to protect its communication with victims and data-leak activity. [...]",
+    "score": 6,
+    "matched": [
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "0d98e098f937",
+    "title": "CaptiveCrunch: Midnight Blizzard Weaponizes Hotel Wi-Fi Captive Portals to Steal Microsoft 365 Credentials",
+    "url": "https://www.zscaler.com/blogs/security-research/captivecrunch-midnight-blizzard-weaponizes-hotel-wi-fi-captive-portals",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-08-11T22:06:00.000Z",
+    "summary": "IntroductionOn July 31, Microsoft Threat Intelligence reported an ongoing credential theft campaign tracked as CaptiveCrunch. Microsoft attributes this activity to Storm-2945, a sub-cluster of Midnight Blizzard (also…",
+    "score": 10,
+    "matched": [
+      "campaign",
+      "credential theft"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 3,
+      "defanged": 0,
+      "addresses": 7,
+      "heading": true,
+      "evidence": 13
+    }
+  },
+  {
+    "id": "7830079a9718",
+    "title": "Microsoft Patches 398 Flaws Including a Windows Driver Zero-Day Under Active Attack",
+    "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html",
+    "source": "The Hacker News",
+    "published": "2026-08-11T20:10:55.000Z",
+    "summary": "Microsoft released its monthly security updates on Tuesday, and one of the flaws it closed is already being used in attacks. The bug sits in a core Windows kernel driver that handles network socket operations. An…",
+    "score": 8,
+    "matched": [
+      "under active attack",
+      "zero-day"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "30ec4f4434e6",
     "title": "Microsoft August 2026 Patch Tuesday fixes 400 flaws, 3 zero-days",
     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/",
@@ -110,39 +175,17 @@
     }
   },
   {
-    "id": "dfa8011fdfb0",
-    "title": "US and South Korea warn of Gunra ransomware targeting govt agencies",
-    "url": "https://www.bleepingcomputer.com/news/security/us-warns-of-gunra-ransomware-attacks-against-government-critical-infrastructure/",
-    "source": "BleepingComputer",
-    "published": "2026-08-11T09:47:06.000Z",
-    "summary": "U.S. federal agencies and South Korea's National Policy Agency warned government and critical infrastructure organizations worldwide to secure their systems against Gunra ransomware attacks. [...]",
-    "score": 6,
+    "id": "9ddeac63f2bb",
+    "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/08/11/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-08-11T12:00:00.000Z",
+    "summary": "CISA has added three new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-20349 Cisco Secure Firewall Adaptive Security Appliance (ASA) and…",
+    "score": 10,
     "matched": [
-      "ransomware"
+      "known exploited"
     ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
-    "id": "f13cf8c4cf50",
-    "title": "Gunra Ransomware Exploits Fortinet and Schneider Electric Flaws to Breach Networks",
-    "url": "https://thehackernews.com/2026/08/gunra-ransomware-exploits-fortinet-and.html",
-    "source": "The Hacker News",
-    "published": "2026-08-11T09:16:24.000Z",
-    "summary": "Cybersecurity and intelligence agencies from South Korea and the U.S. warned of Gunra ransomware attacks targeting critical infrastructure sectors and organizations across the world. Targets of these attacks include…",
-    "score": 6,
-    "matched": [
-      "breach",
-      "ransomware"
-    ],
-    "kind": "other",
+    "kind": "exploited",
     "indicators": {
       "v": 2,
       "hashes": 0,
@@ -150,28 +193,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "d8778e688813",
-    "title": "BdThemes Supply Chain Attack Poisons JSON to Create Rogue WordPress Admins",
-    "url": "https://thehackernews.com/2026/08/bdthemes-supply-chain-attack-poisons.html",
-    "source": "The Hacker News",
-    "published": "2026-08-11T05:48:44.000Z",
-    "summary": "Cybersecurity researchers have warned of a supply chain compromise impacting WordPress plugin vendor BdThemes, prompting the content management systems (CMS) platform's plugins team to temporarily disable their…",
-    "score": 6,
-    "matched": [
-      "compromise",
-      "supply chain"
-    ],
-    "kind": "technique",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 1,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 1
     }
   },
   {
@@ -194,27 +215,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "5410ff3c840f",
-    "title": "DeadLock ransomware: Breaking down a Rust-based encryptor with decentralized recovery infrastructure",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/08/10/deadlock-ransomware-breaking-down-a-rust-based-encryptor-with-decentralized-recovery-infrastructure/",
-    "source": "Microsoft Security",
-    "published": "2026-08-10T15:00:00.000Z",
-    "summary": "Microsoft Threat Intelligence examines DeadLock ransomware, an emerging financially motivated operation distinguished by its use of decentralized infrastructure to support victim communications, negotiations, and data…",
-    "score": 6,
-    "matched": [
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 7,
-      "defanged": 11,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 22
     }
   },
   {
