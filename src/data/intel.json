@@ -1,5 +1,50 @@
 [
   {
+    "id": "ddcb40f48b81",
+    "title": "Lazarus Exploits Windows Zero-Day to Gain SYSTEM Access and Deploy Backdoor",
+    "url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html",
+    "source": "The Hacker News",
+    "published": "2026-08-12T17:39:27.000Z",
+    "summary": "The North Korean threat actor known as Lazarus Group has been attributed to the zero-day exploitation of a newly patched security flaw impacting Microsoft Windows to deliver a never-before-seen backdoor targeting…",
+    "score": 16,
+    "matched": [
+      "zero-day",
+      "threat actor",
+      "backdoor"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 3,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "5b03ff884146",
+    "title": "Lazarus hackers exploited Windows zero-day to target defense firms",
+    "url": "https://www.bleepingcomputer.com/news/security/lazarus-hackers-exploited-windows-zero-day-to-target-defense-firms/",
+    "source": "BleepingComputer",
+    "published": "2026-08-12T15:38:08.000Z",
+    "summary": "North Korean hackers have been exploiting a Windows zero-day vulnerability (CVE-2026-68820) to target defense-sector companies as part of the Operation Dream Job campaign. [...]",
+    "score": 12,
+    "matched": [
+      "zero-day",
+      "campaign"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 6
+    }
+  },
+  {
     "id": "c4b078befb2f",
     "title": "Adobe Patches Three CVSS 10.0 ColdFusion and Campaign Classic Flaws",
     "url": "https://thehackernews.com/2026/08/adobe-patches-three-cvss-100-coldfusion.html",
@@ -60,28 +105,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "4e10981a0111",
-    "title": "Cisco ASA and FTD Flaw Exploited in the Wild Can Trigger Remote DoS",
-    "url": "https://thehackernews.com/2026/08/cisco-asa-and-ftd-flaw-exploited-in.html",
-    "source": "The Hacker News",
-    "published": "2026-08-12T06:15:58.000Z",
-    "summary": "Cisco has warned that a new vulnerability impacting Secure Firewall Adaptive Security Appliance (ASA) Software and Secure Firewall Threat Defense (FTD) Software has been exploited in the wild. The high-severity flaw,…",
-    "score": 6,
-    "matched": [
-      "exploited in",
-      "in the wild"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 11,
-      "heading": false,
-      "evidence": 11
     }
   },
   {
@@ -1027,29 +1050,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 14
-    }
-  },
-  {
-    "id": "8159851e4eb4",
-    "title": "Flash Alert: EtherRat and TukTuk C2 End in The Gentleman Ransomware",
-    "url": "https://thedfirreport.com/2026/05/11/flash-alert-etherrat-and-tuktuk-c2-end-in-the-gentleman-ransomware/",
-    "source": "The DFIR Report",
-    "published": "2026-05-11T14:05:04.000Z",
-    "summary": "The EtherRAT malware family was first reported by Sysdig back in December 2025. At that time, the initial access vector was exploitation of CVE-2025-55182 (React2Shell) targeting Linux servers. In March 2026, a Windows…",
-    "score": 7,
-    "matched": [
-      "ransomware",
-      "malware",
-      "initial access"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 18,
-      "defanged": 1,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 23
     }
   },
   {
