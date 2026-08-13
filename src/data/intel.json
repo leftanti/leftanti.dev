@@ -1,5 +1,26 @@
 [
   {
+    "id": "f2eaae17aa2e",
+    "title": "2026-08-12: SmartApeSG ClickFix leads to two RATs",
+    "url": "https://www.malware-traffic-analysis.net/2026/08/12/index.html",
+    "source": "Malware Traffic Analysis",
+    "published": "2026-08-13T03:07:00.000Z",
+    "summary": "",
+    "score": 8,
+    "matched": [
+      "ClickFix"
+    ],
+    "kind": "technique",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "ddcb40f48b81",
     "title": "Lazarus Exploits Windows Zero-Day to Gain SYSTEM Access and Deploy Backdoor",
     "url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html",
@@ -149,28 +170,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "30ec4f4434e6",
-    "title": "Microsoft August 2026 Patch Tuesday fixes 400 flaws, 3 zero-days",
-    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-august-2026-patch-tuesday-fixes-400-flaws-3-zero-days/",
-    "source": "BleepingComputer",
-    "published": "2026-08-11T18:08:50.000Z",
-    "summary": "Today is Microsoft's August 2026 Patch Tuesday, and with it comes security updates for a massive 400 flaws, including one actively exploited and two publicly disclosed zero-day vulnerabilities. [...]",
-    "score": 8,
-    "matched": [
-      "actively exploited",
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
     }
   },
   {
