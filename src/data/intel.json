@@ -1,16 +1,16 @@
 [
   {
-    "id": "f2eaae17aa2e",
-    "title": "2026-08-12: SmartApeSG ClickFix leads to two RATs",
-    "url": "https://www.malware-traffic-analysis.net/2026/08/12/index.html",
-    "source": "Malware Traffic Analysis",
-    "published": "2026-08-13T03:07:00.000Z",
-    "summary": "",
-    "score": 8,
+    "id": "a2e864adbe5e",
+    "title": "The State of Ransomware Q2 2026",
+    "url": "https://research.checkpoint.com/2026/the-state-of-ransomware-q2-2026/",
+    "source": "Check Point Research",
+    "published": "2026-08-13T12:54:35.000Z",
+    "summary": "For the past year, the ransomware conversation has centered on concentration: a handful of dominant RaaS operations controlling most of the damage, and a shrinking pool of active groups fighting over the same territory.…",
+    "score": 6,
     "matched": [
-      "ClickFix"
+      "ransomware"
     ],
-    "kind": "technique",
+    "kind": "other",
     "indicators": {
       "v": 2,
       "hashes": 0,
@@ -126,6 +126,28 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
+    }
+  },
+  {
+    "id": "4e10981a0111",
+    "title": "Cisco ASA and FTD Flaw Exploited in the Wild Can Trigger Remote DoS",
+    "url": "https://thehackernews.com/2026/08/cisco-asa-and-ftd-flaw-exploited-in.html",
+    "source": "The Hacker News",
+    "published": "2026-08-12T06:15:58.000Z",
+    "summary": "Cisco has warned that a new vulnerability impacting Secure Firewall Adaptive Security Appliance (ASA) Software and Secure Firewall Threat Defense (FTD) Software has been exploited in the wild. The high-severity flaw,…",
+    "score": 6,
+    "matched": [
+      "exploited in",
+      "in the wild"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 11,
+      "heading": false,
+      "evidence": 11
     }
   },
   {
@@ -499,28 +521,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "92fba083c506",
-    "title": "2026-07-31: SmartApeSG ClickFix campaign pushes unidentified RAT",
-    "url": "https://www.malware-traffic-analysis.net/2026/07/31/index.html",
-    "source": "Malware Traffic Analysis",
-    "published": "2026-07-31T20:54:00.000Z",
-    "summary": "",
-    "score": 16,
-    "matched": [
-      "campaign",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 22,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 25
     }
   },
   {
