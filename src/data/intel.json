@@ -1,5 +1,27 @@
 [
   {
+    "id": "ea4d9c02a341",
+    "title": "APT group HoneyMyte upgrades CoolClient: the backdoor gets a kernel-level Windows rootkit",
+    "url": "https://securelist.com/honeymyte-coolclient-driver-rootkit/121028/",
+    "source": "Securelist",
+    "published": "2026-08-14T09:00:14.000Z",
+    "summary": "Our experts discovered a new CoolClient backdoor variant with a kernel-mode rootkit driver that hides malicious processes, files, and network connections from security tools and threat analysts.",
+    "score": 12,
+    "matched": [
+      "APT",
+      "backdoor"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 10,
+      "defanged": 10,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 20
+    }
+  },
+  {
     "id": "44121a45c64c",
     "title": "Microsoft patches LegacyHive Windows zero-day vulnerability",
     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-legacyhive-windows-zero-day-vulnerability/",
@@ -584,28 +606,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 5
-    }
-  },
-  {
-    "id": "5c5d8bace813",
-    "title": "Toy Ghouls’ new toy: the GenieLocker ransomware",
-    "url": "https://securelist.com/genielocker-ransomware-for-windows-linux-and-esxi/120843/",
-    "source": "Securelist",
-    "published": "2026-07-30T08:00:57.000Z",
-    "summary": "Kaspersky experts dissect GenieLocker: new custom ransomware variants for Windows, Linux, and ESXi systems. We found this family in attacks by Toy Ghouls, a financially motivated extortion group.",
-    "score": 7,
-    "matched": [
-      "extortion",
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 50,
-      "defanged": 1,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 55
     }
   },
   {
