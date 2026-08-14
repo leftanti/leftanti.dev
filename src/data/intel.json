@@ -42,6 +42,27 @@
     }
   },
   {
+    "id": "f2eaae17aa2e",
+    "title": "2026-08-12: SmartApeSG ClickFix leads to two RATs",
+    "url": "https://www.malware-traffic-analysis.net/2026/08/12/index.html",
+    "source": "Malware Traffic Analysis",
+    "published": "2026-08-13T03:07:00.000Z",
+    "summary": "",
+    "score": 8,
+    "matched": [
+      "ClickFix"
+    ],
+    "kind": "technique",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "ddcb40f48b81",
     "title": "Lazarus Exploits Windows Zero-Day to Gain SYSTEM Access and Deploy Backdoor",
     "url": "https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html",
@@ -62,28 +83,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 3
-    }
-  },
-  {
-    "id": "5b03ff884146",
-    "title": "Lazarus hackers exploited Windows zero-day to target defense firms",
-    "url": "https://www.bleepingcomputer.com/news/security/lazarus-hackers-exploited-windows-zero-day-to-target-defense-firms/",
-    "source": "BleepingComputer",
-    "published": "2026-08-12T15:38:08.000Z",
-    "summary": "North Korean hackers have been exploiting a Windows zero-day vulnerability (CVE-2026-68820) to target defense-sector companies as part of the Operation Dream Job campaign. [...]",
-    "score": 12,
-    "matched": [
-      "zero-day",
-      "campaign"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 6
     }
   },
   {
@@ -214,28 +213,6 @@
       "addresses": 2,
       "heading": false,
       "evidence": 48
-    }
-  },
-  {
-    "id": "cfe1a7d09642",
-    "title": "DeadLock Ransomware Uses Polygon Smart Contracts to Make Extortion Infra Harder to Disrupt",
-    "url": "https://thehackernews.com/2026/08/deadlock-ransomware-uses-polygon-smart.html",
-    "source": "The Hacker News",
-    "published": "2026-08-11T16:35:27.000Z",
-    "summary": "The ransomware group known as DeadLock has been observed using decentralized infrastructure to facilitate victim communications and data leak operations in a bid to improve operational resilience. \"Its recovery…",
-    "score": 6,
-    "matched": [
-      "extortion",
-      "ransomware"
-    ],
-    "kind": "other",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 1,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 2
     }
   },
   {
@@ -543,6 +520,28 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
+    }
+  },
+  {
+    "id": "92fba083c506",
+    "title": "2026-07-31: SmartApeSG ClickFix campaign pushes unidentified RAT",
+    "url": "https://www.malware-traffic-analysis.net/2026/07/31/index.html",
+    "source": "Malware Traffic Analysis",
+    "published": "2026-07-31T20:54:00.000Z",
+    "summary": "",
+    "score": 16,
+    "matched": [
+      "campaign",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 22,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 25
     }
   },
   {
