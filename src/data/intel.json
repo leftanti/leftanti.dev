@@ -172,6 +172,28 @@
     }
   },
   {
+    "id": "0d98e098f937",
+    "title": "CaptiveCrunch: Midnight Blizzard Weaponizes Hotel Wi-Fi Captive Portals to Steal Microsoft 365 Credentials",
+    "url": "https://www.zscaler.com/blogs/security-research/captivecrunch-midnight-blizzard-weaponizes-hotel-wi-fi-captive-portals",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-08-11T22:06:00.000Z",
+    "summary": "IntroductionOn July 31, Microsoft Threat Intelligence reported an ongoing credential theft campaign tracked as CaptiveCrunch. Microsoft attributes this activity to Storm-2945, a sub-cluster of Midnight Blizzard (also…",
+    "score": 10,
+    "matched": [
+      "campaign",
+      "credential theft"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 3,
+      "defanged": 0,
+      "addresses": 7,
+      "heading": true,
+      "evidence": 13
+    }
+  },
+  {
     "id": "7830079a9718",
     "title": "Microsoft Patches 398 Flaws Including a Windows Driver Zero-Day Under Active Attack",
     "url": "https://thehackernews.com/2026/08/microsoft-patches-398-flaws-including.html",
@@ -216,49 +238,6 @@
     }
   },
   {
-    "id": "cfe1a7d09642",
-    "title": "DeadLock Ransomware Uses Polygon Smart Contracts to Make Extortion Infra Harder to Disrupt",
-    "url": "https://thehackernews.com/2026/08/deadlock-ransomware-uses-polygon-smart.html",
-    "source": "The Hacker News",
-    "published": "2026-08-11T16:35:27.000Z",
-    "summary": "The ransomware group known as DeadLock has been observed using decentralized infrastructure to facilitate victim communications and data leak operations in a bid to improve operational resilience. \"Its recovery…",
-    "score": 6,
-    "matched": [
-      "extortion",
-      "ransomware"
-    ],
-    "kind": "other",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 1,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 2
-    }
-  },
-  {
-    "id": "0f135c6567b4",
-    "title": "Head Mare APT is exploiting vulnerabilities in an unpatched TrueConf server to deliver PhantomCore and PhantomGraph to video conference participants",
-    "url": "https://securelist.com/tr/head-mare-targets-trueconf-server-with-phantomcore/120988/",
-    "source": "Securelist",
-    "published": "2026-08-11T12:00:55.000Z",
-    "summary": "Kaspersky experts have discovered malicious TrueConf software installers. The Head Mare APT group uses them to deliver the PhantomCore and PhantomGraph backdoors to target systems by exploiting vulnerabilities in an…",
-    "score": 6,
-    "matched": [
-      "APT"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 56,
-      "defanged": 15,
-      "addresses": 5,
-      "heading": true,
-      "evidence": 79
-    }
-  },
-  {
     "id": "9ddeac63f2bb",
     "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/08/11/cisa-adds-three-known-exploited-vulnerabilities-catalog",
@@ -270,28 +249,6 @@
       "known exploited"
     ],
     "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "f13cf8c4cf50",
-    "title": "Gunra Ransomware Exploits Fortinet FortiOS, FortiProxy Flaws to Breach Networks",
-    "url": "https://thehackernews.com/2026/08/gunra-ransomware-exploits-fortinet-and.html",
-    "source": "The Hacker News",
-    "published": "2026-08-11T09:16:24.000Z",
-    "summary": "Cybersecurity and intelligence agencies from South Korea and the U.S. warned of Gunra ransomware attacks targeting critical infrastructure sectors and organizations across the world. Targets of these attacks include…",
-    "score": 6,
-    "matched": [
-      "breach",
-      "ransomware"
-    ],
-    "kind": "other",
     "indicators": {
       "v": 2,
       "hashes": 0,
@@ -321,48 +278,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "5410ff3c840f",
-    "title": "DeadLock ransomware: Breaking down a Rust-based encryptor with decentralized recovery infrastructure",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/08/10/deadlock-ransomware-breaking-down-a-rust-based-encryptor-with-decentralized-recovery-infrastructure/",
-    "source": "Microsoft Security",
-    "published": "2026-08-10T15:00:00.000Z",
-    "summary": "Microsoft Threat Intelligence examines DeadLock ransomware, an emerging financially motivated operation distinguished by its use of decentralized infrastructure to support victim communications, negotiations, and data…",
-    "score": 6,
-    "matched": [
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 7,
-      "defanged": 11,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 22
-    }
-  },
-  {
-    "id": "47a4afa26530",
-    "title": "#StopRansomware: Gunra Ransomware",
-    "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-222a",
-    "source": "CISA",
-    "published": "2026-08-10T12:00:00.000Z",
-    "summary": "Advisory at a Glance Title #StopRansomware: Gunra Ransomware Original Publication August 10, 2026 Executive Summary Gunra is a ransomware-as-a-service (RaaS) used by affiliates to target government, critical…",
-    "score": 6,
-    "matched": [
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 8,
-      "defanged": 25,
-      "addresses": 17,
-      "heading": true,
-      "evidence": 53
     }
   },
   {
@@ -521,29 +436,6 @@
     }
   },
   {
-    "id": "1dd22dc6f288",
-    "title": "ChainDrop supply chain compromise: Anatomy of a self-propagating worm",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/08/04/chaindrop-supply-chain-compromise-anatomy-self-propagating-worm/",
-    "source": "Microsoft Security",
-    "published": "2026-08-04T23:46:41.000Z",
-    "summary": "A credential-stealing worm hidden in more than 400 compromised npm packages automatically spread across software ecosystems by republishing malicious updates. This analysis details the attack chain, affected…",
-    "score": 6,
-    "matched": [
-      "compromise",
-      "compromised",
-      "supply chain"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 12,
-      "defanged": 8,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 24
-    }
-  },
-  {
     "id": "0defff6969e1",
     "title": "128 Seconds to disruption: Microsoft Defender stops ransomware at QNET",
     "url": "https://www.microsoft.com/en-us/security/blog/2026/08/04/129-seconds-disruption-microsoft-defender-stops-ransomware-qnet/",
@@ -632,29 +524,6 @@
     }
   },
   {
-    "id": "f98c4379eb5a",
-    "title": "CVE-2026-18577: N-able N-central Authentication Bypass Exploited in the Wild",
-    "url": "https://www.rapid7.com/blog/post/etr-cve-2026-18577-n-able-n-central-authentication-bypass-exploited-in-the-wild",
-    "source": "Rapid7",
-    "published": "2026-08-04T11:11:54.000Z",
-    "summary": "Overview On August 2, 2026, N-able published a security advisory for CVE-2026-18577 , an authentication bypass vulnerability affecting N-central that was discovered being exploited in-the-wild after an incomplete fix…",
-    "score": 6,
-    "matched": [
-      "being exploited",
-      "exploited in",
-      "in the wild"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 18,
-      "addresses": 6,
-      "heading": true,
-      "evidence": 27
-    }
-  },
-  {
     "id": "dd8d41da7130",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/08/03/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -737,6 +606,29 @@
       "addresses": 0,
       "heading": false,
       "evidence": 5
+    }
+  },
+  {
+    "id": "62fcd066ad23",
+    "title": "Helpdesk Hijackers: Teams Vishing, Quick Assist, and GoGRPC Backdoor",
+    "url": "https://www.zscaler.com/blogs/security-research/helpdesk-hijackers-teams-vishing-quick-assist-and-gogrpc-backdoor",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-07-27T14:51:56.000Z",
+    "summary": "IntroductionZscaler ThreatLabz has been tracking attacks from a threat actor that is likely an initial access broker for ransomware attacks since January 2026. The threat actor targets organizations by leveraging…",
+    "score": 11,
+    "matched": [
+      "threat actor",
+      "ransomware",
+      "backdoor"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 12,
+      "defanged": 5,
+      "addresses": 8,
+      "heading": true,
+      "evidence": 28
     }
   },
   {
@@ -830,6 +722,27 @@
     }
   },
   {
+    "id": "bbf853ba6917",
+    "title": "ClaudeFix: Shared Claude Chats Meet ClickFix",
+    "url": "https://www.zscaler.com/blogs/security-research/claudefix-shared-claude-chats-meet-clickfix",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-07-15T14:39:45.000Z",
+    "summary": "IntroductionClickFix is a widely employed attack technique, first seen in 2024, where a victim is instructed to paste-and-run instructions on their system to “fix” a problem or install software. The seemingly benign…",
+    "score": 8,
+    "matched": [
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 10,
+      "defanged": 233,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 247
+    }
+  },
+  {
     "id": "0502111c2751",
     "title": "Threat Actors Achieve Persistence After SQL Injection",
     "url": "https://www.huntress.com/blog/sql-injection-attacker-persistence",
@@ -917,6 +830,51 @@
     }
   },
   {
+    "id": "7981b9411e2a",
+    "title": "SmartApeSG Launches Okendo Reviews Supply Chain Attack",
+    "url": "https://www.zscaler.com/blogs/security-research/smartapesg-launches-okendo-reviews-supply-chain-attack",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-06-18T14:04:56.000Z",
+    "summary": "IntroductionOn May 14, 2026, the Zscaler ThreatLabz team identified unusually high activity associated with the threat actor SmartApeSG to deploy malware. During our examination, we discovered malicious JavaScript code…",
+    "score": 10,
+    "matched": [
+      "threat actor",
+      "malware",
+      "supply chain"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 1,
+      "defanged": 12,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 17
+    }
+  },
+  {
+    "id": "7be4bdd16bb8",
+    "title": "ClickFix Campaign Generated Via AI Delivers SmartRAT",
+    "url": "https://www.zscaler.com/blogs/security-research/clickfix-campaign-generated-ai-delivers-smartrat",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-06-17T17:58:25.000Z",
+    "summary": "IntroductionIn March 2026, Zscaler ThreatLabz observed multiple instances of typosquatting domains hosting malicious content generated with AI-powered website creation tools. Threat actors are leveraging website…",
+    "score": 16,
+    "matched": [
+      "campaign",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 5,
+      "defanged": 24,
+      "addresses": 3,
+      "heading": true,
+      "evidence": 35
+    }
+  },
+  {
     "id": "7cb9bb001c0c",
     "title": "Potemkin Loader & RMMProject The Anatomy of a ClickFix Attack",
     "url": "https://www.huntress.com/blog/potemkin-loader-rmmproject-clickfix-attack",
@@ -940,6 +898,28 @@
     }
   },
   {
+    "id": "4ec633dfd15f",
+    "title": "Shai-Hulud Campaign Evolution: Miasma, Hades, and AI Scanner Evasion",
+    "url": "https://www.zscaler.com/blogs/security-research/shai-hulud-campaign-evolution-miasma-hades-and-ai-scanner-evasion",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-06-12T21:14:52.000Z",
+    "summary": "IntroductionSince Zscaler ThreatLabz published its analysis of Shai-Hulud V2 in November 2025, the campaign has continued to evolve in ways that distinguish it from more typical software supply chain attacks. Over the…",
+    "score": 11,
+    "matched": [
+      "campaign",
+      "supply chain"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 4,
+      "defanged": 5,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 13
+    }
+  },
+  {
     "id": "459eca2bf662",
     "title": "Inside Kali365, a Device Code Phishing Ecosystem | Huntress",
     "url": "https://www.huntress.com/blog/kali365-device-code-phishing-kit",
@@ -958,6 +938,29 @@
       "addresses": 1,
       "heading": true,
       "evidence": 18
+    }
+  },
+  {
+    "id": "056751b038f7",
+    "title": "Technical Analysis of MLTBackdoor",
+    "url": "https://www.zscaler.com/blogs/security-research/technical-analysis-mltbackdoor",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-06-09T16:26:54.000Z",
+    "summary": "IntroductionIn May 2026, Zscaler ThreatLabz identified a new malware family that we track as MLTBackdoor that is likely leveraged by a ransomware-related threat actor. MLTBackdoor has been observed by ThreatLabz being…",
+    "score": 7,
+    "matched": [
+      "threat actor",
+      "ransomware",
+      "malware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 28,
+      "defanged": 9,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 41
     }
   },
   {
