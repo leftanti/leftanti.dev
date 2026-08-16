@@ -22,27 +22,6 @@
     }
   },
   {
-    "id": "44121a45c64c",
-    "title": "Microsoft patches LegacyHive Windows zero-day vulnerability",
-    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-patches-legacyhive-windows-zero-day-vulnerability/",
-    "source": "BleepingComputer",
-    "published": "2026-08-13T17:46:20.000Z",
-    "summary": "Microsoft has released security patches to address a Windows zero-day vulnerability known as \"LegacyHive,\" disclosed after the July 2026 Patch Tuesday. [...]",
-    "score": 8,
-    "matched": [
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
     "id": "a2e864adbe5e",
     "title": "The State of Ransomware Q2 2026",
     "url": "https://research.checkpoint.com/2026/the-state-of-ransomware-q2-2026/",
@@ -235,6 +214,49 @@
       "addresses": 2,
       "heading": false,
       "evidence": 48
+    }
+  },
+  {
+    "id": "cfe1a7d09642",
+    "title": "DeadLock Ransomware Uses Polygon Smart Contracts to Make Extortion Infra Harder to Disrupt",
+    "url": "https://thehackernews.com/2026/08/deadlock-ransomware-uses-polygon-smart.html",
+    "source": "The Hacker News",
+    "published": "2026-08-11T16:35:27.000Z",
+    "summary": "The ransomware group known as DeadLock has been observed using decentralized infrastructure to facilitate victim communications and data leak operations in a bid to improve operational resilience. \"Its recovery…",
+    "score": 6,
+    "matched": [
+      "extortion",
+      "ransomware"
+    ],
+    "kind": "other",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 1,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 2
+    }
+  },
+  {
+    "id": "0f135c6567b4",
+    "title": "Head Mare APT is exploiting vulnerabilities in an unpatched TrueConf server to deliver PhantomCore and PhantomGraph to video conference participants",
+    "url": "https://securelist.com/tr/head-mare-targets-trueconf-server-with-phantomcore/120988/",
+    "source": "Securelist",
+    "published": "2026-08-11T12:00:55.000Z",
+    "summary": "Kaspersky experts have discovered malicious TrueConf software installers. The Head Mare APT group uses them to deliver the PhantomCore and PhantomGraph backdoors to target systems by exploiting vulnerabilities in an…",
+    "score": 6,
+    "matched": [
+      "APT"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 56,
+      "defanged": 15,
+      "addresses": 5,
+      "heading": true,
+      "evidence": 79
     }
   },
   {
@@ -1005,27 +1027,6 @@
       "addresses": 2,
       "heading": true,
       "evidence": 25
-    }
-  },
-  {
-    "id": "63231b31f7ea",
-    "title": "Threat Actor Defense Evasion: How Attackers Disable AV & EDR",
-    "url": "https://www.huntress.com/blog/how-attackers-disable-av-edr",
-    "source": "Huntress",
-    "published": "2026-05-18T14:00:00.000Z",
-    "summary": "Threat actors are actively targeting your security tools. Learn how threat actors disable antivirus and EDR through vulnerable drivers, tampering attacks, and malicious firewall rules, and how Huntress detects.",
-    "score": 8,
-    "matched": [
-      "threat actor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 14,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 14
     }
   },
   {
