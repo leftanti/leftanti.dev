@@ -1,5 +1,115 @@
 [
   {
+    "id": "27c4b2c20495",
+    "title": "Philips and GE investigating Clop ransomware data theft claims",
+    "url": "https://www.bleepingcomputer.com/news/security/philips-and-ge-investigating-clop-ransomware-data-theft-claims/",
+    "source": "BleepingComputer",
+    "published": "2026-08-17T11:25:02.000Z",
+    "summary": "Tech giants General Electric (GE) and Philips have also confirmed they're investigating claims that the Clop ransomware gang breached their systems and stole data. [...]",
+    "score": 6,
+    "matched": [
+      "breached",
+      "data theft",
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 6
+    }
+  },
+  {
+    "id": "a7ad2ff57905",
+    "title": "Microsoft working on Defender patch for ShieldBreak zero-day",
+    "url": "https://www.bleepingcomputer.com/news/security/microsoft-working-on-defender-patch-for-shieldbreak-zero-day/",
+    "source": "BleepingComputer",
+    "published": "2026-08-17T09:05:33.000Z",
+    "summary": "Microsoft is working on a security patch for the \"ShieldBreak\" zero-day vulnerability disclosed last week by security researcher \"Nightmare Eclipse\" and now tracked as CVE-2026-69414. [...]",
+    "score": 14,
+    "matched": [
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "18a680d8e524",
+    "title": "Suspected China-Nexus Actor Exploits VMware vCenter Flaw, Deploys Babuk-Derived Ransomware",
+    "url": "https://thehackernews.com/2026/08/suspected-china-nexus-actor-exploits.html",
+    "source": "The Hacker News",
+    "published": "2026-08-17T07:36:19.000Z",
+    "summary": "Cybersecurity researchers have attributed the exploitation of a newly patched security flaw in Broadcom VMware vCenter to a suspected China-nexus advanced persistent threat (APT). The attacks involve the exploitation of…",
+    "score": 9,
+    "matched": [
+      "APT",
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 5,
+      "addresses": 5,
+      "heading": false,
+      "evidence": 10
+    }
+  },
+  {
+    "id": "95d769fae876",
+    "title": "Mustang Panda Adds Signed Windows Rootkit to CoolClient Backdoor for Stealth",
+    "url": "https://thehackernews.com/2026/08/mustang-panda-adds-signed-windows.html",
+    "source": "The Hacker News",
+    "published": "2026-08-14T13:08:56.000Z",
+    "summary": "The threat actor known as HoneyMyte (aka Mustang Panda) has been observed deploying an updated version of the CoolClient backdoor with a signed Windows kernel-mode rootkit that can hide and protect malicious processes,…",
+    "score": 10,
+    "matched": [
+      "threat actor",
+      "backdoor"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 4,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": true,
+      "evidence": 7
+    }
+  },
+  {
+    "id": "751a60953d86",
+    "title": "CTM360 Uncovers Over 3,000 Recruitment Phishing URLs Using Browser-in-the-Browser (BitB) Credential Traps",
+    "url": "https://thehackernews.com/2026/08/ctm360-uncovers-over-3000-recruitment.html",
+    "source": "The Hacker News",
+    "published": "2026-08-14T10:57:00.000Z",
+    "summary": "Cybersecurity researchers have uncovered a large-scale, global recruitment-themed phishing campaign that uses fake interview scheduling pages and Browser-in-the-Browser (BitB) windows to steal Google and Facebook…",
+    "score": 9,
+    "matched": [
+      "campaign",
+      "phishing"
+    ],
+    "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "ea4d9c02a341",
     "title": "APT group HoneyMyte upgrades CoolClient: the backdoor gets a kernel-level Windows rootkit",
     "url": "https://securelist.com/honeymyte-coolclient-driver-rootkit/121028/",
@@ -22,17 +132,18 @@
     }
   },
   {
-    "id": "a2e864adbe5e",
-    "title": "The State of Ransomware Q2 2026",
-    "url": "https://research.checkpoint.com/2026/the-state-of-ransomware-q2-2026/",
-    "source": "Check Point Research",
-    "published": "2026-08-13T12:54:35.000Z",
-    "summary": "For the past year, the ransomware conversation has centered on concentration: a handful of dominant RaaS operations controlling most of the damage, and a shrinking pool of active groups fighting over the same territory.…",
+    "id": "02cfaa99b310",
+    "title": "GeoServer Zero-Day Targeted in Active Exploitation Attempts, Can Lead to RCE",
+    "url": "https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html",
+    "source": "The Hacker News",
+    "published": "2026-08-13T18:45:12.000Z",
+    "summary": "A newly disclosed zero-day flaw in GeoServer is seeing active exploitation efforts, per watchTowr. The vulnerability, which has yet to be assigned a CVE identifier, is an SQL injection vulnerability in the open-source…",
     "score": 6,
     "matched": [
-      "ransomware"
+      "exploitation attempts",
+      "zero-day"
     ],
-    "kind": "other",
+    "kind": "exploited",
     "indicators": {
       "v": 2,
       "hashes": 0,
@@ -40,6 +151,50 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
+    }
+  },
+  {
+    "id": "705cb6a9be72",
+    "title": "ThreatsDay: GhostJacking AI Attacks, EtherHiding ClickFix, Cursor CLI Flaw + 17 More Stories",
+    "url": "https://thehackernews.com/2026/08/threatsday-ghostjacking-ai-attacks.html",
+    "source": "The Hacker News",
+    "published": "2026-08-13T18:17:10.000Z",
+    "summary": "Some weeks have one big security story. Others bring many smaller updates that are easy to miss but still matter. This week has plenty of them, covering cloud services, AI tools, malware, data breaches, scams, and new…",
+    "score": 8,
+    "matched": [
+      "malware",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 3,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 4
+    }
+  },
+  {
+    "id": "90b7b793e076",
+    "title": "New PATCHCORD Backdoor Targets Afghan Telecom and Indian Critical Infrastructure",
+    "url": "https://thehackernews.com/2026/08/new-patchcord-backdoor-targets-afghan.html",
+    "source": "The Hacker News",
+    "published": "2026-08-13T15:00:29.000Z",
+    "summary": "Afghan telecom providers and South Asian critical infrastructure organizations have emerged as the target of a new ongoing campaign that delivers a previously undocumented backdoor called PATCHCORD. According to Acronis…",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "backdoor"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 2,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
     }
   },
   {
@@ -129,28 +284,6 @@
     }
   },
   {
-    "id": "4e10981a0111",
-    "title": "Cisco ASA and FTD Flaw Exploited in the Wild Can Trigger Remote DoS",
-    "url": "https://thehackernews.com/2026/08/cisco-asa-and-ftd-flaw-exploited-in.html",
-    "source": "The Hacker News",
-    "published": "2026-08-12T06:15:58.000Z",
-    "summary": "Cisco has warned that a new vulnerability impacting Secure Firewall Adaptive Security Appliance (ASA) Software and Secure Firewall Threat Defense (FTD) Software has been exploited in the wild. The high-severity flaw,…",
-    "score": 6,
-    "matched": [
-      "exploited in",
-      "in the wild"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 11,
-      "heading": false,
-      "evidence": 11
-    }
-  },
-  {
     "id": "0d98e098f937",
     "title": "CaptiveCrunch: Midnight Blizzard Weaponizes Hotel Wi-Fi Captive Portals to Steal Microsoft 365 Credentials",
     "url": "https://www.zscaler.com/blogs/security-research/captivecrunch-midnight-blizzard-weaponizes-hotel-wi-fi-captive-portals",
@@ -217,49 +350,6 @@
     }
   },
   {
-    "id": "cfe1a7d09642",
-    "title": "DeadLock Ransomware Uses Polygon Smart Contracts to Make Extortion Infra Harder to Disrupt",
-    "url": "https://thehackernews.com/2026/08/deadlock-ransomware-uses-polygon-smart.html",
-    "source": "The Hacker News",
-    "published": "2026-08-11T16:35:27.000Z",
-    "summary": "The ransomware group known as DeadLock has been observed using decentralized infrastructure to facilitate victim communications and data leak operations in a bid to improve operational resilience. \"Its recovery…",
-    "score": 6,
-    "matched": [
-      "extortion",
-      "ransomware"
-    ],
-    "kind": "other",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 1,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 2
-    }
-  },
-  {
-    "id": "0f135c6567b4",
-    "title": "Head Mare APT is exploiting vulnerabilities in an unpatched TrueConf server to deliver PhantomCore and PhantomGraph to video conference participants",
-    "url": "https://securelist.com/tr/head-mare-targets-trueconf-server-with-phantomcore/120988/",
-    "source": "Securelist",
-    "published": "2026-08-11T12:00:55.000Z",
-    "summary": "Kaspersky experts have discovered malicious TrueConf software installers. The Head Mare APT group uses them to deliver the PhantomCore and PhantomGraph backdoors to target systems by exploiting vulnerabilities in an…",
-    "score": 6,
-    "matched": [
-      "APT"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 56,
-      "defanged": 15,
-      "addresses": 5,
-      "heading": true,
-      "evidence": 79
-    }
-  },
-  {
     "id": "9ddeac63f2bb",
     "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/08/11/cisa-adds-three-known-exploited-vulnerabilities-catalog",
@@ -303,52 +393,6 @@
     }
   },
   {
-    "id": "bb61cbf6cb78",
-    "title": "Metabase Zero-Day Exploited in Wild Allows Admin Access Without Authentication",
-    "url": "https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html",
-    "source": "The Hacker News",
-    "published": "2026-08-08T06:58:31.000Z",
-    "summary": "Metabase has warned that a maximum-severity security flaw impacting its business intelligence and data visualization software package has been exploited in the wild as a zero-day. The vulnerability (CVSS score: 10.0),…",
-    "score": 9,
-    "matched": [
-      "exploited in",
-      "in the wild",
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": true,
-      "evidence": 3
-    }
-  },
-  {
-    "id": "0e3a028652ad",
-    "title": "ClickFix Attacks Deliver macOS Stealer That Can Drain Crypto Wallets",
-    "url": "https://thehackernews.com/2026/08/clickfix-attacks-deliver-macos-stealer.html",
-    "source": "The Hacker News",
-    "published": "2026-08-07T18:29:08.000Z",
-    "summary": "ClickFix-style attacks are being used to deliver a Go-based malware capable of stealing cryptocurrency assets, as well as browser-stored passwords, Apple iCloud Keychain data, and cached credentials. The macOS-focused…",
-    "score": 12,
-    "matched": [
-      "malware",
-      "stealer",
-      "ClickFix"
-    ],
-    "kind": "technique",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
     "id": "c4f45e1735fe",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/08/07/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -360,50 +404,6 @@
       "known exploited"
     ],
     "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "3193878ce9c7",
-    "title": "Microsoft 365 AitM Phishing Hijacks Accounts to Collect Payroll and Finance Emails",
-    "url": "https://thehackernews.com/2026/08/microsoft-365-aitm-phishing-hijacks.html",
-    "source": "The Hacker News",
-    "published": "2026-08-07T10:38:27.000Z",
-    "summary": "Cybersecurity researchers have called attention to an active \"widespread email-driven phishing campaign\" that employs adversary-in-the-middle (AitM) techniques to take control of Microsoft 365 accounts with an aim to…",
-    "score": 20,
-    "matched": [
-      "campaign",
-      "phishing",
-      "adversary-in-the-middle"
-    ],
-    "kind": "campaign",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 1,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 1
-    }
-  },
-  {
-    "id": "d2ca685e7bfe",
-    "title": "Malware Can Abuse Windows Hello for Business Keys for Persistent Entra ID Access",
-    "url": "https://thehackernews.com/2026/08/malware-can-abuse-windows-hello-for.html",
-    "source": "The Hacker News",
-    "published": "2026-08-07T08:52:11.000Z",
-    "summary": "Entra ID researcher Dirk-jan Mollema demonstrated that malware already running in a signed-in Windows session can silently use the victim's Windows Hello for Business key to authenticate to Microsoft Entra ID. The…",
-    "score": 10,
-    "matched": [
-      "malware"
-    ],
-    "kind": "other",
     "indicators": {
       "v": 2,
       "hashes": 0,
