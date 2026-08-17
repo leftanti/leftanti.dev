@@ -1,5 +1,71 @@
 [
   {
+    "id": "17cf9cf4195a",
+    "title": "Hacker claims 3.6 million Azure account records stolen from major companies",
+    "url": "https://www.bleepingcomputer.com/news/security/hacker-claims-36-million-azure-account-records-stolen-from-major-companies/",
+    "source": "BleepingComputer",
+    "published": "2026-08-17T19:35:01.000Z",
+    "summary": "A threat actor is selling employee databases allegedly stolen from the Microsoft Azure infrastructure of multiple Fortune 500 companies after gaining access using compromised credentials. [...]",
+    "score": 8,
+    "matched": [
+      "threat actor",
+      "compromised"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "34135e380428",
+    "title": "C2Looper: A New Backdoor Likely Tied To Ransomware With GitHub C2",
+    "url": "https://www.zscaler.com/blogs/security-research/c2looper-new-backdoor-likely-tied-ransomware-github-c2",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-08-17T14:06:04.000Z",
+    "summary": "IntroductionIn July 2026, Zscaler ThreatLabz identified a new Rust-based malware family that we track as C2Looper, which is likely leveraged by a ransomware-related threat actor. Furthermore, ThreatLabz assesses with…",
+    "score": 14,
+    "matched": [
+      "threat actor",
+      "ransomware",
+      "malware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 4,
+      "defanged": 1,
+      "addresses": 3,
+      "heading": true,
+      "evidence": 11
+    }
+  },
+  {
+    "id": "85edd8ddb144",
+    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/08/17/cisa-adds-one-known-exploited-vulnerability-catalog",
+    "source": "CISA",
+    "published": "2026-08-17T12:00:00.000Z",
+    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2025-62593 Ray-Project Ray Code Injection Vulnerability This type of…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "27c4b2c20495",
     "title": "Philips and GE investigating Clop ransomware data theft claims",
     "url": "https://www.bleepingcomputer.com/news/security/philips-and-ge-investigating-clop-ransomware-data-theft-claims/",
@@ -129,28 +195,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 20
-    }
-  },
-  {
-    "id": "02cfaa99b310",
-    "title": "GeoServer Zero-Day Targeted in Active Exploitation Attempts, Can Lead to RCE",
-    "url": "https://thehackernews.com/2026/08/unpatched-geoserver-zero-day-targeted.html",
-    "source": "The Hacker News",
-    "published": "2026-08-13T18:45:12.000Z",
-    "summary": "A newly disclosed zero-day flaw in GeoServer is seeing active exploitation efforts, per watchTowr. The vulnerability, which has yet to be assigned a CVE identifier, is an SQL injection vulnerability in the open-source…",
-    "score": 6,
-    "matched": [
-      "exploitation attempts",
-      "zero-day"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
     }
   },
   {
@@ -371,28 +415,6 @@
     }
   },
   {
-    "id": "76122533065e",
-    "title": "China-Linked Hackers Deploy New StormEncryptor Ransomware, Likely via N-central Flaw",
-    "url": "https://thehackernews.com/2026/08/china-linked-hackers-deploy-new.html",
-    "source": "The Hacker News",
-    "published": "2026-08-10T16:38:37.000Z",
-    "summary": "Microsoft has disclosed that Storm-1175, a financially motivated threat actor linked to China, has deployed a previously undocumented ransomware strain called StormEncryptor. The use of StormEncryptor marks a shift from…",
-    "score": 10,
-    "matched": [
-      "threat actor",
-      "ransomware"
-    ],
-    "kind": "campaign",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
     "id": "c4f45e1735fe",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/08/07/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -531,27 +553,6 @@
     "source": "CISA",
     "published": "2026-08-04T12:00:00.000Z",
     "summary": "CISA has added three new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-9198 IBM Langflow Code Injection Vulnerability CVE-2026-18556 N-able…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "dd8d41da7130",
-    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/08/03/cisa-adds-one-known-exploited-vulnerability-catalog",
-    "source": "CISA",
-    "published": "2026-08-03T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-18577 N-able N-central Authentication Bypass Using an Alternate Path or…",
     "score": 10,
     "matched": [
       "known exploited"
