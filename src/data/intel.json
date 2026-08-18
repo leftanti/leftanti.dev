@@ -1,5 +1,27 @@
 [
   {
+    "id": "c4c16b212f43",
+    "title": "CISA Flags Actively Exploited Ray Flaw That Can Trigger Browser-Based RCE",
+    "url": "https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html",
+    "source": "The Hacker News",
+    "published": "2026-08-18T06:34:20.000Z",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a critical flaw impacting Ray to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. Ray is an…",
+    "score": 15,
+    "matched": [
+      "actively exploited",
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "17cf9cf4195a",
     "title": "Hacker claims 3.6 million Azure account records stolen from major companies",
     "url": "https://www.bleepingcomputer.com/news/security/hacker-claims-36-million-azure-account-records-stolen-from-major-companies/",
@@ -63,29 +85,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "27c4b2c20495",
-    "title": "Philips and GE investigating Clop ransomware data theft claims",
-    "url": "https://www.bleepingcomputer.com/news/security/philips-and-ge-investigating-clop-ransomware-data-theft-claims/",
-    "source": "BleepingComputer",
-    "published": "2026-08-17T11:25:02.000Z",
-    "summary": "Tech giants General Electric (GE) and Philips have also confirmed they're investigating claims that the Clop ransomware gang breached their systems and stole data. [...]",
-    "score": 6,
-    "matched": [
-      "breached",
-      "data theft",
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 6
     }
   },
   {
