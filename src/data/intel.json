@@ -1,5 +1,50 @@
 [
   {
+    "id": "2547a3051bcf",
+    "title": "16 Typosquatted RubyGems Packages Steal Browser Credentials and Crypto Wallets",
+    "url": "https://thehackernews.com/2026/08/16-typosquatted-rubygems-packages-steal.html",
+    "source": "The Hacker News",
+    "published": "2026-08-18T11:20:00.000Z",
+    "summary": "Cybersecurity researchers have flagged a new typosquatting campaign targeting RubyGems users with a Windows-based information stealer. OpenSourceMalware, which discovered the activity on August 15, 2026, is tracking the…",
+    "score": 7,
+    "matched": [
+      "campaign",
+      "stealer"
+    ],
+    "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 2,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 2
+    }
+  },
+  {
+    "id": "6df82ecf0266",
+    "title": "CISA: Windows Task Host flaw now exploited by ransomware gangs",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-windows-task-host-flaw-now-exploited-by-ransomware-gangs/",
+    "source": "BleepingComputer",
+    "published": "2026-08-18T10:32:16.000Z",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has confirmed that ransomware gangs are also exploiting a high-severity Windows Task Host vulnerability that was flagged as actively exploited in April.…",
+    "score": 13,
+    "matched": [
+      "actively exploited",
+      "exploited in",
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
     "id": "c4c16b212f43",
     "title": "CISA Flags Actively Exploited Ray Flaw That Can Trigger Browser-Based RCE",
     "url": "https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html",
@@ -963,29 +1008,6 @@
     }
   },
   {
-    "id": "056751b038f7",
-    "title": "Technical Analysis of MLTBackdoor",
-    "url": "https://www.zscaler.com/blogs/security-research/technical-analysis-mltbackdoor",
-    "source": "Zscaler ThreatLabz",
-    "published": "2026-06-09T16:26:54.000Z",
-    "summary": "IntroductionIn May 2026, Zscaler ThreatLabz identified a new malware family that we track as MLTBackdoor that is likely leveraged by a ransomware-related threat actor. MLTBackdoor has been observed by ThreatLabz being…",
-    "score": 7,
-    "matched": [
-      "threat actor",
-      "ransomware",
-      "malware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 28,
-      "defanged": 9,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 41
-    }
-  },
-  {
     "id": "2d2175820404",
     "title": "Phishing Campaign Deploys JavaScript-Driven PureLogs Variant to Steal Sensitive Data",
     "url": "https://feeds.fortinet.com/~/957300263/0/fortinet/blog/threat-research~Phishing-Campaign-Deploys-JavaScriptDriven-PureLogs-Variant-to-Steal-Sensitive-Data",
@@ -1027,29 +1049,6 @@
       "addresses": 2,
       "heading": true,
       "evidence": 25
-    }
-  },
-  {
-    "id": "8159851e4eb4",
-    "title": "Flash Alert: EtherRat and TukTuk C2 End in The Gentleman Ransomware",
-    "url": "https://thedfirreport.com/2026/05/11/flash-alert-etherrat-and-tuktuk-c2-end-in-the-gentleman-ransomware/",
-    "source": "The DFIR Report",
-    "published": "2026-05-11T14:05:04.000Z",
-    "summary": "The EtherRAT malware family was first reported by Sysdig back in December 2025. At that time, the initial access vector was exploitation of CVE-2025-55182 (React2Shell) targeting Linux servers. In March 2026, a Windows…",
-    "score": 7,
-    "matched": [
-      "ransomware",
-      "malware",
-      "initial access"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 18,
-      "defanged": 1,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 23
     }
   },
   {
