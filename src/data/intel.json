@@ -1,24 +1,23 @@
 [
   {
-    "id": "2547a3051bcf",
-    "title": "16 Typosquatted RubyGems Packages Steal Browser Credentials and Crypto Wallets",
-    "url": "https://thehackernews.com/2026/08/16-typosquatted-rubygems-packages-steal.html",
-    "source": "The Hacker News",
-    "published": "2026-08-18T11:20:00.000Z",
-    "summary": "Cybersecurity researchers have flagged a new typosquatting campaign targeting RubyGems users with a Windows-based information stealer. OpenSourceMalware, which discovered the activity on August 15, 2026, is tracking the…",
-    "score": 7,
+    "id": "cf649e5c85b0",
+    "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/08/18/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-08-18T12:00:00.000Z",
+    "summary": "CISA has added four new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-33824 Microsoft Internet Key Exchange (IKE) Service Extensions Double…",
+    "score": 10,
     "matched": [
-      "campaign",
-      "stealer"
+      "known exploited"
     ],
-    "kind": "campaign",
+    "kind": "exploited",
     "indicators": {
       "v": 2,
       "hashes": 0,
-      "defanged": 2,
+      "defanged": 0,
       "addresses": 0,
       "heading": false,
-      "evidence": 2
+      "evidence": 0
     }
   },
   {
@@ -330,6 +329,28 @@
     }
   },
   {
+    "id": "df218795e276",
+    "title": "Akira Hits Safe Mode: Ransomware Rebooting Around EDR",
+    "url": "https://www.huntress.com/blog/akira-hits-safe-mode-ransomware-rebooting-around-edr",
+    "source": "Huntress",
+    "published": "2026-08-12T13:00:00.000Z",
+    "summary": "An Akira affiliate rebooted into Safe Mode to kill EDR and Defender, then Safe Mode broke their own ransomware. Here’s the full attack chain.",
+    "score": 10,
+    "matched": [
+      "affiliate",
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 16,
+      "defanged": 1,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 21
+    }
+  },
+  {
     "id": "c4b078befb2f",
     "title": "Adobe Patches Three CVSS 10.0 ColdFusion and Campaign Classic Flaws",
     "url": "https://thehackernews.com/2026/08/adobe-patches-three-cvss-100-coldfusion.html",
@@ -568,50 +589,6 @@
     }
   },
   {
-    "id": "4fb83d6f230e",
-    "title": "QuickFox Supply Chain Attack Used to Deploy FDMTP Implant",
-    "url": "https://feeds.fortinet.com/~/966214247/0/fortinet/blog/threat-research~QuickFox-Supply-Chain-Attack-Used-to-Deploy-FDMTP-Implant",
-    "source": "Fortinet",
-    "published": "2026-08-04T13:00:00.000Z",
-    "summary": "The FortiGuard Labs Incident Response team analyzes a QuickFox supply chain attack that used trojanized Windows installers, selective targeting, and an evolving FDMTP implant",
-    "score": 7,
-    "matched": [
-      "incident response",
-      "implant",
-      "supply chain"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 36,
-      "defanged": 625,
-      "addresses": 58,
-      "heading": true,
-      "evidence": 722
-    }
-  },
-  {
-    "id": "64bf885106e5",
-    "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/08/04/cisa-adds-three-known-exploited-vulnerabilities-catalog",
-    "source": "CISA",
-    "published": "2026-08-04T12:00:00.000Z",
-    "summary": "CISA has added three new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-9198 IBM Langflow Code Injection Vulnerability CVE-2026-18556 N-able…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
     "id": "92fba083c506",
     "title": "2026-07-31: SmartApeSG ClickFix campaign pushes unidentified RAT",
     "url": "https://www.malware-traffic-analysis.net/2026/07/31/index.html",
@@ -676,6 +653,27 @@
     }
   },
   {
+    "id": "9f0e9336b780",
+    "title": "Credential Stuffing Campaign Hits SonicWall | Huntress SOC Tracking",
+    "url": "https://www.huntress.com/blog/sonicwall-credential-stuffing-campaign",
+    "source": "Huntress",
+    "published": "2026-07-28T13:00:00.000Z",
+    "summary": "The Huntress SOC is tracking an active credential stuffing campaign targeting SonicWall devices, compromising dozens of organizations since July 25.",
+    "score": 8,
+    "matched": [
+      "campaign"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 14,
+      "defanged": 10,
+      "addresses": 5,
+      "heading": true,
+      "evidence": 32
+    }
+  },
+  {
     "id": "62fcd066ad23",
     "title": "Helpdesk Hijackers: Teams Vishing, Quick Assist, and GoGRPC Backdoor",
     "url": "https://www.zscaler.com/blogs/security-research/helpdesk-hijackers-teams-vishing-quick-assist-and-gogrpc-backdoor",
@@ -696,6 +694,28 @@
       "addresses": 8,
       "heading": true,
       "evidence": 28
+    }
+  },
+  {
+    "id": "5dd78732982f",
+    "title": "Inside FakeAgent: How a Claude Desktop Malvertising Campaign Hit 29 Organizations with SectopRAT",
+    "url": "https://www.huntress.com/blog/fakeagent-claude-desktop-malvertising-ends-in-dotnet-rat",
+    "source": "Huntress",
+    "published": "2026-07-22T20:00:00.000Z",
+    "summary": "On July 21 and July 22, Huntress observed a number of attacks that started with a malicious public Claude Artifact hosted on a legitimate Claude domain, and ended in organizations being infected by the SectopRAT stealer.",
+    "score": 10,
+    "matched": [
+      "campaign",
+      "stealer"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 19,
+      "defanged": 31,
+      "addresses": 21,
+      "heading": false,
+      "evidence": 71
     }
   },
   {
@@ -984,27 +1004,6 @@
       "addresses": 1,
       "heading": true,
       "evidence": 13
-    }
-  },
-  {
-    "id": "459eca2bf662",
-    "title": "Inside Kali365, a Device Code Phishing Ecosystem | Huntress",
-    "url": "https://www.huntress.com/blog/kali365-device-code-phishing-kit",
-    "source": "Huntress",
-    "published": "2026-06-11T18:00:00.000Z",
-    "summary": "Huntress traced device code phishing from Tencent Cloud to Kali365, a Microsoft 365 kit that steals tokens and keeps access even after MFA or password resets.",
-    "score": 7,
-    "matched": [
-      "phishing"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 14,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 18
     }
   },
   {
