@@ -21,6 +21,28 @@
     }
   },
   {
+    "id": "2547a3051bcf",
+    "title": "16 Typosquatted RubyGems Packages Steal Browser Credentials and Crypto Wallets",
+    "url": "https://thehackernews.com/2026/08/16-typosquatted-rubygems-packages-steal.html",
+    "source": "The Hacker News",
+    "published": "2026-08-18T11:20:00.000Z",
+    "summary": "Cybersecurity researchers have flagged a new typosquatting campaign targeting RubyGems users with a Windows-based information stealer. OpenSourceMalware, which discovered the activity on August 15, 2026, is tracking the…",
+    "score": 7,
+    "matched": [
+      "campaign",
+      "stealer"
+    ],
+    "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 2,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 2
+    }
+  },
+  {
     "id": "6df82ecf0266",
     "title": "CISA: Windows Task Host flaw now exploited by ransomware gangs",
     "url": "https://www.bleepingcomputer.com/news/security/cisa-windows-task-host-flaw-now-exploited-by-ransomware-gangs/",
@@ -129,27 +151,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "a7ad2ff57905",
-    "title": "Microsoft working on Defender patch for ShieldBreak zero-day",
-    "url": "https://www.bleepingcomputer.com/news/security/microsoft-working-on-defender-patch-for-shieldbreak-zero-day/",
-    "source": "BleepingComputer",
-    "published": "2026-08-17T09:05:33.000Z",
-    "summary": "Microsoft is working on a security patch for the \"ShieldBreak\" zero-day vulnerability disclosed last week by security researcher \"Nightmare Eclipse\" and now tracked as CVE-2026-69414. [...]",
-    "score": 14,
-    "matched": [
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
     }
   },
   {
@@ -586,6 +587,29 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
+    }
+  },
+  {
+    "id": "4fb83d6f230e",
+    "title": "QuickFox Supply Chain Attack Used to Deploy FDMTP Implant",
+    "url": "https://feeds.fortinet.com/~/966214247/0/fortinet/blog/threat-research~QuickFox-Supply-Chain-Attack-Used-to-Deploy-FDMTP-Implant",
+    "source": "Fortinet",
+    "published": "2026-08-04T13:00:00.000Z",
+    "summary": "The FortiGuard Labs Incident Response team analyzes a QuickFox supply chain attack that used trojanized Windows installers, selective targeting, and an evolving FDMTP implant",
+    "score": 7,
+    "matched": [
+      "incident response",
+      "implant",
+      "supply chain"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 36,
+      "defanged": 625,
+      "addresses": 58,
+      "heading": true,
+      "evidence": 722
     }
   },
   {
@@ -1026,28 +1050,6 @@
       "addresses": 3,
       "heading": false,
       "evidence": 44
-    }
-  },
-  {
-    "id": "9f002231c0c7",
-    "title": "The Gentleman Ransomware | Defense Evasion TTPs Uncovered | Huntress",
-    "url": "https://www.huntress.com/blog/the-gentlemen-ransomware-defense-evasion-ttps",
-    "source": "Huntress",
-    "published": "2026-05-21T07:00:00.000Z",
-    "summary": "Two recent incidents involving The Gentlemen ransomware show the use of defense evasion tactics, including logs being cleared and attempts to add antivirus exclusions.",
-    "score": 14,
-    "matched": [
-      "ransomware",
-      "TTPs"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 15,
-      "defanged": 5,
-      "addresses": 2,
-      "heading": true,
-      "evidence": 25
     }
   },
   {
