@@ -1,5 +1,28 @@
 [
   {
+    "id": "7b9d29a2333f",
+    "title": "Hackers compromise 14,500 Dahua web cameras in 35-day campaign",
+    "url": "https://www.bleepingcomputer.com/news/security/hackers-compromise-14-500-dahua-web-cameras-in-35-day-campaign/",
+    "source": "BleepingComputer",
+    "published": "2026-08-19T18:09:13.000Z",
+    "summary": "In a large-scale campaign that researchers dubbed CameraSwarm, hackers compromised more than 14,500 Dahua IP cameras mostly in Ukraine and Russia. [...]",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "compromise",
+      "compromised"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
     "id": "a5bd7d34d6d9",
     "title": "SilkParasite Espionage Campaign Targets Central Asian Governments with Five New RATs",
     "url": "https://thehackernews.com/2026/08/silkparasite-espionage-campaign-targets.html",
@@ -12,6 +35,27 @@
       "intrusion"
     ],
     "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "a346145f99bb",
+    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/08/19/cisa-adds-one-known-exploited-vulnerability-catalog",
+    "source": "CISA",
+    "published": "2026-08-19T12:00:00.000Z",
+    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-64849 MLflow Server-Side Request Forgery Vulnerability This type of…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
     "indicators": {
       "v": 2,
       "hashes": 0,
@@ -172,28 +216,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "17cf9cf4195a",
-    "title": "Hacker claims 3.6 million Azure account records stolen from major companies",
-    "url": "https://www.bleepingcomputer.com/news/security/hacker-claims-36-million-azure-account-records-stolen-from-major-companies/",
-    "source": "BleepingComputer",
-    "published": "2026-08-17T19:35:01.000Z",
-    "summary": "A threat actor is selling employee databases allegedly stolen from the Microsoft Azure infrastructure of multiple Fortune 500 companies after gaining access using compromised credentials. [...]",
-    "score": 8,
-    "matched": [
-      "threat actor",
-      "compromised"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
     }
   },
   {
@@ -566,27 +588,6 @@
       "addresses": 1,
       "heading": true,
       "evidence": 30
-    }
-  },
-  {
-    "id": "310016bb0e1c",
-    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/08/05/cisa-adds-one-known-exploited-vulnerability-catalog",
-    "source": "CISA",
-    "published": "2026-08-05T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-63077 JetBrains TeamCity Deserialization of Untrusted Data Vulnerability…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
     }
   },
   {
