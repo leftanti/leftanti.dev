@@ -1,5 +1,26 @@
 [
   {
+    "id": "3a973d9720c5",
+    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/08/20/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-08-20T12:00:00.000Z",
+    "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-72529 TrueConf Server Missing Authentication for Critical Function…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "67cab4925c0d",
     "title": "Critical Zimbra RCE flaw now actively exploited in attacks",
     "url": "https://www.bleepingcomputer.com/news/security/critical-zimbra-rce-flaw-now-actively-exploited-in-attacks/",
@@ -326,28 +347,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 20
-    }
-  },
-  {
-    "id": "705cb6a9be72",
-    "title": "ThreatsDay: GhostJacking AI Attacks, EtherHiding ClickFix, Cursor CLI Flaw + 17 More Stories",
-    "url": "https://thehackernews.com/2026/08/threatsday-ghostjacking-ai-attacks.html",
-    "source": "The Hacker News",
-    "published": "2026-08-13T18:17:10.000Z",
-    "summary": "Some weeks have one big security story. Others bring many smaller updates that are easy to miss but still matter. This week has plenty of them, covering cloud services, AI tools, malware, data breaches, scams, and new…",
-    "score": 8,
-    "matched": [
-      "malware",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 3,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 4
     }
   },
   {
