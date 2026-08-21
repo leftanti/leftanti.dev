@@ -1,5 +1,28 @@
 [
   {
+    "id": "716a3dbc59c8",
+    "title": "Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads",
+    "url": "https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html",
+    "source": "The Hacker News",
+    "published": "2026-08-20T20:22:35.000Z",
+    "summary": "The Rust Project has deleted malicious versions of three widely used Rust crates from crates.io after a compromised maintainer account published releases that added a typosquatted dependency whose build script…",
+    "score": 6,
+    "matched": [
+      "compromised",
+      "malware",
+      "supply chain"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 1,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 5
+    }
+  },
+  {
     "id": "3a973d9720c5",
     "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/08/20/cisa-adds-two-known-exploited-vulnerabilities-catalog",
@@ -350,27 +373,6 @@
     }
   },
   {
-    "id": "f2eaae17aa2e",
-    "title": "2026-08-12: SmartApeSG ClickFix leads to two RATs",
-    "url": "https://www.malware-traffic-analysis.net/2026/08/12/index.html",
-    "source": "Malware Traffic Analysis",
-    "published": "2026-08-13T03:07:00.000Z",
-    "summary": "",
-    "score": 8,
-    "matched": [
-      "ClickFix"
-    ],
-    "kind": "technique",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
     "id": "df218795e276",
     "title": "Akira Hits Safe Mode: Ransomware Rebooting Around EDR",
     "url": "https://www.huntress.com/blog/akira-hits-safe-mode-ransomware-rebooting-around-edr",
@@ -566,28 +568,6 @@
       "addresses": 58,
       "heading": true,
       "evidence": 722
-    }
-  },
-  {
-    "id": "92fba083c506",
-    "title": "2026-07-31: SmartApeSG ClickFix campaign pushes unidentified RAT",
-    "url": "https://www.malware-traffic-analysis.net/2026/07/31/index.html",
-    "source": "Malware Traffic Analysis",
-    "published": "2026-07-31T20:54:00.000Z",
-    "summary": "",
-    "score": 16,
-    "matched": [
-      "campaign",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 22,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 25
     }
   },
   {
@@ -1049,6 +1029,29 @@
       "addresses": 3,
       "heading": false,
       "evidence": 44
+    }
+  },
+  {
+    "id": "8159851e4eb4",
+    "title": "Flash Alert: EtherRat and TukTuk C2 End in The Gentleman Ransomware",
+    "url": "https://thedfirreport.com/2026/05/11/flash-alert-etherrat-and-tuktuk-c2-end-in-the-gentleman-ransomware/",
+    "source": "The DFIR Report",
+    "published": "2026-05-11T14:05:04.000Z",
+    "summary": "The EtherRAT malware family was first reported by Sysdig back in December 2025. At that time, the initial access vector was exploitation of CVE-2025-55182 (React2Shell) targeting Linux servers. In March 2026, a Windows…",
+    "score": 7,
+    "matched": [
+      "ransomware",
+      "malware",
+      "initial access"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 18,
+      "defanged": 1,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 23
     }
   },
   {
