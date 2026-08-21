@@ -1,25 +1,24 @@
 [
   {
-    "id": "716a3dbc59c8",
-    "title": "Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads",
-    "url": "https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html",
+    "id": "58f66a40c663",
+    "title": "Microsoft Entra ID Flaw (CVSS 10.0) Exploited in Wild, Allows Remote Code Execution",
+    "url": "https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html",
     "source": "The Hacker News",
-    "published": "2026-08-20T20:22:35.000Z",
-    "summary": "The Rust Project has deleted malicious versions of three widely used Rust crates from crates.io after a compromised maintainer account published releases that added a typosquatted dependency whose build script…",
-    "score": 6,
+    "published": "2026-08-21T06:06:11.000Z",
+    "summary": "Microsoft on Thursday warned of a maximum-severity security flaw in Entra ID that it said has been exploited in the wild, but noted that no customer action is required. The vulnerability, tracked as CVE-2026-69836 (CVSS…",
+    "score": 11,
     "matched": [
-      "compromised",
-      "malware",
-      "supply chain"
+      "exploited in",
+      "in the wild"
     ],
-    "kind": "ioc",
+    "kind": "exploited",
     "indicators": {
       "v": 2,
-      "hashes": 1,
+      "hashes": 0,
       "defanged": 0,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 5
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
     }
   },
   {
@@ -329,28 +328,6 @@
     }
   },
   {
-    "id": "751a60953d86",
-    "title": "CTM360 Uncovers Over 3,000 Recruitment Phishing URLs Using Browser-in-the-Browser (BitB) Credential Traps",
-    "url": "https://thehackernews.com/2026/08/ctm360-uncovers-over-3000-recruitment.html",
-    "source": "The Hacker News",
-    "published": "2026-08-14T10:57:00.000Z",
-    "summary": "Cybersecurity researchers have uncovered a large-scale, global recruitment-themed phishing campaign that uses fake interview scheduling pages and Browser-in-the-Browser (BitB) windows to steal Google and Facebook…",
-    "score": 9,
-    "matched": [
-      "campaign",
-      "phishing"
-    ],
-    "kind": "campaign",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
     "id": "ea4d9c02a341",
     "title": "APT group HoneyMyte upgrades CoolClient: the backdoor gets a kernel-level Windows rootkit",
     "url": "https://securelist.com/honeymyte-coolclient-driver-rootkit/121028/",
@@ -370,6 +347,27 @@
       "addresses": 0,
       "heading": false,
       "evidence": 20
+    }
+  },
+  {
+    "id": "f2eaae17aa2e",
+    "title": "2026-08-12: SmartApeSG ClickFix leads to two RATs",
+    "url": "https://www.malware-traffic-analysis.net/2026/08/12/index.html",
+    "source": "Malware Traffic Analysis",
+    "published": "2026-08-13T03:07:00.000Z",
+    "summary": "",
+    "score": 8,
+    "matched": [
+      "ClickFix"
+    ],
+    "kind": "technique",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
     }
   },
   {
@@ -571,6 +569,28 @@
     }
   },
   {
+    "id": "92fba083c506",
+    "title": "2026-07-31: SmartApeSG ClickFix campaign pushes unidentified RAT",
+    "url": "https://www.malware-traffic-analysis.net/2026/07/31/index.html",
+    "source": "Malware Traffic Analysis",
+    "published": "2026-07-31T20:54:00.000Z",
+    "summary": "",
+    "score": 16,
+    "matched": [
+      "campaign",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 22,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 25
+    }
+  },
+  {
     "id": "ddd2528ace65",
     "title": "Device Code Phishing Keeps Evolving. Here’s What to Watch For",
     "url": "https://www.huntress.com/blog/device-code-phishing-evolving-threats",
@@ -589,27 +609,6 @@
       "addresses": 4,
       "heading": false,
       "evidence": 23
-    }
-  },
-  {
-    "id": "d89938780cd0",
-    "title": "OctLurk and SilkLurk: newly identified tailored backdoors in cyber-espionage campaign in Central Asia",
-    "url": "https://securelist.com/octlurk-silklurk-backdoors-central-asia/120840/",
-    "source": "Securelist",
-    "published": "2026-07-30T11:00:12.000Z",
-    "summary": "Our experts discovered OctLurk and SilkLurk, backdoors operating primarily in memory, targeting Central Asia. They inject plugins to launch shells, scan networks, dump credentials, and keylogging.",
-    "score": 8,
-    "matched": [
-      "campaign"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 58,
-      "defanged": 87,
-      "addresses": 11,
-      "heading": true,
-      "evidence": 159
     }
   },
   {
