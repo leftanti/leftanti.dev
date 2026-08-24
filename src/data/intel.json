@@ -1,5 +1,71 @@
 [
   {
+    "id": "ed974b7e9a64",
+    "title": "WordlistLoader Delivers Amatera via ClickFix, SynkLoader Phishes Windows Passwords",
+    "url": "https://thehackernews.com/2026/08/wordlistloader-delivers-amatera-via.html",
+    "source": "The Hacker News",
+    "published": "2026-08-24T12:35:36.000Z",
+    "summary": "Cybersecurity researchers have flagged two new malware families called WordlistLoader and SynkLoader that's used to deliver next-stage payloads and likely sell access to ransomware groups. According to findings from Gen…",
+    "score": 13,
+    "matched": [
+      "ransomware",
+      "malware",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 8,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 8
+    }
+  },
+  {
+    "id": "7113f16252a4",
+    "title": "Operation QUICSILVER Targets Myanmar Government and IT with QUICAgent Backdoor",
+    "url": "https://thehackernews.com/2026/08/operation-quicsilver-targets-myanmar.html",
+    "source": "The Hacker News",
+    "published": "2026-08-24T11:51:36.000Z",
+    "summary": "Cybersecurity researchers have flagged a cyber espionage campaign targeting Myanmar that uses graduation ceremony invitation lures to deliver a Go backdoor called QUICAgent. The campaign, codenamed Operation QUICSILVER,…",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "backdoor"
+    ],
+    "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 1,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 2
+    }
+  },
+  {
+    "id": "674aa89b72b9",
+    "title": "CISA orders urgent patching of actively exploited Zimbra flaw",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-orders-urgent-patching-of-actively-exploited-zimbra-flaw/",
+    "source": "BleepingComputer",
+    "published": "2026-08-24T10:45:12.000Z",
+    "summary": "The Cybersecurity and Infrastructure Security Agency (CISA) has ordered U.S. government agencies to patch an actively exploited vulnerability in Zimbra Collaboration Suite (ZCS) within three days. [...]",
+    "score": 10,
+    "matched": [
+      "actively exploited"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
     "id": "3cb411a882f6",
     "title": "Connecting the Dots: Securing the Overlooked Corners of the Software Development Lifecycle (SDLC) Supply Chain",
     "url": "https://unit42.paloaltonetworks.com/sdlc-supply-chain/",
@@ -113,10 +179,9 @@
     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-max-severity-entra-id-flaw-exploited-in-attacks/",
     "source": "BleepingComputer",
     "published": "2026-08-21T11:04:10.000Z",
-    "summary": "Microsoft has patched a maximum-severity vulnerability in the Entra ID identity and access management (IAM) platform that has been exploited in attacks. [...]",
+    "summary": "Microsoft has patched multiple maximum-severity vulnerabilities in Entra ID, Azure Arc, and Exchange Online that allowed attackers to gain remote code execution and escalate privileges. [...]",
     "score": 6,
     "matched": [
-      "exploited in",
       "privilege escalation"
     ],
     "kind": "ioc",
@@ -544,29 +609,6 @@
     }
   },
   {
-    "id": "4fb83d6f230e",
-    "title": "QuickFox Supply Chain Attack Used to Deploy FDMTP Implant",
-    "url": "https://feeds.fortinet.com/~/966214247/0/fortinet/blog/threat-research~QuickFox-Supply-Chain-Attack-Used-to-Deploy-FDMTP-Implant",
-    "source": "Fortinet",
-    "published": "2026-08-04T13:00:00.000Z",
-    "summary": "The FortiGuard Labs Incident Response team analyzes a QuickFox supply chain attack that used trojanized Windows installers, selective targeting, and an evolving FDMTP implant",
-    "score": 7,
-    "matched": [
-      "incident response",
-      "implant",
-      "supply chain"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 36,
-      "defanged": 625,
-      "addresses": 58,
-      "heading": true,
-      "evidence": 722
-    }
-  },
-  {
     "id": "92fba083c506",
     "title": "2026-07-31: SmartApeSG ClickFix campaign pushes unidentified RAT",
     "url": "https://www.malware-traffic-analysis.net/2026/07/31/index.html",
@@ -717,29 +759,6 @@
       "addresses": 2,
       "heading": false,
       "evidence": 27
-    }
-  },
-  {
-    "id": "1dcde256e1f6",
-    "title": "The TTF Trap: A Global Campaign of a Low-Detection Lua Loader",
-    "url": "https://feeds.fortinet.com/~/960560447/0/fortinet/blog/threat-research~The-TTF-Trap-A-Global-Campaign-of-a-LowDetection-Lua-Loader",
-    "source": "Fortinet",
-    "published": "2026-07-16T13:00:00.000Z",
-    "summary": "FortiGuard Labs analyzes a global phishing campaign using obfuscated JScript, disguised .ttf files, and Lua loaders to deliver RATs and infostealers.",
-    "score": 10,
-    "matched": [
-      "campaign",
-      "loader",
-      "phishing"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 34,
-      "defanged": 17,
-      "addresses": 5,
-      "heading": false,
-      "evidence": 56
     }
   },
   {
@@ -1004,28 +1023,6 @@
       "addresses": 1,
       "heading": true,
       "evidence": 41
-    }
-  },
-  {
-    "id": "2d2175820404",
-    "title": "Phishing Campaign Deploys JavaScript-Driven PureLogs Variant to Steal Sensitive Data",
-    "url": "https://feeds.fortinet.com/~/957300263/0/fortinet/blog/threat-research~Phishing-Campaign-Deploys-JavaScriptDriven-PureLogs-Variant-to-Steal-Sensitive-Data",
-    "source": "Fortinet",
-    "published": "2026-05-26T13:00:00.000Z",
-    "summary": "FortiGuard Labs analyzed a new phishing campaign that uses obfuscated JavaScript, PowerShell, process hollowing, and PureLogs to steal sensitive data",
-    "score": 12,
-    "matched": [
-      "campaign",
-      "phishing"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 6,
-      "defanged": 35,
-      "addresses": 3,
-      "heading": false,
-      "evidence": 44
     }
   },
   {
