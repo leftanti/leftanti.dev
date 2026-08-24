@@ -23,6 +23,27 @@
     }
   },
   {
+    "id": "ea24647d8f68",
+    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/08/24/cisa-adds-one-known-exploited-vulnerability-catalog",
+    "source": "CISA",
+    "published": "2026-08-24T12:00:00.000Z",
+    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-21962 Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in Improper…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "7113f16252a4",
     "title": "Operation QUICSILVER Targets Myanmar Government and IT with QUICAgent Backdoor",
     "url": "https://thehackernews.com/2026/08/operation-quicsilver-targets-myanmar.html",
@@ -132,27 +153,6 @@
     }
   },
   {
-    "id": "16245422a0a0",
-    "title": "CISA orders feds to patch actively exploited TrueConf Server flaws",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-trueconf-server-flaws/",
-    "source": "BleepingComputer",
-    "published": "2026-08-21T12:25:33.000Z",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) ordered U.S. federal agencies to prioritize patching two actively exploited vulnerabilities in the TrueConf Server self-hosted communications platform.…",
-    "score": 10,
-    "matched": [
-      "actively exploited"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
     "id": "a1ad39fd9383",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/08/21/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -174,24 +174,26 @@
     }
   },
   {
-    "id": "15f141d04225",
-    "title": "Microsoft patches max severity code execution, privilege escalation flaws",
-    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-max-severity-entra-id-flaw-exploited-in-attacks/",
-    "source": "BleepingComputer",
-    "published": "2026-08-21T11:04:10.000Z",
-    "summary": "Microsoft has patched multiple maximum-severity vulnerabilities in Entra ID, Azure Arc, and Exchange Online that allowed attackers to gain remote code execution and escalate privileges. [...]",
+    "id": "716a3dbc59c8",
+    "title": "Rust Supply Chain Attack Puts Build-Time Malware in Crates with 245 Million Downloads",
+    "url": "https://thehackernews.com/2026/08/rust-supply-chain-attack-puts-build.html",
+    "source": "The Hacker News",
+    "published": "2026-08-20T20:22:35.000Z",
+    "summary": "The Rust Project has deleted malicious versions of three widely used Rust crates from crates.io after a compromised maintainer account published releases that added a typosquatted dependency whose build script…",
     "score": 6,
     "matched": [
-      "privilege escalation"
+      "compromised",
+      "malware",
+      "supply chain"
     ],
     "kind": "ioc",
     "indicators": {
       "v": 2,
-      "hashes": 2,
+      "hashes": 1,
       "defanged": 0,
       "addresses": 1,
-      "heading": false,
-      "evidence": 3
+      "heading": true,
+      "evidence": 5
     }
   },
   {
