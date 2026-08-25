@@ -1,5 +1,50 @@
 [
   {
+    "id": "02168dcbba55",
+    "title": "Mirage2FA Surge Hits 4,500 US and EU Companies, Abusing Microsoft 365 Login Flows",
+    "url": "https://thehackernews.com/2026/08/mirage2fa-surge-hits-4500-us-and-eu.html",
+    "source": "The Hacker News",
+    "published": "2026-08-25T11:56:15.000Z",
+    "summary": "Thousands of companies have been affected by the Mirage2FA campaign from 2024 to 2026. The commercial phishing-as-a-service toolkit targets Microsoft 365 accounts by abusing legitimate login flows and bypassing…",
+    "score": 12,
+    "matched": [
+      "campaign",
+      "phishing"
+    ],
+    "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "e7c2149d23bc",
+    "title": "24 npm Packages Abuse unpkg Mirrors to Host Fake Cloudflare CAPTCHA Pages",
+    "url": "https://thehackernews.com/2026/08/24-npm-packages-abuse-unpkg-mirrors-to.html",
+    "source": "The Hacker News",
+    "published": "2026-08-25T11:52:43.000Z",
+    "summary": "Cybersecurity researchers have disclosed details of a new campaign that uses a cluster of 24 npm packages as free phishing infrastructure for redirecting to ClickFix-style fake CAPTCHA pages. \"While the malware is…",
+    "score": 10,
+    "matched": [
+      "campaign",
+      "malware",
+      "phishing"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 4,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 4
+    }
+  },
+  {
     "id": "032a23e858ec",
     "title": "Actively Exploited Oracle WebLogic Flaw Lets Unauthenticated Attackers Access Critical Data",
     "url": "https://thehackernews.com/2026/08/actively-exploited-oracle-weblogic-flaw.html",
@@ -127,29 +172,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "290e5322ba2e",
-    "title": "New SynkLoader malware pushed in Microsoft Teams phishing campaign",
-    "url": "https://www.bleepingcomputer.com/news/security/new-synkloader-malware-pushed-in-microsoft-teams-phishing-campaign/",
-    "source": "BleepingComputer",
-    "published": "2026-08-21T18:01:30.000Z",
-    "summary": "A previously unknown malware family dubbed SynkLoader is being distributed in Microsoft Teams phishing campaigns to steal credentials via a fake lock screen. [...]",
-    "score": 12,
-    "matched": [
-      "campaign",
-      "malware",
-      "phishing"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 6
     }
   },
   {
@@ -345,28 +367,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "2547a3051bcf",
-    "title": "16 Typosquatted RubyGems Packages Steal Browser Credentials and Crypto Wallets",
-    "url": "https://thehackernews.com/2026/08/16-typosquatted-rubygems-packages-steal.html",
-    "source": "The Hacker News",
-    "published": "2026-08-18T11:20:00.000Z",
-    "summary": "Cybersecurity researchers have flagged a new typosquatting campaign targeting RubyGems users with a Windows-based information stealer. OpenSourceMalware, which discovered the activity on August 15, 2026, is tracking the…",
-    "score": 7,
-    "matched": [
-      "campaign",
-      "stealer"
-    ],
-    "kind": "campaign",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 2,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 2
     }
   },
   {
