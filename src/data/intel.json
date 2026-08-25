@@ -1,5 +1,27 @@
 [
   {
+    "id": "032a23e858ec",
+    "title": "Actively Exploited Oracle WebLogic Flaw Lets Unauthenticated Attackers Access Critical Data",
+    "url": "https://thehackernews.com/2026/08/actively-exploited-oracle-weblogic-flaw.html",
+    "source": "The Hacker News",
+    "published": "2026-08-25T06:12:35.000Z",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a maximum-severity security flaw impacting Oracle HTTP Server and Oracle WebLogic Server to its Known Exploited Vulnerabilities (KEV)…",
+    "score": 15,
+    "matched": [
+      "actively exploited",
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 1,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 2
+    }
+  },
+  {
     "id": "ed974b7e9a64",
     "title": "WordlistLoader Delivers Amatera via ClickFix, SynkLoader Phishes Windows Passwords",
     "url": "https://thehackernews.com/2026/08/wordlistloader-delivers-amatera-via.html",
@@ -345,28 +367,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 2
-    }
-  },
-  {
-    "id": "c4c16b212f43",
-    "title": "CISA Flags Actively Exploited Ray Flaw That Can Trigger Browser-Based RCE",
-    "url": "https://thehackernews.com/2026/08/cisa-flags-actively-exploited-ray-flaw.html",
-    "source": "The Hacker News",
-    "published": "2026-08-18T06:34:20.000Z",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a critical flaw impacting Ray to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. Ray is an…",
-    "score": 15,
-    "matched": [
-      "actively exploited",
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
     }
   },
   {
