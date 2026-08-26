@@ -1,5 +1,28 @@
 [
   {
+    "id": "a631e8a45ed3",
+    "title": "NovaCookies Campaigns Abuse Genuine Docusign Notifications to Steal Microsoft 365 Sessions",
+    "url": "https://thehackernews.com/2026/08/novacookies-campaigns-abuse-genuine.html",
+    "source": "The Hacker News",
+    "published": "2026-08-26T13:44:31.000Z",
+    "summary": "Cybersecurity researchers have disclosed details of a new adversary-in-the-middle (AitM) phishing toolkit called NovaCookies that's used as a proxy to redirect Microsoft 365 sign-ins, while capturing authenticated…",
+    "score": 11,
+    "matched": [
+      "phishing",
+      "adversary-in-the-middle",
+      "AiTM"
+    ],
+    "kind": "technique",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 1,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 1
+    }
+  },
+  {
     "id": "85869282d537",
     "title": "Critical Gitea RCE Actively Exploited as Reported Attack Drops Miner-Like Payload",
     "url": "https://thehackernews.com/2026/08/critical-gitea-rce-actively-exploited.html",
@@ -302,28 +325,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 1
-    }
-  },
-  {
-    "id": "a5bd7d34d6d9",
-    "title": "SilkParasite Espionage Campaign Targets Central Asian Governments with Five New RATs",
-    "url": "https://thehackernews.com/2026/08/silkparasite-espionage-campaign-targets.html",
-    "source": "The Hacker News",
-    "published": "2026-08-19T13:12:17.000Z",
-    "summary": "A previously unreported cyber espionage operation dubbed SilkParasite has been observed targeting government bodies in Central Asia. The intrusion set makes use of seven remote access tool (RAT) families, five of which…",
-    "score": 11,
-    "matched": [
-      "campaign",
-      "intrusion"
-    ],
-    "kind": "campaign",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
     }
   },
   {
