@@ -1,5 +1,26 @@
 [
   {
+    "id": "85869282d537",
+    "title": "Critical Gitea RCE Actively Exploited as Reported Attack Drops Miner-Like Payload",
+    "url": "https://thehackernews.com/2026/08/critical-gitea-rce-actively-exploited.html",
+    "source": "The Hacker News",
+    "published": "2026-08-26T06:27:07.000Z",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday warned of active exploitation efforts targeting a recently patched critical security flaw impacting Gitea. The vulnerability in question is…",
+    "score": 10,
+    "matched": [
+      "actively exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "7fff329c98e3",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/08/25/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -350,50 +371,6 @@
     }
   },
   {
-    "id": "6b40ac50370a",
-    "title": "Critical macOS, SharePoint, vCenter, and Microsoft IKE Flaws Under Active Exploitation",
-    "url": "https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html",
-    "source": "The Hacker News",
-    "published": "2026-08-19T11:01:48.000Z",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added four critical vulnerabilities to its Known Exploited Vulnerabilities (KEV) catalog, stating they are being exploited in the wild. The…",
-    "score": 8,
-    "matched": [
-      "being exploited",
-      "exploited in",
-      "in the wild"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "f5e637719fb3",
-    "title": "Microsoft Links 30+ Rotating Domains to MacSync Stealer Infrastructure",
-    "url": "https://thehackernews.com/2026/08/microsoft-links-30-rotating-domains-to.html",
-    "source": "The Hacker News",
-    "published": "2026-08-19T06:01:53.000Z",
-    "summary": "Microsoft Defender Experts have linked more than 30 web domains to MacSync Stealer, a macOS-focused information stealer, after correlating recurring endpoint and network behaviors across changing infrastructure, tracing…",
-    "score": 8,
-    "matched": [
-      "stealer"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 35,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 35
-    }
-  },
-  {
     "id": "cf649e5c85b0",
     "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/08/18/cisa-adds-four-known-exploited-vulnerabilities-catalog",
@@ -478,6 +455,27 @@
       "addresses": 0,
       "heading": false,
       "evidence": 20
+    }
+  },
+  {
+    "id": "a2e864adbe5e",
+    "title": "The State of Ransomware Q2 2026",
+    "url": "https://research.checkpoint.com/2026/the-state-of-ransomware-q2-2026/",
+    "source": "Check Point Research",
+    "published": "2026-08-13T12:54:35.000Z",
+    "summary": "For the past year, the ransomware conversation has centered on concentration: a handful of dominant RaaS operations controlling most of the damage, and a shrinking pool of active groups fighting over the same territory.…",
+    "score": 6,
+    "matched": [
+      "ransomware"
+    ],
+    "kind": "other",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
     }
   },
   {
