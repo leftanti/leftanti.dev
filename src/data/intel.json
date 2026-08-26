@@ -154,27 +154,6 @@
     }
   },
   {
-    "id": "674aa89b72b9",
-    "title": "CISA orders urgent patching of actively exploited Zimbra flaw",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-orders-urgent-patching-of-actively-exploited-zimbra-flaw/",
-    "source": "BleepingComputer",
-    "published": "2026-08-24T10:45:12.000Z",
-    "summary": "The Cybersecurity and Infrastructure Security Agency (CISA) has ordered U.S. government agencies to patch an actively exploited vulnerability in Zimbra Collaboration Suite (ZCS) within three days. [...]",
-    "score": 10,
-    "matched": [
-      "actively exploited"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
     "id": "3cb411a882f6",
     "title": "Connecting the Dots: Securing the Overlooked Corners of the Software Development Lifecycle (SDLC) Supply Chain",
     "url": "https://unit42.paloaltonetworks.com/sdlc-supply-chain/",
@@ -324,6 +303,29 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
+    }
+  },
+  {
+    "id": "a1c38e14d19e",
+    "title": "Post-DEF CON Phishing Uses Malicious Google Doc to Deliver Malware",
+    "url": "https://www.huntress.com/blog/defcon-phishing-google-doc-malware",
+    "source": "Huntress",
+    "published": "2026-08-19T13:00:00.000Z",
+    "summary": "Huntress researcher uncovers post-Black Hat & DEF CON phishing campaign using X DMs & malicious documents to deliver AMOS, NetSupport RAT, and other malware.",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "malware",
+      "phishing"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 20,
+      "defanged": 47,
+      "addresses": 3,
+      "heading": true,
+      "evidence": 73
     }
   },
   {
