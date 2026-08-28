@@ -1,5 +1,70 @@
 [
   {
+    "id": "71d8660386c8",
+    "title": "PaperCut warns of NG, MF flaw exploited in zero-day attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/papercut-warns-of-ng-mf-flaw-exploited-in-zero-day-attacks/",
+    "source": "BleepingComputer",
+    "published": "2026-08-27T16:31:53.000Z",
+    "summary": "PaperCut is warning that hackers are actively exploiting a vulnerability in all versions of its PaperCut NG and PaperCut MF print management software in zero-day attacks. [...]",
+    "score": 6,
+    "matched": [
+      "exploited in",
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 6
+    }
+  },
+  {
+    "id": "3ab51a0cc84b",
+    "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/08/27/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-08-27T12:00:00.000Z",
+    "summary": "CISA has added three new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2023-49105 ownCloud Improper Authentication Vulnerability CVE-2026-53362…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "4ff42a628cb4",
+    "title": "Alleged TeamPCP Hackers Charged in Australia Over Major Supply Chain Attacks",
+    "url": "https://thehackernews.com/2026/08/alleged-teampcp-hackers-charged-in.html",
+    "source": "The Hacker News",
+    "published": "2026-08-27T11:56:26.000Z",
+    "summary": "The Australian Federal Police (AFP) has charged two Western Australian men with a combined total of 14 offences over their alleged role in TeamPCP, the cybercrime group behind the March 2026 compromise of the…",
+    "score": 6,
+    "matched": [
+      "compromise",
+      "supply chain"
+    ],
+    "kind": "technique",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "a631e8a45ed3",
     "title": "NovaCookies Campaigns Abuse Genuine Docusign Notifications to Steal Microsoft 365 Sessions",
     "url": "https://thehackernews.com/2026/08/novacookies-campaigns-abuse-genuine.html",
@@ -20,6 +85,27 @@
       "addresses": 0,
       "heading": false,
       "evidence": 1
+    }
+  },
+  {
+    "id": "3e5dc6e28c21",
+    "title": "CISA Adds Six Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-08-26T12:00:00.000Z",
+    "summary": "CISA has added six new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2015-3246 Red Hat Libuser Race Condition Vulnerability CVE-2015-5287 Red Hat…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
     }
   },
   {
@@ -459,27 +545,6 @@
     }
   },
   {
-    "id": "a2e864adbe5e",
-    "title": "The State of Ransomware Q2 2026",
-    "url": "https://research.checkpoint.com/2026/the-state-of-ransomware-q2-2026/",
-    "source": "Check Point Research",
-    "published": "2026-08-13T12:54:35.000Z",
-    "summary": "For the past year, the ransomware conversation has centered on concentration: a handful of dominant RaaS operations controlling most of the damage, and a shrinking pool of active groups fighting over the same territory.…",
-    "score": 6,
-    "matched": [
-      "ransomware"
-    ],
-    "kind": "other",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
     "id": "f2eaae17aa2e",
     "title": "2026-08-12: SmartApeSG ClickFix leads to two RATs",
     "url": "https://www.malware-traffic-analysis.net/2026/08/12/index.html",
@@ -587,28 +652,6 @@
       "addresses": 1,
       "heading": true,
       "evidence": 30
-    }
-  },
-  {
-    "id": "0defff6969e1",
-    "title": "128 Seconds to disruption: Microsoft Defender stops ransomware at QNET",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/08/04/129-seconds-disruption-microsoft-defender-stops-ransomware-qnet/",
-    "source": "Microsoft Security",
-    "published": "2026-08-04T17:54:04.000Z",
-    "summary": "Microsoft Defender automatically isolated a compromised QNET endpoint in 128 seconds, stopping a multi-stage attack before the payload could persist or spread. The post 128 Seconds to disruption: Microsoft Defender…",
-    "score": 14,
-    "matched": [
-      "compromised",
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 6,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 7
     }
   },
   {
@@ -761,51 +804,6 @@
       "addresses": 21,
       "heading": false,
       "evidence": 71
-    }
-  },
-  {
-    "id": "4bd5c7c53527",
-    "title": "New North Korean campaign uses fake coding interviews to steal developer credentials",
-    "url": "https://www.elastic.co/security-labs/contagious-interview-malware-svg-steganography",
-    "source": "Elastic Security Labs",
-    "published": "2026-07-18T00:00:00.000Z",
-    "summary": "DPRK-aligned hackers hid malware inside SVG flag images to backdoor developer job interview coding tests. Not one antivirus vendor caught it.",
-    "score": 10,
-    "matched": [
-      "campaign",
-      "malware",
-      "backdoor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 11,
-      "defanged": 14,
-      "addresses": 2,
-      "heading": false,
-      "evidence": 27
-    }
-  },
-  {
-    "id": "f65848757e73",
-    "title": "TELEPUZ: a modular MaaS malware spreading via CLICKFIX-VIDAR chains",
-    "url": "https://www.elastic.co/security-labs/telepuz-maas-malware-clickfix",
-    "source": "Elastic Security Labs",
-    "published": "2026-07-16T00:00:00.000Z",
-    "summary": "TELEPUZ is a modular malware that emerged through CLICKFIX-VIDAR attacks in April. We reverse-engineered it to show you the infrastructure and evasion techniques that matter.",
-    "score": 8,
-    "matched": [
-      "malware",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 18,
-      "defanged": 45,
-      "addresses": 2,
-      "heading": true,
-      "evidence": 68
     }
   },
   {
