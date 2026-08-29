@@ -329,29 +329,6 @@
     }
   },
   {
-    "id": "ed974b7e9a64",
-    "title": "WordlistLoader Delivers Amatera via ClickFix, SynkLoader Phishes Windows Passwords",
-    "url": "https://thehackernews.com/2026/08/wordlistloader-delivers-amatera-via.html",
-    "source": "The Hacker News",
-    "published": "2026-08-24T12:35:36.000Z",
-    "summary": "Cybersecurity researchers have flagged two new malware families called WordlistLoader and SynkLoader that's used to deliver next-stage payloads and likely sell access to ransomware groups. According to findings from Gen…",
-    "score": 13,
-    "matched": [
-      "ransomware",
-      "malware",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 8,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 8
-    }
-  },
-  {
     "id": "ea24647d8f68",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/08/24/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -363,6 +340,27 @@
       "known exploited"
     ],
     "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "3cb411a882f6",
+    "title": "Connecting the Dots: Securing the Overlooked Corners of the Software Development Lifecycle (SDLC) Supply Chain",
+    "url": "https://unit42.paloaltonetworks.com/sdlc-supply-chain/",
+    "source": "Unit 42",
+    "published": "2026-08-21T23:00:21.000Z",
+    "summary": "Attackers are targeting CI/CD pipelines and developer tools instead of application code, requiring total SDLC visibility and strict security controls The post Connecting the Dots: Securing the Overlooked Corners of the…",
+    "score": 6,
+    "matched": [
+      "supply chain"
+    ],
+    "kind": "technique",
     "indicators": {
       "v": 2,
       "hashes": 0,
