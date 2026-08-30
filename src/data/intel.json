@@ -1,12 +1,79 @@
 [
   {
-    "id": "bb61cbf6cb78",
-    "title": "Metabase Zero-Day Exploited in Wild Allows Admin Access Without Authentication",
-    "url": "https://thehackernews.com/2026/08/metabase-zero-day-exploited-in-wild.html",
+    "id": "53af0197de88",
+    "title": "TerminalFix Uses Fake Cloudflare CAPTCHAs to Deploy Reverse-Tunnel Backdoor",
+    "url": "https://thehackernews.com/2026/08/terminalfix-uses-fake-cloudflare.html",
     "source": "The Hacker News",
-    "published": "2026-08-08T06:58:31.000Z",
-    "summary": "Metabase has warned that a maximum-severity security flaw impacting its business intelligence and data visualization software package has been exploited in the wild as a zero-day. The vulnerability (CVSS score: 10.0),…",
+    "published": "2026-08-30T07:36:33.000Z",
+    "summary": "Microsoft has disclosed details of a new ClickFix variant, dubbed TerminalFix, that aims to trick users into running a malicious command in Windows Terminal or PowerShell. \"While traditional ClickFix campaigns direct…",
     "score": 9,
+    "matched": [
+      "backdoor",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 3,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "dd7e776156d2",
+    "title": "TerminalFix campaign deploys a reverse tunnel through multistage intrusion",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/08/28/terminalfix-campaign-deploys-reverse-tunnel-through-multistage-intrusion/",
+    "source": "Microsoft Security",
+    "published": "2026-08-29T03:43:27.000Z",
+    "summary": "Microsoft Threat Intelligence provides analysis of a ClickFix campaign that uses fake CAPTCHA prompts, DLL sideloading, and a reverse tunnel, with detections and hunting guidance. The post TerminalFix campaign deploys a…",
+    "score": 18,
+    "matched": [
+      "campaign",
+      "intrusion",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 18,
+      "defanged": 8,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 30
+    }
+  },
+  {
+    "id": "a8d17d82aec2",
+    "title": "Next-Gen Phishing Tactics Users Aren’t Ready For | Huntress",
+    "url": "https://www.huntress.com/blog/advanced-phishing-tradecraft",
+    "source": "Huntress",
+    "published": "2026-08-28T16:00:00.000Z",
+    "summary": "Move past basic credential harvesting. Discover how modern attackers use ClickFix, BitB, and OAuth consent phishing—and how to train your users with Huntress SAT.",
+    "score": 8,
+    "matched": [
+      "phishing",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 14,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 14
+    }
+  },
+  {
+    "id": "be84f5b5eab9",
+    "title": "PaperCut NG/MF Critical Zero-Day Exploited in the Wild",
+    "url": "https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild",
+    "source": "Rapid7",
+    "published": "2026-08-28T10:09:12.000Z",
+    "summary": "Overview On August 27, 2026, PaperCut Software published an urgent security advisory stating that it is investigating active exploitation of a vulnerability affecting PaperCut NG and PaperCut MF. PaperCut has confirmed…",
+    "score": 12,
     "matched": [
       "exploited in",
       "in the wild",
@@ -23,17 +90,59 @@
     }
   },
   {
-    "id": "7e4cf2dba25a",
-    "title": "Metabase SQLi zero-day exploited in customer data-theft attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/framework-tally-disclose-metabase-data-theft-attacks/",
-    "source": "BleepingComputer",
-    "published": "2026-08-07T20:14:46.000Z",
-    "summary": "A critical Metabase SQL injection vulnerability was exploited in zero-day attacks to breach customer instances in data theft attacks, known to impact Framework and Tally. [...]",
+    "id": "ef13f676f74e",
+    "title": "PaperCut Zero-Day Exploited in Attacks, Affecting All NG and MF Versions",
+    "url": "https://thehackernews.com/2026/08/papercut-zero-day-exploited-in-attacks.html",
+    "source": "The Hacker News",
+    "published": "2026-08-28T08:25:36.000Z",
+    "summary": "PaperCut has alerted customers that bad actors are actively exploiting a vulnerability impacting all versions of its PaperCut NG and PaperCut MF print management software in zero-day attacks. The company has released an…",
     "score": 6,
     "matched": [
       "exploited in",
-      "zero-day",
-      "breach"
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": true,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "4f77dd22a150",
+    "title": "PaperCut Zero-Day: Active Exploitation and Pre-Auth RCE",
+    "url": "https://www.huntress.com/blog/papercut-actively-exploited",
+    "source": "Huntress",
+    "published": "2026-08-28T03:00:00.000Z",
+    "summary": "PaperCut NG and PaperCut MF are under active exploitation. Huntress reproduced a pre-auth RCE chain and shares urgent patching and exposure guidance.",
+    "score": 6,
+    "matched": [
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 14,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": true,
+      "evidence": 17
+    }
+  },
+  {
+    "id": "71d8660386c8",
+    "title": "PaperCut warns of NG, MF flaw exploited in zero-day attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/papercut-warns-of-ng-mf-flaw-exploited-in-zero-day-attacks/",
+    "source": "BleepingComputer",
+    "published": "2026-08-27T16:31:53.000Z",
+    "summary": "PaperCut is warning that hackers are actively exploiting a vulnerability in all versions of its PaperCut NG and PaperCut MF print management software in zero-day attacks. [...]",
+    "score": 6,
+    "matched": [
+      "exploited in",
+      "zero-day"
     ],
     "kind": "ioc",
     "indicators": {
@@ -41,40 +150,17 @@
       "hashes": 2,
       "defanged": 0,
       "addresses": 1,
-      "heading": false,
-      "evidence": 3
+      "heading": true,
+      "evidence": 6
     }
   },
   {
-    "id": "0e3a028652ad",
-    "title": "ClickFix Attacks Deliver macOS Stealer That Can Drain Crypto Wallets",
-    "url": "https://thehackernews.com/2026/08/clickfix-attacks-deliver-macos-stealer.html",
-    "source": "The Hacker News",
-    "published": "2026-08-07T18:29:08.000Z",
-    "summary": "ClickFix-style attacks are being used to deliver a Go-based malware capable of stealing cryptocurrency assets, as well as browser-stored passwords, Apple iCloud Keychain data, and cached credentials. The macOS-focused…",
-    "score": 12,
-    "matched": [
-      "malware",
-      "stealer",
-      "ClickFix"
-    ],
-    "kind": "technique",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "c4f45e1735fe",
-    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/08/07/cisa-adds-one-known-exploited-vulnerability-catalog",
+    "id": "3ab51a0cc84b",
+    "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/08/27/cisa-adds-three-known-exploited-vulnerabilities-catalog",
     "source": "CISA",
-    "published": "2026-08-07T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-8037 Progress LoadMaster Command Injection Vulnerability This type of…",
+    "published": "2026-08-27T12:00:00.000Z",
+    "summary": "CISA has added three new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2023-49105 ownCloud Improper Authentication Vulnerability CVE-2026-53362…",
     "score": 10,
     "matched": [
       "known exploited"
@@ -90,19 +176,41 @@
     }
   },
   {
-    "id": "3193878ce9c7",
-    "title": "Microsoft 365 AitM Phishing Hijacks Accounts to Collect Payroll and Finance Emails",
-    "url": "https://thehackernews.com/2026/08/microsoft-365-aitm-phishing-hijacks.html",
+    "id": "4ff42a628cb4",
+    "title": "Alleged TeamPCP Hackers Charged in Australia Over Major Supply Chain Attacks",
+    "url": "https://thehackernews.com/2026/08/alleged-teampcp-hackers-charged-in.html",
     "source": "The Hacker News",
-    "published": "2026-08-07T10:38:27.000Z",
-    "summary": "Cybersecurity researchers have called attention to an active \"widespread email-driven phishing campaign\" that employs adversary-in-the-middle (AitM) techniques to take control of Microsoft 365 accounts with an aim to…",
-    "score": 20,
+    "published": "2026-08-27T11:56:26.000Z",
+    "summary": "The Australian Federal Police (AFP) has charged two Western Australian men with a combined total of 14 offences over their alleged role in TeamPCP, the cybercrime group behind the March 2026 compromise of the…",
+    "score": 6,
     "matched": [
-      "campaign",
-      "phishing",
-      "adversary-in-the-middle"
+      "compromise",
+      "supply chain"
     ],
-    "kind": "campaign",
+    "kind": "technique",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "a631e8a45ed3",
+    "title": "NovaCookies Campaigns Abuse Genuine Docusign Notifications to Steal Microsoft 365 Sessions",
+    "url": "https://thehackernews.com/2026/08/novacookies-campaigns-abuse-genuine.html",
+    "source": "The Hacker News",
+    "published": "2026-08-26T13:44:31.000Z",
+    "summary": "Cybersecurity researchers have disclosed details of a new adversary-in-the-middle (AitM) phishing toolkit called NovaCookies that's used as a proxy to redirect Microsoft 365 sign-ins, while capturing authenticated…",
+    "score": 11,
+    "matched": [
+      "phishing",
+      "adversary-in-the-middle",
+      "AiTM"
+    ],
+    "kind": "technique",
     "indicators": {
       "v": 2,
       "hashes": 0,
@@ -113,15 +221,15 @@
     }
   },
   {
-    "id": "57be033d94d6",
-    "title": "AI-Assisted HTTP Terminator Finds Novel HTTP Desync Techniques and Apache Zero-Day",
-    "url": "https://thehackernews.com/2026/08/ai-assisted-http-terminator-finds-novel.html",
-    "source": "The Hacker News",
-    "published": "2026-08-07T10:09:54.000Z",
-    "summary": "PortSwigger says HTTP Terminator, an artificial intelligence (AI)-assisted research system built by James Kettle, generated and proved new HTTP desynchronization techniques after exploring 30,000 candidate desync…",
-    "score": 6,
+    "id": "3e5dc6e28c21",
+    "title": "CISA Adds Six Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-08-26T12:00:00.000Z",
+    "summary": "CISA has added six new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2015-3246 Red Hat Libuser Race Condition Vulnerability CVE-2015-5287 Red Hat…",
+    "score": 10,
     "matched": [
-      "zero-day"
+      "known exploited"
     ],
     "kind": "exploited",
     "indicators": {
@@ -134,17 +242,17 @@
     }
   },
   {
-    "id": "d2ca685e7bfe",
-    "title": "Malware Can Abuse Windows Hello for Business Keys for Persistent Entra ID Access",
-    "url": "https://thehackernews.com/2026/08/malware-can-abuse-windows-hello-for.html",
+    "id": "85869282d537",
+    "title": "Critical Gitea RCE Actively Exploited as Reported Attack Drops Miner-Like Payload",
+    "url": "https://thehackernews.com/2026/08/critical-gitea-rce-actively-exploited.html",
     "source": "The Hacker News",
-    "published": "2026-08-07T08:52:11.000Z",
-    "summary": "Entra ID researcher Dirk-jan Mollema demonstrated that malware already running in a signed-in Windows session can silently use the victim's Windows Hello for Business key to authenticate to Microsoft Entra ID. The…",
+    "published": "2026-08-26T06:27:07.000Z",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday warned of active exploitation efforts targeting a recently patched critical security flaw impacting Gitea. The vulnerability in question is…",
     "score": 10,
     "matched": [
-      "malware"
+      "actively exploited"
     ],
-    "kind": "other",
+    "kind": "exploited",
     "indicators": {
       "v": 2,
       "hashes": 0,
@@ -155,17 +263,37 @@
     }
   },
   {
-    "id": "894cedf65f62",
-    "title": "TeamPCP Linked To Redis Attacks Dating Back To 2020 And Later Supply Chain Campaign",
-    "url": "https://thehackernews.com/2026/08/teampcp-linked-to-redis-attacks-dating.html",
+    "id": "7fff329c98e3",
+    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/08/25/cisa-adds-one-known-exploited-vulnerability-catalog",
+    "source": "CISA",
+    "published": "2026-08-25T12:00:00.000Z",
+    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-60004 Gitea Code Injection Vulnerability This type of vulnerability is a…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "02168dcbba55",
+    "title": "Mirage2FA Surge Hits 4,500 US and EU Companies, Abusing Microsoft 365 Login Flows",
+    "url": "https://thehackernews.com/2026/08/mirage2fa-surge-hits-4500-us-and-eu.html",
     "source": "The Hacker News",
-    "published": "2026-08-07T06:50:05.000Z",
-    "summary": "A new analysis has uncovered that the threat actor tracked as TeamPCP has been active on the cybercrime scene as far back as 2020, indicating the group has been compromising internet-facing infrastructure for years…",
-    "score": 18,
+    "published": "2026-08-25T11:56:15.000Z",
+    "summary": "Thousands of companies have been affected by the Mirage2FA campaign from 2024 to 2026. The commercial phishing-as-a-service toolkit targets Microsoft 365 accounts by abusing legitimate login flows and bypassing…",
+    "score": 12,
     "matched": [
       "campaign",
-      "threat actor",
-      "supply chain"
+      "phishing"
     ],
     "kind": "campaign",
     "indicators": {
@@ -178,62 +306,62 @@
     }
   },
   {
-    "id": "68c2af062da5",
-    "title": "ClickFix attack pushes macOS infostealer for crypto theft attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/clickfix-attack-pushes-macos-infostealer-for-crypto-theft-attacks/",
-    "source": "BleepingComputer",
-    "published": "2026-08-06T22:37:17.000Z",
-    "summary": "A Go-based malware delivered in ClickFix attacks targeting macOS users is stealing cryptocurrency assets, browser-stored passwords, Apple Keychain data, and cached credentials. [...]",
-    "score": 8,
+    "id": "e7c2149d23bc",
+    "title": "24 npm Packages Abuse unpkg Mirrors to Host Fake Cloudflare CAPTCHA Pages",
+    "url": "https://thehackernews.com/2026/08/24-npm-packages-abuse-unpkg-mirrors-to.html",
+    "source": "The Hacker News",
+    "published": "2026-08-25T11:52:43.000Z",
+    "summary": "Cybersecurity researchers have disclosed details of a new campaign that uses a cluster of 24 npm packages as free phishing infrastructure for redirecting to ClickFix-style fake CAPTCHA pages. \"While the malware is…",
+    "score": 10,
     "matched": [
+      "campaign",
       "malware",
-      "infostealer",
-      "ClickFix"
+      "phishing"
     ],
     "kind": "ioc",
     "indicators": {
       "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
+      "hashes": 0,
+      "defanged": 4,
+      "addresses": 0,
       "heading": false,
-      "evidence": 3
+      "evidence": 4
     }
   },
   {
-    "id": "f02ebc568bdd",
-    "title": "Ransomware Moves up the Org Chart: Managers Are Prime Targets",
-    "url": "https://www.zscaler.com/blogs/security-research/ransomware-moves-org-chart-managers-are-prime-targets",
-    "source": "Zscaler ThreatLabz",
-    "published": "2026-08-06T13:50:10.000Z",
-    "summary": "When a ransomware attack makes headlines, attention usually turns to the organization that was breached, the systems encrypted, data stolen, and disruption or ransom demand that followed. Less, if anything, is revealed…",
-    "score": 6,
+    "id": "032a23e858ec",
+    "title": "Actively Exploited Oracle WebLogic Flaw Lets Unauthenticated Attackers Access Critical Data",
+    "url": "https://thehackernews.com/2026/08/actively-exploited-oracle-weblogic-flaw.html",
+    "source": "The Hacker News",
+    "published": "2026-08-25T06:12:35.000Z",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added a maximum-severity security flaw impacting Oracle HTTP Server and Oracle WebLogic Server to its Known Exploited Vulnerabilities (KEV)…",
+    "score": 15,
     "matched": [
-      "breached",
-      "ransomware"
+      "actively exploited",
+      "known exploited"
     ],
-    "kind": "other",
+    "kind": "exploited",
     "indicators": {
       "v": 2,
-      "hashes": 1,
-      "defanged": 0,
+      "hashes": 0,
+      "defanged": 1,
       "addresses": 1,
       "heading": false,
       "evidence": 2
     }
   },
   {
-    "id": "e0232f32abe2",
-    "title": "Ransom Cartel Creator Gets 16 Years in Prison for Operating Ransomware-as-a-Service",
-    "url": "https://thehackernews.com/2026/08/ransom-cartel-creator-gets-16-years-in.html",
-    "source": "The Hacker News",
-    "published": "2026-08-06T07:19:54.000Z",
-    "summary": "A federal judge in Alexandria, Virginia, sentenced Maksim Silnikau to 16 years in prison on August 5 for creating and running Ransom Cartel, the ransomware-as-a-service operation he stood up in 2021. Between 2021 and…",
-    "score": 6,
+    "id": "ea24647d8f68",
+    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/08/24/cisa-adds-one-known-exploited-vulnerability-catalog",
+    "source": "CISA",
+    "published": "2026-08-24T12:00:00.000Z",
+    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-21962 Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in Improper…",
+    "score": 10,
     "matched": [
-      "ransomware"
+      "known exploited"
     ],
-    "kind": "other",
+    "kind": "exploited",
     "indicators": {
       "v": 2,
       "hashes": 0,
@@ -244,25 +372,285 @@
     }
   },
   {
-    "id": "98c630944da4",
-    "title": "Over 250 ClickFix Domains Use Browser Fingerprinting to Hide macOS Malware Lures",
-    "url": "https://thehackernews.com/2026/08/over-250-clickfix-domains-use-browser.html",
-    "source": "The Hacker News",
-    "published": "2026-08-05T18:44:31.000Z",
-    "summary": "A macOS ClickFix operation spanning more than 250 front-end domains now fingerprints visitors before deciding whether to show them a malware lure, a change Microsoft Threat Intelligence tracked on infrastructure it had…",
+    "id": "6c5418399984",
+    "title": "2026-08-21: SmartApeSG ClickFix campaign leads to two RATs",
+    "url": "https://www.malware-traffic-analysis.net/2026/08/21/index.html",
+    "source": "Malware Traffic Analysis",
+    "published": "2026-08-21T17:49:00.000Z",
+    "summary": "",
+    "score": 16,
+    "matched": [
+      "campaign",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 4,
+      "defanged": 18,
+      "addresses": 2,
+      "heading": false,
+      "evidence": 24
+    }
+  },
+  {
+    "id": "a1ad39fd9383",
+    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/08/21/cisa-adds-one-known-exploited-vulnerability-catalog",
+    "source": "CISA",
+    "published": "2026-08-21T12:00:00.000Z",
+    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-73570 Zimbra Collaboration Suite (ZCS) OS Command Injection Vulnerability…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "3a973d9720c5",
+    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/08/20/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-08-20T12:00:00.000Z",
+    "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-72529 TrueConf Server Missing Authentication for Critical Function…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "a1c38e14d19e",
+    "title": "Post-DEF CON Phishing Uses Malicious Google Doc to Deliver Malware",
+    "url": "https://www.huntress.com/blog/defcon-phishing-google-doc-malware",
+    "source": "Huntress",
+    "published": "2026-08-19T13:00:00.000Z",
+    "summary": "Huntress researcher uncovers post-Black Hat & DEF CON phishing campaign using X DMs & malicious documents to deliver AMOS, NetSupport RAT, and other malware.",
     "score": 8,
     "matched": [
+      "campaign",
       "malware",
+      "phishing"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 20,
+      "defanged": 47,
+      "addresses": 3,
+      "heading": true,
+      "evidence": 73
+    }
+  },
+  {
+    "id": "a346145f99bb",
+    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/08/19/cisa-adds-one-known-exploited-vulnerability-catalog",
+    "source": "CISA",
+    "published": "2026-08-19T12:00:00.000Z",
+    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-64849 MLflow Server-Side Request Forgery Vulnerability This type of…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "cf649e5c85b0",
+    "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/08/18/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-08-18T12:00:00.000Z",
+    "summary": "CISA has added four new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-33824 Microsoft Internet Key Exchange (IKE) Service Extensions Double…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "34135e380428",
+    "title": "C2Looper: A New Backdoor Likely Tied To Ransomware With GitHub C2",
+    "url": "https://www.zscaler.com/blogs/security-research/c2looper-new-backdoor-likely-tied-ransomware-github-c2",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-08-17T14:06:04.000Z",
+    "summary": "IntroductionIn July 2026, Zscaler ThreatLabz identified a new Rust-based malware family that we track as C2Looper, which is likely leveraged by a ransomware-related threat actor. Furthermore, ThreatLabz assesses with…",
+    "score": 14,
+    "matched": [
+      "threat actor",
+      "ransomware",
+      "malware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 4,
+      "defanged": 1,
+      "addresses": 3,
+      "heading": true,
+      "evidence": 11
+    }
+  },
+  {
+    "id": "85edd8ddb144",
+    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/08/17/cisa-adds-one-known-exploited-vulnerability-catalog",
+    "source": "CISA",
+    "published": "2026-08-17T12:00:00.000Z",
+    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2025-62593 Ray-Project Ray Code Injection Vulnerability This type of…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "ea4d9c02a341",
+    "title": "APT group HoneyMyte upgrades CoolClient: the backdoor gets a kernel-level Windows rootkit",
+    "url": "https://securelist.com/honeymyte-coolclient-driver-rootkit/121028/",
+    "source": "Securelist",
+    "published": "2026-08-14T09:00:14.000Z",
+    "summary": "Our experts discovered a new CoolClient backdoor variant with a kernel-mode rootkit driver that hides malicious processes, files, and network connections from security tools and threat analysts.",
+    "score": 12,
+    "matched": [
+      "APT",
+      "backdoor"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 10,
+      "defanged": 10,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 20
+    }
+  },
+  {
+    "id": "f2eaae17aa2e",
+    "title": "2026-08-12: SmartApeSG ClickFix leads to two RATs",
+    "url": "https://www.malware-traffic-analysis.net/2026/08/12/index.html",
+    "source": "Malware Traffic Analysis",
+    "published": "2026-08-13T03:07:00.000Z",
+    "summary": "",
+    "score": 8,
+    "matched": [
       "ClickFix"
     ],
     "kind": "technique",
     "indicators": {
       "v": 2,
       "hashes": 0,
-      "defanged": 2,
+      "defanged": 0,
       "addresses": 0,
       "heading": false,
-      "evidence": 2
+      "evidence": 0
+    }
+  },
+  {
+    "id": "df218795e276",
+    "title": "Akira Hits Safe Mode: Ransomware Rebooting Around EDR",
+    "url": "https://www.huntress.com/blog/akira-hits-safe-mode-ransomware-rebooting-around-edr",
+    "source": "Huntress",
+    "published": "2026-08-12T13:00:00.000Z",
+    "summary": "An Akira affiliate rebooted into Safe Mode to kill EDR and Defender, then Safe Mode broke their own ransomware. Here’s the full attack chain.",
+    "score": 10,
+    "matched": [
+      "affiliate",
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 16,
+      "defanged": 1,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 21
+    }
+  },
+  {
+    "id": "0d98e098f937",
+    "title": "CaptiveCrunch: Midnight Blizzard Weaponizes Hotel Wi-Fi Captive Portals to Steal Microsoft 365 Credentials",
+    "url": "https://www.zscaler.com/blogs/security-research/captivecrunch-midnight-blizzard-weaponizes-hotel-wi-fi-captive-portals",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-08-11T22:06:00.000Z",
+    "summary": "IntroductionOn July 31, Microsoft Threat Intelligence reported an ongoing credential theft campaign tracked as CaptiveCrunch. Microsoft attributes this activity to Storm-2945, a sub-cluster of Midnight Blizzard (also…",
+    "score": 10,
+    "matched": [
+      "campaign",
+      "credential theft"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 3,
+      "defanged": 0,
+      "addresses": 7,
+      "heading": true,
+      "evidence": 13
+    }
+  },
+  {
+    "id": "870dff2b21df",
+    "title": "Shattering the Dream – When a Job Offer Becomes a Zero-Day Attack",
+    "url": "https://research.checkpoint.com/2026/shattering-the-dream-when-a-job-offer-becomes-a-zero-day-attack/",
+    "source": "Check Point Research",
+    "published": "2026-08-11T17:30:00.000Z",
+    "summary": "Key Points Introduction Since early 2026, Check Point Research has tracked a wave of the Operation Dream Job campaign. This wave primarily targeted the defense sector worldwide, with a particular emphasis on companies…",
+    "score": 10,
+    "matched": [
+      "zero-day",
+      "campaign"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 41,
+      "defanged": 5,
+      "addresses": 2,
+      "heading": false,
+      "evidence": 48
     }
   },
   {
@@ -289,94 +677,6 @@
     }
   },
   {
-    "id": "310016bb0e1c",
-    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/08/05/cisa-adds-one-known-exploited-vulnerability-catalog",
-    "source": "CISA",
-    "published": "2026-08-05T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-63077 JetBrains TeamCity Deserialization of Untrusted Data Vulnerability…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "cadf3defd1a8",
-    "title": "CISA Flags Langflow RCE, Tomcat, and N-central Flaws as Actively Exploited",
-    "url": "https://thehackernews.com/2026/08/cisa-flags-langflow-rce-tomcat-and-n.html",
-    "source": "The Hacker News",
-    "published": "2026-08-05T07:40:39.000Z",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA), on August 5, 2026, added three flaws to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation in the wild. The list…",
-    "score": 18,
-    "matched": [
-      "actively exploited",
-      "in the wild",
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "361feaf14309",
-    "title": "QuickFox Supply Chain Attack Delivers FDMTP Backdoor via Trojanized Windows Installer",
-    "url": "https://thehackernews.com/2026/08/quickfox-supply-chain-attack-delivers.html",
-    "source": "The Hacker News",
-    "published": "2026-08-05T05:47:19.000Z",
-    "summary": "Cybersecurity researchers have disclosed what has been described as a \"long-standing supply chain attack\" on QuickFox, a virtual private network (VPN) and network acceleration tool designed for overseas Chinese users.…",
-    "score": 12,
-    "matched": [
-      "backdoor",
-      "supply chain"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 2,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
-    "id": "0defff6969e1",
-    "title": "128 Seconds to disruption: Microsoft Defender stops ransomware at QNET",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/08/04/129-seconds-disruption-microsoft-defender-stops-ransomware-qnet/",
-    "source": "Microsoft Security",
-    "published": "2026-08-04T17:54:04.000Z",
-    "summary": "Microsoft Defender automatically isolated a compromised QNET endpoint in 128 seconds, stopping a multi-stage attack before the payload could persist or spread. The post 128 Seconds to disruption: Microsoft Defender…",
-    "score": 14,
-    "matched": [
-      "compromised",
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 6,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 7
-    }
-  },
-  {
     "id": "3a35006e2624",
     "title": "The Frontier AI Vulnerability Burst: Industrializing Autonomous Zero-Day Discovery in Open-Source Software",
     "url": "https://unit42.paloaltonetworks.com/frontier-ai-vulnerability-burst/",
@@ -387,71 +687,6 @@
     "matched": [
       "zero-day",
       "supply chain"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "4fb83d6f230e",
-    "title": "QuickFox Supply Chain Attack Used to Deploy FDMTP Implant",
-    "url": "https://feeds.fortinet.com/~/966214247/0/fortinet/blog/threat-research~QuickFox-Supply-Chain-Attack-Used-to-Deploy-FDMTP-Implant",
-    "source": "Fortinet",
-    "published": "2026-08-04T13:00:00.000Z",
-    "summary": "The FortiGuard Labs Incident Response team analyzes a QuickFox supply chain attack that used trojanized Windows installers, selective targeting, and an evolving FDMTP implant",
-    "score": 7,
-    "matched": [
-      "incident response",
-      "implant",
-      "supply chain"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 36,
-      "defanged": 625,
-      "addresses": 58,
-      "heading": true,
-      "evidence": 722
-    }
-  },
-  {
-    "id": "64bf885106e5",
-    "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/08/04/cisa-adds-three-known-exploited-vulnerabilities-catalog",
-    "source": "CISA",
-    "published": "2026-08-04T12:00:00.000Z",
-    "summary": "CISA has added three new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-9198 IBM Langflow Code Injection Vulnerability CVE-2026-18556 N-able…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "dd8d41da7130",
-    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/08/03/cisa-adds-one-known-exploited-vulnerability-catalog",
-    "source": "CISA",
-    "published": "2026-08-03T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-18577 N-able N-central Authentication Bypass Using an Alternate Path or…",
-    "score": 10,
-    "matched": [
-      "known exploited"
     ],
     "kind": "exploited",
     "indicators": {
@@ -486,24 +721,24 @@
     }
   },
   {
-    "id": "d89938780cd0",
-    "title": "OctLurk and SilkLurk: newly identified tailored backdoors in cyber-espionage campaign in Central Asia",
-    "url": "https://securelist.com/octlurk-silklurk-backdoors-central-asia/120840/",
-    "source": "Securelist",
-    "published": "2026-07-30T11:00:12.000Z",
-    "summary": "Our experts discovered OctLurk and SilkLurk, backdoors operating primarily in memory, targeting Central Asia. They inject plugins to launch shells, scan networks, dump credentials, and keylogging.",
-    "score": 8,
+    "id": "ddd2528ace65",
+    "title": "Device Code Phishing Keeps Evolving. Here’s What to Watch For",
+    "url": "https://www.huntress.com/blog/device-code-phishing-evolving-threats",
+    "source": "Huntress",
+    "published": "2026-07-31T13:00:00.000Z",
+    "summary": "Huntress is tracking an evolving wave of device code phishing that abuses trusted Microsoft 365 sign-in flows. Learn the signals defenders should watch for and how to respond.",
+    "score": 7,
     "matched": [
-      "campaign"
+      "phishing"
     ],
     "kind": "ioc",
     "indicators": {
       "v": 2,
-      "hashes": 58,
-      "defanged": 87,
-      "addresses": 11,
-      "heading": true,
-      "evidence": 159
+      "hashes": 14,
+      "defanged": 5,
+      "addresses": 4,
+      "heading": false,
+      "evidence": 23
     }
   },
   {
@@ -528,46 +763,24 @@
     }
   },
   {
-    "id": "5c5d8bace813",
-    "title": "Toy Ghouls’ new toy: the GenieLocker ransomware",
-    "url": "https://securelist.com/genielocker-ransomware-for-windows-linux-and-esxi/120843/",
-    "source": "Securelist",
-    "published": "2026-07-30T08:00:57.000Z",
-    "summary": "Kaspersky experts dissect GenieLocker: new custom ransomware variants for Windows, Linux, and ESXi systems. We found this family in attacks by Toy Ghouls, a financially motivated extortion group.",
-    "score": 7,
+    "id": "9f0e9336b780",
+    "title": "Credential Stuffing Campaign Hits SonicWall | Huntress SOC Tracking",
+    "url": "https://www.huntress.com/blog/sonicwall-credential-stuffing-campaign",
+    "source": "Huntress",
+    "published": "2026-07-28T13:00:00.000Z",
+    "summary": "The Huntress SOC is tracking an active credential stuffing campaign targeting SonicWall devices, compromising dozens of organizations since July 25.",
+    "score": 8,
     "matched": [
-      "extortion",
-      "ransomware"
+      "campaign"
     ],
     "kind": "ioc",
     "indicators": {
       "v": 2,
-      "hashes": 50,
-      "defanged": 1,
-      "addresses": 1,
+      "hashes": 14,
+      "defanged": 10,
+      "addresses": 5,
       "heading": true,
-      "evidence": 55
-    }
-  },
-  {
-    "id": "06f94c065a4a",
-    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/07/29/cisa-adds-one-known-exploited-vulnerability-catalog",
-    "source": "CISA",
-    "published": "2026-07-29T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-20316 Cisco Secure Firewall Management Center Use of Hard-coded Password…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
+      "evidence": 32
     }
   },
   {
@@ -594,114 +807,25 @@
     }
   },
   {
-    "id": "4bd5c7c53527",
-    "title": "New North Korean campaign uses fake coding interviews to steal developer credentials",
-    "url": "https://www.elastic.co/security-labs/contagious-interview-malware-svg-steganography",
-    "source": "Elastic Security Labs",
-    "published": "2026-07-18T00:00:00.000Z",
-    "summary": "DPRK-aligned hackers hid malware inside SVG flag images to backdoor developer job interview coding tests. Not one antivirus vendor caught it.",
+    "id": "5dd78732982f",
+    "title": "Inside FakeAgent: How a Claude Desktop Malvertising Campaign Hit 29 Organizations with SectopRAT",
+    "url": "https://www.huntress.com/blog/fakeagent-claude-desktop-malvertising-ends-in-dotnet-rat",
+    "source": "Huntress",
+    "published": "2026-07-22T20:00:00.000Z",
+    "summary": "On July 21 and July 22, Huntress observed a number of attacks that started with a malicious public Claude Artifact hosted on a legitimate Claude domain, and ended in organizations being infected by the SectopRAT stealer.",
     "score": 10,
     "matched": [
       "campaign",
-      "malware",
-      "backdoor"
+      "stealer"
     ],
     "kind": "ioc",
     "indicators": {
       "v": 2,
-      "hashes": 11,
-      "defanged": 14,
-      "addresses": 2,
+      "hashes": 19,
+      "defanged": 31,
+      "addresses": 21,
       "heading": false,
-      "evidence": 27
-    }
-  },
-  {
-    "id": "c8eaf1b464ec",
-    "title": "HelloNet campaign: new malicious modules launched through the ViPNet update system",
-    "url": "https://securelist.com/tr/hellonet-vipnet/120700/",
-    "source": "Securelist",
-    "published": "2026-07-16T13:05:56.000Z",
-    "summary": "We identified targeted infection attempts against large Russian organizations using the ViPNet update system (a software suite for creating secure networks).",
-    "score": 8,
-    "matched": [
-      "campaign"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 18,
-      "defanged": 4,
-      "addresses": 4,
-      "heading": true,
-      "evidence": 29
-    }
-  },
-  {
-    "id": "1dcde256e1f6",
-    "title": "The TTF Trap: A Global Campaign of a Low-Detection Lua Loader",
-    "url": "https://feeds.fortinet.com/~/960560447/0/fortinet/blog/threat-research~The-TTF-Trap-A-Global-Campaign-of-a-LowDetection-Lua-Loader",
-    "source": "Fortinet",
-    "published": "2026-07-16T13:00:00.000Z",
-    "summary": "FortiGuard Labs analyzes a global phishing campaign using obfuscated JScript, disguised .ttf files, and Lua loaders to deliver RATs and infostealers.",
-    "score": 10,
-    "matched": [
-      "campaign",
-      "loader",
-      "phishing"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 34,
-      "defanged": 17,
-      "addresses": 5,
-      "heading": false,
-      "evidence": 56
-    }
-  },
-  {
-    "id": "aa0c74c30b28",
-    "title": "UAT-11795 deploys novel Starland RAT and bespoke WLDR C2 implant in financially motivated campaign",
-    "url": "https://blog.talosintelligence.com/uat-11795-deploys-novel-starland-rat-and-bespoke-wldr-c2-implant-in-financially-motivated-campaign/",
-    "source": "Cisco Talos",
-    "published": "2026-07-16T10:00:01.000Z",
-    "summary": "Cisco Talos is disclosing UAT-11795, a sophisticated, Russian-speaking, financially motivated adversary that has been conducting a malicious campaign targeting users in the U.S. and Europe since at least June 2025.",
-    "score": 8,
-    "matched": [
-      "campaign",
-      "implant"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 15,
-      "addresses": 2,
-      "heading": false,
-      "evidence": 17
-    }
-  },
-  {
-    "id": "f65848757e73",
-    "title": "TELEPUZ: a modular MaaS malware spreading via CLICKFIX-VIDAR chains",
-    "url": "https://www.elastic.co/security-labs/telepuz-maas-malware-clickfix",
-    "source": "Elastic Security Labs",
-    "published": "2026-07-16T00:00:00.000Z",
-    "summary": "TELEPUZ is a modular malware that emerged through CLICKFIX-VIDAR attacks in April. We reverse-engineered it to show you the infrastructure and evasion techniques that matter.",
-    "score": 8,
-    "matched": [
-      "malware",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 18,
-      "defanged": 45,
-      "addresses": 2,
-      "heading": true,
-      "evidence": 68
+      "evidence": 71
     }
   },
   {
@@ -748,50 +872,6 @@
     }
   },
   {
-    "id": "bf9ce33e9c04",
-    "title": "ClickFix to Cash-Out: Anatomy of a Mexican Banking-Fraud Toolkit",
-    "url": "https://www.elastic.co/security-labs/mexican-banking-fraud-scmbanker-ref6045",
-    "source": "Elastic Security Labs",
-    "published": "2026-07-08T00:00:00.000Z",
-    "summary": "Elastic Security Labs tracks REF6045, an active operator-assisted banking fraud operation targeting customers of Mexican banks, fintech, payment processors, and cryptocurrency exchanges.",
-    "score": 8,
-    "matched": [
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 31,
-      "defanged": 76,
-      "addresses": 3,
-      "heading": false,
-      "evidence": 110
-    }
-  },
-  {
-    "id": "9631efcfa4e0",
-    "title": "Vidar Stealer Unmasked: Code Signing Abuse, Go Loaders and File Inflation",
-    "url": "https://unit42.paloaltonetworks.com/vidar-stealer-xmrig-miner-campaign-analysis/",
-    "source": "Unit 42",
-    "published": "2026-07-07T22:00:21.000Z",
-    "summary": "A cybercrime campaign combined a loader-as-a-service framework and DLL sideloading via a Go-compiled fake MpClient.dll, a novel evasion layer combination. The post Vidar Stealer Unmasked: Code Signing Abuse, Go Loaders…",
-    "score": 8,
-    "matched": [
-      "campaign",
-      "stealer",
-      "loader"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 107,
-      "defanged": 17,
-      "addresses": 4,
-      "heading": true,
-      "evidence": 131
-    }
-  },
-  {
     "id": "e83c171f1737",
     "title": "From Bing Search to Ransomware: Bumblebee and AdaptixC2 Deliver Akira",
     "url": "https://thedfirreport.com/2026/06/29/from-bing-search-to-ransomware-bumblebee-and-adaptixc2-deliver-akira-3/",
@@ -811,28 +891,6 @@
       "addresses": 11,
       "heading": false,
       "evidence": 66
-    }
-  },
-  {
-    "id": "a8d17d82aec2",
-    "title": "Next-Gen Phishing Tactics Users Aren’t Ready For | Huntress",
-    "url": "https://www.huntress.com/blog/advanced-phishing-tradecraft",
-    "source": "Huntress",
-    "published": "2026-06-22T12:00:00.000Z",
-    "summary": "Move past basic credential harvesting. Discover how modern attackers use ClickFix, BitB, and OAuth consent phishing—and how to train your users with Huntress SAT.",
-    "score": 8,
-    "matched": [
-      "phishing",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 14,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 14
     }
   },
   {
@@ -967,71 +1025,6 @@
       "addresses": 1,
       "heading": true,
       "evidence": 41
-    }
-  },
-  {
-    "id": "2d2175820404",
-    "title": "Phishing Campaign Deploys JavaScript-Driven PureLogs Variant to Steal Sensitive Data",
-    "url": "https://feeds.fortinet.com/~/957300263/0/fortinet/blog/threat-research~Phishing-Campaign-Deploys-JavaScriptDriven-PureLogs-Variant-to-Steal-Sensitive-Data",
-    "source": "Fortinet",
-    "published": "2026-05-26T13:00:00.000Z",
-    "summary": "FortiGuard Labs analyzed a new phishing campaign that uses obfuscated JavaScript, PowerShell, process hollowing, and PureLogs to steal sensitive data",
-    "score": 12,
-    "matched": [
-      "campaign",
-      "phishing"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 6,
-      "defanged": 35,
-      "addresses": 3,
-      "heading": false,
-      "evidence": 44
-    }
-  },
-  {
-    "id": "9f002231c0c7",
-    "title": "The Gentleman Ransomware | Defense Evasion TTPs Uncovered | Huntress",
-    "url": "https://www.huntress.com/blog/the-gentlemen-ransomware-defense-evasion-ttps",
-    "source": "Huntress",
-    "published": "2026-05-21T07:00:00.000Z",
-    "summary": "Two recent incidents involving The Gentlemen ransomware show the use of defense evasion tactics, including logs being cleared and attempts to add antivirus exclusions.",
-    "score": 14,
-    "matched": [
-      "ransomware",
-      "TTPs"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 15,
-      "defanged": 5,
-      "addresses": 2,
-      "heading": true,
-      "evidence": 25
-    }
-  },
-  {
-    "id": "63231b31f7ea",
-    "title": "Threat Actor Defense Evasion: How Attackers Disable AV & EDR",
-    "url": "https://www.huntress.com/blog/how-attackers-disable-av-edr",
-    "source": "Huntress",
-    "published": "2026-05-18T14:00:00.000Z",
-    "summary": "Threat actors are actively targeting your security tools. Learn how threat actors disable antivirus and EDR through vulnerable drivers, tampering attacks, and malicious firewall rules, and how Huntress detects.",
-    "score": 8,
-    "matched": [
-      "threat actor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 14,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 14
     }
   },
   {
