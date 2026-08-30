@@ -133,28 +133,6 @@
     }
   },
   {
-    "id": "71d8660386c8",
-    "title": "PaperCut warns of NG, MF flaw exploited in zero-day attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/papercut-warns-of-ng-mf-flaw-exploited-in-zero-day-attacks/",
-    "source": "BleepingComputer",
-    "published": "2026-08-27T16:31:53.000Z",
-    "summary": "PaperCut is warning that hackers are actively exploiting a vulnerability in all versions of its PaperCut NG and PaperCut MF print management software in zero-day attacks. [...]",
-    "score": 6,
-    "matched": [
-      "exploited in",
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 6
-    }
-  },
-  {
     "id": "3ab51a0cc84b",
     "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/08/27/cisa-adds-three-known-exploited-vulnerabilities-catalog",
@@ -362,6 +340,27 @@
       "known exploited"
     ],
     "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "3cb411a882f6",
+    "title": "Connecting the Dots: Securing the Overlooked Corners of the Software Development Lifecycle (SDLC) Supply Chain",
+    "url": "https://unit42.paloaltonetworks.com/sdlc-supply-chain/",
+    "source": "Unit 42",
+    "published": "2026-08-21T23:00:21.000Z",
+    "summary": "Attackers are targeting CI/CD pipelines and developer tools instead of application code, requiring total SDLC visibility and strict security controls The post Connecting the Dots: Securing the Overlooked Corners of the…",
+    "score": 6,
+    "matched": [
+      "supply chain"
+    ],
+    "kind": "technique",
     "indicators": {
       "v": 2,
       "hashes": 0,
