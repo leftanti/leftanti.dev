@@ -9,9 +9,9 @@ section name where a Sentinel table name would go, the title piped off it,
 metadata as a commented-out pipe stage below.
 
 ```
-KqlLibrary
+DetectionEngineering
 | Detecting OAuth device code phishing
-//| 2026-08-04  [SigninLogs] [T1528]
+//| 2026-08-04  [query] [SigninLogs] [T1528]
 ```
 
 ## Stack

@@ -37,38 +37,43 @@ export interface Section {
 
   /** One-line summary, used on listing pages and in meta descriptions. */
   blurb: string;
+
+  /**
+   * Optional sub-links shown in a hover/focus dropdown under this section's
+   * nav item. Most sections have nothing worth a submenu; only set this where
+   * there is a real second way to browse the section.
+   */
+  navLinks?: { label: string; href: string }[];
 }
 
 export const SECTIONS: Section[] = [
   {
-    key: 'kql',
-    name: 'KqlLibrary',
-    navLabel: 'kql',
-    colorVar: '--section-kql',
-    route: '/kql',
+    key: 'detections',
+    name: 'DetectionEngineering',
+    navLabel: 'detections',
+    colorVar: '--section-detections',
+    route: '/detections',
     inTimeline: true,
     inNav: true,
-    blurb: 'Reusable KQL for Microsoft Sentinel and Defender, with notes on data sources and tuning.',
+    blurb:
+      'KQL and analytics rules in one place — reusable hunting queries and scheduled detections alike, filed by data table, technique, and whether they alert.',
+    navLinks: [
+      { label: 'all', href: '/detections' },
+      { label: 'queries', href: '/tags/query' },
+      { label: 'rules', href: '/tags/rule' },
+      { label: 'browse by technique/table', href: '/detections/browse' },
+    ],
   },
   {
-    key: 'hunting',
-    name: 'ThreatHunting',
-    navLabel: 'hunting',
-    colorVar: '--section-hunting',
-    route: '/hunting',
+    key: 'research',
+    name: 'ThreatResearch',
+    navLabel: 'research',
+    colorVar: '--section-research',
+    route: '/research',
     inTimeline: true,
     inNav: true,
-    blurb: 'Hunting methodology and findings write-ups — hypothesis, query, result.',
-  },
-  {
-    key: 'rules',
-    name: 'AnalyticsRules',
-    navLabel: 'rules',
-    colorVar: '--section-rules',
-    route: '/rules',
-    inTimeline: true,
-    inNav: true,
-    blurb: 'Detection write-ups: the logic, the KQL, the tuning, and the false positives.',
+    blurb:
+      'Threat hunts, hunting malicious infrastructure to report, and malware analysis — hypothesis, method, result.',
   },
   {
     key: 'cheatsheets',
@@ -130,7 +135,7 @@ export function getSection(key: string): Section {
   return section;
 }
 
-/** `var(--section-kql)` — the only way a component should reference a section hue. */
+/** `var(--section-detections)` — the only way a component should reference a section hue. */
 export function sectionColor(key: string): string {
   return `var(${getSection(key).colorVar})`;
 }

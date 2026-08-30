@@ -38,7 +38,7 @@ const currentSection = sectionForPath(path);
     <ul class="nav__list" role="list">
       {
         NAV_SECTIONS.map((section) => (
-          <li>
+          <li class:list={['nav__item', section.navLinks && 'nav__item--has-menu']}>
             <a
               class="nav__link nav__link--section"
               href={section.route}
@@ -47,6 +47,17 @@ const currentSection = sectionForPath(path);
             >
               {section.navLabel}
             </a>
+            {section.navLinks && (
+              <ul class="nav__menu" role="list">
+                {section.navLinks.map((link) => (
+                  <li>
+                    <a class="nav__menu-link" href={link.href}>
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
         ))
       }
@@ -87,8 +98,8 @@ const currentSection = sectionForPath(path);
     /* The logo's only colour source: its filled shape is `currentColor`, so
        it takes this. --mark-color is set inline above on section pages;
        everywhere else this falls through to --brand, so the mark reads as
-       the site's own rather than going neutral. --brand and --section-kql
-       are the same green, so home and /kql look identical here by design.
+       the site's own rather than going neutral. --brand and --section-detections
+       are the same green, so home and /detections look identical here by design.
 
        This has to live on the anchor rather than on the SVG, because Astro
        scopes component styles and a rule written here cannot reach inside
@@ -175,5 +186,72 @@ const currentSection = sectionForPath(path);
     text-decoration-color: currentColor;
     text-decoration-thickness: var(--underline-thickness);
     text-underline-offset: var(--nav-underline-offset);
+  }
+
+  /* --- Dropdown submenu -------------------------------------------------
+     Zero JavaScript: pure :hover and :focus-within. The trigger is always a
+     real link to the section itself, never a dead button — clicking or
+     tapping it just navigates normally, so touch devices (no hover) and
+     anyone who lands here without ever opening the menu are not stuck.
+
+     The closed state deliberately uses opacity + pointer-events, never
+     display:none or visibility:hidden. Both of those remove an element from
+     the tab order entirely, which would make the menu unreachable by
+     keyboard: :focus-within only fires once a descendant receives focus, and
+     a link that cannot be focused can never receive it. Opacity keeps the
+     links tabbable throughout, just invisible until reached. */
+
+  .nav__item {
+    position: relative;
+  }
+
+  .nav__menu {
+    position: absolute;
+    /* Flush against the trigger — no margin. A gap here is genuinely empty
+       page space the cursor has to cross, and while it does, it has left
+       .nav__item's hoverable area, so the menu vanishes before the pointer
+       ever arrives. The breathing room below is padding instead, which is
+       still inside the box being hover-tested. */
+    inset-block-start: 100%;
+    inset-inline-start: 0;
+    z-index: 1;
+    padding: var(--space-sm) var(--space-xs) var(--space-xs);
+    min-width: 11rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3xs);
+    list-style: none;
+
+    background-color: var(--bg-raised);
+    border: var(--stroke) solid var(--border);
+    border-radius: var(--radius-block);
+
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .nav__item--has-menu:hover .nav__menu,
+  .nav__item--has-menu:focus-within .nav__menu {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav__menu-link {
+    display: block;
+    padding: var(--space-xs) var(--space-sm);
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    line-height: var(--lh-snug);
+    color: var(--text-dim);
+    text-decoration: none;
+    border-radius: var(--radius-pill);
+    white-space: nowrap;
+  }
+
+  .nav__menu-link:hover,
+  .nav__menu-link:focus-visible {
+    color: var(--text);
+    background-color: var(--border-faint);
   }
 </style>

@@ -46,6 +46,13 @@ interface Props {
 
   /** Heading for entries `groupBy` returned null for. */
   ungroupedLabel?: string;
+
+  /**
+   * A link to a curated directory of this section — e.g. detections browsable
+   * by MITRE technique or data table, rather than just newest-first. Optional:
+   * most sections have nothing worth a second view.
+   */
+  browseLink?: { label: string; href: string };
 }
 
 const {
@@ -54,6 +61,7 @@ const {
   showTags = false,
   groupBy,
   ungroupedLabel = 'Other',
+  browseLink,
 } = Astro.props;
 
 const tags = showTags ? collectTags(items) : [];
@@ -106,6 +114,15 @@ const countLabel = `${count} ${count === 1 ? 'entry' : 'entries'}`;
           ))}
         </span>
       </nav>
+    )
+  }
+
+  {
+    browseLink && (
+      <p class="listing__browse">
+        <span aria-hidden="true">//|</span>{' '}
+        <a href={browseLink.href}>{browseLink.label} →</a>
+      </p>
     )
   }
 
@@ -168,6 +185,26 @@ const countLabel = `${count} ${count === 1 ? 'entry' : 'entries'}`;
     display: flex;
     flex-wrap: wrap;
     gap: var(--pill-gap);
+  }
+
+  .listing__browse {
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    line-height: var(--lh-snug);
+    color: var(--text-comment);
+    margin-block-end: var(--space-xl);
+  }
+
+  .listing__browse a {
+    color: var(--text-dim);
+    text-decoration: none;
+  }
+
+  .listing__browse a:hover {
+    color: var(--text);
+    text-decoration: underline;
+    text-decoration-thickness: var(--underline-thickness);
+    text-underline-offset: var(--underline-offset);
   }
 
   .listing__count {

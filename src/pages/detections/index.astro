@@ -1,0 +1,22 @@
+---
+/**
+ * /detections — KQL queries and analytics rules, merged, newest first.
+ *
+ * A thin wrapper, and it must stay that way. Everything it does lives in
+ * SectionLayout; the only decisions here are which section to list, whether
+ * to show the tag filter row, and the link to the curated browse index.
+ */
+import SectionLayout from '../../layouts/SectionLayout.astro';
+import { getSection } from '../../config/sections';
+import { getSectionItems } from '../../lib/timeline';
+
+const section = getSection('detections');
+const items = await getSectionItems(section);
+---
+
+<SectionLayout
+  section={section}
+  items={items}
+  showTags={true}
+  browseLink={{ label: 'browse by technique or table', href: '/detections/browse' }}
+/>

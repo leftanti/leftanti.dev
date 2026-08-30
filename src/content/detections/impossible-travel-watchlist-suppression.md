@@ -3,6 +3,7 @@ title: Impossible travel that survives contact with a VPN estate
 date: 2026-07-28
 description: An impossible-travel rule is only as good as its suppression list. This one drives exclusions from a watchlist so the logic never has to be edited to add an egress range.
 tags: [entra, identity, watchlists, false-positives]
+kind: rule
 dataTable: SigninLogs
 technique: T1078.004
 severity: medium

@@ -11,10 +11,11 @@ here is a second source of truth — this file explains, it does not define.
 
 **A hue means one subject, everywhere on the site.**
 
-Green is KQL. It is green in the nav, green as a table name in the timeline,
-green on the `/kql` heading, green on the header mark while you are anywhere
-under `/kql`, and green on the KQL references category on `/resources`. If you
-ever see green meaning two different things, something is wrong.
+Green is DetectionEngineering. It is green in the nav, green as a table name in
+the timeline, green on the `/detections` heading, green on the header mark while
+you are anywhere under `/detections`, and green on the KQL references category
+on `/resources`. If you ever see green meaning two different things, something
+is wrong.
 
 That is also why colour is never decorative here. A coloured thing is saying
 "this belongs to that subject". If it is not saying that, it stays neutral.
@@ -42,24 +43,36 @@ the one that matters — these hues carry small mono text.
 
 | Variable | Hex | Hue | Sat | Light | Contrast | Subject |
 | --- | --- | --- | --- | --- | --- | --- |
-| `--section-hunting` | `#c08a5e` | 27° | 44% | 56% | 6.39 | ThreatHunting, amber |
+| `--section-research` | `#c08a5e` | 27° | 44% | 56% | 6.39 | ThreatResearch, amber |
 | `--section-intel` | `#a09a8c` | 42° | 10% | 59% | 6.81 | IntelDigest, sand |
 | `--section-posts` | `#8a918e` | 154° | 3% | 55% | 5.92 | Notes, grey |
-| `--section-kql` | `#6fae94` | 155° | 28% | 56% | 7.41 | KqlLibrary, green |
+| `--section-detections` | `#6fae94` | 155° | 28% | 56% | 7.41 | DetectionEngineering, green |
 | `--section-cheatsheets` | `#7ea3c4` | 208° | 37% | 63% | 7.19 | CheatSheets, blue |
-| `--section-rules` | `#b07f9c` | 324° | 24% | 59% | 5.78 | AnalyticsRules, mauve |
 
-`--brand` (`#6fae94`) is deliberately the same green as `--section-kql`. It is
-the site representing itself rather than a section — the header mark where no
-section owns the page, the favicon, and OG images. The two are kept as separate
-values so retuning the KQL section does not silently change the brand.
+`--brand` (`#6fae94`) is deliberately the same green as `--section-detections`.
+It is the site representing itself rather than a section — the header mark
+where no section owns the page, the favicon, and OG images. The two are kept as
+separate values so retuning the DetectionEngineering hue does not silently
+change the brand.
+
+**`DetectionEngineering` is KQL queries and analytics rules merged.** Both are
+the same artefact — a query, an explanation, tuning notes — differing only in
+whether one is scheduled to alert. A `kind: query | rule` field on each entry
+says which, rendered as the first pill on the row, so the merge did not cost
+the ability to tell them apart.
+
+**`ThreatResearch` covers threat hunts, hunting malicious infrastructure to
+report externally, and malware analysis** — one section for hands-on
+investigative work, as opposed to the query/rule authoring in
+DetectionEngineering.
 
 ## Intel kinds
 
 The digest on `/intel` colours a row by **what the item is**, not who published
-it. There are eleven feeds and ten hues, so per-source colour does not fit — and
-it would make a hue mean both a section and a vendor, which is the one thing the
-rule above forbids. What an item is tells you more at a glance anyway.
+it. There are twenty feeds and only a handful of hues, so per-source colour does
+not fit — and it would make a hue mean both a section and a vendor, which is the
+one thing the rule above forbids. What an item is tells you more at a glance
+anyway.
 
 | Variable | Hex | Hue | Sat | Light | Contrast | Means |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -75,28 +88,39 @@ The categories themselves live in
 [`src/config/intel-kinds.mjs`](../src/config/intel-kinds.mjs), read by both the
 fetch script and the pages so the two cannot drift.
 
-## There is no reserve left
+## One reserved hue
 
-These four were the spare hues, claimed and renamed. **The palette is now at
-capacity: ten hues, all in use.**
+`--reserved-mauve` (`#b07f9c`, 324°) sits in `theme.css`, referenced by nothing.
+It was `--section-rules` — freed when the old KQL and Rules sections merged into
+`DetectionEngineering` — and it is kept defined and documented rather than
+deleted, specifically so it is available without having to derive a new one.
 
-A seventh section therefore needs a hue derived from scratch against the
-constraints below. That is deliberately harder than it was, because at ten hues
-the wheel is genuinely crowded — the tightest pair is already 26° apart. If a
-new section can share meaning with an existing subject, prefer that to inventing
-an eleventh colour.
+Deriving from scratch is materially harder now than it was when this site
+launched: the four intel kinds have since claimed what used to be spare hues, so
+the wheel is crowded and the tightest pair among the nine in current use is
+already 26° apart. A hue already proven to pass every constraint is worth
+banking rather than discarding.
+
+**To claim it:** rename `--reserved-mauve` to `--section-<key>` in
+`theme.css`, move it up into the section-colour block, and follow
+[Adding a section](#adding-a-section) below. If nothing needs it, leave it —
+it costs nothing sitting idle.
 
 ## Adding a section
 
-Worked end to end, adding a `Malware` section on `/malware`. Nothing below is a
-template edit — every file is config, data, or a five-line wrapper.
+Worked end to end, adding a `Malware` section on `/malware`, claiming the
+reserved mauve. Nothing below is a template edit — every file is config, data,
+or a five-line wrapper.
 
-**1. Claim a spare hue** in [`theme.css`](../src/styles/theme.css). Rename it, and
-move it up into the section block so the spares list stays a list of spares:
+**1. Claim the reserved hue** in [`theme.css`](../src/styles/theme.css). Rename
+it and move it into the section-colour block:
 
 ```css
---section-malware: #5fa4a6;   /* was --spare-teal */
+--section-malware: #b07f9c;   /* was --reserved-mauve */
 ```
+
+If the reserve has already been spent by the time you read this, see
+[Inventing a new hue](#inventing-a-new-hue) instead.
 
 **2. Add the section** to `SECTIONS` in
 [`sections.ts`](../src/config/sections.ts). Order in this array is the nav order:
@@ -131,7 +155,7 @@ const malware = defineCollection({
 Then add it to the export at the bottom of that file:
 
 ```ts
-export const collections = { kql, hunting, rules, cheatsheets, notes, malware, resources };
+export const collections = { detections, research, cheatsheets, notes, malware, resources, intel };
 ```
 
 **4. Create the folder** and a first entry:
@@ -140,14 +164,14 @@ export const collections = { kql, hunting, rules, cheatsheets, notes, malware, r
 mkdir src/content/malware
 ```
 
-**5. Copy the two page wrappers.** Take `src/pages/kql/index.astro` and
-`src/pages/kql/[...id].astro` into `src/pages/malware/`, then change every
-`'kql'` in both files to `'malware'` — four in total: one in `index.astro`, three
-in `[...id].astro`. That is the whole edit; nothing else in either file is
+**5. Copy the two page wrappers.** Take `src/pages/research/index.astro` and
+`src/pages/research/[...id].astro` into `src/pages/malware/`, then change every
+`'research'` in both files to `'malware'` — four in total: one in `index.astro`,
+three in `[...id].astro`. That is the whole edit; nothing else in either file is
 section-specific.
 
 ```bash
-rg "'kql'" src/pages/malware
+rg "'research'" src/pages/malware
 ```
 
 **6. Check it.** `npm run build` — the section appears in the nav, its entries
@@ -157,36 +181,71 @@ If you want the section to have no landing page, set `route: null` and skip the
 `index.astro` in step 5. Its entries then surface only in the timeline, the way
 `Notes` does.
 
+If you want a hover dropdown under the nav item, like `DetectionEngineering`
+has, add a `navLinks` array to the section — see `SiteHeader.astro` for how it
+renders, and `SectionLayout`'s `browseLink` prop for a curated index page like
+`/detections/browse` to link the dropdown at.
+
 ## Adding a resource category
 
 Add an object to [`src/data/resources.json`](../src/data/resources.json). No code
 changes at all.
+
+A category is flat, or split into subcategories — never both, never neither.
+Flat suits a short list:
 
 ```json
 {
   "id": "cloud-security",
   "order": 7,
   "title": "CloudSecurity",
-  "colorVar": "--section-hunting",
+  "colorVar": "--section-research",
   "blurb": "One line on what is in here.",
   "links": [{ "title": "…", "url": "https://…", "note": "…" }]
 }
 ```
 
+Subcategories suit one that has grown enough to want a second click before the
+list — the disclosure nests one level, entirely in HTML, no JavaScript either
+level:
+
+```json
+{
+  "id": "tools",
+  "order": 6,
+  "title": "Tools",
+  "colorVar": "--section-posts",
+  "blurb": "Things to paste an artefact into at two in the morning.",
+  "subcategories": [
+    {
+      "title": "OSINT",
+      "links": [{ "title": "…", "url": "https://…", "note": "…" }]
+    },
+    {
+      "title": "Malware analysis",
+      "blurb": "Optional — most subcategories don't need one.",
+      "links": [{ "title": "…", "url": "https://…", "note": "…" }]
+    }
+  ]
+}
+```
+
 **Point `colorVar` at an existing section hue** — whichever section the category
-relates to. Categories borrow; they do not own. A category that genuinely matches
-no section is a hint that the section is missing, not that the palette needs a
-seventh colour.
+relates to. Categories borrow; they do not own. Subcategories inherit their
+parent's hue automatically; they never set one of their own. A category that
+genuinely matches no section is a hint that the section is missing, not that
+the palette needs a seventh colour.
 
 `order` exists because the loader returns entries sorted by id, not in file
 order. Without it the page would be alphabetical whatever the JSON looks like.
 The schema is strict, so a typo in any key fails the build rather than rendering
-a category with no colour.
+a category with no colour — and it enforces the either/or: a category with both
+`links` and `subcategories`, or neither, fails the build naming the category.
 
 ## Inventing a new hue
 
-Only if all four spares are gone. Four constraints, all of which the existing ten
-satisfy:
+Only once the reserved mauve is also spent. Four constraints, all of which the
+existing nine satisfy:
 
 - **Lightness 51–65%.** Lighter looks like a link; darker fails contrast on `--bg`.
 - **Saturation 21–44%.** Above that it reads as a warning colour, which means something else here.

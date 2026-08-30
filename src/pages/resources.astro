@@ -1,20 +1,27 @@
 ---
 /**
- * /resources — curated external links, grouped into collapsible categories.
+ * /resources — curated external links, grouped into collapsible categories,
+ * each optionally split into collapsible subcategories.
  *
  * Everything on this page comes from src/data/resources.json. Adding a link is
- * a row in that file; adding a category is an object in it. This page never
- * needs editing to add either.
+ * a row in that file; adding a category or a subcategory is an object in it.
+ * This page never needs editing to add any of them.
  *
- * COLLAPSING
- * Built on native <details>/<summary>, so the expanding costs no JavaScript,
- * works with the keyboard, and announces its own expanded state to a screen
- * reader. This page therefore still ships zero client JS, unlike the entry
- * pages which ship the copy button.
+ * COLLAPSING, TWO LEVELS DEEP
+ * Built on native <details>/<summary>, nested — a subcategory is just a
+ * <details> inside a <details>, which HTML has always supported natively. No
+ * JavaScript at either level: expanding costs nothing, works with the
+ * keyboard, and announces its own state to a screen reader. This page ships
+ * zero client JS, unlike the entry pages which ship the copy button.
  *
- * Categories start closed: the point of the page is to stay scannable as the
- * list grows, and a collapsed category still shows its name, its count, and
- * what is inside it. To open one by default, add the `open` attribute.
+ * A category has either `links` directly, or `subcategories` that each carry
+ * their own `links` — see the schema in content.config.ts. Flat suits a short
+ * list; subcategories suit one that has grown enough to want a second click
+ * before the list, e.g. Tools split into OSINT / Malware Analysis / Network.
+ *
+ * Categories and subcategories both start closed: the point of the page is to
+ * stay scannable as the list grows, and a collapsed one still shows its name,
+ * its count, and what is inside it. Add `open` in the data to default one open.
  *
  * Rendered in the site's own idiom: the category name sits where a table name
  * goes and each link is piped off it.
@@ -22,9 +29,9 @@
  * COLOUR
  * A category carries a hue on exactly the two things a section colours — its
  * name and its pipe glyphs — and nothing else. The hue is not a new one: each
- * category borrows the colour of the section it relates to, so green still
- * means KQL and mauve still means detection engineering wherever you meet it.
- * The mapping is data, in resources.json, not code.
+ * category borrows the colour of the section it relates to. Subcategories
+ * inherit their parent's hue rather than choosing their own — they group
+ * within one category, they do not own a colour.
  */
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -48,7 +55,12 @@ function metaFor(url: string, note?: string): string {
   return note ? `${domain} — ${note}` : domain;
 }
 
-const linkCount = categories.reduce((n, c) => n + c.data.links.length, 0);
+/** Total links in a category, whichever shape it uses. */
+function countOf(category: (typeof categories)[number]): number {
+  return category.data.links?.length ?? category.data.subcategories?.reduce((n, s) => n + s.links.length, 0) ?? 0;
+}
+
+const linkCount = categories.reduce((n, c) => n + countOf(c), 0);
 ---
 
 <BaseLayout title="Resources" description={DESCRIPTION}>
@@ -68,28 +80,63 @@ const linkCount = categories.reduce((n, c) => n + c.data.links.length, 0);
             <span class="category__head">
               <span class="category__marker" aria-hidden="true" />
               <span class="category__name">{category.data.title}</span>
-              <span class="category__count">{category.data.links.length}</span>
+              <span class="category__count">{countOf(category)}</span>
             </span>
             <span class="category__blurb">
               <span aria-hidden="true">//</span> {category.data.blurb}
             </span>
           </summary>
 
-          <ol class="category__links" role="list">
-            {category.data.links.map((link) => (
-              <li>
-                <QueryLines
-                  showTable={false}
-                  accent={`var(${category.data.colorVar})`}
-                  title={link.title}
-                  href={link.url}
-                  meta={metaFor(link.url, link.note)}
-                  headingLevel={3}
-                  external={true}
-                />
-              </li>
-            ))}
-          </ol>
+          <div class="category__body">
+            {category.data.links && (
+              <ol class="link-list" role="list">
+                {category.data.links.map((link) => (
+                  <li>
+                    <QueryLines
+                      showTable={false}
+                      accent={`var(${category.data.colorVar})`}
+                      title={link.title}
+                      href={link.url}
+                      meta={metaFor(link.url, link.note)}
+                      headingLevel={3}
+                      external={true}
+                    />
+                  </li>
+                ))}
+              </ol>
+            )}
+
+            {category.data.subcategories && (
+              <div class="subcategories">
+                {category.data.subcategories.map((sub) => (
+                  <details class="subcategory">
+                    <summary class="subcategory__summary">
+                      <span class="subcategory__marker" aria-hidden="true" />
+                      <span class="subcategory__name">{sub.title}</span>
+                      <span class="category__count">{sub.links.length}</span>
+                      {sub.blurb && <span class="subcategory__blurb">{sub.blurb}</span>}
+                    </summary>
+
+                    <ol class="link-list" role="list">
+                      {sub.links.map((link) => (
+                        <li>
+                          <QueryLines
+                            showTable={false}
+                            accent={`var(${category.data.colorVar})`}
+                            title={link.title}
+                            href={link.url}
+                            meta={metaFor(link.url, link.note)}
+                            headingLevel={3}
+                            external={true}
+                          />
+                        </li>
+                      ))}
+                    </ol>
+                  </details>
+                ))}
+              </div>
+            )}
+          </div>
         </details>
       ))
     }
@@ -156,7 +203,8 @@ const linkCount = categories.reduce((n, c) => n + c.data.links.length, 0);
 
   /* `+` closed, `-` open. Both are one mono cell, so the name never shifts.
      No rotation, no transition — the site animates nothing but the cursor. */
-  .category__marker {
+  .category__marker,
+  .subcategory__marker {
     flex: none;
     font-family: var(--font-mono);
     font-size: var(--fs-mark);
@@ -164,16 +212,20 @@ const linkCount = categories.reduce((n, c) => n + c.data.links.length, 0);
     color: var(--comment-mark);
   }
 
-  .category__marker::before {
+  .category__marker::before,
+  .subcategory__marker::before {
     content: '+';
   }
 
-  .category[open] .category__marker::before {
+  .category[open] > .category__summary .category__marker::before,
+  .subcategory[open] > .subcategory__summary .subcategory__marker::before {
     content: '-';
   }
 
   /* The category's hue, on the name — the same place a section wears its own.
-     Set inline on the <details> above, from the data file. */
+     Set inline on the <details> above, from the data file. Subcategories
+     inherit it via currentColor rather than getting a style attribute of
+     their own, since they never carry a colour of their own to set. */
   .category__name {
     font-family: var(--font-mono);
     font-size: var(--fs-mark);
@@ -209,13 +261,76 @@ const linkCount = categories.reduce((n, c) => n + c.data.links.length, 0);
     max-width: var(--measure);
   }
 
-  .category__links {
+  .category__body {
+    padding-block-start: var(--space-lg);
+    padding-inline-start: calc(var(--fs-mark) + var(--space-sm));
+  }
+
+  .link-list {
     display: flex;
     flex-direction: column;
     gap: var(--space-lg);
     margin: 0;
-    padding-block-start: var(--space-lg);
-    padding-inline-start: calc(var(--fs-mark) + var(--space-sm));
+    padding: 0;
     list-style: none;
+  }
+
+  /* --- Subcategories: the same disclosure pattern, one level in --------- */
+
+  .subcategories {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .subcategory {
+    border-block-start: var(--hairline) solid var(--border-faint);
+    padding-block: var(--space-md);
+  }
+
+  .subcategory:first-child {
+    border-block-start: none;
+    padding-block-start: 0;
+  }
+
+  .subcategory__summary {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .subcategory__summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* Smaller than a category name — the visual weight says "one level down"
+     without needing any decoration beyond size. */
+  .subcategory__name {
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    font-weight: var(--fw-medium);
+    line-height: var(--lh-snug);
+    color: var(--category-color);
+  }
+
+  .subcategory__summary:hover .subcategory__name {
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+    text-decoration-thickness: var(--underline-thickness);
+    text-underline-offset: var(--underline-offset);
+  }
+
+  .subcategory__blurb {
+    flex-basis: 100%;
+    font-family: var(--font-mono);
+    font-size: var(--fs-tiny);
+    color: var(--text-comment);
+  }
+
+  .subcategory > .link-list {
+    padding-block-start: var(--space-md);
+    padding-inline-start: calc(var(--fs-meta) + var(--space-sm));
   }
 </style>

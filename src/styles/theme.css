@@ -36,10 +36,11 @@
      apple-touch-icon, OG images. Anywhere the site is shown somewhere
      that cannot read this file, the value below is what gets copied.
 
-     It is the same green as --section-kql on purpose — KQL is the house
-     speciality — but the two are kept as separate values so tuning the
-     KQL section hue does not silently change the brand. Change this and
-     you must retune public/favicon.svg by hand; nothing else can.
+     It is the same green as --section-detections on purpose — detection
+     engineering is the house speciality — but the two are kept as separate
+     values so tuning that section's hue does not silently change the brand.
+     Change this and you must retune public/favicon.svg by hand; nothing
+     else can.
      ------------------------------------------------------------------ */
 
   --brand: #6fae94;
@@ -55,17 +56,32 @@
      src/config/sections.ts. Templates never name a colour directly.
      ------------------------------------------------------------------ */
 
-  --section-kql: #6fae94;          /* KqlLibrary      — green (see --brand) */
-  --section-hunting: #c08a5e;      /* ThreatHunting   — amber   */
-  --section-rules: #b07f9c;        /* AnalyticsRules  — mauve   */
+  --section-detections: #6fae94;   /* DetectionEngineering — green (see --brand) */
+  --section-research: #c08a5e;     /* ThreatResearch  — amber   */
   --section-cheatsheets: #7ea3c4;  /* CheatSheets     — blue    */
   --section-intel: #a09a8c;        /* IntelDigest     — sand    */
   --section-posts: #8a918e;        /* Notes           — grey    */
 
+  /* ------------------------------------------------------------------
+     3a. RESERVED
+     Freed by merging AnalyticsRules into DetectionEngineering. Kept defined
+     rather than deleted, specifically so it is available without having to
+     derive a new hue against the constraints in docs/palette.md — deriving
+     one got materially harder once the intel kinds claimed the four old
+     spares, so a hue already proven to pass is worth banking.
+
+     Referenced by nothing. Claim it for a real section by renaming it
+     `--section-<key>`, the same way the intel kinds were claimed from the
+     original spares.
+     ------------------------------------------------------------------ */
+
+  --reserved-mauve: #b07f9c;  /* ex AnalyticsRules — freed by the kql+rules merge */
+
   /* Resource categories deliberately add no colours of their own. Each one
      borrows the hue of the section it relates to — the KQL references category
-     is the same green as KqlLibrary — so a hue keeps meaning one subject across
-     the whole site instead of a second palette competing with the first.
+     is the same green as DetectionEngineering — so a hue keeps meaning one
+     subject across the whole site instead of a second palette competing with
+     the first.
 
      The mapping is data, not code: it lives in src/data/resources.json as a
      colorVar per category. Nothing here needs changing to re-map one. */

@@ -1,16 +1,10 @@
 ---
-/**
- * /kql — the KQL library listing.
- *
- * A thin wrapper, and it must stay that way. Everything it does lives in
- * SectionLayout; the only decisions here are which section to list and whether
- * to show the tag filter row.
- */
+/** /research — threat research listing. Thin wrapper; see SectionLayout. */
 import SectionLayout from '../../layouts/SectionLayout.astro';
 import { getSection } from '../../config/sections';
 import { getSectionItems } from '../../lib/timeline';
 
-const section = getSection('kql');
+const section = getSection('research');
 const items = await getSectionItems(section);
 ---
 

@@ -71,28 +71,29 @@ const technique = oneOrMany.refine(
 /** Constrained so severities stay comparable across the whole rules library. */
 const severity = z.enum(['informational', 'low', 'medium', 'high', 'critical']);
 
-const kql = defineCollection({
-  loader: glob({ base: './src/content/kql', pattern: '**/*.md' }),
+/**
+ * KQL queries and analytics rules, merged. Both are the same artefact shape —
+ * a query, an explanation, tuning notes — differing only in whether one is
+ * scheduled to alert. `kind` says which explicitly rather than leaving it to
+ * be inferred from the presence of `severity`, so a query that legitimately
+ * has no severity is never mistaken for an unfinished rule.
+ */
+const detections = defineCollection({
+  loader: glob({ base: './src/content/detections', pattern: '**/*.md' }),
   schema: base.extend({
+    kind: z.enum(['query', 'rule'], 'kind must be "query" or "rule"'),
     dataTable: oneOrMany.optional(),
     technique: technique.optional(),
-  }),
-});
-
-const hunting = defineCollection({
-  loader: glob({ base: './src/content/hunting', pattern: '**/*.md' }),
-  schema: base.extend({
-    dataTable: oneOrMany.optional(),
-    technique: technique.optional(),
-  }),
-});
-
-const rules = defineCollection({
-  loader: glob({ base: './src/content/rules', pattern: '**/*.md' }),
-  schema: base.extend({
-    dataTable: oneOrMany.optional(),
-    technique: technique.optional(),
+    /** Rules typically set this; a bare hunting query usually does not. */
     severity: severity.optional(),
+  }),
+});
+
+const research = defineCollection({
+  loader: glob({ base: './src/content/research', pattern: '**/*.md' }),
+  schema: base.extend({
+    dataTable: oneOrMany.optional(),
+    technique: technique.optional(),
   }),
 });
 
@@ -117,46 +118,69 @@ const notes = defineCollection({
  * the timeline or the feed. Adding a link is a row in that file; adding a
  * category is an object in it. Nothing else changes.
  */
+/** One external link. Shared by both flat categories and subcategories. */
+const resourceLink = z.strictObject({
+  title: z.string().min(1),
+  url: z.url('resource url must be absolute, e.g. https://example.com'),
+  /** Short reason it is worth opening. Optional. */
+  note: z.string().optional(),
+});
+
 const resources = defineCollection({
   loader: file('./src/data/resources.json'),
-  schema: z.strictObject({
-    id: z.string().min(1),
+  schema: z
+    .strictObject({
+      id: z.string().min(1),
 
-    /**
-     * Display order. The loader hands entries back sorted by id, not in the
-     * order they appear in the file, so without this the page would be
-     * alphabetical whatever the JSON looks like.
-     */
-    order: z.number().int().positive(),
+      /**
+       * Display order. The loader hands entries back sorted by id, not in the
+       * order they appear in the file, so without this the page would be
+       * alphabetical whatever the JSON looks like.
+       */
+      order: z.number().int().positive(),
 
-    /** PascalCase — it sits where a table name would go, like a section does. */
-    title: z.string().min(1),
+      /** PascalCase — it sits where a table name would go, like a section does. */
+      title: z.string().min(1),
 
-    /**
-     * The CSS custom property holding this category's hue, e.g. `--section-kql`.
-     *
-     * Categories borrow section hues rather than defining new ones, so a colour
-     * keeps meaning one subject everywhere on the site. Validated as a custom
-     * property name so a typo fails the build instead of rendering an entry
-     * with no colour at all.
-     */
-    colorVar: z
-      .string()
-      .regex(/^--[a-z][a-z0-9-]*$/, 'colorVar must be a CSS custom property, e.g. --section-kql'),
+      /**
+       * The CSS custom property holding this category's hue, e.g. `--section-detections`.
+       *
+       * Categories borrow section hues rather than defining new ones, so a colour
+       * keeps meaning one subject everywhere on the site. Validated as a custom
+       * property name so a typo fails the build instead of rendering an entry
+       * with no colour at all. Subcategories, if any, inherit this — they group
+       * within one category, they do not own a colour of their own.
+       */
+      colorVar: z
+        .string()
+        .regex(/^--[a-z][a-z0-9-]*$/, 'colorVar must be a CSS custom property, e.g. --section-detections'),
 
-    blurb: z.string().min(1),
+      blurb: z.string().min(1),
 
-    links: z
-      .array(
-        z.strictObject({
-          title: z.string().min(1),
-          url: z.url('resource url must be absolute, e.g. https://example.com'),
-          /** Short reason it is worth opening. Optional. */
-          note: z.string().optional(),
-        })
-      )
-      .min(1, 'a category with no links should be deleted, not left empty'),
-  }),
+      /**
+       * A category has either `links` directly, or `subcategories` that each
+       * carry their own `links` — never both, never neither. Flat is right for
+       * a short list; subcategories are for a category that has grown enough
+       * to need one more click before the list, e.g. Tools split into OSINT /
+       * Malware Analysis / Network rather than one long undifferentiated list.
+       */
+      links: z.array(resourceLink).optional(),
+
+      subcategories: z
+        .array(
+          z.strictObject({
+            title: z.string().min(1),
+            /** Optional — a subcategory rarely needs as much framing as a category does. */
+            blurb: z.string().optional(),
+            links: z.array(resourceLink).min(1, 'a subcategory with no links should be deleted, not left empty'),
+          })
+        )
+        .optional(),
+    })
+    .refine((data) => Boolean(data.links?.length) !== Boolean(data.subcategories?.length), {
+      message:
+        'a category needs exactly one of "links" or "subcategories" — both set or both missing is not allowed',
+    }),
 });
 
 /**
@@ -210,4 +234,4 @@ const intel = defineCollection({
 });
 
 /** Keys here must match the `key` of the matching entry in sections.ts. */
-export const collections = { kql, hunting, rules, cheatsheets, notes, resources, intel };
+export const collections = { detections, research, cheatsheets, notes, resources, intel };

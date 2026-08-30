@@ -49,14 +49,13 @@ template edits, ever.
 
 | Folder | Appears at | For |
 | --- | --- | --- |
-| `src/content/kql/` | `/kql/<name>` | Reusable queries |
-| `src/content/hunting/` | `/hunting/<name>` | Hunt write-ups |
-| `src/content/rules/` | `/rules/<name>` | Detection write-ups |
+| `src/content/detections/` | `/detections/<name>` | KQL queries and analytics rules |
+| `src/content/research/` | `/research/<name>` | Hunts, malicious-infra research, malware analysis |
 | `src/content/cheatsheets/` | `/cheatsheets/<name>` | Study references |
 | `src/content/notes/` | `/notes/<name>` | Everything else |
 
 The filename becomes the URL, so `failed-signon-burst.md` is served at
-`/kql/failed-signon-burst`.
+`/detections/failed-signon-burst`.
 
 ### Starting from a template
 
@@ -82,13 +81,16 @@ Then, depending on the folder:
 
 | Field | Where | Notes |
 | --- | --- | --- |
-| `dataTable` | kql, hunting, rules | One value or a list |
-| `technique` | kql, hunting, rules | ATT&CK IDs — `T1110` or `T1110.003` |
-| `severity` | rules | One of informational, low, medium, high, critical |
+| `kind` | detections only | `query` or `rule`. Not optional there — every entry says which |
+| `dataTable` | detections, research | One value or a list |
+| `technique` | detections, research | ATT&CK IDs — `T1110` or `T1110.003` |
+| `severity` | detections | One of informational, low, medium, high, critical. Rules typically set it; bare queries usually don't |
 | `cert` | cheatsheets | e.g. `BTL2`. Also groups the listing page |
 
-**All of them are optional.** A cheat sheet has no data table; the page renders
-only what you give it and never an empty placeholder.
+**All of them are optional except `kind`.** A cheat sheet has no data table; the
+page renders only what you give it and never an empty placeholder. `kind` is the
+one exception — it drives the query/rule split on `/detections`, so it has to be
+explicit rather than inferred from whether `severity` is set.
 
 `draft: true` keeps an entry out of the built site entirely. It still shows in
 `npm run dev`, marked with a `draft` pill, so you can see work in progress
@@ -100,7 +102,7 @@ The build fails and tells you which file and which field. The schemas are
 strict, so a misspelled key is an error rather than a silently ignored value:
 
 ```
-[InvalidContentEntryDataError] kql → my-entry data does not match collection schema.
+[InvalidContentEntryDataError] detections → my-entry data does not match collection schema.
   technique: technique must be an ATT&CK ID like T1078 or T1078.004
   ****: Unrecognized key: "dataTables"
 ```
@@ -129,6 +131,21 @@ similar entries converging on the same word instead of drifting.
 
 Both feed the tag pages, so nothing is lost either way.
 
+### Browsing detections by technique or table
+
+`/detections` lists newest first, same as every section. `/detections/browse`
+is a second view — every technique and every data table in use, with a count,
+linking into the same tag pages. It exists because "which techniques do I
+already have queries for" is a different question from "what did I write most
+recently", and once there are hundreds of entries the second question stops
+being answerable by scrolling.
+
+It rebuilds itself from the content automatically; nothing to maintain when you
+add an entry. Hovering (or tab-focusing) the `detections` nav link also opens a
+small menu straight to `all` / `queries` / `rules` / `browse` — configured as
+`navLinks` on that section in `sections.ts`, and worth copying if another
+section ever grows enough to want the same treatment.
+
 ---
 
 ## Adding a new collection
@@ -136,13 +153,14 @@ Both feed the tag pages, so nothing is lost either way.
 Five steps. [`docs/palette.md`](palette.md) has this worked through end to end
 with the actual code, including how to claim a colour.
 
-1. Add a hue to `src/styles/theme.css` (see the palette doc — the reserve is
-   used up, so this now needs deriving)
+1. Add a hue to `src/styles/theme.css` — one is currently reserved
+   (`--reserved-mauve`, freed by the KQL/Rules merge) and free to claim; see
+   the palette doc for how, and for what to do once that is also spent
 2. Add an entry to `SECTIONS` in `src/config/sections.ts`
 3. Add the collection and its schema to `src/content.config.ts`
 4. Create `src/content/<key>/`
-5. Copy `src/pages/kql/index.astro` and `src/pages/kql/[...id].astro` into
-   `src/pages/<key>/` and change the four occurrences of `'kql'`
+5. Copy `src/pages/research/index.astro` and `src/pages/research/[...id].astro`
+   into `src/pages/<key>/` and change the four occurrences of `'research'`
 
 Any collection whose schema has a date joins the home timeline, the RSS feed
 and the tag pages automatically.

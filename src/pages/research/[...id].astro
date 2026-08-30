@@ -1,5 +1,5 @@
 ---
-/** /hunting/<id> — one hunt write-up. Thin wrapper; see EntryLayout. */
+/** /research/<id> — one hunt, OSINT search, or malware analysis write-up. Thin wrapper; see EntryLayout. */
 import type { CollectionEntry } from 'astro:content';
 import { getCollection, render } from 'astro:content';
 import EntryLayout from '../../layouts/EntryLayout.astro';
@@ -7,20 +7,20 @@ import { getSection } from '../../config/sections';
 import { isPublished, itemForEntry } from '../../lib/timeline';
 
 export async function getStaticPaths() {
-  const entries = await getCollection('hunting');
+  const entries = await getCollection('research');
   return entries
     .filter((entry) => isPublished(entry.data))
     .map((entry) => ({ params: { id: entry.id }, props: { entry } }));
 }
 
 interface Props {
-  entry: CollectionEntry<'hunting'>;
+  entry: CollectionEntry<'research'>;
 }
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 
-const section = getSection('hunting');
+const section = getSection('research');
 ---
 
 <EntryLayout item={itemForEntry(section, entry)} description={entry.data.description}>

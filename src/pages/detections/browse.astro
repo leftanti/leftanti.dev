@@ -1,0 +1,240 @@
+---
+/**
+ * /detections/browse — a directory into detections, not a second listing.
+ *
+ * The actual aggregation already exists: /tags/<technique> and /tags/<table>
+ * already collect everything site-wide that carries a given value, correctly,
+ * because getTagIndex() already walks every collection. What was missing was
+ * a way to find out *which* techniques and tables have anything at all,
+ * without already knowing the ID to type into the URL. This page is that
+ * front door — every link on it lands on a page that already existed.
+ *
+ * Named `browse.astro` rather than `index.astro` inside an `index/` folder
+ * deliberately: `/detections/index` would collide with the `[...id]` catch-all
+ * detail route, which would try to look up an entry literally named "index".
+ * Astro resolves a static route over a dynamic one when both could match, but
+ * there is no reason to rely on that when a distinct filename sidesteps it.
+ *
+ * ============================================================================
+ * EVERY "BY ..." SECTION ON THIS PAGE COMES FROM THE `GROUPS` ARRAY BELOW.
+ * Add, remove, or reorder a section by editing that array. Nothing else on
+ * the page needs to change — nowhere below it names a field or a heading.
+ * ============================================================================
+ */
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getSection } from '../../config/sections';
+import { isPublished, tagHref } from '../../lib/timeline';
+
+type Entry = CollectionEntry<'detections'>['data'];
+
+interface Group {
+  /** Heading for this section, e.g. "By MITRE technique". */
+  title: string;
+
+  /**
+   * Pulls the value(s) to group by out of one entry. Return an array even for
+   * a single-valued field — `[d.kind]` — so multi-valued fields like
+   * `technique` (which can be one ID or a list) work the same way.
+   */
+  values: (data: Entry) => string[] | undefined;
+
+  /**
+   * Optional: rename a raw value for display. `kind` stores "query"/"rule",
+   * but the page should say "Queries"/"Rules" — this is where that happens.
+   * Leave unset to show the raw value as-is, which is right for techniques
+   * and table names.
+   */
+  labelFor?: (value: string) => string;
+
+  /** Shown when nothing in the collection has this field set. */
+  emptyMessage: string;
+}
+
+/**
+ * The order here is the order on the page. To add a section — say, grouping
+ * by `severity` — copy one of these objects, point `values` at the field, and
+ * it appears with no other change required:
+ *
+ *   {
+ *     title: 'By severity',
+ *     values: (d) => (d.severity ? [d.severity] : []),
+ *     emptyMessage: 'Nothing tagged with a severity yet.',
+ *   },
+ */
+const GROUPS: Group[] = [
+  {
+    title: 'By kind',
+    values: (d) => [d.kind],
+    labelFor: (v) => (v === 'rule' ? 'Rules' : 'Queries'),
+    emptyMessage: 'Nothing here yet.',
+  },
+  {
+    title: 'By MITRE technique',
+    values: (d) => d.technique,
+    emptyMessage: 'Nothing tagged with a technique yet.',
+  },
+  {
+    title: 'By data table',
+    values: (d) => d.dataTable,
+    emptyMessage: 'Nothing tagged with a data table yet.',
+  },
+];
+
+const section = getSection('detections');
+
+const entries = (await getCollection('detections')).filter((e) => isPublished(e.data));
+
+/** Counts distinct values a group's `values()` returns, busiest first. */
+function tally(group: Group) {
+  const counts = new Map<string, number>();
+  for (const entry of entries) {
+    for (const value of group.values(entry.data) ?? []) {
+      counts.set(value, (counts.get(value) ?? 0) + 1);
+    }
+  }
+  return [...counts.entries()]
+    .map(([raw, count]) => ({
+      label: group.labelFor ? group.labelFor(raw) : raw,
+      href: tagHref(raw),
+      count,
+    }))
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+}
+
+const rendered = GROUPS.map((group) => ({ group, items: tally(group) }));
+
+const DESCRIPTION = 'Every query and rule, indexed by MITRE technique and by data table.';
+---
+
+<BaseLayout title={`Browse — ${section.name}`} description={DESCRIPTION}>
+  <header class="head" style={`--section-color: var(${section.colorVar});`}>
+    <h1 class="head__title">Browse {section.name}</h1>
+    <p class="head__blurb">
+      {entries.length} entries, indexed by technique and by table rather than by date.
+    </p>
+  </header>
+
+  {
+    rendered.map(({ group, items }) => (
+      <section class="group">
+        <h2 class="group__title">{group.title}</h2>
+        {items.length === 0 ? (
+          <p class="group__empty">{group.emptyMessage}</p>
+        ) : (
+          <ul class="group__list" role="list">
+            {items.map((item) => (
+              <li>
+                <a href={item.href}>
+                  {item.label} <span class="group__count">{item.count}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
+    ))
+  }
+
+  <footer class="foot">
+    <a class="foot__back" href="/detections">
+      <span aria-hidden="true">//</span> newest first
+    </a>
+  </footer>
+</BaseLayout>
+
+<style>
+  .head {
+    margin-block-end: var(--space-2xl);
+  }
+
+  .head__title {
+    font-family: var(--font-mono);
+    font-size: var(--fs-h2);
+    font-weight: var(--fw-medium);
+    letter-spacing: var(--ls-normal);
+    color: var(--section-color);
+  }
+
+  .head__blurb {
+    margin-block-start: var(--space-md);
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    color: var(--text-comment);
+  }
+
+  .group {
+    margin-block-end: var(--space-3xl);
+  }
+
+  .group__title {
+    font-family: var(--font-mono);
+    font-size: var(--fs-mark);
+    font-weight: var(--fw-medium);
+    letter-spacing: var(--ls-wide);
+    color: var(--text-dim);
+    margin-block-end: var(--space-lg);
+    padding-block-end: var(--space-xs);
+    border-block-end: var(--stroke) solid var(--border-faint);
+  }
+
+  .group__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--pill-gap);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .group__list a {
+    display: inline-flex;
+    align-items: baseline;
+    gap: var(--space-sm);
+    font-family: var(--font-mono);
+    font-size: var(--fs-micro);
+    line-height: var(--lh-snug);
+    letter-spacing: var(--ls-wide);
+    color: var(--text-fainter);
+    border: var(--hairline) solid var(--border);
+    border-radius: var(--radius-pill);
+    padding: var(--space-2xs) var(--space-sm);
+    text-decoration: none;
+  }
+
+  .group__list a:hover {
+    color: var(--text-dim);
+    border-color: var(--text-comment);
+  }
+
+  .group__count {
+    color: var(--comment-mark);
+  }
+
+  .group__empty {
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    color: var(--text-comment);
+  }
+
+  .foot {
+    margin-block-start: var(--space-4xl);
+    padding-block-start: var(--space-xl);
+    border-block-start: var(--stroke) solid var(--border-faint);
+  }
+
+  .foot__back {
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    color: var(--text-comment);
+    text-decoration: none;
+  }
+
+  .foot__back:hover {
+    color: var(--text-dim);
+    text-decoration: underline;
+    text-decoration-thickness: var(--underline-thickness);
+    text-underline-offset: var(--underline-offset);
+  }
+</style>

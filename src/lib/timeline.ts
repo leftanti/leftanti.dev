@@ -77,6 +77,8 @@ export interface EntryFrontmatter {
   description: string;
   tags: string[];
   draft: boolean;
+  /** 'query' | 'rule' on the merged detections collection only. */
+  kind?: string;
   dataTable?: string[];
   technique?: string[];
   severity?: string;
@@ -97,6 +99,10 @@ const MAX_PILLS = 3;
  */
 function pillsFor(data: EntryFrontmatter): TimelineTag[] {
   const labels = [
+    // First, so it survives the three-pill cap: on the merged detections
+    // collection this is the one distinction a reader scans for — query or
+    // rule — before anything else on the row.
+    ...(data.kind ? [data.kind] : []),
     ...(data.dataTable ?? []),
     ...(data.technique ?? []),
     ...(data.severity ? [data.severity] : []),
@@ -192,6 +198,7 @@ export async function getTimelineItems(): Promise<TimelineItem[]> {
  */
 function allTagsFor(data: EntryFrontmatter): string[] {
   return [
+    ...(data.kind ? [data.kind] : []),
     ...(data.dataTable ?? []),
     ...(data.technique ?? []),
     ...(data.severity ? [data.severity] : []),

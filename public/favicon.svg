@@ -11,7 +11,7 @@
     them here by hand; nothing will warn you.
 
       #0f100f  is the custom property named bg
-      #6fae94  is brand, the canonical green, which matches section-kql
+      #6fae94  is brand, the canonical green, which matches section-detections
       #3f4441  is comment-mark
 
     Those names are written without their leading pair of dashes on purpose: a

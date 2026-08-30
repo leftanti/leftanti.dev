@@ -3,6 +3,7 @@ title: Failed sign-on bursts from a single address
 date: 2026-08-04
 description: Groups failed Entra sign-ins by source address and application to surface password spraying, while ignoring the interrupt result codes that are not really failures.
 tags: [entra, identity, password-spray]
+kind: query
 dataTable: SigninLogs
 technique: T1110.003
 draft: false

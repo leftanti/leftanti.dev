@@ -6,13 +6,13 @@
  * Sentinel table name would go, the title is piped off it, and the metadata is
  * a commented-out pipe stage below:
  *
- *   KqlLibrary
+ *   DetectionEngineering
  *   | Detecting OAuth device code phishing
- *   //| 2026-08-04  [SigninLogs] [T1528]
+ *   //| 2026-08-04  [query] [SigninLogs] [T1528]
  *
  * Used in two places, and deliberately only defined once:
- *   - `as="link"`   a row in a timeline, title links to the entry
- *   - `as="title"`  the heading of that entry's own page, title is plain text
+ *   - `variant="row"`      a row in a timeline, title links to the entry
+ *   - `variant="heading"`  the heading of that entry's own page, title is plain text
  *
  * They share this file because the alignment below is load-bearing and a second
  * copy of it would drift the first time either was touched.

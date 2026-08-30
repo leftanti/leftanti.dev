@@ -23,9 +23,9 @@ No CDNs, no Google Fonts, no analytics, no embeds, no external scripts or styles
 
 Dark, near-black, monospace-forward. The chrome is neutral. **Each section owns exactly one muted hue**, used only for its section name, its pipe glyph, its nav link, and the header logo on its pages. Nothing else on the page is coloured.
 
-**A hue means one subject, everywhere.** Resource categories on `/resources` are coloured, but they add no colours — each borrows the hue of the section it relates to, so the KQL references category is the same green as `KqlLibrary`. They wear it in exactly the two places a section does: the category name and its pipe glyphs. The mapping is data (`colorVar` in `src/data/resources.json`), never hardcoded in a template. Adding a seventh hue for a category would break the scheme; map it to an existing section instead.
+**A hue means one subject, everywhere.** Resource categories on `/resources` are coloured, but they add no colours — each borrows the hue of the section it relates to, so the KQL references category is the same green as `DetectionEngineering`. They wear it in exactly the two places a section does: the category name and its pipe glyphs. The mapping is data (`colorVar` in `src/data/resources.json`), never hardcoded in a template. Adding a seventh hue for a category would break the scheme; map it to an existing section instead.
 
-**Four unclaimed hues** (`--spare-*`) sit in `theme.css` for sections that do not exist yet, referenced by nothing until claimed. [docs/palette.md](docs/palette.md) is the full reference: what every hue means, where colour is allowed to appear, the steps to add a section or a resource category, and the contrast and separation constraints a new hue must satisfy. **Read it before adding or retuning any colour.**
+**One reserved hue** (`--reserved-mauve`) sits in `theme.css`, freed by merging the old KQL and Rules sections into `DetectionEngineering`, kept defined and documented rather than deleted. Referenced by nothing until claimed for a real section. [docs/palette.md](docs/palette.md) is the full reference: what every hue means, where colour is allowed to appear, the steps to add a section or a resource category, and the contrast and separation constraints a new hue must satisfy. **Read it before adding or retuning any colour.**
 
 Banned everywhere: gradients, glow, glitch effects, matrix rain, and all animation — the single exception being one blinking block cursor.
 
@@ -37,16 +37,16 @@ A left anti join rendered literally: two overlapping circles, the left one fille
 
 - **One shared SVG component.** Never redrawn inline anywhere.
 - The filled shape uses `fill="currentColor"` so the header mark **inherits the current section's colour**, falling back to **`--brand`** on the home page and any page without a section. The mark is never neutral — it is the site's own identity, not chrome, which is why it is the one coloured thing on a page that has no section.
-- **Canonical brand green is `--brand` (`#6fae94`)** — the header mark wherever no section owns the page, plus `favicon.svg`, the apple-touch-icon, and OG images. Anywhere the site represents itself rather than a section. This deliberately matches `--section-kql`; that overlap is intended, not a bug, and it is why the mark looks the same on the home page as on `/kql`.
+- **Canonical brand green is `--brand` (`#6fae94`)** — the header mark wherever no section owns the page, plus `favicon.svg`, the apple-touch-icon, and OG images. Anywhere the site represents itself rather than a section. This deliberately matches `--section-detections`; that overlap is intended, not a bug, and it is why the mark looks the same on the home page as on `/detections`.
 
 ## The timeline pattern
 
 The site's signature element, and the thing most easily broken by a careless edit. Each entry is a miniature KQL query — the section name where a Sentinel table name would go, the title piped off it, metadata as a commented-out pipe stage:
 
 ```
-KqlLibrary
+DetectionEngineering
 | Detecting OAuth device code phishing
-//| 2026-08-04  [SigninLogs] [T1528]
+//| 2026-08-04  [query] [SigninLogs] [T1528]
 ```
 
 - **Alignment is load-bearing.** The `|` line and the `//|` line start at the same left edge, with `//` occupying the first two character cells so the comment line's pipe sits exactly two glyphs right. **Both pipe glyphs must be the same font-size** or the alignment breaks.
