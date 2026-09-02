@@ -1,5 +1,72 @@
 [
   {
+    "id": "5fa2181f18ac",
+    "title": "Extradited Russian Hacker Faces Charges Over Excel Malware Campaign That Infected Thousands",
+    "url": "https://thehackernews.com/2026/09/extradited-russian-hacker-faces-charges.html",
+    "source": "The Hacker News",
+    "published": "2026-09-02T09:10:23.000Z",
+    "summary": "The U.S. Department of Justice (DoJ) has charged a Russian national, extradited from Cyprus on August 28, with using roughly 255 fake accounts on a freelance platform to send malware-laced Excel attachments to about…",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "malware"
+    ],
+    "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "8b38ed6919de",
+    "title": "US charges Russian for infecting 80,000 freelancers with malware",
+    "url": "https://www.bleepingcomputer.com/news/security/us-charges-russian-for-infecting-80-000-freelancers-with-malware/",
+    "source": "BleepingComputer",
+    "published": "2026-09-02T09:06:48.000Z",
+    "summary": "A California federal grand jury has indicted a Russian national for his role in a phishing campaign that infected thousands of freelancers with TVRAT and DarkVNC malware. [...]",
+    "score": 6,
+    "matched": [
+      "campaign",
+      "malware",
+      "phishing"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "574f6475af2f",
+    "title": "SonicWall warns of actively exploited SMA1000 zero-day flaws",
+    "url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-actively-exploited-sma1000-zero-day-flaws/",
+    "source": "BleepingComputer",
+    "published": "2026-09-02T06:39:29.000Z",
+    "summary": "SonicWall warned customers that threat actors are chaining two new SMA1000 zero-day vulnerabilities in remote code execution attacks. [...]",
+    "score": 16,
+    "matched": [
+      "actively exploited",
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 6
+    }
+  },
+  {
     "id": "dba39c4bbd31",
     "title": "Counterfeit installers to system compromise: Tracking a deceptive software download campaign",
     "url": "https://www.microsoft.com/en-us/security/blog/2026/09/01/counterfeit-installers-system-compromise-tracking-deceptive-software-download-campaign/",
@@ -284,29 +351,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "a631e8a45ed3",
-    "title": "NovaCookies Campaigns Abuse Genuine Docusign Notifications to Steal Microsoft 365 Sessions",
-    "url": "https://thehackernews.com/2026/08/novacookies-campaigns-abuse-genuine.html",
-    "source": "The Hacker News",
-    "published": "2026-08-26T13:44:31.000Z",
-    "summary": "Cybersecurity researchers have disclosed details of a new adversary-in-the-middle (AitM) phishing toolkit called NovaCookies that's used as a proxy to redirect Microsoft 365 sign-ins, while capturing authenticated…",
-    "score": 11,
-    "matched": [
-      "phishing",
-      "adversary-in-the-middle",
-      "AiTM"
-    ],
-    "kind": "technique",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 1,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 1
     }
   },
   {
@@ -653,48 +697,6 @@
       "addresses": 2,
       "heading": false,
       "evidence": 48
-    }
-  },
-  {
-    "id": "0f135c6567b4",
-    "title": "Head Mare APT is exploiting vulnerabilities in an unpatched TrueConf server to deliver PhantomCore and PhantomGraph to video conference participants",
-    "url": "https://securelist.com/tr/head-mare-targets-trueconf-server-with-phantomcore/120988/",
-    "source": "Securelist",
-    "published": "2026-08-11T12:00:55.000Z",
-    "summary": "Kaspersky experts have discovered malicious TrueConf software installers. The Head Mare APT group uses them to deliver the PhantomCore and PhantomGraph backdoors to target systems by exploiting vulnerabilities in an…",
-    "score": 6,
-    "matched": [
-      "APT"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 56,
-      "defanged": 15,
-      "addresses": 5,
-      "heading": true,
-      "evidence": 79
-    }
-  },
-  {
-    "id": "5410ff3c840f",
-    "title": "DeadLock ransomware: Breaking down a Rust-based encryptor with decentralized recovery infrastructure",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/08/10/deadlock-ransomware-breaking-down-a-rust-based-encryptor-with-decentralized-recovery-infrastructure/",
-    "source": "Microsoft Security",
-    "published": "2026-08-10T15:00:00.000Z",
-    "summary": "Microsoft Threat Intelligence examines DeadLock ransomware, an emerging financially motivated operation distinguished by its use of decentralized infrastructure to support victim communications, negotiations, and data…",
-    "score": 6,
-    "matched": [
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 7,
-      "defanged": 11,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 22
     }
   },
   {
