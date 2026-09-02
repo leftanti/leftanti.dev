@@ -1,24 +1,25 @@
 [
   {
-    "id": "fbafad1e69fd",
-    "title": "Berlin confirms data theft after Rhysida ransomware attack claims",
-    "url": "https://www.bleepingcomputer.com/news/security/berlin-confirms-data-theft-after-rhysida-ransomware-attack-claims/",
-    "source": "BleepingComputer",
-    "published": "2026-08-31T13:30:01.000Z",
-    "summary": "Berlin's city administration has confirmed that cybercriminals are attempting to extort the city after the Rhysida ransomware gang listed it on their data leak site. [...]",
-    "score": 6,
+    "id": "dba39c4bbd31",
+    "title": "Counterfeit installers to system compromise: Tracking a deceptive software download campaign",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/01/counterfeit-installers-system-compromise-tracking-deceptive-software-download-campaign/",
+    "source": "Microsoft Security",
+    "published": "2026-09-01T22:48:28.000Z",
+    "summary": "An active campaign is impersonating legitimate software vendors to deliver malware through look-alike download pages and regenerated installer archives. Microsoft Defender Experts shares observed attack techniques,…",
+    "score": 12,
     "matched": [
-      "data theft",
-      "ransomware"
+      "campaign",
+      "compromise",
+      "malware"
     ],
     "kind": "ioc",
     "indicators": {
       "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
+      "hashes": 17,
+      "defanged": 76,
+      "addresses": 11,
+      "heading": true,
+      "evidence": 107
     }
   },
   {
@@ -676,26 +677,24 @@
     }
   },
   {
-    "id": "461d42fb2633",
-    "title": "From open lures to cloaked gates: How a macOS ClickFix campaign learned to hide",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/08/05/macos-clickfix-campaign-learned-hide/",
+    "id": "5410ff3c840f",
+    "title": "DeadLock ransomware: Breaking down a Rust-based encryptor with decentralized recovery infrastructure",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/08/10/deadlock-ransomware-breaking-down-a-rust-based-encryptor-with-decentralized-recovery-infrastructure/",
     "source": "Microsoft Security",
-    "published": "2026-08-05T15:48:39.000Z",
-    "summary": "A macOS ClickFix campaign shifted tactics from openly serving infostealer lures to hiding them behind a browser-fingerprinting gate. The change makes malicious infrastructure harder to detect while giving defenders new…",
-    "score": 16,
+    "published": "2026-08-10T15:00:00.000Z",
+    "summary": "Microsoft Threat Intelligence examines DeadLock ransomware, an emerging financially motivated operation distinguished by its use of decentralized infrastructure to support victim communications, negotiations, and data…",
+    "score": 6,
     "matched": [
-      "campaign",
-      "infostealer",
-      "ClickFix"
+      "ransomware"
     ],
     "kind": "ioc",
     "indicators": {
       "v": 2,
-      "hashes": 6,
-      "defanged": 20,
+      "hashes": 7,
+      "defanged": 11,
       "addresses": 1,
       "heading": true,
-      "evidence": 30
+      "evidence": 22
     }
   },
   {
