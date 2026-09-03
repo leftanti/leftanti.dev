@@ -1,5 +1,27 @@
 [
   {
+    "id": "40a4e36b4ae1",
+    "title": "US Becomes Top Target in RMM Phishing Campaign Spanning 46 Countries",
+    "url": "https://thehackernews.com/2026/09/us-becomes-top-target-in-rmm-phishing.html",
+    "source": "The Hacker News",
+    "published": "2026-09-03T11:58:00.000Z",
+    "summary": "An RMM phishing campaign initially associated with Canadian targeting due to its use of Canada Revenue Agency (CRA) tax forms as lures has turned out to be part of a broader campaign spanning 46 countries. Around 45% of…",
+    "score": 12,
+    "matched": [
+      "campaign",
+      "phishing"
+    ],
+    "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "50aef9dc283c",
     "title": "Impersonating IT support: how threat actors turn a remote session into enterprise-wide access",
     "url": "https://www.microsoft.com/en-us/security/blog/2026/09/02/impersonating-it-support-threat-actors-turn-remote-session-into-enterprise-wide-access/",
@@ -152,28 +174,6 @@
       "addresses": 1,
       "heading": false,
       "evidence": 3
-    }
-  },
-  {
-    "id": "574f6475af2f",
-    "title": "SonicWall warns of actively exploited SMA1000 zero-day flaws",
-    "url": "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-actively-exploited-sma1000-zero-day-flaws/",
-    "source": "BleepingComputer",
-    "published": "2026-09-02T06:39:29.000Z",
-    "summary": "SonicWall warned customers that threat actors are chaining two new SMA1000 zero-day vulnerabilities in remote code execution attacks. [...]",
-    "score": 16,
-    "matched": [
-      "actively exploited",
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 6
     }
   },
   {
@@ -378,28 +378,6 @@
     }
   },
   {
-    "id": "ef13f676f74e",
-    "title": "PaperCut Zero-Day Exploited in Attacks, Affecting All NG and MF Versions",
-    "url": "https://thehackernews.com/2026/08/papercut-zero-day-exploited-in-attacks.html",
-    "source": "The Hacker News",
-    "published": "2026-08-28T08:25:36.000Z",
-    "summary": "PaperCut has alerted customers that bad actors are actively exploiting a vulnerability impacting all versions of its PaperCut NG and PaperCut MF print management software in zero-day attacks. The company has released an…",
-    "score": 6,
-    "matched": [
-      "exploited in",
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": true,
-      "evidence": 3
-    }
-  },
-  {
     "id": "4f77dd22a150",
     "title": "PaperCut Zero-Day: Active Exploitation and Pre-Auth RCE",
     "url": "https://www.huntress.com/blog/papercut-actively-exploited",
@@ -463,38 +441,17 @@
     }
   },
   {
-    "id": "7fff329c98e3",
-    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/08/25/cisa-adds-one-known-exploited-vulnerability-catalog",
-    "source": "CISA",
-    "published": "2026-08-25T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-60004 Gitea Code Injection Vulnerability This type of vulnerability is a…",
-    "score": 10,
+    "id": "3cb411a882f6",
+    "title": "Connecting the Dots: Securing the Overlooked Corners of the Software Development Lifecycle (SDLC) Supply Chain",
+    "url": "https://unit42.paloaltonetworks.com/sdlc-supply-chain/",
+    "source": "Unit 42",
+    "published": "2026-08-21T23:00:21.000Z",
+    "summary": "Attackers are targeting CI/CD pipelines and developer tools instead of application code, requiring total SDLC visibility and strict security controls The post Connecting the Dots: Securing the Overlooked Corners of the…",
+    "score": 6,
     "matched": [
-      "known exploited"
+      "supply chain"
     ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "ea24647d8f68",
-    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/08/24/cisa-adds-one-known-exploited-vulnerability-catalog",
-    "source": "CISA",
-    "published": "2026-08-24T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-21962 Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in Improper…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
+    "kind": "technique",
     "indicators": {
       "v": 2,
       "hashes": 0,
@@ -527,24 +484,25 @@
     }
   },
   {
-    "id": "a1ad39fd9383",
-    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/08/21/cisa-adds-one-known-exploited-vulnerability-catalog",
-    "source": "CISA",
-    "published": "2026-08-21T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-73570 Zimbra Collaboration Suite (ZCS) OS Command Injection Vulnerability…",
-    "score": 10,
+    "id": "ba0cb5d8743d",
+    "title": "Identity Abuse Through Trusted Communication Channels",
+    "url": "https://unit42.paloaltonetworks.com/communication-channel-identity-risks/",
+    "source": "Unit 42",
+    "published": "2026-08-20T10:00:25.000Z",
+    "summary": "Unit 42 details how attackers exploit enterprise collaboration tools for identity phishing and credential theft. Discover key defense strategies. The post Identity Abuse Through Trusted Communication Channels appeared…",
+    "score": 6,
     "matched": [
-      "known exploited"
+      "phishing",
+      "credential theft"
     ],
-    "kind": "exploited",
+    "kind": "other",
     "indicators": {
       "v": 2,
       "hashes": 0,
-      "defanged": 0,
+      "defanged": 1,
       "addresses": 0,
       "heading": false,
-      "evidence": 0
+      "evidence": 1
     }
   },
   {
@@ -613,6 +571,27 @@
       "addresses": 0,
       "heading": false,
       "evidence": 20
+    }
+  },
+  {
+    "id": "a2e864adbe5e",
+    "title": "The State of Ransomware Q2 2026",
+    "url": "https://research.checkpoint.com/2026/the-state-of-ransomware-q2-2026/",
+    "source": "Check Point Research",
+    "published": "2026-08-13T12:54:35.000Z",
+    "summary": "For the past year, the ransomware conversation has centered on concentration: a handful of dominant RaaS operations controlling most of the damage, and a shrinking pool of active groups fighting over the same territory.…",
+    "score": 6,
+    "matched": [
+      "ransomware"
+    ],
+    "kind": "other",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
     }
   },
   {
@@ -700,6 +679,27 @@
       "addresses": 2,
       "heading": false,
       "evidence": 48
+    }
+  },
+  {
+    "id": "0f135c6567b4",
+    "title": "Head Mare APT is exploiting vulnerabilities in an unpatched TrueConf server to deliver PhantomCore and PhantomGraph to video conference participants",
+    "url": "https://securelist.com/tr/head-mare-targets-trueconf-server-with-phantomcore/120988/",
+    "source": "Securelist",
+    "published": "2026-08-11T12:00:55.000Z",
+    "summary": "Kaspersky experts have discovered malicious TrueConf software installers. The Head Mare APT group uses them to deliver the PhantomCore and PhantomGraph backdoors to target systems by exploiting vulnerabilities in an…",
+    "score": 6,
+    "matched": [
+      "APT"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 56,
+      "defanged": 15,
+      "addresses": 5,
+      "heading": true,
+      "evidence": 79
     }
   },
   {
