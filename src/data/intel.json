@@ -1,5 +1,69 @@
 [
   {
+    "id": "2546d0986a89",
+    "title": "Phishing Campaign Sends Millions of Emails Using Invisible Unicode to Evade Filters",
+    "url": "https://thehackernews.com/2026/09/phishing-campaign-sends-millions-of.html",
+    "source": "The Hacker News",
+    "published": "2026-09-04T15:57:15.000Z",
+    "summary": "Microsoft is alerting of a \"high-volume phishing campaign\" that's using invisible Unicode tag characters to bypass email filters. \"Instead of using these characters to hide instructions from people while exposing them…",
+    "score": 12,
+    "matched": [
+      "campaign",
+      "phishing"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 12,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 12
+    }
+  },
+  {
+    "id": "1241e056a5f7",
+    "title": "New CrowdStrike 'FalconFlank' zero-day grants SYSTEM privileges",
+    "url": "https://www.bleepingcomputer.com/news/security/new-crowdstrike-falconflank-zero-day-grants-system-privileges/",
+    "source": "BleepingComputer",
+    "published": "2026-09-04T13:22:01.000Z",
+    "summary": "An anonymous security researcher who uses the \"Nightmare Eclipse\" handle released a CrowdStrike Falcon zero-day exploit named \"FalconFlank\" that lets attackers escalate privileges on up-to-date Windows systems. [...]",
+    "score": 7,
+    "matched": [
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "7a3278b4ac0a",
+    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/09/04/cisa-adds-one-known-exploited-vulnerability-catalog",
+    "source": "CISA",
+    "published": "2026-09-04T12:00:00.000Z",
+    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-85046 Google Chromium V8 Type Confusion Vulnerability This type of…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "ba1e0af3fb41",
     "title": "DPRK APTs: Ted backdoor and curlRAT target South Korean media and automotive sectors",
     "url": "https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors",
@@ -444,27 +508,6 @@
     }
   },
   {
-    "id": "3e5dc6e28c21",
-    "title": "CISA Adds Six Known Exploited Vulnerabilities to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog",
-    "source": "CISA",
-    "published": "2026-08-26T12:00:00.000Z",
-    "summary": "CISA has added six new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2015-3246 Red Hat Libuser Race Condition Vulnerability CVE-2015-5287 Red Hat…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
     "id": "3cb411a882f6",
     "title": "Connecting the Dots: Securing the Overlooked Corners of the Software Development Lifecycle (SDLC) Supply Chain",
     "url": "https://unit42.paloaltonetworks.com/sdlc-supply-chain/",
@@ -598,27 +641,6 @@
     }
   },
   {
-    "id": "a2e864adbe5e",
-    "title": "The State of Ransomware Q2 2026",
-    "url": "https://research.checkpoint.com/2026/the-state-of-ransomware-q2-2026/",
-    "source": "Check Point Research",
-    "published": "2026-08-13T12:54:35.000Z",
-    "summary": "For the past year, the ransomware conversation has centered on concentration: a handful of dominant RaaS operations controlling most of the damage, and a shrinking pool of active groups fighting over the same territory.…",
-    "score": 6,
-    "matched": [
-      "ransomware"
-    ],
-    "kind": "other",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
     "id": "f2eaae17aa2e",
     "title": "2026-08-12: SmartApeSG ClickFix leads to two RATs",
     "url": "https://www.malware-traffic-analysis.net/2026/08/12/index.html",
@@ -725,28 +747,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "92fba083c506",
-    "title": "2026-07-31: SmartApeSG ClickFix campaign pushes unidentified RAT",
-    "url": "https://www.malware-traffic-analysis.net/2026/07/31/index.html",
-    "source": "Malware Traffic Analysis",
-    "published": "2026-07-31T20:54:00.000Z",
-    "summary": "",
-    "score": 16,
-    "matched": [
-      "campaign",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 22,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 25
     }
   },
   {
