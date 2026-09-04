@@ -22,29 +22,6 @@
     }
   },
   {
-    "id": "50aef9dc283c",
-    "title": "Impersonating IT support: how threat actors turn a remote session into enterprise-wide access",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/02/impersonating-it-support-threat-actors-turn-remote-session-into-enterprise-wide-access/",
-    "source": "Microsoft Security",
-    "published": "2026-09-02T22:51:18.000Z",
-    "summary": "Microsoft Threat Intelligence observed a human-operated intrusion campaign that abuses Microsoft Teams external collaboration to impersonate IT support, gain remote access, and deploy a Node.js-based implant. Learn how…",
-    "score": 7,
-    "matched": [
-      "campaign",
-      "intrusion",
-      "implant"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 12,
-      "defanged": 14,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 30
-    }
-  },
-  {
     "id": "a4323813a3bc",
     "title": "Critical SonicWall SMA1000 Vulnerabilities CVE-2026-83548, CVE-2026-83549 Exploited in the Wild",
     "url": "https://www.rapid7.com/blog/post/etr-critical-sonicwall-sma1000-vulnerabilities-cve-2026-83548-cve-2026-83549-exploited-in-the-wild",
@@ -151,52 +128,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "8b38ed6919de",
-    "title": "US charges Russian for infecting 80,000 freelancers with malware",
-    "url": "https://www.bleepingcomputer.com/news/security/us-charges-russian-for-infecting-80-000-freelancers-with-malware/",
-    "source": "BleepingComputer",
-    "published": "2026-09-02T09:06:48.000Z",
-    "summary": "A California federal grand jury has indicted a Russian national for his role in a phishing campaign that infected thousands of freelancers with TVRAT and DarkVNC malware. [...]",
-    "score": 6,
-    "matched": [
-      "campaign",
-      "malware",
-      "phishing"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
-    "id": "dba39c4bbd31",
-    "title": "Counterfeit installers to system compromise: Tracking a deceptive software download campaign",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/01/counterfeit-installers-system-compromise-tracking-deceptive-software-download-campaign/",
-    "source": "Microsoft Security",
-    "published": "2026-09-01T22:48:28.000Z",
-    "summary": "An active campaign is impersonating legitimate software vendors to deliver malware through look-alike download pages and regenerated installer archives. Microsoft Defender Experts shares observed attack techniques,…",
-    "score": 12,
-    "matched": [
-      "campaign",
-      "compromise",
-      "malware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 17,
-      "defanged": 76,
-      "addresses": 11,
-      "heading": true,
-      "evidence": 107
     }
   },
   {
@@ -307,29 +238,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 3
-    }
-  },
-  {
-    "id": "dd7e776156d2",
-    "title": "TerminalFix campaign deploys a reverse tunnel through multistage intrusion",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/08/28/terminalfix-campaign-deploys-reverse-tunnel-through-multistage-intrusion/",
-    "source": "Microsoft Security",
-    "published": "2026-08-29T03:43:27.000Z",
-    "summary": "Microsoft Threat Intelligence provides analysis of a ClickFix campaign that uses fake CAPTCHA prompts, DLL sideloading, and a reverse tunnel, with detections and hunting guidance. The post TerminalFix campaign deploys a…",
-    "score": 18,
-    "matched": [
-      "campaign",
-      "intrusion",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 18,
-      "defanged": 8,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 30
     }
   },
   {
@@ -703,6 +611,28 @@
     }
   },
   {
+    "id": "f02ebc568bdd",
+    "title": "Ransomware Moves up the Org Chart: Managers Are Prime Targets",
+    "url": "https://www.zscaler.com/blogs/security-research/ransomware-moves-org-chart-managers-are-prime-targets",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-08-06T13:50:10.000Z",
+    "summary": "When a ransomware attack makes headlines, attention usually turns to the organization that was breached, the systems encrypted, data stolen, and disruption or ransom demand that followed. Less, if anything, is revealed…",
+    "score": 6,
+    "matched": [
+      "breached",
+      "ransomware"
+    ],
+    "kind": "other",
+    "indicators": {
+      "v": 2,
+      "hashes": 1,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 2
+    }
+  },
+  {
     "id": "3a35006e2624",
     "title": "The Frontier AI Vulnerability Burst: Industrializing Autonomous Zero-Day Discovery in Open-Source Software",
     "url": "https://unit42.paloaltonetworks.com/frontier-ai-vulnerability-burst/",
@@ -725,6 +655,29 @@
     }
   },
   {
+    "id": "f98c4379eb5a",
+    "title": "CVE-2026-18577: N-able N-central Authentication Bypass Exploited in the Wild",
+    "url": "https://www.rapid7.com/blog/post/etr-cve-2026-18577-n-able-n-central-authentication-bypass-exploited-in-the-wild",
+    "source": "Rapid7",
+    "published": "2026-08-04T11:11:54.000Z",
+    "summary": "Overview On August 2, 2026, N-able published a security advisory for CVE-2026-18577 , an authentication bypass vulnerability affecting N-central that was discovered being exploited in-the-wild after an incomplete fix…",
+    "score": 6,
+    "matched": [
+      "being exploited",
+      "exploited in",
+      "in the wild"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 18,
+      "addresses": 6,
+      "heading": true,
+      "evidence": 27
+    }
+  },
+  {
     "id": "92fba083c506",
     "title": "2026-07-31: SmartApeSG ClickFix campaign pushes unidentified RAT",
     "url": "https://www.malware-traffic-analysis.net/2026/07/31/index.html",
@@ -744,6 +697,28 @@
       "addresses": 1,
       "heading": false,
       "evidence": 25
+    }
+  },
+  {
+    "id": "54ec111ffe21",
+    "title": "This month in security with Tony Anscombe – July 2026 edition",
+    "url": "https://www.welivesecurity.com/en/videos/month-security-tony-anscombe-july-2026/",
+    "source": "ESET Research",
+    "published": "2026-07-31T14:14:15.000Z",
+    "summary": "OpenAI models going rogue, the first documented agentic ransomware operation, and an emergent AI-driven supply chain threat made for a packed July roundup",
+    "score": 6,
+    "matched": [
+      "ransomware",
+      "supply chain"
+    ],
+    "kind": "technique",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
     }
   },
   {
@@ -809,6 +784,27 @@
       "addresses": 8,
       "heading": true,
       "evidence": 28
+    }
+  },
+  {
+    "id": "dfe05ba1cef8",
+    "title": "Russian Espionage Group Exploited Zimbra Zero-Day to Steal Mail and 2FA Codes",
+    "url": "https://www.proofpoint.com/us/newsroom/news/russian-espionage-group-exploited-zimbra-zero-day-steal-mail-and-2fa-codes",
+    "source": "Proofpoint",
+    "published": "2026-07-23T16:13:08.000Z",
+    "summary": "",
+    "score": 6,
+    "matched": [
+      "zero-day"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
     }
   },
   {
