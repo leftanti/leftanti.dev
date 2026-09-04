@@ -1,5 +1,73 @@
 [
   {
+    "id": "ba1e0af3fb41",
+    "title": "DPRK APTs: Ted backdoor and curlRAT target South Korean media and automotive sectors",
+    "url": "https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors",
+    "source": "Rapid7",
+    "published": "2026-09-04T12:00:00.000Z",
+    "summary": "Overview A new Linux toolkit, identified by Rapid7 Labs, has been targeting organizations across South Korea’s automotive and media industries with minimal detection. The campaign made use of a HAProxy instance named…",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "backdoor"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 30,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": true,
+      "evidence": 33
+    }
+  },
+  {
+    "id": "d0bfd527d755",
+    "title": "Google warns of new Chrome zero-day flaw exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/google-warns-of-new-chrome-zero-day-flaw-exploited-in-attacks/",
+    "source": "BleepingComputer",
+    "published": "2026-09-04T11:48:17.000Z",
+    "summary": "Google has updated the Chrome browser to address an actively exploited high-severity zero-day flaw in the V8 engine and 11 other vulnerabilities. [...]",
+    "score": 11,
+    "matched": [
+      "actively exploited",
+      "exploited in",
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "c21f3d5267aa",
+    "title": "Google Releases Chrome Update to Patch Actively Exploited V8 Zero-Day",
+    "url": "https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html",
+    "source": "The Hacker News",
+    "published": "2026-09-04T07:18:47.000Z",
+    "summary": "Google on Thursday released security updates to patch 12 vulnerabilities, including one that has come under active exploitation in the wild. The high-severity vulnerability, tracked as CVE-2026-85046 (CVSS score: 8.8),…",
+    "score": 19,
+    "matched": [
+      "actively exploited",
+      "in the wild",
+      "zero-day"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "40a4e36b4ae1",
     "title": "US Becomes Top Target in RMM Phishing Campaign Spanning 46 Countries",
     "url": "https://thehackernews.com/2026/09/us-becomes-top-target-in-rmm-phishing.html",
@@ -87,27 +155,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 29
-    }
-  },
-  {
-    "id": "1d3c4e8b72c4",
-    "title": "Ransomware protection for MSPs: A 6-point checklist for faster recovery",
-    "url": "https://www.bleepingcomputer.com/news/security/ransomware-protection-for-msps-a-6-point-checklist-for-faster-recovery/",
-    "source": "BleepingComputer",
-    "published": "2026-09-02T14:02:12.000Z",
-    "summary": "Ransomware resilience requires more than backups or endpoint detection alone. Acronis outlines six capabilities MSPs should test across client environments, from reducing exposure and detecting attacks to preserving…",
-    "score": 6,
-    "matched": [
-      "ransomware"
-    ],
-    "kind": "other",
-    "indicators": {
-      "v": 2,
-      "hashes": 1,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 2
     }
   },
   {
@@ -656,49 +703,6 @@
       "addresses": 2,
       "heading": false,
       "evidence": 48
-    }
-  },
-  {
-    "id": "0f135c6567b4",
-    "title": "Head Mare APT is exploiting vulnerabilities in an unpatched TrueConf server to deliver PhantomCore and PhantomGraph to video conference participants",
-    "url": "https://securelist.com/tr/head-mare-targets-trueconf-server-with-phantomcore/120988/",
-    "source": "Securelist",
-    "published": "2026-08-11T12:00:55.000Z",
-    "summary": "Kaspersky experts have discovered malicious TrueConf software installers. The Head Mare APT group uses them to deliver the PhantomCore and PhantomGraph backdoors to target systems by exploiting vulnerabilities in an…",
-    "score": 6,
-    "matched": [
-      "APT"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 56,
-      "defanged": 15,
-      "addresses": 5,
-      "heading": true,
-      "evidence": 79
-    }
-  },
-  {
-    "id": "f02ebc568bdd",
-    "title": "Ransomware Moves up the Org Chart: Managers Are Prime Targets",
-    "url": "https://www.zscaler.com/blogs/security-research/ransomware-moves-org-chart-managers-are-prime-targets",
-    "source": "Zscaler ThreatLabz",
-    "published": "2026-08-06T13:50:10.000Z",
-    "summary": "When a ransomware attack makes headlines, attention usually turns to the organization that was breached, the systems encrypted, data stolen, and disruption or ransom demand that followed. Less, if anything, is revealed…",
-    "score": 6,
-    "matched": [
-      "breached",
-      "ransomware"
-    ],
-    "kind": "other",
-    "indicators": {
-      "v": 2,
-      "hashes": 1,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 2
     }
   },
   {
