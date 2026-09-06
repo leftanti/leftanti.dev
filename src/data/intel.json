@@ -1,5 +1,26 @@
 [
   {
+    "id": "acd0dfe21913",
+    "title": "Four REVSTEALER-Linked Modules Disable Windows Update and Defender to Run a Crypto Miner",
+    "url": "https://thehackernews.com/2026/09/four-revstealer-linked-modules-disable.html",
+    "source": "The Hacker News",
+    "published": "2026-09-06T08:34:20.000Z",
+    "summary": "Elastic Security Labs has documented four previously unreported programs associated with REVSTEALER, an emerging Windows information stealer, that remain on an infected machine after the stealer deletes itself. One of…",
+    "score": 12,
+    "matched": [
+      "stealer"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 5,
+      "defanged": 4,
+      "addresses": 0,
+      "heading": true,
+      "evidence": 12
+    }
+  },
+  {
     "id": "a6f7e900dd40",
     "title": "Unpatched Magento and Adobe Commerce Zero-Day Exploited to Backdoor Online Stores",
     "url": "https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html",
@@ -520,27 +541,6 @@
       "known exploited"
     ],
     "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "3cb411a882f6",
-    "title": "Connecting the Dots: Securing the Overlooked Corners of the Software Development Lifecycle (SDLC) Supply Chain",
-    "url": "https://unit42.paloaltonetworks.com/sdlc-supply-chain/",
-    "source": "Unit 42",
-    "published": "2026-08-21T23:00:21.000Z",
-    "summary": "Attackers are targeting CI/CD pipelines and developer tools instead of application code, requiring total SDLC visibility and strict security controls The post Connecting the Dots: Securing the Overlooked Corners of the…",
-    "score": 6,
-    "matched": [
-      "supply chain"
-    ],
-    "kind": "technique",
     "indicators": {
       "v": 2,
       "hashes": 0,
