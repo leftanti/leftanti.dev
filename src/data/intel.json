@@ -151,29 +151,6 @@
     }
   },
   {
-    "id": "d0bfd527d755",
-    "title": "Google warns of new Chrome zero-day flaw exploited in attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/google-warns-of-new-chrome-zero-day-flaw-exploited-in-attacks/",
-    "source": "BleepingComputer",
-    "published": "2026-09-04T11:48:17.000Z",
-    "summary": "Google has updated the Chrome browser to address an actively exploited high-severity zero-day flaw in the V8 engine and 11 other vulnerabilities. [...]",
-    "score": 11,
-    "matched": [
-      "actively exploited",
-      "exploited in",
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
     "id": "c21f3d5267aa",
     "title": "Google Releases Chrome Update to Patch Actively Exploited V8 Zero-Day",
     "url": "https://thehackernews.com/2026/09/google-releases-chrome-update-to-patch.html",
@@ -353,29 +330,6 @@
     }
   },
   {
-    "id": "62520fb19d8c",
-    "title": "ValleyRAT Backdoor Hides in Signed Adware That Users Add to Antivirus Exclusions",
-    "url": "https://thehackernews.com/2026/08/valleyrat-backdoor-hides-in-signed.html",
-    "source": "The Hacker News",
-    "published": "2026-08-31T12:14:00.000Z",
-    "summary": "The threat actor known as Silver Fox has been observed distributing the ValleyRAT backdoor disguised as a signed Chinese adware application, running the malware under a trusted process to slip past users who add such…",
-    "score": 8,
-    "matched": [
-      "threat actor",
-      "malware",
-      "backdoor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 3,
-      "defanged": 4,
-      "addresses": 2,
-      "heading": true,
-      "evidence": 12
-    }
-  },
-  {
     "id": "6b34d2d44630",
     "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/08/31/cisa-adds-two-known-exploited-vulnerabilities-catalog",
@@ -387,27 +341,6 @@
       "known exploited"
     ],
     "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "b1b20ef14b5c",
-    "title": "Aurora Ransomware Operators Use Cursor AI in Attacks Against 10 Targets",
-    "url": "https://thehackernews.com/2026/08/aurora-ransomware-operators-use-cursor.html",
-    "source": "The Hacker News",
-    "published": "2026-08-31T11:47:24.000Z",
-    "summary": "Threat actors associated with Aurora (aka Aur0ra) ransomware have been observed using SpaceX's artificial intelligence (AI)-powered coding assistant Cursor to break into target networks, according to findings from…",
-    "score": 6,
-    "matched": [
-      "ransomware"
-    ],
-    "kind": "other",
     "indicators": {
       "v": 2,
       "hashes": 0,
@@ -551,6 +484,27 @@
     }
   },
   {
+    "id": "3cb411a882f6",
+    "title": "Connecting the Dots: Securing the Overlooked Corners of the Software Development Lifecycle (SDLC) Supply Chain",
+    "url": "https://unit42.paloaltonetworks.com/sdlc-supply-chain/",
+    "source": "Unit 42",
+    "published": "2026-08-21T23:00:21.000Z",
+    "summary": "Attackers are targeting CI/CD pipelines and developer tools instead of application code, requiring total SDLC visibility and strict security controls The post Connecting the Dots: Securing the Overlooked Corners of the…",
+    "score": 6,
+    "matched": [
+      "supply chain"
+    ],
+    "kind": "technique",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "6c5418399984",
     "title": "2026-08-21: SmartApeSG ClickFix campaign leads to two RATs",
     "url": "https://www.malware-traffic-analysis.net/2026/08/21/index.html",
@@ -570,6 +524,28 @@
       "addresses": 2,
       "heading": false,
       "evidence": 24
+    }
+  },
+  {
+    "id": "ba0cb5d8743d",
+    "title": "Identity Abuse Through Trusted Communication Channels",
+    "url": "https://unit42.paloaltonetworks.com/communication-channel-identity-risks/",
+    "source": "Unit 42",
+    "published": "2026-08-20T10:00:25.000Z",
+    "summary": "Unit 42 details how attackers exploit enterprise collaboration tools for identity phishing and credential theft. Discover key defense strategies. The post Identity Abuse Through Trusted Communication Channels appeared…",
+    "score": 6,
+    "matched": [
+      "phishing",
+      "credential theft"
+    ],
+    "kind": "other",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 1,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 1
     }
   },
   {
@@ -638,6 +614,27 @@
       "addresses": 0,
       "heading": false,
       "evidence": 20
+    }
+  },
+  {
+    "id": "a2e864adbe5e",
+    "title": "The State of Ransomware Q2 2026",
+    "url": "https://research.checkpoint.com/2026/the-state-of-ransomware-q2-2026/",
+    "source": "Check Point Research",
+    "published": "2026-08-13T12:54:35.000Z",
+    "summary": "For the past year, the ransomware conversation has centered on concentration: a handful of dominant RaaS operations controlling most of the damage, and a shrinking pool of active groups fighting over the same territory.…",
+    "score": 6,
+    "matched": [
+      "ransomware"
+    ],
+    "kind": "other",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
     }
   },
   {
