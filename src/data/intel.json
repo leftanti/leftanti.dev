@@ -1,5 +1,51 @@
 [
   {
+    "id": "cdddae27cbea",
+    "title": "ClickFix moves into the browser: Cryptocurrency theft with Google-hosted C2",
+    "url": "https://blog.talosintelligence.com/clickfix-moves-into-the-browser/",
+    "source": "Cisco Talos",
+    "published": "2026-09-08T10:00:38.000Z",
+    "summary": "Cisco Talos is tracking a cryptocurrency-stealing campaign that abuses the Google Visualization API for command and control (C2), retrieving obfuscated JavaScript from a publicly published Google Sheets document and…",
+    "score": 12,
+    "matched": [
+      "campaign",
+      "ClickFix",
+      "command and control"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 20,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 20
+    }
+  },
+  {
+    "id": "a4ca88039821",
+    "title": "Adobe Patches Magento Zero-Day Exploited to Deploy Rust Backdoor and PHP Web Shell",
+    "url": "https://thehackernews.com/2026/09/adobe-patches-magento-zero-day.html",
+    "source": "The Hacker News",
+    "published": "2026-09-08T09:13:47.000Z",
+    "summary": "Adobe on Monday released security patches to address a maximum-severity flaw impacting Adobe Commerce and Magento Open Source that has come under active exploitation in the wild. The vulnerability, now tracked as…",
+    "score": 13,
+    "matched": [
+      "in the wild",
+      "zero-day",
+      "backdoor"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 1,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 1
+    }
+  },
+  {
     "id": "49d431d7e03c",
     "title": "Magento StyleSmuggler zero-day exploited to deploy Linux backdoor",
     "url": "https://www.bleepingcomputer.com/news/security/magento-stylesmuggler-zero-day-exploited-to-deploy-linux-backdoor/",
@@ -509,27 +555,6 @@
     }
   },
   {
-    "id": "4f77dd22a150",
-    "title": "PaperCut Zero-Day: Active Exploitation and Pre-Auth RCE",
-    "url": "https://www.huntress.com/blog/papercut-actively-exploited",
-    "source": "Huntress",
-    "published": "2026-08-28T03:00:00.000Z",
-    "summary": "PaperCut NG and PaperCut MF are under active exploitation. Huntress reproduced a pre-auth RCE chain and shares urgent patching, exposure, and detection guidance.",
-    "score": 6,
-    "matched": [
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 14,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": true,
-      "evidence": 17
-    }
-  },
-  {
     "id": "3ab51a0cc84b",
     "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/08/27/cisa-adds-three-known-exploited-vulnerabilities-catalog",
@@ -541,27 +566,6 @@
       "known exploited"
     ],
     "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "3cb411a882f6",
-    "title": "Connecting the Dots: Securing the Overlooked Corners of the Software Development Lifecycle (SDLC) Supply Chain",
-    "url": "https://unit42.paloaltonetworks.com/sdlc-supply-chain/",
-    "source": "Unit 42",
-    "published": "2026-08-21T23:00:21.000Z",
-    "summary": "Attackers are targeting CI/CD pipelines and developer tools instead of application code, requiring total SDLC visibility and strict security controls The post Connecting the Dots: Securing the Overlooked Corners of the…",
-    "score": 6,
-    "matched": [
-      "supply chain"
-    ],
-    "kind": "technique",
     "indicators": {
       "v": 2,
       "hashes": 0,
