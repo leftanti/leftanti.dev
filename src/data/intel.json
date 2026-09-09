@@ -33,8 +33,15 @@
     "matched": [
       "zero-day"
     ],
-    "kind": "exploited",
-    "indicators": null
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
   },
   {
     "id": "1c575186fad4",
@@ -70,8 +77,15 @@
       "exploited in",
       "zero-day"
     ],
-    "kind": "exploited",
-    "indicators": null
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
   },
   {
     "id": "0e5d9e729090",
@@ -362,29 +376,6 @@
     }
   },
   {
-    "id": "50aef9dc283c",
-    "title": "Impersonating IT support: how threat actors turn a remote session into enterprise-wide access",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/02/impersonating-it-support-threat-actors-turn-remote-session-into-enterprise-wide-access/",
-    "source": "Microsoft Security",
-    "published": "2026-09-02T22:51:18.000Z",
-    "summary": "Microsoft Threat Intelligence observed a human-operated intrusion campaign that abuses Microsoft Teams external collaboration to impersonate IT support, gain remote access, and deploy a Node.js-based implant. Learn how…",
-    "score": 7,
-    "matched": [
-      "campaign",
-      "intrusion",
-      "implant"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 12,
-      "defanged": 14,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 30
-    }
-  },
-  {
     "id": "a4323813a3bc",
     "title": "Critical SonicWall SMA1000 Vulnerabilities CVE-2026-83548, CVE-2026-83549 Exploited in the Wild",
     "url": "https://www.rapid7.com/blog/post/etr-critical-sonicwall-sma1000-vulnerabilities-cve-2026-83548-cve-2026-83549-exploited-in-the-wild",
@@ -583,6 +574,28 @@
       "defanged": 0,
       "addresses": 0,
       "heading": true,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "64e9c45aa341",
+    "title": "From 88 lines to 1: Detecting DLL hijacking with Elastic Defend",
+    "url": "https://www.elastic.co/security-labs/threat-command/dll-search-order-hijacking-elastic-defend",
+    "source": "Elastic Security Labs",
+    "published": "2026-08-28T00:00:00.000Z",
+    "summary": "The ClickFix campaign that sideloads a malicious mscoree.dll also ships a driver to kill Elastic Endpoint. We rebuilt that DLL as a NativeAOT library, dropped it beside a signed Microsoft binary, and Elastic Defend…",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 3,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
       "evidence": 3
     }
   },
@@ -786,27 +799,6 @@
     }
   },
   {
-    "id": "ddd2528ace65",
-    "title": "Device Code Phishing Keeps Evolving. Here’s What to Watch For",
-    "url": "https://www.huntress.com/blog/device-code-phishing-evolving-threats",
-    "source": "Huntress",
-    "published": "2026-07-31T13:00:00.000Z",
-    "summary": "Huntress is tracking an evolving wave of device code phishing that abuses trusted Microsoft 365 sign-in flows. Learn the signals defenders should watch for and how to respond.",
-    "score": 7,
-    "matched": [
-      "phishing"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 14,
-      "defanged": 5,
-      "addresses": 4,
-      "heading": false,
-      "evidence": 23
-    }
-  },
-  {
     "id": "9f0e9336b780",
     "title": "Credential Stuffing Campaign Hits SonicWall | Huntress SOC Tracking",
     "url": "https://www.huntress.com/blog/sonicwall-credential-stuffing-campaign",
@@ -870,6 +862,51 @@
       "addresses": 21,
       "heading": false,
       "evidence": 71
+    }
+  },
+  {
+    "id": "869bb8555344",
+    "title": "New North Korean campaign uses fake coding interviews to steal developer credentials",
+    "url": "https://www.elastic.co/security-labs/threat-command/contagious-interview-malware-svg-steganography",
+    "source": "Elastic Security Labs",
+    "published": "2026-07-18T00:00:00.000Z",
+    "summary": "DPRK-aligned hackers hid malware inside SVG flag images to backdoor developer job interview coding tests. Not one antivirus vendor caught it.",
+    "score": 10,
+    "matched": [
+      "campaign",
+      "malware",
+      "backdoor"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 10,
+      "defanged": 14,
+      "addresses": 2,
+      "heading": false,
+      "evidence": 26
+    }
+  },
+  {
+    "id": "f6b8c91eb812",
+    "title": "TELEPUZ: a modular MaaS malware spreading via CLICKFIX-VIDAR chains",
+    "url": "https://www.elastic.co/security-labs/threat-command/telepuz-maas-malware-clickfix",
+    "source": "Elastic Security Labs",
+    "published": "2026-07-16T00:00:00.000Z",
+    "summary": "TELEPUZ is a modular malware that emerged through CLICKFIX-VIDAR attacks in April. We reverse-engineered it to show you the infrastructure and evasion techniques that matter.",
+    "score": 8,
+    "matched": [
+      "malware",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 17,
+      "defanged": 45,
+      "addresses": 2,
+      "heading": true,
+      "evidence": 67
     }
   },
   {
@@ -983,29 +1020,6 @@
     }
   },
   {
-    "id": "7cb9bb001c0c",
-    "title": "Potemkin Loader & RMMProject The Anatomy of a ClickFix Attack",
-    "url": "https://www.huntress.com/blog/potemkin-loader-rmmproject-clickfix-attack",
-    "source": "Huntress",
-    "published": "2026-06-16T14:00:00.000Z",
-    "summary": "A ClickFix infection drops Potemkin loader and RMMProject RAT, leading to browser theft, hidden remote desktop, and lateral movement across over 11 hosts.",
-    "score": 8,
-    "matched": [
-      "loader",
-      "ClickFix",
-      "lateral movement"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 21,
-      "defanged": 43,
-      "addresses": 4,
-      "heading": true,
-      "evidence": 71
-    }
-  },
-  {
     "id": "4ec633dfd15f",
     "title": "Shai-Hulud Campaign Evolution: Miasma, Hades, and AI Scanner Evasion",
     "url": "https://www.zscaler.com/blogs/security-research/shai-hulud-campaign-evolution-miasma-hades-and-ai-scanner-evasion",
@@ -1028,24 +1042,24 @@
     }
   },
   {
-    "id": "459eca2bf662",
-    "title": "Inside Kali365, a Device Code Phishing Ecosystem | Huntress",
-    "url": "https://www.huntress.com/blog/kali365-device-code-phishing-kit",
-    "source": "Huntress",
-    "published": "2026-06-11T18:00:00.000Z",
-    "summary": "Huntress traced device code phishing from Tencent Cloud to Kali365, a Microsoft 365 kit that steals tokens and keeps access even after MFA or password resets.",
-    "score": 7,
+    "id": "19d6edea0b7b",
+    "title": "Detecting Tycoon 2FA AiTM attacks across Entra ID and Google Workspace",
+    "url": "https://www.elastic.co/security-labs/threat-command/tycoon-2fa-aitm-detection-engineering",
+    "source": "Elastic Security Labs",
+    "published": "2026-05-26T00:00:00.000Z",
+    "summary": "Tycoon 2FA bypasses MFA on Entra ID and Google Workspace. We map telemetry fingerprints across both platforms, ship detection rules for both tiers, and contain incidents in under 10 seconds with Elastic Workflows.",
+    "score": 14,
     "matched": [
-      "phishing"
+      "AiTM"
     ],
     "kind": "ioc",
     "indicators": {
       "v": 2,
-      "hashes": 14,
+      "hashes": 13,
       "defanged": 0,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 18
+      "addresses": 0,
+      "heading": false,
+      "evidence": 13
     }
   },
   {
