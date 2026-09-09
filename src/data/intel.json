@@ -1,5 +1,26 @@
 [
   {
+    "id": "4e0c1d21aa5c",
+    "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/09/09/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-09-09T12:00:00.000Z",
+    "summary": "CISA has added four new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2025-25249 Fortinet Multiple Products Heap-based Buffer Overflow Vulnerability…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "78d2d3e14138",
     "title": "Chrome V8 Zero-Day Exploited in the Wild Enables Code Execution Inside Sandbox",
     "url": "https://thehackernews.com/2026/09/chrome-v8-zero-day-exploited-in-wild.html",
@@ -344,28 +365,6 @@
       "zero-day"
     ],
     "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "40a4e36b4ae1",
-    "title": "US Becomes Top Target in RMM Phishing Campaign Spanning 46 Countries",
-    "url": "https://thehackernews.com/2026/09/us-becomes-top-target-in-rmm-phishing.html",
-    "source": "The Hacker News",
-    "published": "2026-09-03T11:58:00.000Z",
-    "summary": "An RMM phishing campaign initially associated with Canadian targeting due to its use of Canada Revenue Agency (CRA) tax forms as lures has turned out to be part of a broader campaign spanning 46 countries. Around 45% of…",
-    "score": 12,
-    "matched": [
-      "campaign",
-      "phishing"
-    ],
-    "kind": "campaign",
     "indicators": {
       "v": 2,
       "hashes": 0,
