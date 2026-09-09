@@ -1,5 +1,125 @@
 [
   {
+    "id": "78d2d3e14138",
+    "title": "Chrome V8 Zero-Day Exploited in the Wild Enables Code Execution Inside Sandbox",
+    "url": "https://thehackernews.com/2026/09/chrome-v8-zero-day-exploited-in-wild.html",
+    "source": "The Hacker News",
+    "published": "2026-09-09T09:11:03.000Z",
+    "summary": "Google on Thursday released updates to patch 230 security vulnerabilities, including one that has come under active exploitation in the wild. The medium-severity vulnerability, assigned the CVE identifier CVE-2026-87491…",
+    "score": 12,
+    "matched": [
+      "exploited in",
+      "in the wild",
+      "zero-day"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "7c32ccdd8564",
+    "title": "New Microsoft Defender 'ShieldCrash' zero-day grants SYSTEM access",
+    "url": "https://www.bleepingcomputer.com/news/security/new-microsoft-defender-shieldcrash-zero-day-grants-system-access/",
+    "source": "BleepingComputer",
+    "published": "2026-09-09T07:30:15.000Z",
+    "summary": "An anonymous security researcher known as Nightmare Eclipse has released a new Microsoft Defender zero-day exploit named \"ShieldCrash\" right after Microsoft rolled out its September 2026 Patch Tuesday security updates.…",
+    "score": 14,
+    "matched": [
+      "zero-day"
+    ],
+    "kind": "exploited",
+    "indicators": null
+  },
+  {
+    "id": "1c575186fad4",
+    "title": "Researcher Drops New Microsoft Defender PoC Showing ShieldBreak Patch Can Be Bypassed",
+    "url": "https://thehackernews.com/2026/09/researcher-drops-new-microsoft-defender.html",
+    "source": "The Hacker News",
+    "published": "2026-09-09T06:47:27.000Z",
+    "summary": "The security researcher known as Chaotic Eclipse has dropped a proof-of-concept (PoC) for yet another zero-day in Microsoft Defender. The vulnerability, codenamed ShieldCrash, is assessed to be a patch bypass for…",
+    "score": 11,
+    "matched": [
+      "zero-day"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "88b32b5a0d37",
+    "title": "Google warns of new Chrome zero-day bug exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/google-patches-seventh-chrome-zero-day-exploited-in-attacks-this-year/",
+    "source": "BleepingComputer",
+    "published": "2026-09-09T06:25:48.000Z",
+    "summary": "Google has patched 230 vulnerabilities on Tuesday, including another actively exploited Chrome zero-day bug, the seventh such vulnerability patched since the start of the year. [...]",
+    "score": 11,
+    "matched": [
+      "actively exploited",
+      "exploited in",
+      "zero-day"
+    ],
+    "kind": "exploited",
+    "indicators": null
+  },
+  {
+    "id": "0e5d9e729090",
+    "title": "Microsoft Patches Record 974 Flaws, Including Two Exploited Windows Zero-Days",
+    "url": "https://thehackernews.com/2026/09/microsoft-patches-record-974-flaws.html",
+    "source": "The Hacker News",
+    "published": "2026-09-09T04:41:29.000Z",
+    "summary": "Microsoft on Tuesday broke Patch Tuesday records by addressing an earth-shattering 974 vulnerabilities spanning its software portfolio, including two flaws that it said have been actively exploited in the wild. These…",
+    "score": 10,
+    "matched": [
+      "actively exploited",
+      "exploited in",
+      "in the wild"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "23a085d64186",
+    "title": "N-able N-central Pre-Auth RCE Flaw Exploited in the Wild",
+    "url": "https://thehackernews.com/2026/09/n-able-n-central-pre-auth-rce-flaw.html",
+    "source": "The Hacker News",
+    "published": "2026-09-09T04:27:51.000Z",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added a maximum-severity security flaw impacting N-able N-central to its Known Exploited Vulnerabilities (KEV) catalog, requiring Federal…",
+    "score": 11,
+    "matched": [
+      "exploited in",
+      "in the wild",
+      "known exploited"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": true,
+      "evidence": 3
+    }
+  },
+  {
     "id": "7ac007eba4bd",
     "title": "Microsoft September 2026 Patch Tuesday fixes 966 flaws, 2 zero-days",
     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-september-2026-patch-tuesday-fixes-966-flaws-2-zero-days/",
@@ -19,29 +139,6 @@
       "addresses": 2,
       "heading": false,
       "evidence": 4
-    }
-  },
-  {
-    "id": "de3b7bf7290a",
-    "title": "Adobe fixes critical Magento zero-day exploited to backdoor servers",
-    "url": "https://www.bleepingcomputer.com/news/security/adobe-fixes-critical-magento-zero-day-exploited-to-backdoor-servers/",
-    "source": "BleepingComputer",
-    "published": "2026-09-08T13:34:47.000Z",
-    "summary": "Adobe has released an emergency fix for CVE-2026-75650, an actively exploited max-severity zero-day vulnerability dubbed StyleSmuggler, that impacts multiple versions of Magento and Adobe Commerce. [...]",
-    "score": 15,
-    "matched": [
-      "actively exploited",
-      "zero-day",
-      "backdoor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
     }
   },
   {
@@ -109,50 +206,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 1
-    }
-  },
-  {
-    "id": "a48cf88b7ef5",
-    "title": "Fake IT Calls Target Executives in Microsoft 365 Data Theft and Extortion Attacks",
-    "url": "https://thehackernews.com/2026/09/microsoft-365-attackers-use-help-desk.html",
-    "source": "The Hacker News",
-    "published": "2026-09-07T15:51:56.000Z",
-    "summary": "Threat hunters have disclosed details of a widespread data theft and extortion threat cluster that's targeting Microsoft 365 and other software-as-a-service (SaaS) offerings through information technology (IT) help desk…",
-    "score": 6,
-    "matched": [
-      "data theft",
-      "extortion"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 9,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 9
-    }
-  },
-  {
-    "id": "51e0fedb88d7",
-    "title": "⚡ Weekly Recap: Chrome 0-Day, Router Hijacks, Coder Supply Chain Attack and More",
-    "url": "https://thehackernews.com/2026/09/weekly-recap-chrome-0-day-router.html",
-    "source": "The Hacker News",
-    "published": "2026-09-07T14:36:07.000Z",
-    "summary": "Turning off email images should at least stop the pictures. This week, attackers had a workaround: a scannable QR code built out of text. It still appears, even with images blocked. A small detail, but an annoying one…",
-    "score": 6,
-    "matched": [
-      "0-day",
-      "supply chain"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 2,
-      "addresses": 3,
-      "heading": false,
-      "evidence": 5
     }
   },
   {
@@ -355,28 +408,6 @@
     }
   },
   {
-    "id": "3b410cf359cf",
-    "title": "Fake Software Installers Disable Windows Update and Weaken Microsoft Defender",
-    "url": "https://thehackernews.com/2026/09/fake-software-installers-disable.html",
-    "source": "The Hacker News",
-    "published": "2026-09-02T16:41:06.000Z",
-    "summary": "An active malware campaign is using bogus software-download websites to impersonate trusted vendors and distribute malicious installers. \"The campaign has targeted users looking to download popular software and has…",
-    "score": 14,
-    "matched": [
-      "campaign",
-      "malware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 29,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 29
-    }
-  },
-  {
     "id": "be1cd6ed484b",
     "title": "Inside Knight Office, a New M365 AiTM Phishing Kit",
     "url": "https://www.huntress.com/blog/inside-knight-office-m365-aitm-attack",
@@ -553,27 +584,6 @@
       "addresses": 0,
       "heading": true,
       "evidence": 3
-    }
-  },
-  {
-    "id": "4f77dd22a150",
-    "title": "PaperCut Zero-Day: Active Exploitation and Pre-Auth RCE",
-    "url": "https://www.huntress.com/blog/papercut-actively-exploited",
-    "source": "Huntress",
-    "published": "2026-08-28T03:00:00.000Z",
-    "summary": "PaperCut NG and PaperCut MF are under active exploitation. Huntress reproduced a pre-auth RCE chain and shares urgent patching, exposure, and detection guidance.",
-    "score": 6,
-    "matched": [
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 14,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": true,
-      "evidence": 17
     }
   },
   {
@@ -1036,29 +1046,6 @@
       "addresses": 1,
       "heading": true,
       "evidence": 18
-    }
-  },
-  {
-    "id": "8159851e4eb4",
-    "title": "Flash Alert: EtherRat and TukTuk C2 End in The Gentleman Ransomware",
-    "url": "https://thedfirreport.com/2026/05/11/flash-alert-etherrat-and-tuktuk-c2-end-in-the-gentleman-ransomware/",
-    "source": "The DFIR Report",
-    "published": "2026-05-11T14:05:04.000Z",
-    "summary": "The EtherRAT malware family was first reported by Sysdig back in December 2025. At that time, the initial access vector was exploitation of CVE-2025-55182 (React2Shell) targeting Linux servers. In March 2026, a Windows…",
-    "score": 7,
-    "matched": [
-      "ransomware",
-      "malware",
-      "initial access"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 18,
-      "defanged": 1,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 23
     }
   },
   {
