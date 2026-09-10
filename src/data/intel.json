@@ -1,5 +1,28 @@
 [
   {
+    "id": "9a363bbcb1a5",
+    "title": "CISA: WatchGuard RCE flaw now exploited in ransomware attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-watchguard-rce-flaw-now-exploited-in-ransomware-attacks/",
+    "source": "BleepingComputer",
+    "published": "2026-09-10T09:10:20.000Z",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has confirmed that ransomware gangs are also exploiting a critical WatchGuard Firebox firewall vulnerability, which it flagged as actively exploited in…",
+    "score": 11,
+    "matched": [
+      "actively exploited",
+      "exploited in",
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 6
+    }
+  },
+  {
     "id": "4e0c1d21aa5c",
     "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/09/09/cisa-adds-four-known-exploited-vulnerabilities-catalog",
@@ -26,7 +49,7 @@
     "url": "https://thehackernews.com/2026/09/chrome-v8-zero-day-exploited-in-wild.html",
     "source": "The Hacker News",
     "published": "2026-09-09T09:11:03.000Z",
-    "summary": "Google on Thursday released updates to patch 230 security vulnerabilities, including one that has come under active exploitation in the wild. The medium-severity vulnerability, assigned the CVE identifier CVE-2026-87491…",
+    "summary": "Google on Tuesday released updates to patch 230 security vulnerabilities, including one that has come under active exploitation in the wild. The medium-severity vulnerability, assigned the CVE identifier CVE-2026-87491…",
     "score": 12,
     "matched": [
       "exploited in",
@@ -751,28 +774,6 @@
       "addresses": 2,
       "heading": false,
       "evidence": 48
-    }
-  },
-  {
-    "id": "3a35006e2624",
-    "title": "The Frontier AI Vulnerability Burst: Industrializing Autonomous Zero-Day Discovery in Open-Source Software",
-    "url": "https://unit42.paloaltonetworks.com/frontier-ai-vulnerability-burst/",
-    "source": "Unit 42",
-    "published": "2026-08-04T13:00:11.000Z",
-    "summary": "Frontier AI is reshaping vulnerability discovery. Learn how our NOVA system found 14,000+ unknown vulnerabilities across the open-source software supply chain. The post The Frontier AI Vulnerability Burst:…",
-    "score": 9,
-    "matched": [
-      "zero-day",
-      "supply chain"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
     }
   },
   {
