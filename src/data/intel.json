@@ -1,5 +1,70 @@
 [
   {
+    "id": "6924e2256481",
+    "title": "Passkey-themed phishing attacks lead to Microsoft 365 data theft",
+    "url": "https://www.bleepingcomputer.com/news/security/passkey-themed-phishing-attacks-lead-to-microsoft-365-data-theft/",
+    "source": "BleepingComputer",
+    "published": "2026-09-11T17:26:50.000Z",
+    "summary": "Microsoft says threat actors linked to ShinyHunters, Helix, and other extortion gangs are using passkey and single sign-on-themed social engineering attacks to compromise corporate Microsoft accounts and steal data from…",
+    "score": 10,
+    "matched": [
+      "compromise",
+      "data theft",
+      "extortion"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 9,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 12
+    }
+  },
+  {
+    "id": "62beac1c0708",
+    "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/09/11/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-09-11T12:00:00.000Z",
+    "summary": "CISA has added three new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-42016 JFrog Artifactory Incorrect Authorization Vulnerability…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "765bc9acacf0",
+    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/09/11/cisa-adds-one-known-exploited-vulnerability-catalog",
+    "source": "CISA",
+    "published": "2026-09-11T12:00:00.000Z",
+    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-85706 GitLab Community Edition and Enterprise Edition Path Traversal…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "f804c4cab4d2",
     "title": "PaperCut Replaces Emergency Patches With Fixes for Two Actively Exploited Flaws",
     "url": "https://thehackernews.com/2026/09/papercut-replaces-emergency-patches.html",
@@ -85,27 +150,6 @@
       "addresses": 2,
       "heading": true,
       "evidence": 52
-    }
-  },
-  {
-    "id": "85faadacbcd0",
-    "title": "New 'BlueMoon' kit exploited Windows and Chrome zero-day flaws",
-    "url": "https://www.bleepingcomputer.com/news/security/new-bluemoon-kit-exploited-windows-and-chrome-zero-day-flaws/",
-    "source": "BleepingComputer",
-    "published": "2026-09-10T14:11:34.000Z",
-    "summary": "Multiple cyber-espionage groups deployed an exploit kit dubbed \"BlueMoon\" that leveraged zero-day vulnerabilities in Microsoft Windows and Google Chrome. [...]",
-    "score": 8,
-    "matched": [
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 6
     }
   },
   {
@@ -308,49 +352,6 @@
     }
   },
   {
-    "id": "acd0dfe21913",
-    "title": "Four REVSTEALER-Linked Modules Disable Windows Update and Defender to Run a Crypto Miner",
-    "url": "https://thehackernews.com/2026/09/four-revstealer-linked-modules-disable.html",
-    "source": "The Hacker News",
-    "published": "2026-09-06T08:34:20.000Z",
-    "summary": "Elastic Security Labs has documented four previously unreported programs associated with REVSTEALER, an emerging Windows information stealer, that remain on an infected machine after the stealer deletes itself. One of…",
-    "score": 12,
-    "matched": [
-      "stealer"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 5,
-      "defanged": 4,
-      "addresses": 0,
-      "heading": true,
-      "evidence": 12
-    }
-  },
-  {
-    "id": "a6f7e900dd40",
-    "title": "Unpatched Magento and Adobe Commerce Zero-Day Exploited to Backdoor Online Stores",
-    "url": "https://thehackernews.com/2026/09/unpatched-magento-and-adobe-commerce.html",
-    "source": "The Hacker News",
-    "published": "2026-09-05T20:14:47.000Z",
-    "summary": "Attackers are exploiting a new unpatched vulnerability in Magento Open Source and Adobe Commerce that lets them run malicious code on an online store's server without logging in, Dutch e-commerce security company Sansec…",
-    "score": 10,
-    "matched": [
-      "zero-day",
-      "backdoor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 4,
-      "defanged": 4,
-      "addresses": 3,
-      "heading": false,
-      "evidence": 11
-    }
-  },
-  {
     "id": "7a3278b4ac0a",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/09/04/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -481,27 +482,6 @@
       "addresses": 11,
       "heading": true,
       "evidence": 107
-    }
-  },
-  {
-    "id": "6b34d2d44630",
-    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/08/31/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-    "source": "CISA",
-    "published": "2026-08-31T12:00:00.000Z",
-    "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-81578 PaperCut NG/MF Missing Authentication for Critical Function…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
     }
   },
   {
@@ -1034,6 +1014,29 @@
       "addresses": 3,
       "heading": true,
       "evidence": 35
+    }
+  },
+  {
+    "id": "7cb9bb001c0c",
+    "title": "Potemkin Loader & RMMProject The Anatomy of a ClickFix Attack",
+    "url": "https://www.huntress.com/blog/potemkin-loader-rmmproject-clickfix-attack",
+    "source": "Huntress",
+    "published": "2026-06-16T14:00:00.000Z",
+    "summary": "A ClickFix infection drops Potemkin loader and RMMProject RAT, leading to browser theft, hidden remote desktop, and lateral movement across over 11 hosts.",
+    "score": 8,
+    "matched": [
+      "loader",
+      "ClickFix",
+      "lateral movement"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 21,
+      "defanged": 43,
+      "addresses": 4,
+      "heading": true,
+      "evidence": 71
     }
   },
   {
