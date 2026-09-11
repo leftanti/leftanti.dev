@@ -1,5 +1,26 @@
 [
   {
+    "id": "f804c4cab4d2",
+    "title": "PaperCut Replaces Emergency Patches With Fixes for Two Actively Exploited Flaws",
+    "url": "https://thehackernews.com/2026/09/papercut-replaces-emergency-patches.html",
+    "source": "The Hacker News",
+    "published": "2026-09-11T06:46:18.000Z",
+    "summary": "PaperCut on Thursday released a new security maintenance release that replaces all previously published emergency patches that were pushed to address two security flaws that have come under active exploitation. The…",
+    "score": 10,
+    "matched": [
+      "actively exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 1,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 1
+    }
+  },
+  {
     "id": "6605511b4082",
     "title": "Detect and disrupt AI-themed attacks with Microsoft Defender",
     "url": "https://www.microsoft.com/en-us/security/blog/2026/09/10/detect-and-disrupt-ai-themed-attacks-with-microsoft-defender/",
@@ -350,28 +371,6 @@
       "addresses": 3,
       "heading": false,
       "evidence": 11
-    }
-  },
-  {
-    "id": "2546d0986a89",
-    "title": "Phishing Campaign Sends Millions of Emails Using Invisible Unicode to Evade Filters",
-    "url": "https://thehackernews.com/2026/09/phishing-campaign-sends-millions-of.html",
-    "source": "The Hacker News",
-    "published": "2026-09-04T15:57:15.000Z",
-    "summary": "Microsoft is alerting of a \"high-volume phishing campaign\" that's using invisible Unicode tag characters to bypass email filters. \"Instead of using these characters to hide instructions from people while exposing them…",
-    "score": 12,
-    "matched": [
-      "campaign",
-      "phishing"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 12,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 12
     }
   },
   {
