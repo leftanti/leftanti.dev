@@ -1,5 +1,27 @@
 [
   {
+    "id": "3be9058c0a3e",
+    "title": "CISA Adds 5 Actively Exploited Artifactory, ScreenConnect, and RouterOS Flaws to KEV",
+    "url": "https://thehackernews.com/2026/09/cisa-adds-5-actively-exploited.html",
+    "source": "The Hacker News",
+    "published": "2026-09-12T15:54:45.000Z",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added five security flaws impacting JFrog Artifactory, ConnectWise ScreenConnect, and MikroTik RouterOS to its Known Exploited Vulnerabilities (KEV)…",
+    "score": 15,
+    "matched": [
+      "actively exploited",
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "8a8c14f1ab78",
     "title": "OpenAI Agents Linked to RubyGems Campaign That Gained RCE on RubyDoc Servers",
     "url": "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html",
@@ -947,27 +969,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 21
-    }
-  },
-  {
-    "id": "16b5d60ea281",
-    "title": "ClickFix to Cash-Out: Anatomy of a Mexican Banking-Fraud Toolkit",
-    "url": "https://www.elastic.co/security-labs/threat-command/mexican-banking-fraud-scmbanker-ref6045",
-    "source": "Elastic Security Labs",
-    "published": "2026-07-08T00:00:00.000Z",
-    "summary": "Elastic Security Labs tracks REF6045, an active operator-assisted banking fraud operation targeting customers of Mexican banks, fintech, payment processors, and cryptocurrency exchanges.",
-    "score": 8,
-    "matched": [
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 30,
-      "defanged": 76,
-      "addresses": 3,
-      "heading": false,
-      "evidence": 109
     }
   },
   {
