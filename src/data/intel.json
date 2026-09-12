@@ -1,5 +1,26 @@
 [
   {
+    "id": "8a8c14f1ab78",
+    "title": "OpenAI Agents Linked to RubyGems Campaign That Gained RCE on RubyDoc Servers",
+    "url": "https://thehackernews.com/2026/09/openai-agents-linked-to-rubygems.html",
+    "source": "The Hacker News",
+    "published": "2026-09-12T09:07:56.000Z",
+    "summary": "The \"major malicious attack\" that targeted RubyGems in May 2026 was the work of a swarm of OpenAI agents, according to a new report published by researchers Spencer Kitts, Thomas Larsen, and Sydney Von Arx. On May 12,…",
+    "score": 8,
+    "matched": [
+      "campaign"
+    ],
+    "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 1,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 1
+    }
+  },
+  {
     "id": "6924e2256481",
     "title": "Passkey-themed phishing attacks lead to Microsoft 365 data theft",
     "url": "https://www.bleepingcomputer.com/news/security/passkey-themed-phishing-attacks-lead-to-microsoft-365-data-theft/",
@@ -1014,29 +1035,6 @@
       "addresses": 3,
       "heading": true,
       "evidence": 35
-    }
-  },
-  {
-    "id": "7cb9bb001c0c",
-    "title": "Potemkin Loader & RMMProject The Anatomy of a ClickFix Attack",
-    "url": "https://www.huntress.com/blog/potemkin-loader-rmmproject-clickfix-attack",
-    "source": "Huntress",
-    "published": "2026-06-16T14:00:00.000Z",
-    "summary": "A ClickFix infection drops Potemkin loader and RMMProject RAT, leading to browser theft, hidden remote desktop, and lateral movement across over 11 hosts.",
-    "score": 8,
-    "matched": [
-      "loader",
-      "ClickFix",
-      "lateral movement"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 21,
-      "defanged": 43,
-      "addresses": 4,
-      "heading": true,
-      "evidence": 71
     }
   },
   {
