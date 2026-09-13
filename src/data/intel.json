@@ -885,6 +885,29 @@
     }
   },
   {
+    "id": "1dcde256e1f6",
+    "title": "The TTF Trap: A Global Campaign of a Low-Detection Lua Loader",
+    "url": "https://feeds.fortinet.com/~/960560447/0/fortinet/blog/threat-research~The-TTF-Trap-A-Global-Campaign-of-a-LowDetection-Lua-Loader",
+    "source": "Fortinet",
+    "published": "2026-07-16T13:00:00.000Z",
+    "summary": "FortiGuard Labs analyzes a global phishing campaign using obfuscated JScript, disguised .ttf files, and Lua loaders to deliver RATs and infostealers.",
+    "score": 10,
+    "matched": [
+      "campaign",
+      "loader",
+      "phishing"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 34,
+      "defanged": 17,
+      "addresses": 5,
+      "heading": false,
+      "evidence": 56
+    }
+  },
+  {
     "id": "f6b8c91eb812",
     "title": "TELEPUZ: a modular MaaS malware spreading via CLICKFIX-VIDAR chains",
     "url": "https://www.elastic.co/security-labs/threat-command/telepuz-maas-malware-clickfix",
@@ -1079,28 +1102,6 @@
       "addresses": 2,
       "heading": false,
       "evidence": 10
-    }
-  },
-  {
-    "id": "af984ca53b54",
-    "title": "Cat’s Got Your Files: Lynx Ransomware",
-    "url": "https://thedfirreport.com/2025/12/17/cats-got-your-files-lynx-ransomware/",
-    "source": "The DFIR Report",
-    "published": "2025-12-17T19:07:07.000Z",
-    "summary": "Key Takeaways The DFIR Report Services Contact us today for pricing or a demo! The intrusion began in early March 2025 with a single successful Remote Desktop Protocol (RDP) logon to an internet-exposed system. Notably,…",
-    "score": 9,
-    "matched": [
-      "intrusion",
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 10,
-      "defanged": 9,
-      "addresses": 2,
-      "heading": false,
-      "evidence": 21
     }
   }
 ]
