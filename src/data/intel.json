@@ -151,28 +151,6 @@
     }
   },
   {
-    "id": "8c0bfc4c70dd",
-    "title": "AI-powered attack exploited PaperCut flaws to hack 395 organizations",
-    "url": "https://www.bleepingcomputer.com/news/security/ai-powered-attack-exploited-papercut-flaws-to-hack-395-organizations/",
-    "source": "BleepingComputer",
-    "published": "2026-09-10T15:55:56.000Z",
-    "summary": "A threat actor, likely Russian-speaking, used hundreds of AI agents to develop and launch a global exploitation campaign targeting vulnerable PaperCut NG/MF servers. [...]",
-    "score": 8,
-    "matched": [
-      "campaign",
-      "threat actor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
     "id": "93d3be6534b8",
     "title": "SloppyRAT: A New Tool For Ransomware Attacks",
     "url": "https://www.zscaler.com/blogs/security-research/sloppyrat-new-tool-ransomware-attacks",
@@ -969,6 +947,27 @@
       "addresses": 0,
       "heading": false,
       "evidence": 21
+    }
+  },
+  {
+    "id": "16b5d60ea281",
+    "title": "ClickFix to Cash-Out: Anatomy of a Mexican Banking-Fraud Toolkit",
+    "url": "https://www.elastic.co/security-labs/threat-command/mexican-banking-fraud-scmbanker-ref6045",
+    "source": "Elastic Security Labs",
+    "published": "2026-07-08T00:00:00.000Z",
+    "summary": "Elastic Security Labs tracks REF6045, an active operator-assisted banking fraud operation targeting customers of Mexican banks, fintech, payment processors, and cryptocurrency exchanges.",
+    "score": 8,
+    "matched": [
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 30,
+      "defanged": 76,
+      "addresses": 3,
+      "heading": false,
+      "evidence": 109
     }
   },
   {
