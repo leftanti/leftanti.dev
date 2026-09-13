@@ -97,9 +97,9 @@ const research = defineCollection({
   }),
 });
 
-/** Homelab and coding write-ups. No detection-specific fields — use `tags`. */
-const projects = defineCollection({
-  loader: glob({ base: './src/content/projects', pattern: '**/*.md' }),
+/** Learning-to-code, scripts, LLM benchmarks, tinkering. Just base + `tags`. */
+const labs = defineCollection({
+  loader: glob({ base: './src/content/labs', pattern: '**/*.md' }),
   schema: base,
 });
 
@@ -240,4 +240,4 @@ const intel = defineCollection({
 });
 
 /** Keys here must match the `key` of the matching entry in sections.ts. */
-export const collections = { detections, research, projects, cheatsheets, notes, resources, intel };
+export const collections = { detections, research, labs, cheatsheets, notes, resources, intel };

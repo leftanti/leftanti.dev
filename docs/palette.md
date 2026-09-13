@@ -43,12 +43,16 @@ the one that matters — these hues carry small mono text.
 
 | Variable | Hex | Hue | Sat | Light | Contrast | Subject |
 | --- | --- | --- | --- | --- | --- | --- |
-| `--section-research` | `#c08a5e` | 27° | 44% | 56% | 6.39 | ThreatResearch, amber |
+| `--section-labs` | `#c08a5e` | 27° | 44% | 56% | 6.39 | Labs, amber |
 | `--section-intel` | `#a09a8c` | 42° | 10% | 59% | 6.81 | IntelDigest, sand |
 | `--section-posts` | `#8a918e` | 154° | 3% | 55% | 5.92 | Notes, grey |
 | `--section-detections` | `#6fae94` | 155° | 28% | 56% | 7.41 | DetectionEngineering, green |
 | `--section-cheatsheets` | `#7ea3c4` | 208° | 37% | 63% | 7.19 | CheatSheets, blue |
-| `--section-projects` | `#b07f9c` | 324° | 24% | 59% | 5.78 | Projects, mauve |
+| `--section-research` | `#b07f9c` | 324° | 24% | 59% | 5.78 | ThreatResearch, mauve |
+
+`--section-research` and `--section-labs` swapped hexes from how they first shipped —
+amber now reads as Labs, mauve as ThreatResearch. Each variable name still means
+what it always did; only which hue it holds changed.
 
 `--brand` (`#6fae94`) is deliberately the same green as `--section-detections`.
 It is the site representing itself rather than a section — the header mark
@@ -91,8 +95,10 @@ fetch script and the pages so the two cannot drift.
 
 ## No reserve left
 
-The mauve freed by merging KQL and Rules into `DetectionEngineering` was
-claimed by `Projects`. **The palette is at capacity again: ten hues, all in
+The hue freed by merging KQL and Rules into `DetectionEngineering` was
+claimed by `Labs` (mauve and amber were later swapped between `Labs` and
+`ThreatResearch`, but that traded which hue means which — it spent nothing new).
+**The palette is at capacity again: ten hues, all in
 use.** A new section now needs a hue derived from scratch — see
 [Inventing a new hue](#inventing-a-new-hue).
 

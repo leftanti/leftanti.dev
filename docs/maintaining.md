@@ -51,7 +51,7 @@ template edits, ever.
 | --- | --- | --- |
 | `src/content/detections/` | `/detections/<name>` | KQL queries and analytics rules |
 | `src/content/research/` | `/research/<name>` | Hunts, malicious-infra research, malware analysis |
-| `src/content/projects/` | `/projects/<name>` | Homelab and coding write-ups |
+| `src/content/labs/` | `/labs/<name>` | Learning to code, scripts, LLM benchmarks, tinkering |
 | `src/content/cheatsheets/` | `/cheatsheets/<name>` | Study references |
 | `src/content/notes/` | `/notes/<name>` | Everything else |
 

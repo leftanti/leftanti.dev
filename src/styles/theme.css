@@ -57,11 +57,11 @@
      ------------------------------------------------------------------ */
 
   --section-detections: #6fae94;   /* DetectionEngineering — green (see --brand) */
-  --section-research: #c08a5e;     /* ThreatResearch  — amber   */
+  --section-research: #b07f9c;     /* ThreatResearch  — mauve (swapped with Labs) */
   --section-cheatsheets: #7ea3c4;  /* CheatSheets     — blue    */
   --section-intel: #a09a8c;        /* IntelDigest     — sand    */
   --section-posts: #8a918e;        /* Notes           — grey    */
-  --section-projects: #b07f9c;     /* Projects        — mauve (was --reserved-mauve) */
+  --section-labs: #c08a5e;         /* Labs            — amber (swapped with ThreatResearch) */
 
   /* No reserve left — the mauve freed by the kql+rules merge was claimed by
      Projects. See docs/palette.md before inventing a new hue. */

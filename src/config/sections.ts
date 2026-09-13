@@ -65,6 +65,16 @@ export const SECTIONS: Section[] = [
     ],
   },
   {
+    key: 'labs',
+    name: 'Labs',
+    navLabel: 'labs',
+    colorVar: '--section-labs',
+    route: '/labs',
+    inTimeline: true,
+    inNav: true,
+    blurb: 'Learning to code, scripts worth showing off, local LLM benchmarks, and other tinkering.',
+  },
+  {
     key: 'research',
     name: 'ThreatResearch',
     navLabel: 'research',
@@ -95,16 +105,6 @@ export const SECTIONS: Section[] = [
     inTimeline: false,
     inNav: true,
     blurb: 'Filtered security headlines, refreshed every six hours. Links out, always.',
-  },
-  {
-    key: 'projects',
-    name: 'Projects',
-    navLabel: 'projects',
-    colorVar: '--section-projects',
-    route: '/projects',
-    inTimeline: true,
-    inNav: true,
-    blurb: 'Homelab and coding write-ups — local LLMs, a Telegram bot, and whatever comes next.',
   },
   {
     key: 'notes',
