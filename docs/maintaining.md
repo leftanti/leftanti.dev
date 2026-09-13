@@ -51,6 +51,7 @@ template edits, ever.
 | --- | --- | --- |
 | `src/content/detections/` | `/detections/<name>` | KQL queries and analytics rules |
 | `src/content/research/` | `/research/<name>` | Hunts, malicious-infra research, malware analysis |
+| `src/content/projects/` | `/projects/<name>` | Homelab and coding write-ups |
 | `src/content/cheatsheets/` | `/cheatsheets/<name>` | Study references |
 | `src/content/notes/` | `/notes/<name>` | Everything else |
 
@@ -153,9 +154,8 @@ section ever grows enough to want the same treatment.
 Five steps. [`docs/palette.md`](palette.md) has this worked through end to end
 with the actual code, including how to claim a colour.
 
-1. Add a hue to `src/styles/theme.css` — one is currently reserved
-   (`--reserved-mauve`, freed by the KQL/Rules merge) and free to claim; see
-   the palette doc for how, and for what to do once that is also spent
+1. Add a hue to `src/styles/theme.css` — no reserve is currently free, so this
+   means deriving one; see the palette doc for the constraints
 2. Add an entry to `SECTIONS` in `src/config/sections.ts`
 3. Add the collection and its schema to `src/content.config.ts`
 4. Create `src/content/<key>/`

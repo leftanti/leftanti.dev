@@ -25,7 +25,7 @@ Dark, near-black, monospace-forward. The chrome is neutral. **Each section owns 
 
 **A hue means one subject, everywhere.** Resource categories on `/resources` are coloured, but they add no colours — each borrows the hue of the section it relates to, so the KQL references category is the same green as `DetectionEngineering`. They wear it in exactly the two places a section does: the category name and its pipe glyphs. The mapping is data (`colorVar` in `src/data/resources.json`), never hardcoded in a template. Adding a seventh hue for a category would break the scheme; map it to an existing section instead.
 
-**One reserved hue** (`--reserved-mauve`) sits in `theme.css`, freed by merging the old KQL and Rules sections into `DetectionEngineering`, kept defined and documented rather than deleted. Referenced by nothing until claimed for a real section. [docs/palette.md](docs/palette.md) is the full reference: what every hue means, where colour is allowed to appear, the steps to add a section or a resource category, and the contrast and separation constraints a new hue must satisfy. **Read it before adding or retuning any colour.**
+**No reserve left.** The hue freed by merging KQL and Rules into `DetectionEngineering` was claimed by `Projects`. Ten hues, all in use. [docs/palette.md](docs/palette.md) is the full reference: what every hue means, where colour is allowed to appear, the steps to add a section or a resource category, and the contrast and separation constraints a new hue must satisfy. **Read it before adding or retuning any colour.**
 
 Banned everywhere: gradients, glow, glitch effects, matrix rain, and all animation — the single exception being one blinking block cursor.
 

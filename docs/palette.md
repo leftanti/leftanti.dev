@@ -48,6 +48,7 @@ the one that matters — these hues carry small mono text.
 | `--section-posts` | `#8a918e` | 154° | 3% | 55% | 5.92 | Notes, grey |
 | `--section-detections` | `#6fae94` | 155° | 28% | 56% | 7.41 | DetectionEngineering, green |
 | `--section-cheatsheets` | `#7ea3c4` | 208° | 37% | 63% | 7.19 | CheatSheets, blue |
+| `--section-projects` | `#b07f9c` | 324° | 24% | 59% | 5.78 | Projects, mauve |
 
 `--brand` (`#6fae94`) is deliberately the same green as `--section-detections`.
 It is the site representing itself rather than a section — the header mark
@@ -88,39 +89,26 @@ The categories themselves live in
 [`src/config/intel-kinds.mjs`](../src/config/intel-kinds.mjs), read by both the
 fetch script and the pages so the two cannot drift.
 
-## One reserved hue
+## No reserve left
 
-`--reserved-mauve` (`#b07f9c`, 324°) sits in `theme.css`, referenced by nothing.
-It was `--section-rules` — freed when the old KQL and Rules sections merged into
-`DetectionEngineering` — and it is kept defined and documented rather than
-deleted, specifically so it is available without having to derive a new one.
-
-Deriving from scratch is materially harder now than it was when this site
-launched: the four intel kinds have since claimed what used to be spare hues, so
-the wheel is crowded and the tightest pair among the nine in current use is
-already 26° apart. A hue already proven to pass every constraint is worth
-banking rather than discarding.
-
-**To claim it:** rename `--reserved-mauve` to `--section-<key>` in
-`theme.css`, move it up into the section-colour block, and follow
-[Adding a section](#adding-a-section) below. If nothing needs it, leave it —
-it costs nothing sitting idle.
+The mauve freed by merging KQL and Rules into `DetectionEngineering` was
+claimed by `Projects`. **The palette is at capacity again: ten hues, all in
+use.** A new section now needs a hue derived from scratch — see
+[Inventing a new hue](#inventing-a-new-hue).
 
 ## Adding a section
 
-Worked end to end, adding a `Malware` section on `/malware`, claiming the
-reserved mauve. Nothing below is a template edit — every file is config, data,
-or a five-line wrapper.
+Worked end to end, adding a `Malware` section on `/malware`. Nothing below is a
+template edit — every file is config, data, or a five-line wrapper.
 
-**1. Claim the reserved hue** in [`theme.css`](../src/styles/theme.css). Rename
-it and move it into the section-colour block:
+**1. Get a hue.** If nothing is reserved (check the top of the section-colour
+block in `theme.css` for a `--reserved-*` entry first — one may exist by the
+time you read this), derive one against the constraints in
+[Inventing a new hue](#inventing-a-new-hue) and add it there:
 
 ```css
---section-malware: #b07f9c;   /* was --reserved-mauve */
+--section-malware: #......;
 ```
-
-If the reserve has already been spent by the time you read this, see
-[Inventing a new hue](#inventing-a-new-hue) instead.
 
 **2. Add the section** to `SECTIONS` in
 [`sections.ts`](../src/config/sections.ts). Order in this array is the nav order:
@@ -155,7 +143,7 @@ const malware = defineCollection({
 Then add it to the export at the bottom of that file:
 
 ```ts
-export const collections = { detections, research, cheatsheets, notes, malware, resources, intel };
+export const collections = { detections, research, projects, cheatsheets, notes, malware, resources, intel };
 ```
 
 **4. Create the folder** and a first entry:
@@ -244,8 +232,8 @@ a category with no colour — and it enforces the either/or: a category with bot
 
 ## Inventing a new hue
 
-Only once the reserved mauve is also spent. Four constraints, all of which the
-existing nine satisfy:
+Only once a new one is genuinely needed — check theme.css for a `--reserved-*` hue first. Four constraints, all of which the
+existing ten satisfy:
 
 - **Lightness 51–65%.** Lighter looks like a link; darker fails contrast on `--bg`.
 - **Saturation 21–44%.** Above that it reads as a warning colour, which means something else here.

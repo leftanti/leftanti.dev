@@ -97,6 +97,16 @@ export const SECTIONS: Section[] = [
     blurb: 'Filtered security headlines, refreshed every six hours. Links out, always.',
   },
   {
+    key: 'projects',
+    name: 'Projects',
+    navLabel: 'projects',
+    colorVar: '--section-projects',
+    route: '/projects',
+    inTimeline: true,
+    inNav: true,
+    blurb: 'Homelab and coding write-ups — local LLMs, a Telegram bot, and whatever comes next.',
+  },
+  {
     key: 'notes',
     name: 'Notes',
     navLabel: 'notes',
