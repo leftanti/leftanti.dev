@@ -1,5 +1,70 @@
 [
   {
+    "id": "118d561a97b4",
+    "title": "Hackers hijack HBO Max Reddit account to push malware in ClickFix ads",
+    "url": "https://www.bleepingcomputer.com/news/security/hackers-hijack-hbo-max-reddit-account-to-push-malware-in-clickfix-ads/",
+    "source": "BleepingComputer",
+    "published": "2026-09-14T18:34:16.000Z",
+    "summary": "Hackers compromised HBO Max's official Reddit account and used it to push malicious ads that launched ClickFix attacks to infect Windows and macOS devices with information-stealing malware. [...]",
+    "score": 9,
+    "matched": [
+      "compromised",
+      "malware",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 9,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 12
+    }
+  },
+  {
+    "id": "73b8e9dc994c",
+    "title": "Hackers target exposed Vite dev servers to steal AWS, Azure secrets",
+    "url": "https://www.bleepingcomputer.com/news/security/hackers-target-exposed-vite-dev-servers-to-steal-aws-azure-secrets/",
+    "source": "BleepingComputer",
+    "published": "2026-09-14T16:15:58.000Z",
+    "summary": "A mass-scanning campaign targeting internet-exposed Vite development servers is attempting to steal cloud credentials and configurations from AWS and Azure deployments. [...]",
+    "score": 8,
+    "matched": [
+      "campaign"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 3,
+      "addresses": 4,
+      "heading": false,
+      "evidence": 9
+    }
+  },
+  {
+    "id": "377957138129",
+    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/09/14/cisa-adds-one-known-exploited-vulnerability-catalog",
+    "source": "CISA",
+    "published": "2026-09-14T12:00:00.000Z",
+    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-76461 Cisco Secure Email Gateway SQL Injection Vulnerability This type of…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "3be9058c0a3e",
     "title": "CISA Adds 5 Actively Exploited Artifactory, ScreenConnect, and RouterOS Flaws to KEV",
     "url": "https://thehackernews.com/2026/09/cisa-adds-5-actively-exploited.html",
@@ -40,29 +105,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 1
-    }
-  },
-  {
-    "id": "6924e2256481",
-    "title": "Passkey-themed phishing attacks lead to Microsoft 365 data theft",
-    "url": "https://www.bleepingcomputer.com/news/security/passkey-themed-phishing-attacks-lead-to-microsoft-365-data-theft/",
-    "source": "BleepingComputer",
-    "published": "2026-09-11T17:26:50.000Z",
-    "summary": "Microsoft says threat actors linked to ShinyHunters, Helix, and other extortion gangs are using passkey and single sign-on-themed social engineering attacks to compromise corporate Microsoft accounts and steal data from…",
-    "score": 10,
-    "matched": [
-      "compromise",
-      "data theft",
-      "extortion"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 9,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 12
     }
   },
   {
@@ -347,29 +389,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 20
-    }
-  },
-  {
-    "id": "a4ca88039821",
-    "title": "Adobe Patches Magento Zero-Day Exploited to Deploy Rust Backdoor and PHP Web Shell",
-    "url": "https://thehackernews.com/2026/09/adobe-patches-magento-zero-day.html",
-    "source": "The Hacker News",
-    "published": "2026-09-08T09:13:47.000Z",
-    "summary": "Adobe on Monday released security patches to address a maximum-severity flaw impacting Adobe Commerce and Magento Open Source that has come under active exploitation in the wild. The vulnerability, now tracked as…",
-    "score": 13,
-    "matched": [
-      "in the wild",
-      "zero-day",
-      "backdoor"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 1,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 1
     }
   },
   {
@@ -970,27 +989,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 21
-    }
-  },
-  {
-    "id": "16b5d60ea281",
-    "title": "ClickFix to Cash-Out: Anatomy of a Mexican Banking-Fraud Toolkit",
-    "url": "https://www.elastic.co/security-labs/threat-command/mexican-banking-fraud-scmbanker-ref6045",
-    "source": "Elastic Security Labs",
-    "published": "2026-07-08T00:00:00.000Z",
-    "summary": "Elastic Security Labs tracks REF6045, an active operator-assisted banking fraud operation targeting customers of Mexican banks, fintech, payment processors, and cryptocurrency exchanges.",
-    "score": 8,
-    "matched": [
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 30,
-      "defanged": 76,
-      "addresses": 3,
-      "heading": false,
-      "evidence": 109
     }
   },
   {
