@@ -1,5 +1,26 @@
 [
   {
+    "id": "2863f9a0ea26",
+    "title": "Mass-Scanning Campaign Exploits Vite Flaw to Extract Cloud Credentials From Exposed Dev Servers",
+    "url": "https://thehackernews.com/2026/09/mass-scanning-campaign-exploits-vite.html",
+    "source": "The Hacker News",
+    "published": "2026-09-15T11:12:32.000Z",
+    "summary": "Cybersecurity researchers have disclosed details of a mass-scanning campaign that has targeted Vite deployments siphon sensitive data. The first is an automated effort aimed at internet-exposed Vite development servers…",
+    "score": 8,
+    "matched": [
+      "campaign"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 2,
+      "addresses": 2,
+      "heading": false,
+      "evidence": 4
+    }
+  },
+  {
     "id": "ed5aa7d72633",
     "title": "China-Linked Hackers Exploit Chrome-Windows Zero-Day Chain to Deploy GRIMWEDGE",
     "url": "https://thehackernews.com/2026/09/china-linked-hackers-exploit-chrome.html",
@@ -501,27 +522,6 @@
       "addresses": 2,
       "heading": true,
       "evidence": 60
-    }
-  },
-  {
-    "id": "7b167633ddb9",
-    "title": "CISA Adds Seven Known Exploited Vulnerabilities to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/09/02/cisa-adds-seven-known-exploited-vulnerabilities-catalog",
-    "source": "CISA",
-    "published": "2026-09-02T12:00:00.000Z",
-    "summary": "CISA has added seven new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-9586 Sangoma Switchvox SQL Injection Vulnerability CVE-2026-48710 Kludex…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
     }
   },
   {
