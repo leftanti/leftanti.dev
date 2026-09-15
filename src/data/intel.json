@@ -346,52 +346,6 @@
     }
   },
   {
-    "id": "0e5d9e729090",
-    "title": "Microsoft Patches Record 974 Flaws, Including Two Exploited Windows Zero-Days",
-    "url": "https://thehackernews.com/2026/09/microsoft-patches-record-974-flaws.html",
-    "source": "The Hacker News",
-    "published": "2026-09-09T04:41:29.000Z",
-    "summary": "Microsoft on Tuesday broke Patch Tuesday records by addressing an earth-shattering 974 vulnerabilities spanning its software portfolio, including two flaws that it said have been actively exploited in the wild. These…",
-    "score": 10,
-    "matched": [
-      "actively exploited",
-      "exploited in",
-      "in the wild"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "23a085d64186",
-    "title": "N-able N-central Pre-Auth RCE Flaw Exploited in the Wild",
-    "url": "https://thehackernews.com/2026/09/n-able-n-central-pre-auth-rce-flaw.html",
-    "source": "The Hacker News",
-    "published": "2026-09-09T04:27:51.000Z",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added a maximum-severity security flaw impacting N-able N-central to its Known Exploited Vulnerabilities (KEV) catalog, requiring Federal…",
-    "score": 11,
-    "matched": [
-      "exploited in",
-      "in the wild",
-      "known exploited"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": true,
-      "evidence": 3
-    }
-  },
-  {
     "id": "1914339fcb09",
     "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/09/08/cisa-adds-four-known-exploited-vulnerabilities-catalog",
@@ -476,6 +430,29 @@
       "addresses": 0,
       "heading": true,
       "evidence": 33
+    }
+  },
+  {
+    "id": "50aef9dc283c",
+    "title": "Impersonating IT support: how threat actors turn a remote session into enterprise-wide access",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/02/impersonating-it-support-threat-actors-turn-remote-session-into-enterprise-wide-access/",
+    "source": "Microsoft Security",
+    "published": "2026-09-02T22:51:18.000Z",
+    "summary": "Microsoft Threat Intelligence observed a human-operated intrusion campaign that abuses Microsoft Teams external collaboration to impersonate IT support, gain remote access, and deploy a Node.js-based implant. Learn how…",
+    "score": 7,
+    "matched": [
+      "campaign",
+      "intrusion",
+      "implant"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 12,
+      "defanged": 14,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 30
     }
   },
   {
@@ -972,6 +949,27 @@
     }
   },
   {
+    "id": "bbf853ba6917",
+    "title": "ClaudeFix: Shared Claude Chats Meet ClickFix",
+    "url": "https://www.zscaler.com/blogs/security-research/claudefix-shared-claude-chats-meet-clickfix",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-07-15T14:39:45.000Z",
+    "summary": "IntroductionClickFix is a widely employed attack technique, first seen in 2024, where a victim is instructed to paste-and-run instructions on their system to “fix” a problem or install software. The seemingly benign…",
+    "score": 8,
+    "matched": [
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 10,
+      "defanged": 233,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 247
+    }
+  },
+  {
     "id": "0502111c2751",
     "title": "Threat Actors Achieve Persistence After SQL Injection",
     "url": "https://www.huntress.com/blog/sql-injection-attacker-persistence",
@@ -991,6 +989,27 @@
       "addresses": 0,
       "heading": false,
       "evidence": 21
+    }
+  },
+  {
+    "id": "16b5d60ea281",
+    "title": "ClickFix to Cash-Out: Anatomy of a Mexican Banking-Fraud Toolkit",
+    "url": "https://www.elastic.co/security-labs/threat-command/mexican-banking-fraud-scmbanker-ref6045",
+    "source": "Elastic Security Labs",
+    "published": "2026-07-08T00:00:00.000Z",
+    "summary": "Elastic Security Labs tracks REF6045, an active operator-assisted banking fraud operation targeting customers of Mexican banks, fintech, payment processors, and cryptocurrency exchanges.",
+    "score": 8,
+    "matched": [
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 30,
+      "defanged": 76,
+      "addresses": 3,
+      "heading": false,
+      "evidence": 109
     }
   },
   {
@@ -1036,28 +1055,6 @@
       "addresses": 1,
       "heading": true,
       "evidence": 17
-    }
-  },
-  {
-    "id": "7be4bdd16bb8",
-    "title": "ClickFix Campaign Generated Via AI Delivers SmartRAT",
-    "url": "https://www.zscaler.com/blogs/security-research/clickfix-campaign-generated-ai-delivers-smartrat",
-    "source": "Zscaler ThreatLabz",
-    "published": "2026-06-17T17:58:25.000Z",
-    "summary": "IntroductionIn March 2026, Zscaler ThreatLabz observed multiple instances of typosquatting domains hosting malicious content generated with AI-powered website creation tools. Threat actors are leveraging website…",
-    "score": 16,
-    "matched": [
-      "campaign",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 5,
-      "defanged": 24,
-      "addresses": 3,
-      "heading": true,
-      "evidence": 35
     }
   },
   {
