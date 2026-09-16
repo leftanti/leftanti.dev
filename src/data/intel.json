@@ -1,5 +1,48 @@
 [
   {
+    "id": "8a3f8241ec08",
+    "title": "Operation RapidRust: APT36 Deploys RUSTYSHADE, RUSTYMOVE, PSNATCH, and BASHNATCH",
+    "url": "https://www.zscaler.com/blogs/security-research/operation-rapidrust-apt36-deploys-rustyshade-rustymove-psnatch-and",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-09-16T15:13:12.000Z",
+    "summary": "IntroductionIn August 2026, Zscaler ThreatLabz observed new activity by the Pakistan-nexus threat actor APT36 in a campaign we’re tracking as Operation RapidRust. Since our last publication about the group’s activity in…",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "threat actor"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 13,
+      "defanged": 17,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 34
+    }
+  },
+  {
+    "id": "d41ff96249a9",
+    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/09/16/cisa-adds-one-known-exploited-vulnerability-catalog",
+    "source": "CISA",
+    "published": "2026-09-16T12:00:00.000Z",
+    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-58704 Google Pixel Improper Authorization Vulnerability This type of…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "9c58eaa56e59",
     "title": "Critical ScreenConnect flaw now actively exploited in attacks",
     "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-exploiting-critical-screenconnect-flaw/",
@@ -20,29 +63,6 @@
       "addresses": 1,
       "heading": false,
       "evidence": 3
-    }
-  },
-  {
-    "id": "e55a80bc52c0",
-    "title": "NightEagle targets Russian companies",
-    "url": "https://securelist.com/tr/nighteagle-apt-ghostcontainer-and-tunneling/121323/",
-    "source": "Securelist",
-    "published": "2026-09-16T10:00:11.000Z",
-    "summary": "Kaspersky GERT experts have uncovered a new campaign by the NightEagle APT, featuring the GhostContainer backdoor and tools hosted on GitHub. The group is also exploiting vulnerabilities in Active Directory and RDP.",
-    "score": 9,
-    "matched": [
-      "campaign",
-      "APT",
-      "backdoor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 8,
-      "defanged": 5,
-      "addresses": 0,
-      "heading": true,
-      "evidence": 16
     }
   },
   {
@@ -350,29 +370,6 @@
     }
   },
   {
-    "id": "78d2d3e14138",
-    "title": "Chrome V8 Zero-Day Exploited in the Wild Enables Code Execution Inside Sandbox",
-    "url": "https://thehackernews.com/2026/09/chrome-v8-zero-day-exploited-in-wild.html",
-    "source": "The Hacker News",
-    "published": "2026-09-09T09:11:03.000Z",
-    "summary": "Google on Tuesday released updates to patch 230 security vulnerabilities, including one that has come under active exploitation in the wild. The medium-severity vulnerability, assigned the CVE identifier CVE-2026-87491…",
-    "score": 12,
-    "matched": [
-      "exploited in",
-      "in the wild",
-      "zero-day"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
     "id": "1914339fcb09",
     "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/09/08/cisa-adds-four-known-exploited-vulnerabilities-catalog",
@@ -457,6 +454,29 @@
       "addresses": 0,
       "heading": true,
       "evidence": 33
+    }
+  },
+  {
+    "id": "50aef9dc283c",
+    "title": "Impersonating IT support: how threat actors turn a remote session into enterprise-wide access",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/02/impersonating-it-support-threat-actors-turn-remote-session-into-enterprise-wide-access/",
+    "source": "Microsoft Security",
+    "published": "2026-09-02T22:51:18.000Z",
+    "summary": "Microsoft Threat Intelligence observed a human-operated intrusion campaign that abuses Microsoft Teams external collaboration to impersonate IT support, gain remote access, and deploy a Node.js-based implant. Learn how…",
+    "score": 7,
+    "matched": [
+      "campaign",
+      "intrusion",
+      "implant"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 12,
+      "defanged": 14,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 30
     }
   },
   {
@@ -1036,29 +1056,6 @@
       "addresses": 11,
       "heading": false,
       "evidence": 66
-    }
-  },
-  {
-    "id": "7981b9411e2a",
-    "title": "SmartApeSG Launches Okendo Reviews Supply Chain Attack",
-    "url": "https://www.zscaler.com/blogs/security-research/smartapesg-launches-okendo-reviews-supply-chain-attack",
-    "source": "Zscaler ThreatLabz",
-    "published": "2026-06-18T14:04:56.000Z",
-    "summary": "IntroductionOn May 14, 2026, the Zscaler ThreatLabz team identified unusually high activity associated with the threat actor SmartApeSG to deploy malware. During our examination, we discovered malicious JavaScript code…",
-    "score": 10,
-    "matched": [
-      "threat actor",
-      "malware",
-      "supply chain"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 1,
-      "defanged": 12,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 17
     }
   },
   {
