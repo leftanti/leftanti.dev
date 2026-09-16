@@ -1,5 +1,28 @@
 [
   {
+    "id": "3e23f9d44232",
+    "title": "Acronis warns of actively exploited flaw in its cPanel backup plugin",
+    "url": "https://www.bleepingcomputer.com/news/security/acronis-warns-of-actively-exploited-flaw-in-its-cpanel-backup-plugin/",
+    "source": "BleepingComputer",
+    "published": "2026-09-15T21:37:35.000Z",
+    "summary": "Acronis disclosed a high-severity Linux local privilege escalation vulnerability in its backup plugin for cPanel, WebHost Manager (WHM), and Plesk that may be exploited in the wild. [...]",
+    "score": 13,
+    "matched": [
+      "actively exploited",
+      "exploited in",
+      "in the wild"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 6
+    }
+  },
+  {
     "id": "2863f9a0ea26",
     "title": "Mass-Scanning Campaign Exploits Vite Flaw to Extract Cloud Credentials From Exposed Dev Servers",
     "url": "https://thehackernews.com/2026/09/mass-scanning-campaign-exploits-vite.html",
@@ -64,27 +87,6 @@
       "addresses": 1,
       "heading": false,
       "evidence": 12
-    }
-  },
-  {
-    "id": "73b8e9dc994c",
-    "title": "Hackers target exposed Vite dev servers to steal AWS, Azure secrets",
-    "url": "https://www.bleepingcomputer.com/news/security/hackers-target-exposed-vite-dev-servers-to-steal-aws-azure-secrets/",
-    "source": "BleepingComputer",
-    "published": "2026-09-14T16:15:58.000Z",
-    "summary": "A mass-scanning campaign targeting internet-exposed Vite development servers is attempting to steal cloud credentials and configurations from AWS and Azure deployments. [...]",
-    "score": 8,
-    "matched": [
-      "campaign"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 3,
-      "addresses": 4,
-      "heading": false,
-      "evidence": 9
     }
   },
   {
