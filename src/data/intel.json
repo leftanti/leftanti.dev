@@ -22,6 +22,27 @@
     }
   },
   {
+    "id": "21cfd79f3f9a",
+    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/09/16/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-09-16T12:00:00.000Z",
+    "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-76460 Cisco Identity Services Engine Incorrect Use of Privileged APIs…",
+    "score": 12,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "d41ff96249a9",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/09/16/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -63,6 +84,29 @@
       "addresses": 1,
       "heading": false,
       "evidence": 3
+    }
+  },
+  {
+    "id": "e55a80bc52c0",
+    "title": "NightEagle targets Russian companies",
+    "url": "https://securelist.com/tr/nighteagle-apt-ghostcontainer-and-tunneling/121323/",
+    "source": "Securelist",
+    "published": "2026-09-16T10:00:11.000Z",
+    "summary": "Kaspersky GERT experts have uncovered a new campaign by the NightEagle APT, featuring the GhostContainer backdoor and tools hosted on GitHub. The group is also exploiting vulnerabilities in Active Directory and RDP.",
+    "score": 9,
+    "matched": [
+      "campaign",
+      "APT",
+      "backdoor"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 8,
+      "defanged": 5,
+      "addresses": 0,
+      "heading": true,
+      "evidence": 16
     }
   },
   {
@@ -220,12 +264,12 @@
     }
   },
   {
-    "id": "62beac1c0708",
-    "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/09/11/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+    "id": "765bc9acacf0",
+    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/09/11/cisa-adds-one-known-exploited-vulnerability-catalog",
     "source": "CISA",
     "published": "2026-09-11T12:00:00.000Z",
-    "summary": "CISA has added three new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-42016 JFrog Artifactory Incorrect Authorization Vulnerability…",
+    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-85706 GitLab Community Edition and Enterprise Edition Path Traversal…",
     "score": 10,
     "matched": [
       "known exploited"
@@ -241,12 +285,12 @@
     }
   },
   {
-    "id": "765bc9acacf0",
-    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/09/11/cisa-adds-one-known-exploited-vulnerability-catalog",
+    "id": "62beac1c0708",
+    "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/09/11/cisa-adds-three-known-exploited-vulnerabilities-catalog",
     "source": "CISA",
     "published": "2026-09-11T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-85706 GitLab Community Edition and Enterprise Edition Path Traversal…",
+    "summary": "CISA has added three new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-42016 JFrog Artifactory Incorrect Authorization Vulnerability…",
     "score": 10,
     "matched": [
       "known exploited"
@@ -454,29 +498,6 @@
       "addresses": 0,
       "heading": true,
       "evidence": 33
-    }
-  },
-  {
-    "id": "50aef9dc283c",
-    "title": "Impersonating IT support: how threat actors turn a remote session into enterprise-wide access",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/02/impersonating-it-support-threat-actors-turn-remote-session-into-enterprise-wide-access/",
-    "source": "Microsoft Security",
-    "published": "2026-09-02T22:51:18.000Z",
-    "summary": "Microsoft Threat Intelligence observed a human-operated intrusion campaign that abuses Microsoft Teams external collaboration to impersonate IT support, gain remote access, and deploy a Node.js-based implant. Learn how…",
-    "score": 7,
-    "matched": [
-      "campaign",
-      "intrusion",
-      "implant"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 12,
-      "defanged": 14,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 30
     }
   },
   {
@@ -1013,27 +1034,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 21
-    }
-  },
-  {
-    "id": "16b5d60ea281",
-    "title": "ClickFix to Cash-Out: Anatomy of a Mexican Banking-Fraud Toolkit",
-    "url": "https://www.elastic.co/security-labs/threat-command/mexican-banking-fraud-scmbanker-ref6045",
-    "source": "Elastic Security Labs",
-    "published": "2026-07-08T00:00:00.000Z",
-    "summary": "Elastic Security Labs tracks REF6045, an active operator-assisted banking fraud operation targeting customers of Mexican banks, fintech, payment processors, and cryptocurrency exchanges.",
-    "score": 8,
-    "matched": [
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 30,
-      "defanged": 76,
-      "addresses": 3,
-      "heading": false,
-      "evidence": 109
     }
   },
   {
