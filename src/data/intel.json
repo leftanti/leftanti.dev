@@ -1,5 +1,28 @@
 [
   {
+    "id": "e5d44a5dcdb5",
+    "title": "Cisco warns of max severity ISE zero-day exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/cisco-warns-of-identity-service-engine-zero-day-exploited-in-attacks/",
+    "source": "BleepingComputer",
+    "published": "2026-09-17T07:20:54.000Z",
+    "summary": "Cisco has released security updates to address a maximum-severity Identity Services Engine vulnerability that attackers are actively exploiting in the wild. [...]",
+    "score": 11,
+    "matched": [
+      "exploited in",
+      "in the wild",
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 6
+    }
+  },
+  {
     "id": "8a3f8241ec08",
     "title": "Operation RapidRust: APT36 Deploys RUSTYSHADE, RUSTYMOVE, PSNATCH, and BASHNATCH",
     "url": "https://www.zscaler.com/blogs/security-research/operation-rapidrust-apt36-deploys-rustyshade-rustymove-psnatch-and",
@@ -130,29 +153,6 @@
       "addresses": 1,
       "heading": false,
       "evidence": 3
-    }
-  },
-  {
-    "id": "3e23f9d44232",
-    "title": "Acronis warns of actively exploited flaw in its cPanel backup plugin",
-    "url": "https://www.bleepingcomputer.com/news/security/acronis-warns-of-actively-exploited-flaw-in-its-cpanel-backup-plugin/",
-    "source": "BleepingComputer",
-    "published": "2026-09-15T21:37:35.000Z",
-    "summary": "Acronis disclosed a high-severity Linux local privilege escalation vulnerability in its backup plugin for cPanel, WebHost Manager (WHM), and Plesk that may be exploited in the wild. [...]",
-    "score": 13,
-    "matched": [
-      "actively exploited",
-      "exploited in",
-      "in the wild"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 6
     }
   },
   {
