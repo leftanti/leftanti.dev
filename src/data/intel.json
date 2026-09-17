@@ -23,6 +23,28 @@
     }
   },
   {
+    "id": "fafd9a90272c",
+    "title": "Cisco Warns of New Zero-Day ISE Auth Bypass (CVSS 10.0) Exploited in Active Attacks",
+    "url": "https://thehackernews.com/2026/09/cisco-warns-of-new-zero-day-ise-auth.html",
+    "source": "The Hacker News",
+    "published": "2026-09-17T06:39:40.000Z",
+    "summary": "Cisco has warned of a fresh maximum-severity security flaw impacting Identity Services Engine (ISE) that has come under active exploitation. The vulnerability, tracked as CVE-2026-76460 (CVSS score: 10.0), could allow…",
+    "score": 8,
+    "matched": [
+      "exploited in",
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": true,
+      "evidence": 3
+    }
+  },
+  {
     "id": "8a3f8241ec08",
     "title": "Operation RapidRust: APT36 Deploys RUSTYSHADE, RUSTYMOVE, PSNATCH, and BASHNATCH",
     "url": "https://www.zscaler.com/blogs/security-research/operation-rapidrust-apt36-deploys-rustyshade-rustymove-psnatch-and",
@@ -130,29 +152,6 @@
       "addresses": 0,
       "heading": true,
       "evidence": 16
-    }
-  },
-  {
-    "id": "ff86f0f44dbb",
-    "title": "Google fixes actively exploited Android zero-day on Pixel devices",
-    "url": "https://www.bleepingcomputer.com/news/security/google-fixes-actively-exploited-android-zero-day-on-pixel-devices/",
-    "source": "BleepingComputer",
-    "published": "2026-09-16T07:00:19.000Z",
-    "summary": "Google has released the September 2026 security patches to address 110 vulnerabilities affecting its Pixel devices, including one zero-day flaw actively exploited in targeted attacks. [...]",
-    "score": 16,
-    "matched": [
-      "actively exploited",
-      "exploited in",
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
     }
   },
   {
@@ -458,27 +457,6 @@
     }
   },
   {
-    "id": "7a3278b4ac0a",
-    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/09/04/cisa-adds-one-known-exploited-vulnerability-catalog",
-    "source": "CISA",
-    "published": "2026-09-04T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-85046 Google Chromium V8 Type Confusion Vulnerability This type of…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
     "id": "ba1e0af3fb41",
     "title": "DPRK APTs: Ted backdoor and curlRAT target South Korean media and automotive sectors",
     "url": "https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors",
@@ -498,6 +476,29 @@
       "addresses": 0,
       "heading": true,
       "evidence": 33
+    }
+  },
+  {
+    "id": "50aef9dc283c",
+    "title": "Impersonating IT support: how threat actors turn a remote session into enterprise-wide access",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/02/impersonating-it-support-threat-actors-turn-remote-session-into-enterprise-wide-access/",
+    "source": "Microsoft Security",
+    "published": "2026-09-02T22:51:18.000Z",
+    "summary": "Microsoft Threat Intelligence observed a human-operated intrusion campaign that abuses Microsoft Teams external collaboration to impersonate IT support, gain remote access, and deploy a Node.js-based implant. Learn how…",
+    "score": 7,
+    "matched": [
+      "campaign",
+      "intrusion",
+      "implant"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 12,
+      "defanged": 14,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 30
     }
   },
   {
@@ -590,29 +591,6 @@
       "addresses": 16,
       "heading": true,
       "evidence": 131
-    }
-  },
-  {
-    "id": "dd7e776156d2",
-    "title": "TerminalFix campaign deploys a reverse tunnel through multistage intrusion",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/08/28/terminalfix-campaign-deploys-reverse-tunnel-through-multistage-intrusion/",
-    "source": "Microsoft Security",
-    "published": "2026-08-29T03:43:27.000Z",
-    "summary": "Microsoft Threat Intelligence provides analysis of a ClickFix campaign that uses fake CAPTCHA prompts, DLL sideloading, and a reverse tunnel, with detections and hunting guidance. The post TerminalFix campaign deploys a…",
-    "score": 18,
-    "matched": [
-      "campaign",
-      "intrusion",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 18,
-      "defanged": 8,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 30
     }
   },
   {
@@ -1034,6 +1012,27 @@
       "addresses": 0,
       "heading": false,
       "evidence": 21
+    }
+  },
+  {
+    "id": "16b5d60ea281",
+    "title": "ClickFix to Cash-Out: Anatomy of a Mexican Banking-Fraud Toolkit",
+    "url": "https://www.elastic.co/security-labs/threat-command/mexican-banking-fraud-scmbanker-ref6045",
+    "source": "Elastic Security Labs",
+    "published": "2026-07-08T00:00:00.000Z",
+    "summary": "Elastic Security Labs tracks REF6045, an active operator-assisted banking fraud operation targeting customers of Mexican banks, fintech, payment processors, and cryptocurrency exchanges.",
+    "score": 8,
+    "matched": [
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 30,
+      "defanged": 76,
+      "addresses": 3,
+      "heading": false,
+      "evidence": 109
     }
   },
   {
