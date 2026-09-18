@@ -304,27 +304,6 @@
     }
   },
   {
-    "id": "f804c4cab4d2",
-    "title": "PaperCut Replaces Emergency Patches With Fixes for Two Actively Exploited Flaws",
-    "url": "https://thehackernews.com/2026/09/papercut-replaces-emergency-patches.html",
-    "source": "The Hacker News",
-    "published": "2026-09-11T06:46:18.000Z",
-    "summary": "PaperCut on Thursday released a new security maintenance release that replaces all previously published emergency patches that were pushed to address two security flaws that have come under active exploitation. The…",
-    "score": 10,
-    "matched": [
-      "actively exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 1,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 1
-    }
-  },
-  {
     "id": "6605511b4082",
     "title": "Detect and disrupt AI-themed attacks with Microsoft Defender",
     "url": "https://www.microsoft.com/en-us/security/blog/2026/09/10/detect-and-disrupt-ai-themed-attacks-with-microsoft-defender/",
@@ -836,6 +815,27 @@
       "addresses": 58,
       "heading": true,
       "evidence": 722
+    }
+  },
+  {
+    "id": "ddd2528ace65",
+    "title": "Device Code Phishing Keeps Evolving. Here’s What to Watch For",
+    "url": "https://www.huntress.com/blog/device-code-phishing-evolving-threats",
+    "source": "Huntress",
+    "published": "2026-07-31T13:00:00.000Z",
+    "summary": "Huntress is tracking an evolving wave of device code phishing that abuses trusted Microsoft 365 sign-in flows. Learn the signals defenders should watch for and how to respond.",
+    "score": 7,
+    "matched": [
+      "phishing"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 14,
+      "defanged": 5,
+      "addresses": 4,
+      "heading": false,
+      "evidence": 23
     }
   },
   {
