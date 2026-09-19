@@ -1,5 +1,51 @@
 [
   {
+    "id": "d36262dc6684",
+    "title": "Critical Pre-Auth RCE in Orkes Conductor Workflow Platform Exploited in the Wild",
+    "url": "https://thehackernews.com/2026/09/critical-pre-auth-rce-in-orkes.html",
+    "source": "The Hacker News",
+    "published": "2026-09-19T08:18:54.000Z",
+    "summary": "A critical vulnerability impacting Orkes Conductor is being actively exploited in the wild, according to Fortinet. The vulnerability in question is CVE-2026-58138 (CVSS v3.1 score: 9.8/CVSS v4 score: 9.3), which relates…",
+    "score": 11,
+    "matched": [
+      "actively exploited",
+      "exploited in",
+      "in the wild"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "9de6b003d2fd",
+    "title": "CISA Flags Three Linux Kernel Vulnerabilities Exploited in the Wild",
+    "url": "https://thehackernews.com/2026/09/cisa-flags-three-linux-kernel.html",
+    "source": "The Hacker News",
+    "published": "2026-09-19T06:24:10.000Z",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added three security flaws impacting the Linux kernel to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active…",
+    "score": 11,
+    "matched": [
+      "exploited in",
+      "in the wild",
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "f1123f13d50a",
     "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/09/18/cisa-adds-two-known-exploited-vulnerabilities-catalog",
@@ -791,50 +837,6 @@
       "addresses": 2,
       "heading": false,
       "evidence": 48
-    }
-  },
-  {
-    "id": "4fb83d6f230e",
-    "title": "QuickFox Supply Chain Attack Used to Deploy FDMTP Implant",
-    "url": "https://feeds.fortinet.com/~/966214247/0/fortinet/blog/threat-research~QuickFox-Supply-Chain-Attack-Used-to-Deploy-FDMTP-Implant",
-    "source": "Fortinet",
-    "published": "2026-08-04T13:00:00.000Z",
-    "summary": "The FortiGuard Labs Incident Response team analyzes a QuickFox supply chain attack that used trojanized Windows installers, selective targeting, and an evolving FDMTP implant",
-    "score": 7,
-    "matched": [
-      "incident response",
-      "implant",
-      "supply chain"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 36,
-      "defanged": 625,
-      "addresses": 58,
-      "heading": true,
-      "evidence": 722
-    }
-  },
-  {
-    "id": "ddd2528ace65",
-    "title": "Device Code Phishing Keeps Evolving. Here’s What to Watch For",
-    "url": "https://www.huntress.com/blog/device-code-phishing-evolving-threats",
-    "source": "Huntress",
-    "published": "2026-07-31T13:00:00.000Z",
-    "summary": "Huntress is tracking an evolving wave of device code phishing that abuses trusted Microsoft 365 sign-in flows. Learn the signals defenders should watch for and how to respond.",
-    "score": 7,
-    "matched": [
-      "phishing"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 14,
-      "defanged": 5,
-      "addresses": 4,
-      "heading": false,
-      "evidence": 23
     }
   },
   {
