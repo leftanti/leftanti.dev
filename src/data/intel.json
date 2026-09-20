@@ -1,5 +1,28 @@
 [
   {
+    "id": "cdba8046e1c4",
+    "title": "Malicious npm packages evade install-script defenses at runtime",
+    "url": "https://www.bleepingcomputer.com/news/security/malicious-npm-packages-evade-install-script-defenses-at-runtime/",
+    "source": "BleepingComputer",
+    "published": "2026-09-20T14:11:21.000Z",
+    "summary": "An ongoing npm malware campaign involving the 'indexed-btree' package shows how threat actors bypass supply chain defenses by hiding malicious code in a package's normal runtime behavior rather than in installation…",
+    "score": 7,
+    "matched": [
+      "campaign",
+      "malware",
+      "supply chain"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
     "id": "d36262dc6684",
     "title": "Critical Pre-Auth RCE in Orkes Conductor Workflow Platform Exploited in the Wild",
     "url": "https://thehackernews.com/2026/09/critical-pre-auth-rce-in-orkes.html",
@@ -107,28 +130,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "63abcf87ae11",
-    "title": "Brevo supply-chain attack injected ClickFix scripts on customer sites",
-    "url": "https://www.bleepingcomputer.com/news/security/brevo-supply-chain-attack-injected-clickfix-scripts-on-customer-sites/",
-    "source": "BleepingComputer",
-    "published": "2026-09-17T17:11:34.000Z",
-    "summary": "Brevo confirmed that attackers stole a Cloudflare API key and used it to inject malicious ClickFix scripts into its websites and JavaScript files embedded on customer sites to distribute malware. [...]",
-    "score": 8,
-    "matched": [
-      "malware",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 3,
-      "defanged": 4,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 8
     }
   },
   {
