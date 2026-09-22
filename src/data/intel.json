@@ -1,5 +1,49 @@
 [
   {
+    "id": "f5352ddaaf0c",
+    "title": "New Windows Defender zero-day blocks Microsoft antivirus updates",
+    "url": "https://www.bleepingcomputer.com/news/security/new-windows-defender-zero-day-blocks-microsoft-antivirus-updates/",
+    "source": "BleepingComputer",
+    "published": "2026-09-22T09:55:11.000Z",
+    "summary": "Over the weekend, security researcher Abdelhamid Naceri (also known as Nightmare Eclipse) released another Microsoft Defender zero-day exploit that blocks antivirus updates. [...]",
+    "score": 16,
+    "matched": [
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "8ccc97a0b799",
+    "title": "SideCopy Broadens India Targeting to Academia With ReverseRAT Spear-Phishing",
+    "url": "https://thehackernews.com/2026/09/sidecopy-broadens-india-targeting-to.html",
+    "source": "The Hacker News",
+    "published": "2026-09-22T07:52:03.000Z",
+    "summary": "The threat actor known as SideCopy has been observed using spear-phishing lures to target academic institutions in India, expanding their strategic focus beyond government entities. \"SideCopy campaign operations…",
+    "score": 12,
+    "matched": [
+      "campaign",
+      "threat actor",
+      "phishing"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 3,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
     "id": "1dcb430bc406",
     "title": "Contagious Interview Campaign Compromises 30,000 Devices, Steals $10.71M in Crypto",
     "url": "https://thehackernews.com/2026/09/contagious-interview-campaign.html",
@@ -969,49 +1013,6 @@
       "addresses": 5,
       "heading": false,
       "evidence": 56
-    }
-  },
-  {
-    "id": "f6b8c91eb812",
-    "title": "TELEPUZ: a modular MaaS malware spreading via CLICKFIX-VIDAR chains",
-    "url": "https://www.elastic.co/security-labs/threat-command/telepuz-maas-malware-clickfix",
-    "source": "Elastic Security Labs",
-    "published": "2026-07-16T00:00:00.000Z",
-    "summary": "TELEPUZ is a modular malware that emerged through CLICKFIX-VIDAR attacks in April. We reverse-engineered it to show you the infrastructure and evasion techniques that matter.",
-    "score": 8,
-    "matched": [
-      "malware",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 17,
-      "defanged": 45,
-      "addresses": 2,
-      "heading": true,
-      "evidence": 67
-    }
-  },
-  {
-    "id": "bbf853ba6917",
-    "title": "ClaudeFix: Shared Claude Chats Meet ClickFix",
-    "url": "https://www.zscaler.com/blogs/security-research/claudefix-shared-claude-chats-meet-clickfix",
-    "source": "Zscaler ThreatLabz",
-    "published": "2026-07-15T14:39:45.000Z",
-    "summary": "IntroductionClickFix is a widely employed attack technique, first seen in 2024, where a victim is instructed to paste-and-run instructions on their system to “fix” a problem or install software. The seemingly benign…",
-    "score": 8,
-    "matched": [
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 10,
-      "defanged": 233,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 247
     }
   },
   {
