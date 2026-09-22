@@ -1,5 +1,26 @@
 [
   {
+    "id": "d1d540cc1041",
+    "title": "Researcher Drops BigDiskBuster Zero-Day PoC That Blocks Microsoft Defender Updates",
+    "url": "https://thehackernews.com/2026/09/researcher-drops-bigdiskbuster-zero-day.html",
+    "source": "The Hacker News",
+    "published": "2026-09-22T16:14:04.000Z",
+    "summary": "A zero-day proof-of-concept tool that stops Microsoft Defender from installing platform and signature updates by filling all available disk space was published on GitHub on September 19. The tool, called BigDiskBuster,…",
+    "score": 14,
+    "matched": [
+      "zero-day"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "f9ade19d5d9c",
     "title": "New CVSS 10.0 VeloCloud Orchestrator Flaw Actively Exploited in Certificate-Based Setups",
     "url": "https://thehackernews.com/2026/09/new-cvss-100-velocloud-orchestrator.html",
@@ -19,6 +40,27 @@
       "addresses": 12,
       "heading": false,
       "evidence": 15
+    }
+  },
+  {
+    "id": "cb8f3e70f70b",
+    "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/09/22/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-09-22T12:00:00.000Z",
+    "summary": "CISA has added four new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-85102 Check Point Multiple Products Improper Certificate Validation…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
     }
   },
   {
@@ -128,27 +170,6 @@
       "hashes": 0,
       "defanged": 3,
       "addresses": 0,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
-    "id": "652d50a3bcbc",
-    "title": "Microsoft reminds admins to migrate Entra ID users to passkeys",
-    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-reminds-admins-to-migrate-entra-id-users-to-passkeys/",
-    "source": "BleepingComputer",
-    "published": "2026-09-21T13:16:20.000Z",
-    "summary": "Microsoft has reminded admins to migrate Entra ID users to phishing-resistant authentication methods to avoid sign-in disruptions after it retires SMS first-factor sign-in starting in February 2027. [...]",
-    "score": 10,
-    "matched": [
-      "phishing"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
       "heading": false,
       "evidence": 3
     }
@@ -351,25 +372,25 @@
     }
   },
   {
-    "id": "fafd9a90272c",
-    "title": "Cisco Warns of New Zero-Day ISE Auth Bypass (CVSS 10.0) Exploited in Active Attacks",
-    "url": "https://thehackernews.com/2026/09/cisco-warns-of-new-zero-day-ise-auth.html",
-    "source": "The Hacker News",
-    "published": "2026-09-17T06:39:40.000Z",
-    "summary": "Cisco has warned of a fresh maximum-severity security flaw impacting Identity Services Engine (ISE) that has come under active exploitation. The vulnerability, tracked as CVE-2026-76460 (CVSS score: 10.0), could allow…",
-    "score": 8,
+    "id": "751077092345",
+    "title": "Beware the SparroWock: The backdoor that bites, the commands that catch",
+    "url": "https://www.welivesecurity.com/en/eset-research/beware-sparrowock-backdoor-bites-commands-catch/",
+    "source": "ESET Research",
+    "published": "2026-09-17T08:50:00.000Z",
+    "summary": "ESET researchers document SparroWocky, the new flagship backdoor of the FamousSparrow APT group",
+    "score": 7,
     "matched": [
-      "exploited in",
-      "zero-day"
+      "APT",
+      "backdoor"
     ],
     "kind": "ioc",
     "indicators": {
       "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
+      "hashes": 2,
+      "defanged": 19,
+      "addresses": 18,
       "heading": true,
-      "evidence": 3
+      "evidence": 42
     }
   },
   {
@@ -550,6 +571,29 @@
     }
   },
   {
+    "id": "50aef9dc283c",
+    "title": "Impersonating IT support: how threat actors turn a remote session into enterprise-wide access",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/02/impersonating-it-support-threat-actors-turn-remote-session-into-enterprise-wide-access/",
+    "source": "Microsoft Security",
+    "published": "2026-09-02T22:51:18.000Z",
+    "summary": "Microsoft Threat Intelligence observed a human-operated intrusion campaign that abuses Microsoft Teams external collaboration to impersonate IT support, gain remote access, and deploy a Node.js-based implant. Learn how…",
+    "score": 7,
+    "matched": [
+      "campaign",
+      "intrusion",
+      "implant"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 12,
+      "defanged": 14,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 30
+    }
+  },
+  {
     "id": "a4323813a3bc",
     "title": "Critical SonicWall SMA1000 Vulnerabilities CVE-2026-83548, CVE-2026-83549 Exploited in the Wild",
     "url": "https://www.rapid7.com/blog/post/etr-critical-sonicwall-sma1000-vulnerabilities-cve-2026-83548-cve-2026-83549-exploited-in-the-wild",
@@ -573,29 +617,6 @@
     }
   },
   {
-    "id": "be1cd6ed484b",
-    "title": "Inside Knight Office, a New M365 AiTM Phishing Kit",
-    "url": "https://www.huntress.com/blog/inside-knight-office-m365-aitm-attack",
-    "source": "Huntress",
-    "published": "2026-09-02T13:00:00.000Z",
-    "summary": "An inside look at Knight Office, a newly discovered AiTM phishing kit featuring custom control panels, Cloudflare Turnstile, and M365 Token theft.",
-    "score": 10,
-    "matched": [
-      "phishing",
-      "AiTM",
-      "token theft"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 14,
-      "defanged": 41,
-      "addresses": 2,
-      "heading": true,
-      "evidence": 60
-    }
-  },
-  {
     "id": "2882c0e66491",
     "title": "Spring Ring: An Inside Look at Voice Phishing Campaigns in Microsoft Teams",
     "url": "https://unit42.paloaltonetworks.com/spring-ring-voice-phishing-campaigns/",
@@ -616,28 +637,6 @@
       "addresses": 16,
       "heading": true,
       "evidence": 131
-    }
-  },
-  {
-    "id": "a8d17d82aec2",
-    "title": "Next-Gen Phishing Tactics Users Aren’t Ready For | Huntress",
-    "url": "https://www.huntress.com/blog/advanced-phishing-tradecraft",
-    "source": "Huntress",
-    "published": "2026-08-28T16:00:00.000Z",
-    "summary": "Move past basic credential harvesting. Discover how modern attackers use ClickFix, BitB, and OAuth consent phishing—and how to train your users with Huntress SAT.",
-    "score": 8,
-    "matched": [
-      "phishing",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 14,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 14
     }
   },
   {
@@ -708,29 +707,6 @@
     }
   },
   {
-    "id": "a1c38e14d19e",
-    "title": "Post-DEF CON Phishing Uses Malicious Google Doc to Deliver Malware",
-    "url": "https://www.huntress.com/blog/defcon-phishing-google-doc-malware",
-    "source": "Huntress",
-    "published": "2026-08-19T13:00:00.000Z",
-    "summary": "Huntress researcher uncovers post-Black Hat & DEF CON phishing campaign using X DMs & malicious documents to deliver AMOS, NetSupport RAT, and other malware.",
-    "score": 8,
-    "matched": [
-      "campaign",
-      "malware",
-      "phishing"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 20,
-      "defanged": 47,
-      "addresses": 3,
-      "heading": true,
-      "evidence": 73
-    }
-  },
-  {
     "id": "34135e380428",
     "title": "C2Looper: A New Backdoor Likely Tied To Ransomware With GitHub C2",
     "url": "https://www.zscaler.com/blogs/security-research/c2looper-new-backdoor-likely-tied-ransomware-github-c2",
@@ -776,28 +752,6 @@
     }
   },
   {
-    "id": "df218795e276",
-    "title": "Akira Hits Safe Mode: Ransomware Rebooting Around EDR",
-    "url": "https://www.huntress.com/blog/akira-hits-safe-mode-ransomware-rebooting-around-edr",
-    "source": "Huntress",
-    "published": "2026-08-12T13:00:00.000Z",
-    "summary": "An Akira affiliate rebooted into Safe Mode to kill EDR and Defender, then Safe Mode broke their own ransomware. Here’s the full attack chain.",
-    "score": 10,
-    "matched": [
-      "affiliate",
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 16,
-      "defanged": 1,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 21
-    }
-  },
-  {
     "id": "0d98e098f937",
     "title": "CaptiveCrunch: Midnight Blizzard Weaponizes Hotel Wi-Fi Captive Portals to Steal Microsoft 365 Credentials",
     "url": "https://www.zscaler.com/blogs/security-research/captivecrunch-midnight-blizzard-weaponizes-hotel-wi-fi-captive-portals",
@@ -839,6 +793,50 @@
       "addresses": 2,
       "heading": false,
       "evidence": 48
+    }
+  },
+  {
+    "id": "4fb83d6f230e",
+    "title": "QuickFox Supply Chain Attack Used to Deploy FDMTP Implant",
+    "url": "https://feeds.fortinet.com/~/966214247/0/fortinet/blog/threat-research~QuickFox-Supply-Chain-Attack-Used-to-Deploy-FDMTP-Implant",
+    "source": "Fortinet",
+    "published": "2026-08-04T13:00:00.000Z",
+    "summary": "The FortiGuard Labs Incident Response team analyzes a QuickFox supply chain attack that used trojanized Windows installers, selective targeting, and an evolving FDMTP implant",
+    "score": 7,
+    "matched": [
+      "incident response",
+      "implant",
+      "supply chain"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 36,
+      "defanged": 625,
+      "addresses": 58,
+      "heading": true,
+      "evidence": 722
+    }
+  },
+  {
+    "id": "ddd2528ace65",
+    "title": "Device Code Phishing Keeps Evolving. Here’s What to Watch For",
+    "url": "https://www.huntress.com/blog/device-code-phishing-evolving-threats",
+    "source": "Huntress",
+    "published": "2026-07-31T13:00:00.000Z",
+    "summary": "Huntress is tracking an evolving wave of device code phishing that abuses trusted Microsoft 365 sign-in flows. Learn the signals defenders should watch for and how to respond.",
+    "score": 7,
+    "matched": [
+      "phishing"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 14,
+      "defanged": 5,
+      "addresses": 4,
+      "heading": false,
+      "evidence": 23
     }
   },
   {
