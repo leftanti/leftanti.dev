@@ -242,6 +242,29 @@
     }
   },
   {
+    "id": "24ce00a91522",
+    "title": "TerminalFix: PNG Steganography, (Mon, Sep 21st)",
+    "url": "https://isc.sans.edu/diary/rss/33318",
+    "source": "SANS ISC",
+    "published": "2026-09-21T10:33:53.000Z",
+    "summary": "Microsoft Security Research published an interesting blog post \" TerminalFix campaign deploys a reverse tunnel through multistage intrusion \" about a malware campaign. The aspect that I want to take a closer look at, is…",
+    "score": 7,
+    "matched": [
+      "campaign",
+      "intrusion",
+      "malware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 9,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 10
+    }
+  },
+  {
     "id": "466b4f516547",
     "title": "ClickFix Lures Deploy ChainScript RAT Using Polygon to Rotate C2 Infrastructure",
     "url": "https://thehackernews.com/2026/09/clickfix-lures-deploy-chainscript-rat.html",
@@ -363,28 +386,6 @@
       "known exploited"
     ],
     "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "9be6eecf6db2",
-    "title": "Claimed Bug Bounty Hunter Likely Used LLM to Build PhantomRaven npm Stealer",
-    "url": "https://thehackernews.com/2026/09/claimed-bug-bounty-hunter-likely-used.html",
-    "source": "The Hacker News",
-    "published": "2026-09-18T09:18:03.000Z",
-    "summary": "A financially motivated threat actor has been linked to the development and distribution of a JavaScript (JS)-based information stealer known as PhantomRaven via the npm package registry. \"The developer likely wrote the…",
-    "score": 8,
-    "matched": [
-      "threat actor",
-      "stealer"
-    ],
-    "kind": "campaign",
     "indicators": {
       "v": 2,
       "hashes": 0,
