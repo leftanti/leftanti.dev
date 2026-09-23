@@ -1,23 +1,46 @@
 [
   {
-    "id": "03b9753abd7a",
-    "title": "F5 Patches Critical BIG-IP APM Zero-Day Exploited for Unauthenticated RCE on OAuth Servers",
-    "url": "https://thehackernews.com/2026/09/f5-patches-critical-big-ip-apm-zero-day.html",
-    "source": "The Hacker News",
-    "published": "2026-09-23T08:29:48.000Z",
-    "summary": "Attackers are exploiting a critical flaw in F5 BIG-IP Access Policy Manager (APM) that lets them run code on a BIG-IP system without logging in, F5 says. The flaw, CVE-2026-94127, affects only systems in which APM…",
-    "score": 6,
+    "id": "15e725d5ca47",
+    "title": "Macfinger ClickFix campaign, (Tue, Sep 22nd)",
+    "url": "https://isc.sans.edu/diary/rss/33360",
+    "source": "SANS ISC",
+    "published": "2026-09-23T16:14:37.000Z",
+    "summary": "Introduction",
+    "score": 16,
     "matched": [
-      "zero-day"
+      "campaign",
+      "ClickFix"
     ],
-    "kind": "exploited",
+    "kind": "ioc",
     "indicators": {
       "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 1
+      "hashes": 10,
+      "defanged": 103,
+      "addresses": 3,
+      "heading": true,
+      "evidence": 119
+    }
+  },
+  {
+    "id": "859fc41a4996",
+    "title": "Arista patches actively exploited VeloCloud Orchestrator zero-day",
+    "url": "https://www.bleepingcomputer.com/news/security/arista-patches-actively-exploited-velocloud-orchestrator-zero-day/",
+    "source": "BleepingComputer",
+    "published": "2026-09-23T12:29:53.000Z",
+    "summary": "Arista Networks has released security patches for a zero-day flaw that is being actively exploited and affects VeloCloud Orchestrator (VCO) On-Prem deployments. [...]",
+    "score": 16,
+    "matched": [
+      "actively exploited",
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 2,
+      "addresses": 7,
+      "heading": true,
+      "evidence": 14
     }
   },
   {
@@ -41,49 +64,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 4
-    }
-  },
-  {
-    "id": "1b2d52ee9e8f",
-    "title": "Ryuk ransomware member sentenced to 24 months in prison",
-    "url": "https://www.bleepingcomputer.com/news/security/ryuk-ransomware-member-sentenced-to-24-months-in-prison/",
-    "source": "BleepingComputer",
-    "published": "2026-09-23T08:20:05.000Z",
-    "summary": "An Armenian man was sentenced to 24 months in prison and 3 years of supervised release for hacking U.S. companies and encrypting their systems in Ryuk ransomware attacks. [...]",
-    "score": 6,
-    "matched": [
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
-    "id": "15e725d5ca47",
-    "title": "Macfinger ClickFix campaign, (Tue, Sep 22nd)",
-    "url": "https://isc.sans.edu/diary/rss/33360",
-    "source": "SANS ISC",
-    "published": "2026-09-23T00:55:11.000Z",
-    "summary": "Introduction",
-    "score": 16,
-    "matched": [
-      "campaign",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 10,
-      "defanged": 103,
-      "addresses": 3,
-      "heading": true,
-      "evidence": 119
     }
   },
   {
@@ -148,27 +128,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "f5352ddaaf0c",
-    "title": "New Windows Defender zero-day blocks Microsoft antivirus updates",
-    "url": "https://www.bleepingcomputer.com/news/security/new-windows-defender-zero-day-blocks-microsoft-antivirus-updates/",
-    "source": "BleepingComputer",
-    "published": "2026-09-22T09:55:11.000Z",
-    "summary": "Over the weekend, security researcher Abdelhamid Naceri (also known as Nightmare Eclipse) released another Microsoft Defender zero-day exploit that blocks antivirus updates. [...]",
-    "score": 16,
-    "matched": [
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
     }
   },
   {
@@ -280,29 +239,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "24ce00a91522",
-    "title": "TerminalFix: PNG Steganography, (Mon, Sep 21st)",
-    "url": "https://isc.sans.edu/diary/rss/33318",
-    "source": "SANS ISC",
-    "published": "2026-09-21T10:33:53.000Z",
-    "summary": "Microsoft Security Research published an interesting blog post \" TerminalFix campaign deploys a reverse tunnel through multistage intrusion \" about a malware campaign. The aspect that I want to take a closer look at, is…",
-    "score": 7,
-    "matched": [
-      "campaign",
-      "intrusion",
-      "malware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 9,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 10
     }
   },
   {
@@ -456,28 +392,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "751077092345",
-    "title": "Beware the SparroWock: The backdoor that bites, the commands that catch",
-    "url": "https://www.welivesecurity.com/en/eset-research/beware-sparrowock-backdoor-bites-commands-catch/",
-    "source": "ESET Research",
-    "published": "2026-09-17T08:50:00.000Z",
-    "summary": "ESET researchers document SparroWocky, the new flagship backdoor of the FamousSparrow APT group",
-    "score": 7,
-    "matched": [
-      "APT",
-      "backdoor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 19,
-      "addresses": 18,
-      "heading": true,
-      "evidence": 42
     }
   },
   {
@@ -658,29 +572,6 @@
     }
   },
   {
-    "id": "50aef9dc283c",
-    "title": "Impersonating IT support: how threat actors turn a remote session into enterprise-wide access",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/02/impersonating-it-support-threat-actors-turn-remote-session-into-enterprise-wide-access/",
-    "source": "Microsoft Security",
-    "published": "2026-09-02T22:51:18.000Z",
-    "summary": "Microsoft Threat Intelligence observed a human-operated intrusion campaign that abuses Microsoft Teams external collaboration to impersonate IT support, gain remote access, and deploy a Node.js-based implant. Learn how…",
-    "score": 7,
-    "matched": [
-      "campaign",
-      "intrusion",
-      "implant"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 12,
-      "defanged": 14,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 30
-    }
-  },
-  {
     "id": "a4323813a3bc",
     "title": "Critical SonicWall SMA1000 Vulnerabilities CVE-2026-83548, CVE-2026-83549 Exploited in the Wild",
     "url": "https://www.rapid7.com/blog/post/etr-critical-sonicwall-sma1000-vulnerabilities-cve-2026-83548-cve-2026-83549-exploited-in-the-wild",
@@ -704,6 +595,29 @@
     }
   },
   {
+    "id": "be1cd6ed484b",
+    "title": "Inside Knight Office, a New M365 AiTM Phishing Kit",
+    "url": "https://www.huntress.com/blog/inside-knight-office-m365-aitm-attack",
+    "source": "Huntress",
+    "published": "2026-09-02T13:00:00.000Z",
+    "summary": "An inside look at Knight Office, a newly discovered AiTM phishing kit featuring custom control panels, Cloudflare Turnstile, and M365 Token theft.",
+    "score": 10,
+    "matched": [
+      "phishing",
+      "AiTM",
+      "token theft"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 14,
+      "defanged": 41,
+      "addresses": 2,
+      "heading": true,
+      "evidence": 60
+    }
+  },
+  {
     "id": "2882c0e66491",
     "title": "Spring Ring: An Inside Look at Voice Phishing Campaigns in Microsoft Teams",
     "url": "https://unit42.paloaltonetworks.com/spring-ring-voice-phishing-campaigns/",
@@ -724,6 +638,28 @@
       "addresses": 16,
       "heading": true,
       "evidence": 131
+    }
+  },
+  {
+    "id": "a8d17d82aec2",
+    "title": "Next-Gen Phishing Tactics Users Aren’t Ready For | Huntress",
+    "url": "https://www.huntress.com/blog/advanced-phishing-tradecraft",
+    "source": "Huntress",
+    "published": "2026-08-28T16:00:00.000Z",
+    "summary": "Move past basic credential harvesting. Discover how modern attackers use ClickFix, BitB, and OAuth consent phishing—and how to train your users with Huntress SAT.",
+    "score": 8,
+    "matched": [
+      "phishing",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 14,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 14
     }
   },
   {
@@ -794,6 +730,29 @@
     }
   },
   {
+    "id": "a1c38e14d19e",
+    "title": "Post-DEF CON Phishing Uses Malicious Google Doc to Deliver Malware",
+    "url": "https://www.huntress.com/blog/defcon-phishing-google-doc-malware",
+    "source": "Huntress",
+    "published": "2026-08-19T13:00:00.000Z",
+    "summary": "Huntress researcher uncovers post-Black Hat & DEF CON phishing campaign using X DMs & malicious documents to deliver AMOS, NetSupport RAT, and other malware.",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "malware",
+      "phishing"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 20,
+      "defanged": 47,
+      "addresses": 3,
+      "heading": true,
+      "evidence": 73
+    }
+  },
+  {
     "id": "34135e380428",
     "title": "C2Looper: A New Backdoor Likely Tied To Ransomware With GitHub C2",
     "url": "https://www.zscaler.com/blogs/security-research/c2looper-new-backdoor-likely-tied-ransomware-github-c2",
@@ -836,6 +795,28 @@
       "addresses": 0,
       "heading": false,
       "evidence": 20
+    }
+  },
+  {
+    "id": "df218795e276",
+    "title": "Akira Hits Safe Mode: Ransomware Rebooting Around EDR",
+    "url": "https://www.huntress.com/blog/akira-hits-safe-mode-ransomware-rebooting-around-edr",
+    "source": "Huntress",
+    "published": "2026-08-12T13:00:00.000Z",
+    "summary": "An Akira affiliate rebooted into Safe Mode to kill EDR and Defender, then Safe Mode broke their own ransomware. Here’s the full attack chain.",
+    "score": 10,
+    "matched": [
+      "affiliate",
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 16,
+      "defanged": 1,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 21
     }
   },
   {
@@ -883,26 +864,24 @@
     }
   },
   {
-    "id": "4fb83d6f230e",
-    "title": "QuickFox Supply Chain Attack Used to Deploy FDMTP Implant",
-    "url": "https://feeds.fortinet.com/~/966214247/0/fortinet/blog/threat-research~QuickFox-Supply-Chain-Attack-Used-to-Deploy-FDMTP-Implant",
-    "source": "Fortinet",
-    "published": "2026-08-04T13:00:00.000Z",
-    "summary": "The FortiGuard Labs Incident Response team analyzes a QuickFox supply chain attack that used trojanized Windows installers, selective targeting, and an evolving FDMTP implant",
-    "score": 7,
+    "id": "9f0e9336b780",
+    "title": "Credential Stuffing Campaign Hits SonicWall | Huntress SOC Tracking",
+    "url": "https://www.huntress.com/blog/sonicwall-credential-stuffing-campaign",
+    "source": "Huntress",
+    "published": "2026-07-28T13:00:00.000Z",
+    "summary": "The Huntress SOC is tracking an active credential stuffing campaign targeting SonicWall devices, compromising dozens of organizations since July 25.",
+    "score": 8,
     "matched": [
-      "incident response",
-      "implant",
-      "supply chain"
+      "campaign"
     ],
     "kind": "ioc",
     "indicators": {
       "v": 2,
-      "hashes": 36,
-      "defanged": 625,
-      "addresses": 58,
+      "hashes": 14,
+      "defanged": 10,
+      "addresses": 5,
       "heading": true,
-      "evidence": 722
+      "evidence": 32
     }
   },
   {
@@ -926,6 +905,28 @@
       "addresses": 8,
       "heading": true,
       "evidence": 28
+    }
+  },
+  {
+    "id": "5dd78732982f",
+    "title": "Inside FakeAgent: How a Claude Desktop Malvertising Campaign Hit 29 Organizations with SectopRAT",
+    "url": "https://www.huntress.com/blog/fakeagent-claude-desktop-malvertising-ends-in-dotnet-rat",
+    "source": "Huntress",
+    "published": "2026-07-22T20:00:00.000Z",
+    "summary": "On July 21 and July 22, Huntress observed a number of attacks that started with a malicious public Claude Artifact hosted on a legitimate Claude domain, and ended in organizations being infected by the SectopRAT stealer.",
+    "score": 10,
+    "matched": [
+      "campaign",
+      "stealer"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 19,
+      "defanged": 31,
+      "addresses": 21,
+      "heading": false,
+      "evidence": 71
     }
   },
   {
@@ -1018,6 +1019,28 @@
     }
   },
   {
+    "id": "0502111c2751",
+    "title": "Threat Actors Achieve Persistence After SQL Injection",
+    "url": "https://www.huntress.com/blog/sql-injection-attacker-persistence",
+    "source": "Huntress",
+    "published": "2026-07-13T13:00:00.000Z",
+    "summary": "See how a threat actor used SQL injection and BadIIS to gain persistence, disable Windows Defender, and quietly install a cryptominer.",
+    "score": 9,
+    "matched": [
+      "threat actor",
+      "persistence"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 15,
+      "defanged": 6,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 21
+    }
+  },
+  {
     "id": "16b5d60ea281",
     "title": "ClickFix to Cash-Out: Anatomy of a Mexican Banking-Fraud Toolkit",
     "url": "https://www.elastic.co/security-labs/threat-command/mexican-banking-fraud-scmbanker-ref6045",
@@ -1058,29 +1081,6 @@
       "addresses": 11,
       "heading": false,
       "evidence": 66
-    }
-  },
-  {
-    "id": "8159851e4eb4",
-    "title": "Flash Alert: EtherRat and TukTuk C2 End in The Gentleman Ransomware",
-    "url": "https://thedfirreport.com/2026/05/11/flash-alert-etherrat-and-tuktuk-c2-end-in-the-gentleman-ransomware/",
-    "source": "The DFIR Report",
-    "published": "2026-05-11T14:05:04.000Z",
-    "summary": "The EtherRAT malware family was first reported by Sysdig back in December 2025. At that time, the initial access vector was exploitation of CVE-2025-55182 (React2Shell) targeting Linux servers. In March 2026, a Windows…",
-    "score": 7,
-    "matched": [
-      "ransomware",
-      "malware",
-      "initial access"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 18,
-      "defanged": 1,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 23
     }
   },
   {
