@@ -1,5 +1,70 @@
 [
   {
+    "id": "03b9753abd7a",
+    "title": "F5 Patches Critical BIG-IP APM Zero-Day Exploited for Unauthenticated RCE on OAuth Servers",
+    "url": "https://thehackernews.com/2026/09/f5-patches-critical-big-ip-apm-zero-day.html",
+    "source": "The Hacker News",
+    "published": "2026-09-23T08:29:48.000Z",
+    "summary": "Attackers are exploiting a critical flaw in F5 BIG-IP Access Policy Manager (APM) that lets them run code on a BIG-IP system without logging in, F5 says. The flaw, CVE-2026-94127, affects only systems in which APM…",
+    "score": 6,
+    "matched": [
+      "zero-day"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 1
+    }
+  },
+  {
+    "id": "19cb6802f53c",
+    "title": "Chinese Hackers Exploit Chrome-Windows Zero-Day Chain to Deploy CLEANGULP Malware",
+    "url": "https://thehackernews.com/2026/09/chinese-hackers-exploit-chrome-windows.html",
+    "source": "The Hacker News",
+    "published": "2026-09-23T08:29:24.000Z",
+    "summary": "A Chinese threat actor codenamed UTA0565 has been observed exploiting the recently disclosed Google Chrome-Microsoft Windows exploit chain as zero-days through fake websites. The attacks, detected on September 3 and 4,…",
+    "score": 12,
+    "matched": [
+      "zero-day",
+      "threat actor",
+      "malware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 4,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 4
+    }
+  },
+  {
+    "id": "1b2d52ee9e8f",
+    "title": "Ryuk ransomware member sentenced to 24 months in prison",
+    "url": "https://www.bleepingcomputer.com/news/security/ryuk-ransomware-member-sentenced-to-24-months-in-prison/",
+    "source": "BleepingComputer",
+    "published": "2026-09-23T08:20:05.000Z",
+    "summary": "An Armenian man was sentenced to 24 months in prison and 3 years of supervised release for hacking U.S. companies and encrypting their systems in Ryuk ransomware attacks. [...]",
+    "score": 6,
+    "matched": [
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
     "id": "15e725d5ca47",
     "title": "Macfinger ClickFix campaign, (Tue, Sep 22nd)",
     "url": "https://isc.sans.edu/diary/rss/33360",
@@ -19,73 +84,6 @@
       "addresses": 3,
       "heading": true,
       "evidence": 119
-    }
-  },
-  {
-    "id": "c3a921694948",
-    "title": "ShinyHunters claims FBI hack, data theft in PeopleSoft zero-day breach",
-    "url": "https://www.bleepingcomputer.com/news/security/shinyhunters-claims-fbi-hack-data-theft-in-peoplesoft-zero-day-breach/",
-    "source": "BleepingComputer",
-    "published": "2026-09-22T19:13:29.000Z",
-    "summary": "The ShinyHunters extortion gang claims it breached FBI systems using a new Oracle PeopleSoft zero-day vulnerability, gaining access to internal services and stealing sensitive data on employees and job applicants. [...]",
-    "score": 6,
-    "matched": [
-      "zero-day",
-      "breach",
-      "breached"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
-    "id": "767190fea915",
-    "title": "Check Point Warns of Management Server Zero-Day Exploited in Targeted Attacks",
-    "url": "https://thehackernews.com/2026/09/check-point-warns-of-management-server.html",
-    "source": "The Hacker News",
-    "published": "2026-09-22T18:29:39.000Z",
-    "summary": "Attackers exploited a previously unknown flaw in Check Point's Security Management Server in a handful of targeted attacks on July 23, the company said. The flaw, CVE-2026-93616, allows an attacker who can access the…",
-    "score": 6,
-    "matched": [
-      "exploited in",
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": true,
-      "evidence": 3
-    }
-  },
-  {
-    "id": "5272044666ad",
-    "title": "Check Point warns of Management Server zero-day exploited in attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/check-point-patches-management-server-zero-day-exploited-in-attacks/",
-    "source": "BleepingComputer",
-    "published": "2026-09-22T16:32:47.000Z",
-    "summary": "Check Point Software released emergency hotfixes to address a critical Security Management Server vulnerability that could let attackers run arbitrary scripts. [...]",
-    "score": 6,
-    "matched": [
-      "exploited in",
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 6
     }
   },
   {
