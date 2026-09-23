@@ -1,5 +1,94 @@
 [
   {
+    "id": "15e725d5ca47",
+    "title": "Macfinger ClickFix campaign, (Tue, Sep 22nd)",
+    "url": "https://isc.sans.edu/diary/rss/33360",
+    "source": "SANS ISC",
+    "published": "2026-09-23T00:55:11.000Z",
+    "summary": "Introduction",
+    "score": 16,
+    "matched": [
+      "campaign",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 10,
+      "defanged": 103,
+      "addresses": 3,
+      "heading": true,
+      "evidence": 119
+    }
+  },
+  {
+    "id": "c3a921694948",
+    "title": "ShinyHunters claims FBI hack, data theft in PeopleSoft zero-day breach",
+    "url": "https://www.bleepingcomputer.com/news/security/shinyhunters-claims-fbi-hack-data-theft-in-peoplesoft-zero-day-breach/",
+    "source": "BleepingComputer",
+    "published": "2026-09-22T19:13:29.000Z",
+    "summary": "The ShinyHunters extortion gang claims it breached FBI systems using a new Oracle PeopleSoft zero-day vulnerability, gaining access to internal services and stealing sensitive data on employees and job applicants. [...]",
+    "score": 6,
+    "matched": [
+      "zero-day",
+      "breach",
+      "breached"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "767190fea915",
+    "title": "Check Point Warns of Management Server Zero-Day Exploited in Targeted Attacks",
+    "url": "https://thehackernews.com/2026/09/check-point-warns-of-management-server.html",
+    "source": "The Hacker News",
+    "published": "2026-09-22T18:29:39.000Z",
+    "summary": "Attackers exploited a previously unknown flaw in Check Point's Security Management Server in a handful of targeted attacks on July 23, the company said. The flaw, CVE-2026-93616, allows an attacker who can access the…",
+    "score": 6,
+    "matched": [
+      "exploited in",
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": true,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "5272044666ad",
+    "title": "Check Point warns of Management Server zero-day exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/check-point-patches-management-server-zero-day-exploited-in-attacks/",
+    "source": "BleepingComputer",
+    "published": "2026-09-22T16:32:47.000Z",
+    "summary": "Check Point Software released emergency hotfixes to address a critical Security Management Server vulnerability that could let attackers run arbitrary scripts. [...]",
+    "score": 6,
+    "matched": [
+      "exploited in",
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 6
+    }
+  },
+  {
     "id": "d1d540cc1041",
     "title": "Researcher Drops BigDiskBuster Zero-Day PoC That Blocks Microsoft Defender Updates",
     "url": "https://thehackernews.com/2026/09/researcher-drops-bigdiskbuster-zero-day.html",
@@ -819,48 +908,6 @@
     }
   },
   {
-    "id": "ddd2528ace65",
-    "title": "Device Code Phishing Keeps Evolving. Here’s What to Watch For",
-    "url": "https://www.huntress.com/blog/device-code-phishing-evolving-threats",
-    "source": "Huntress",
-    "published": "2026-07-31T13:00:00.000Z",
-    "summary": "Huntress is tracking an evolving wave of device code phishing that abuses trusted Microsoft 365 sign-in flows. Learn the signals defenders should watch for and how to respond.",
-    "score": 7,
-    "matched": [
-      "phishing"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 14,
-      "defanged": 5,
-      "addresses": 4,
-      "heading": false,
-      "evidence": 23
-    }
-  },
-  {
-    "id": "9f0e9336b780",
-    "title": "Credential Stuffing Campaign Hits SonicWall | Huntress SOC Tracking",
-    "url": "https://www.huntress.com/blog/sonicwall-credential-stuffing-campaign",
-    "source": "Huntress",
-    "published": "2026-07-28T13:00:00.000Z",
-    "summary": "The Huntress SOC is tracking an active credential stuffing campaign targeting SonicWall devices, compromising dozens of organizations since July 25.",
-    "score": 8,
-    "matched": [
-      "campaign"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 14,
-      "defanged": 10,
-      "addresses": 5,
-      "heading": true,
-      "evidence": 32
-    }
-  },
-  {
     "id": "62fcd066ad23",
     "title": "Helpdesk Hijackers: Teams Vishing, Quick Assist, and GoGRPC Backdoor",
     "url": "https://www.zscaler.com/blogs/security-research/helpdesk-hijackers-teams-vishing-quick-assist-and-gogrpc-backdoor",
@@ -881,28 +928,6 @@
       "addresses": 8,
       "heading": true,
       "evidence": 28
-    }
-  },
-  {
-    "id": "5dd78732982f",
-    "title": "Inside FakeAgent: How a Claude Desktop Malvertising Campaign Hit 29 Organizations with SectopRAT",
-    "url": "https://www.huntress.com/blog/fakeagent-claude-desktop-malvertising-ends-in-dotnet-rat",
-    "source": "Huntress",
-    "published": "2026-07-22T20:00:00.000Z",
-    "summary": "On July 21 and July 22, Huntress observed a number of attacks that started with a malicious public Claude Artifact hosted on a legitimate Claude domain, and ended in organizations being infected by the SectopRAT stealer.",
-    "score": 10,
-    "matched": [
-      "campaign",
-      "stealer"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 19,
-      "defanged": 31,
-      "addresses": 21,
-      "heading": false,
-      "evidence": 71
     }
   },
   {
@@ -995,28 +1020,6 @@
     }
   },
   {
-    "id": "0502111c2751",
-    "title": "Threat Actors Achieve Persistence After SQL Injection",
-    "url": "https://www.huntress.com/blog/sql-injection-attacker-persistence",
-    "source": "Huntress",
-    "published": "2026-07-13T13:00:00.000Z",
-    "summary": "See how a threat actor used SQL injection and BadIIS to gain persistence, disable Windows Defender, and quietly install a cryptominer.",
-    "score": 9,
-    "matched": [
-      "threat actor",
-      "persistence"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 15,
-      "defanged": 6,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 21
-    }
-  },
-  {
     "id": "16b5d60ea281",
     "title": "ClickFix to Cash-Out: Anatomy of a Mexican Banking-Fraud Toolkit",
     "url": "https://www.elastic.co/security-labs/threat-command/mexican-banking-fraud-scmbanker-ref6045",
@@ -1060,24 +1063,26 @@
     }
   },
   {
-    "id": "19d6edea0b7b",
-    "title": "Detecting Tycoon 2FA AiTM attacks across Entra ID and Google Workspace",
-    "url": "https://www.elastic.co/security-labs/threat-command/tycoon-2fa-aitm-detection-engineering",
-    "source": "Elastic Security Labs",
-    "published": "2026-05-26T00:00:00.000Z",
-    "summary": "Tycoon 2FA bypasses MFA on Entra ID and Google Workspace. We map telemetry fingerprints across both platforms, ship detection rules for both tiers, and contain incidents in under 10 seconds with Elastic Workflows.",
-    "score": 14,
+    "id": "8159851e4eb4",
+    "title": "Flash Alert: EtherRat and TukTuk C2 End in The Gentleman Ransomware",
+    "url": "https://thedfirreport.com/2026/05/11/flash-alert-etherrat-and-tuktuk-c2-end-in-the-gentleman-ransomware/",
+    "source": "The DFIR Report",
+    "published": "2026-05-11T14:05:04.000Z",
+    "summary": "The EtherRAT malware family was first reported by Sysdig back in December 2025. At that time, the initial access vector was exploitation of CVE-2025-55182 (React2Shell) targeting Linux servers. In March 2026, a Windows…",
+    "score": 7,
     "matched": [
-      "AiTM"
+      "ransomware",
+      "malware",
+      "initial access"
     ],
     "kind": "ioc",
     "indicators": {
       "v": 2,
-      "hashes": 13,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 13
+      "hashes": 18,
+      "defanged": 1,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 23
     }
   },
   {
