@@ -1,5 +1,26 @@
 [
   {
+    "id": "cc2b9c5d0475",
+    "title": "Placeholder domain used in dev docs now serves ClickFix attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/placeholder-domain-used-in-dev-docs-now-serves-clickfix-attacks/",
+    "source": "BleepingComputer",
+    "published": "2026-09-23T22:46:01.000Z",
+    "summary": "The \"third-party.com\" domain, commonly used as a placeholder in developer documentation and code examples, is serving a fake Cloudflare verification page that attempts to trick Windows users into executing PowerShell…",
+    "score": 9,
+    "matched": [
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 3,
+      "defanged": 4,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 8
+    }
+  },
+  {
     "id": "15e725d5ca47",
     "title": "Macfinger ClickFix campaign, (Tue, Sep 22nd)",
     "url": "https://isc.sans.edu/diary/rss/33360",
@@ -239,29 +260,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "24ce00a91522",
-    "title": "TerminalFix: PNG Steganography, (Mon, Sep 21st)",
-    "url": "https://isc.sans.edu/diary/rss/33318",
-    "source": "SANS ISC",
-    "published": "2026-09-21T10:33:53.000Z",
-    "summary": "Microsoft Security Research published an interesting blog post \" TerminalFix campaign deploys a reverse tunnel through multistage intrusion \" about a malware campaign. The aspect that I want to take a closer look at, is…",
-    "score": 7,
-    "matched": [
-      "campaign",
-      "intrusion",
-      "malware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 9,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 10
     }
   },
   {
