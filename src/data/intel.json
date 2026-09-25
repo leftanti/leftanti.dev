@@ -1,5 +1,49 @@
 [
   {
+    "id": "ae45fbe3008f",
+    "title": "A Closer Look at Malware From the Macfinger ClickFix Campaign, (Fri, Sep 25th)",
+    "url": "https://isc.sans.edu/diary/rss/33368",
+    "source": "SANS ISC",
+    "published": "2026-09-25T12:45:19.000Z",
+    "summary": "Introduction",
+    "score": 16,
+    "matched": [
+      "campaign",
+      "malware",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 6,
+      "defanged": 27,
+      "addresses": 3,
+      "heading": true,
+      "evidence": 39
+    }
+  },
+  {
+    "id": "f60fa8e7cf68",
+    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/09/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-09-25T12:00:00.000Z",
+    "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-65660 Microsoft SharePoint Code Injection Vulnerability CVE-2026-67279…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "b1531d8f8db5",
     "title": "Roundcube Pre-Auth SQL Injection Flaw Actively Exploited in the Wild",
     "url": "https://thehackernews.com/2026/09/roundcube-pre-auth-sql-injection-flaw.html",
@@ -20,29 +64,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "ae45fbe3008f",
-    "title": "A Closer Look at Malware From the Macfinger ClickFix Campaign, (Fri, Sep 25th)",
-    "url": "https://isc.sans.edu/diary/rss/33368",
-    "source": "SANS ISC",
-    "published": "2026-09-25T06:45:47.000Z",
-    "summary": "Introduction",
-    "score": 16,
-    "matched": [
-      "campaign",
-      "malware",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 6,
-      "defanged": 27,
-      "addresses": 3,
-      "heading": true,
-      "evidence": 39
     }
   },
   {
@@ -172,27 +193,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "cc2b9c5d0475",
-    "title": "Placeholder domain used in dev docs now serves ClickFix attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/placeholder-domain-used-in-dev-docs-now-serves-clickfix-attacks/",
-    "source": "BleepingComputer",
-    "published": "2026-09-23T22:46:01.000Z",
-    "summary": "The \"third-party.com\" domain, commonly used as a placeholder in developer documentation and code examples, is serving a fake Cloudflare verification page that attempts to trick Windows users into executing PowerShell…",
-    "score": 9,
-    "matched": [
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 3,
-      "defanged": 4,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 8
     }
   },
   {
@@ -372,29 +372,6 @@
     }
   },
   {
-    "id": "1554d5146d5b",
-    "title": "TASK#STOMP PowerShell Backdoor Steals Documents, Wi-Fi Passwords, and Clipboard Data",
-    "url": "https://thehackernews.com/2026/09/taskstomp-powershell-backdoor-steals.html",
-    "source": "The Hacker News",
-    "published": "2026-09-21T14:15:40.000Z",
-    "summary": "Cybersecurity researchers have disclosed details of a new campaign dubbed TASK#STOMP that delivers a PowerShell backdoor designed to harvest sensitive data from compromised hosts. The backdoor \"automatically harvests…",
-    "score": 8,
-    "matched": [
-      "campaign",
-      "compromised",
-      "backdoor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 3,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
     "id": "da155613153e",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/09/21/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -406,28 +383,6 @@
       "known exploited"
     ],
     "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "466b4f516547",
-    "title": "ClickFix Lures Deploy ChainScript RAT Using Polygon to Rotate C2 Infrastructure",
-    "url": "https://thehackernews.com/2026/09/clickfix-lures-deploy-chainscript-rat.html",
-    "source": "The Hacker News",
-    "published": "2026-09-21T08:39:38.000Z",
-    "summary": "Threat actors are leveraging ClickFix-like lures to deliver a previously undocumented remote access trojan (RAT) called ChainScript. \"ChainScript has appeared under multiple build names, including ComponentTask33,…",
-    "score": 8,
-    "matched": [
-      "remote access trojan",
-      "ClickFix"
-    ],
-    "kind": "technique",
     "indicators": {
       "v": 2,
       "hashes": 0,
@@ -948,6 +903,27 @@
     }
   },
   {
+    "id": "9f0e9336b780",
+    "title": "Credential Stuffing Campaign Hits SonicWall | Huntress SOC Tracking",
+    "url": "https://www.huntress.com/blog/sonicwall-credential-stuffing-campaign",
+    "source": "Huntress",
+    "published": "2026-07-28T13:00:00.000Z",
+    "summary": "The Huntress SOC is tracking an active credential stuffing campaign targeting SonicWall devices, compromising dozens of organizations since July 25.",
+    "score": 8,
+    "matched": [
+      "campaign"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 14,
+      "defanged": 10,
+      "addresses": 5,
+      "heading": true,
+      "evidence": 32
+    }
+  },
+  {
     "id": "62fcd066ad23",
     "title": "Helpdesk Hijackers: Teams Vishing, Quick Assist, and GoGRPC Backdoor",
     "url": "https://www.zscaler.com/blogs/security-research/helpdesk-hijackers-teams-vishing-quick-assist-and-gogrpc-backdoor",
@@ -1036,6 +1012,28 @@
       "addresses": 5,
       "heading": false,
       "evidence": 56
+    }
+  },
+  {
+    "id": "f6b8c91eb812",
+    "title": "TELEPUZ: a modular MaaS malware spreading via CLICKFIX-VIDAR chains",
+    "url": "https://www.elastic.co/security-labs/threat-command/telepuz-maas-malware-clickfix",
+    "source": "Elastic Security Labs",
+    "published": "2026-07-16T00:00:00.000Z",
+    "summary": "TELEPUZ is a modular malware that emerged through CLICKFIX-VIDAR attacks in April. We reverse-engineered it to show you the infrastructure and evasion techniques that matter.",
+    "score": 8,
+    "matched": [
+      "malware",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 17,
+      "defanged": 45,
+      "addresses": 2,
+      "heading": true,
+      "evidence": 67
     }
   },
   {
