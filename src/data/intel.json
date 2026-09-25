@@ -44,6 +44,27 @@
     }
   },
   {
+    "id": "746dd1995123",
+    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/09/25/cisa-adds-one-known-exploited-vulnerability-catalog",
+    "source": "CISA",
+    "published": "2026-09-25T12:00:00.000Z",
+    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-87902 WordPress Core Remote File Inclusion Vulnerability This type of…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "b1531d8f8db5",
     "title": "Roundcube Pre-Auth SQL Injection Flaw Actively Exploited in the Wild",
     "url": "https://thehackernews.com/2026/09/roundcube-pre-auth-sql-injection-flaw.html",
@@ -485,27 +506,6 @@
     "published": "2026-09-16T12:00:00.000Z",
     "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-76460 Cisco Identity Services Engine Incorrect Use of Privileged APIs…",
     "score": 12,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "d41ff96249a9",
-    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/09/16/cisa-adds-one-known-exploited-vulnerability-catalog",
-    "source": "CISA",
-    "published": "2026-09-16T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-58704 Google Pixel Improper Authorization Vulnerability This type of…",
-    "score": 10,
     "matched": [
       "known exploited"
     ],
