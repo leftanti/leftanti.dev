@@ -1,5 +1,72 @@
 [
   {
+    "id": "b1531d8f8db5",
+    "title": "Roundcube Pre-Auth SQL Injection Flaw Actively Exploited in the Wild",
+    "url": "https://thehackernews.com/2026/09/roundcube-pre-auth-sql-injection-flaw.html",
+    "source": "The Hacker News",
+    "published": "2026-09-25T10:14:02.000Z",
+    "summary": "The Canadian Centre for Cyber Security has warned that a now-patched Roundcube Webmail vulnerability is being actively exploited in the wild. The vulnerability in question is CVE-2026-48842 (CVSS score: 8.1), a…",
+    "score": 16,
+    "matched": [
+      "actively exploited",
+      "exploited in",
+      "in the wild"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "ae45fbe3008f",
+    "title": "A Closer Look at Malware From the Macfinger ClickFix Campaign, (Fri, Sep 25th)",
+    "url": "https://isc.sans.edu/diary/rss/33368",
+    "source": "SANS ISC",
+    "published": "2026-09-25T06:45:47.000Z",
+    "summary": "Introduction",
+    "score": 16,
+    "matched": [
+      "campaign",
+      "malware",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 6,
+      "defanged": 27,
+      "addresses": 3,
+      "heading": true,
+      "evidence": 39
+    }
+  },
+  {
+    "id": "e3589523daea",
+    "title": "2026-09-24: Files for an ISC Diary (Macfinger ClickFix activity)",
+    "url": "https://www.malware-traffic-analysis.net/2026/09/24/index.html",
+    "source": "Malware Traffic Analysis",
+    "published": "2026-09-25T06:36:00.000Z",
+    "summary": "",
+    "score": 8,
+    "matched": [
+      "ClickFix"
+    ],
+    "kind": "technique",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "f08eddd0d2c7",
     "title": "Hacked Ukrainian Sites Serve Fake Cloudflare ClickFix Lures for Psychedelic Stealer",
     "url": "https://thehackernews.com/2026/09/hacked-ukrainian-sites-serve-fake.html",
@@ -881,27 +948,6 @@
     }
   },
   {
-    "id": "9f0e9336b780",
-    "title": "Credential Stuffing Campaign Hits SonicWall | Huntress SOC Tracking",
-    "url": "https://www.huntress.com/blog/sonicwall-credential-stuffing-campaign",
-    "source": "Huntress",
-    "published": "2026-07-28T13:00:00.000Z",
-    "summary": "The Huntress SOC is tracking an active credential stuffing campaign targeting SonicWall devices, compromising dozens of organizations since July 25.",
-    "score": 8,
-    "matched": [
-      "campaign"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 14,
-      "defanged": 10,
-      "addresses": 5,
-      "heading": true,
-      "evidence": 32
-    }
-  },
-  {
     "id": "62fcd066ad23",
     "title": "Helpdesk Hijackers: Teams Vishing, Quick Assist, and GoGRPC Backdoor",
     "url": "https://www.zscaler.com/blogs/security-research/helpdesk-hijackers-teams-vishing-quick-assist-and-gogrpc-backdoor",
@@ -990,49 +1036,6 @@
       "addresses": 5,
       "heading": false,
       "evidence": 56
-    }
-  },
-  {
-    "id": "f6b8c91eb812",
-    "title": "TELEPUZ: a modular MaaS malware spreading via CLICKFIX-VIDAR chains",
-    "url": "https://www.elastic.co/security-labs/threat-command/telepuz-maas-malware-clickfix",
-    "source": "Elastic Security Labs",
-    "published": "2026-07-16T00:00:00.000Z",
-    "summary": "TELEPUZ is a modular malware that emerged through CLICKFIX-VIDAR attacks in April. We reverse-engineered it to show you the infrastructure and evasion techniques that matter.",
-    "score": 8,
-    "matched": [
-      "malware",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 17,
-      "defanged": 45,
-      "addresses": 2,
-      "heading": true,
-      "evidence": 67
-    }
-  },
-  {
-    "id": "bbf853ba6917",
-    "title": "ClaudeFix: Shared Claude Chats Meet ClickFix",
-    "url": "https://www.zscaler.com/blogs/security-research/claudefix-shared-claude-chats-meet-clickfix",
-    "source": "Zscaler ThreatLabz",
-    "published": "2026-07-15T14:39:45.000Z",
-    "summary": "IntroductionClickFix is a widely employed attack technique, first seen in 2024, where a victim is instructed to paste-and-run instructions on their system to “fix” a problem or install software. The seemingly benign…",
-    "score": 8,
-    "matched": [
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 10,
-      "defanged": 233,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 247
     }
   },
   {
