@@ -1,5 +1,28 @@
 [
   {
+    "id": "917fda2ee064",
+    "title": "SharePoint RCE and MikroTik RouterOS Flaws Actively Exploited in the Wild",
+    "url": "https://thehackernews.com/2026/09/sharepoint-rce-and-mikrotik-routeros.html",
+    "source": "The Hacker News",
+    "published": "2026-09-26T08:49:53.000Z",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added two security flaws impacting Microsoft SharePoint and Mikrotik RouterOS to its Known Exploited Vulnerabilities (KEV) catalog, citing…",
+    "score": 21,
+    "matched": [
+      "actively exploited",
+      "exploited in",
+      "in the wild"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 1,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 1
+    }
+  },
+  {
     "id": "ae45fbe3008f",
     "title": "A Closer Look at Malware From the Macfinger ClickFix Campaign, (Fri, Sep 25th)",
     "url": "https://isc.sans.edu/diary/rss/33368",
@@ -346,50 +369,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 3
-    }
-  },
-  {
-    "id": "1dcb430bc406",
-    "title": "Contagious Interview Campaign Compromises 30,000 Devices, Steals $10.71M in Crypto",
-    "url": "https://thehackernews.com/2026/09/contagious-interview-campaign.html",
-    "source": "The Hacker News",
-    "published": "2026-09-21T17:19:00.000Z",
-    "summary": "The North Korean threat actors behind the Contagious Interview campaign have compromised at least 30,000 devices located in more than 100 countries and siphoned funds or account credentials from over 7,000…",
-    "score": 8,
-    "matched": [
-      "campaign",
-      "compromised"
-    ],
-    "kind": "campaign",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "5997c3e8371d",
-    "title": "⚡ Weekly Recap: Cisco 0-Day, AI Agent RCE, ClickFix Attacks, ClickFix Surge, and Browser Hijacks",
-    "url": "https://thehackernews.com/2026/09/weekly-recap-cisco-0-day-ai-agent-rce.html",
-    "source": "The Hacker News",
-    "published": "2026-09-21T14:24:13.000Z",
-    "summary": "A browser. A plugin. A package. A login screen. Normal stuff. That is basically the problem this week. The trouble keeps showing up inside things people already trust: code that takes a bad turn, old payloads coming…",
-    "score": 8,
-    "matched": [
-      "0-day",
-      "ClickFix"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
     }
   },
   {
@@ -1034,6 +1013,27 @@
       "addresses": 2,
       "heading": true,
       "evidence": 67
+    }
+  },
+  {
+    "id": "bbf853ba6917",
+    "title": "ClaudeFix: Shared Claude Chats Meet ClickFix",
+    "url": "https://www.zscaler.com/blogs/security-research/claudefix-shared-claude-chats-meet-clickfix",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-07-15T14:39:45.000Z",
+    "summary": "IntroductionClickFix is a widely employed attack technique, first seen in 2024, where a victim is instructed to paste-and-run instructions on their system to “fix” a problem or install software. The seemingly benign…",
+    "score": 8,
+    "matched": [
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 10,
+      "defanged": 233,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 247
     }
   },
   {
