@@ -1,5 +1,28 @@
 [
   {
+    "id": "d0389279f562",
+    "title": "Lunex Stealer Abuses AMD Driver to Disable Security Monitoring and Steal Browser Credentials",
+    "url": "https://thehackernews.com/2026/09/lunex-stealer-abuses-amd-driver-to.html",
+    "source": "The Hacker News",
+    "published": "2026-09-26T18:22:52.000Z",
+    "summary": "The Psychedelic Stealer malware distributed via compromised Ukrainian websites using ClickFix-style Cloudflare verification checks is part of a wider malware-as-a-service (MaaS) platform called Lunex. The new findings…",
+    "score": 8,
+    "matched": [
+      "compromised",
+      "malware",
+      "stealer"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 7,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 8
+    }
+  },
+  {
     "id": "917fda2ee064",
     "title": "SharePoint RCE and MikroTik RouterOS Flaws Actively Exploited in the Wild",
     "url": "https://thehackernews.com/2026/09/sharepoint-rce-and-mikrotik-routeros.html",
@@ -1013,27 +1036,6 @@
       "addresses": 2,
       "heading": true,
       "evidence": 67
-    }
-  },
-  {
-    "id": "bbf853ba6917",
-    "title": "ClaudeFix: Shared Claude Chats Meet ClickFix",
-    "url": "https://www.zscaler.com/blogs/security-research/claudefix-shared-claude-chats-meet-clickfix",
-    "source": "Zscaler ThreatLabz",
-    "published": "2026-07-15T14:39:45.000Z",
-    "summary": "IntroductionClickFix is a widely employed attack technique, first seen in 2024, where a victim is instructed to paste-and-run instructions on their system to “fix” a problem or install software. The seemingly benign…",
-    "score": 8,
-    "matched": [
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 10,
-      "defanged": 233,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 247
     }
   },
   {
