@@ -1,25 +1,23 @@
 [
   {
-    "id": "1e3a7f249c71",
-    "title": "Warning: Two Unpatched Citrix NetScaler RCE Zero-Days Under Active Exploitation",
-    "url": "https://thehackernews.com/2026/09/warning-two-unpatched-citrix-netscaler.html",
-    "source": "The Hacker News",
-    "published": "2026-09-27T07:47:57.000Z",
-    "summary": "Two new unpatched zero-day vulnerabilities in Citrix NetScaler ADC and NetScaler Gateway appliances that allow remote code execution are being actively exploited in the wild, security firm watchTowr said on September…",
-    "score": 11,
+    "id": "596df4519eeb",
+    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/09/27/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-09-27T12:00:00.000Z",
+    "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-88771 Citrix NetScaler Improper Input Validation Vulnerability…",
+    "score": 10,
     "matched": [
-      "actively exploited",
-      "exploited in",
-      "in the wild"
+      "known exploited"
     ],
-    "kind": "ioc",
+    "kind": "exploited",
     "indicators": {
       "v": 2,
       "hashes": 0,
-      "defanged": 1,
+      "defanged": 0,
       "addresses": 0,
-      "heading": true,
-      "evidence": 4
+      "heading": false,
+      "evidence": 0
     }
   },
   {
@@ -524,27 +522,6 @@
     }
   },
   {
-    "id": "21cfd79f3f9a",
-    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/09/16/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-    "source": "CISA",
-    "published": "2026-09-16T12:00:00.000Z",
-    "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-76460 Cisco Identity Services Engine Incorrect Use of Privileged APIs…",
-    "score": 12,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
     "id": "e55a80bc52c0",
     "title": "NightEagle targets Russian companies",
     "url": "https://securelist.com/tr/nighteagle-apt-ghostcontainer-and-tunneling/121323/",
@@ -1037,6 +1014,28 @@
       "addresses": 5,
       "heading": false,
       "evidence": 56
+    }
+  },
+  {
+    "id": "f6b8c91eb812",
+    "title": "TELEPUZ: a modular MaaS malware spreading via CLICKFIX-VIDAR chains",
+    "url": "https://www.elastic.co/security-labs/threat-command/telepuz-maas-malware-clickfix",
+    "source": "Elastic Security Labs",
+    "published": "2026-07-16T00:00:00.000Z",
+    "summary": "TELEPUZ is a modular malware that emerged through CLICKFIX-VIDAR attacks in April. We reverse-engineered it to show you the infrastructure and evasion techniques that matter.",
+    "score": 8,
+    "matched": [
+      "malware",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 17,
+      "defanged": 45,
+      "addresses": 2,
+      "heading": true,
+      "evidence": 67
     }
   },
   {
