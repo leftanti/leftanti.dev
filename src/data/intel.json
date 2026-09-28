@@ -1,5 +1,26 @@
 [
   {
+    "id": "21a555d4ed91",
+    "title": "JadePuffer agentic AI attacks target Azure, destroy cloud resources",
+    "url": "https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-ai-attacks-target-azure-destroy-cloud-resources/",
+    "source": "BleepingComputer",
+    "published": "2026-09-28T15:49:27.000Z",
+    "summary": "The JadePuffer ransomware operator is targeting Azure tenants with agent-driven attacks that conduct reconnaissance, steal credentials, and destroy core components. [...]",
+    "score": 7,
+    "matched": [
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
     "id": "b2d877fcb67a",
     "title": "JADEPUFFER-Linked Attackers Used Compromised Service Principals to Delete Azure Resources",
     "url": "https://thehackernews.com/2026/09/jadepuffer-linked-attackers-used.html",
@@ -348,49 +369,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 4
-    }
-  },
-  {
-    "id": "d1d540cc1041",
-    "title": "Researcher Drops BigDiskBuster Zero-Day PoC That Blocks Microsoft Defender Updates",
-    "url": "https://thehackernews.com/2026/09/researcher-drops-bigdiskbuster-zero-day.html",
-    "source": "The Hacker News",
-    "published": "2026-09-22T16:14:04.000Z",
-    "summary": "A zero-day proof-of-concept tool that stops Microsoft Defender from installing platform and signature updates by filling all available disk space was published on GitHub on September 19. The tool, called BigDiskBuster,…",
-    "score": 14,
-    "matched": [
-      "zero-day"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "f9ade19d5d9c",
-    "title": "New CVSS 10.0 VeloCloud Orchestrator Flaw Actively Exploited in Certificate-Based Setups",
-    "url": "https://thehackernews.com/2026/09/new-cvss-100-velocloud-orchestrator.html",
-    "source": "The Hacker News",
-    "published": "2026-09-22T12:29:00.000Z",
-    "summary": "Attackers are exploiting a new flaw in on-premises VeloCloud Orchestrator (VCO), the server that manages the Edge devices in a VeloCloud SD-WAN, Arista said on September 22. The flaw, tracked as CVE-2026-93952, may…",
-    "score": 10,
-    "matched": [
-      "actively exploited",
-      "exploited in"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 1,
-      "defanged": 2,
-      "addresses": 12,
-      "heading": false,
-      "evidence": 15
     }
   },
   {
@@ -882,28 +860,6 @@
     }
   },
   {
-    "id": "870dff2b21df",
-    "title": "Shattering the Dream – When a Job Offer Becomes a Zero-Day Attack",
-    "url": "https://research.checkpoint.com/2026/shattering-the-dream-when-a-job-offer-becomes-a-zero-day-attack/",
-    "source": "Check Point Research",
-    "published": "2026-08-11T17:30:00.000Z",
-    "summary": "Key Points Introduction Since early 2026, Check Point Research has tracked a wave of the Operation Dream Job campaign. This wave primarily targeted the defense sector worldwide, with a particular emphasis on companies…",
-    "score": 10,
-    "matched": [
-      "zero-day",
-      "campaign"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 41,
-      "defanged": 5,
-      "addresses": 2,
-      "heading": false,
-      "evidence": 48
-    }
-  },
-  {
     "id": "9f0e9336b780",
     "title": "Credential Stuffing Campaign Hits SonicWall | Huntress SOC Tracking",
     "url": "https://www.huntress.com/blog/sonicwall-credential-stuffing-campaign",
@@ -1038,6 +994,27 @@
     }
   },
   {
+    "id": "bbf853ba6917",
+    "title": "ClaudeFix: Shared Claude Chats Meet ClickFix",
+    "url": "https://www.zscaler.com/blogs/security-research/claudefix-shared-claude-chats-meet-clickfix",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-07-15T14:39:45.000Z",
+    "summary": "IntroductionClickFix is a widely employed attack technique, first seen in 2024, where a victim is instructed to paste-and-run instructions on their system to “fix” a problem or install software. The seemingly benign…",
+    "score": 8,
+    "matched": [
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 10,
+      "defanged": 233,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 247
+    }
+  },
+  {
     "id": "0502111c2751",
     "title": "Threat Actors Achieve Persistence After SQL Injection",
     "url": "https://www.huntress.com/blog/sql-injection-attacker-persistence",
@@ -1057,6 +1034,27 @@
       "addresses": 0,
       "heading": false,
       "evidence": 21
+    }
+  },
+  {
+    "id": "16b5d60ea281",
+    "title": "ClickFix to Cash-Out: Anatomy of a Mexican Banking-Fraud Toolkit",
+    "url": "https://www.elastic.co/security-labs/threat-command/mexican-banking-fraud-scmbanker-ref6045",
+    "source": "Elastic Security Labs",
+    "published": "2026-07-08T00:00:00.000Z",
+    "summary": "Elastic Security Labs tracks REF6045, an active operator-assisted banking fraud operation targeting customers of Mexican banks, fintech, payment processors, and cryptocurrency exchanges.",
+    "score": 8,
+    "matched": [
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 30,
+      "defanged": 76,
+      "addresses": 3,
+      "heading": false,
+      "evidence": 109
     }
   },
   {
