@@ -1,23 +1,24 @@
 [
   {
-    "id": "21a555d4ed91",
-    "title": "JadePuffer agentic AI attacks target Azure, destroy cloud resources",
-    "url": "https://www.bleepingcomputer.com/news/security/jadepuffer-agentic-ai-attacks-target-azure-destroy-cloud-resources/",
-    "source": "BleepingComputer",
-    "published": "2026-09-28T15:49:27.000Z",
-    "summary": "The JadePuffer ransomware operator is targeting Azure tenants with agent-driven attacks that conduct reconnaissance, steal credentials, and destroy core components. [...]",
-    "score": 7,
+    "id": "625d808ffc99",
+    "title": "Attackers Abuse ChatGPT Custom GPTs to Deliver RAT via ClickFix",
+    "url": "https://www.huntress.com/blog/chatgpt-custom-gpts-clickfix-rat",
+    "source": "Huntress",
+    "published": "2026-09-28T20:00:00.000Z",
+    "summary": "Huntress researchers reveal how attackers are exploiting ChatGPT Custom GPTs to spread ClickFix lures and DLL-sideloaded malware. See the full breakdown.",
+    "score": 8,
     "matched": [
-      "ransomware"
+      "malware",
+      "ClickFix"
     ],
     "kind": "ioc",
     "indicators": {
       "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
+      "hashes": 39,
+      "defanged": 26,
+      "addresses": 2,
+      "heading": true,
+      "evidence": 70
     }
   },
   {
