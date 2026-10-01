@@ -1,5 +1,26 @@
 [
   {
+    "id": "db301593e724",
+    "title": "Defender Exclusion Abuse: How Attackers Hide Malware from MDAV",
+    "url": "https://www.huntress.com/blog/you-can-run-but-you-cant-hide-defender-exclusions",
+    "source": "Huntress",
+    "published": "2026-09-30T17:30:00.000Z",
+    "summary": "See how attackers like GootKit and WhisperGate abuse Windows Defender exclusions to hide malware from AV scans — and how Huntress detects it.",
+    "score": 9,
+    "matched": [
+      "malware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 23,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 23
+    }
+  },
+  {
     "id": "29c4859e9f3e",
     "title": "Attackers Abuse ChatGPT Custom GPTs to Deliver RAT via ClickFix Lures",
     "url": "https://thehackernews.com/2026/09/attackers-abuse-chatgpt-custom-gpts-to.html",
@@ -384,28 +405,6 @@
       "known exploited"
     ],
     "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "1af8eb0d6b91",
-    "title": "17,000 URLs Reveal How ClickFix Turns Trusted Websites Into Malware Traps: Report by CTM360",
-    "url": "https://thehackernews.com/2026/09/17000-urls-reveal-how-clickfix-turns.html",
-    "source": "The Hacker News",
-    "published": "2026-09-24T09:14:21.000Z",
-    "summary": "ClickFix has become the most common way attackers get into enterprise networks, and it does it without an exploit, an attachment, or a file on disk. Our new global threat report traces the technique from a novelty in…",
-    "score": 8,
-    "matched": [
-      "malware",
-      "ClickFix"
-    ],
-    "kind": "technique",
     "indicators": {
       "v": 2,
       "hashes": 0,
