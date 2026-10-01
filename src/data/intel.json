@@ -1,5 +1,26 @@
 [
   {
+    "id": "c698c79d197c",
+    "title": "OpenAI Disrupts Reasoning Extraction Campaign Linked to Moonshot AI Associates",
+    "url": "https://thehackernews.com/2026/10/openai-disrupts-reasoning-extraction.html",
+    "source": "The Hacker News",
+    "published": "2026-10-01T10:42:36.000Z",
+    "summary": "OpenAI on Wednesday said it identified and disrupted a coordinated distillation campaign that was designed to illicitly extract protected reasoning from its artificial intelligence (AI) models. A \"core cluster of the…",
+    "score": 8,
+    "matched": [
+      "campaign"
+    ],
+    "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 1,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 1
+    }
+  },
+  {
     "id": "db301593e724",
     "title": "Defender Exclusion Abuse: How Attackers Hide Malware from MDAV",
     "url": "https://www.huntress.com/blog/you-can-run-but-you-cant-hide-defender-exclusions",
@@ -347,29 +368,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "f08eddd0d2c7",
-    "title": "Hacked Ukrainian Sites Serve Fake Cloudflare ClickFix Lures for Psychedelic Stealer",
-    "url": "https://thehackernews.com/2026/09/hacked-ukrainian-sites-serve-fake.html",
-    "source": "The Hacker News",
-    "published": "2026-09-24T14:29:06.000Z",
-    "summary": "An active ClickFix campaign has been observed compromising legitimate Ukrainian business websites to inject bogus Cloudflare verification pages and trick victims into downloading a previously undocumented information…",
-    "score": 16,
-    "matched": [
-      "campaign",
-      "stealer",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 6,
-      "addresses": 2,
-      "heading": false,
-      "evidence": 8
     }
   },
   {
