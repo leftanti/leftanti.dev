@@ -1,5 +1,28 @@
 [
   {
+    "id": "376c054ae07c",
+    "title": "Fortinet warns of critical FortiMail flaw exploited in zero-day attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-fortimail-flaw-exploited-in-zero-day-attacks/",
+    "source": "BleepingComputer",
+    "published": "2026-10-01T22:42:49.000Z",
+    "summary": "Fortinet is warning customers of a critical FortiMail vulnerability, tracked as CVE-2026-104286, that is being actively exploited in zero-day attacks to execute unauthorized code or commands on vulnerable devices. [...]",
+    "score": 11,
+    "matched": [
+      "actively exploited",
+      "exploited in",
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 9,
+      "defanged": 2,
+      "addresses": 3,
+      "heading": true,
+      "evidence": 17
+    }
+  },
+  {
     "id": "54143a9a3bed",
     "title": "Huntress Tragic Quadrant: Top Cyber Threats Wrecking Businesses",
     "url": "https://www.huntress.com/blog/huntress-tragic-quadrant-cyber-threats",
@@ -834,29 +857,6 @@
       "addresses": 7,
       "heading": true,
       "evidence": 13
-    }
-  },
-  {
-    "id": "4fb83d6f230e",
-    "title": "QuickFox Supply Chain Attack Used to Deploy FDMTP Implant",
-    "url": "https://feeds.fortinet.com/~/966214247/0/fortinet/blog/threat-research~QuickFox-Supply-Chain-Attack-Used-to-Deploy-FDMTP-Implant",
-    "source": "Fortinet",
-    "published": "2026-08-04T13:00:00.000Z",
-    "summary": "The FortiGuard Labs Incident Response team analyzes a QuickFox supply chain attack that used trojanized Windows installers, selective targeting, and an evolving FDMTP implant",
-    "score": 7,
-    "matched": [
-      "incident response",
-      "implant",
-      "supply chain"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 36,
-      "defanged": 625,
-      "addresses": 58,
-      "heading": true,
-      "evidence": 722
     }
   },
   {
