@@ -1,5 +1,26 @@
 [
   {
+    "id": "d0de9f0b66ea",
+    "title": "2026-09-29: Macfinger ClickFix activity",
+    "url": "https://www.malware-traffic-analysis.net/2026/09/29/index.html",
+    "source": "Malware Traffic Analysis",
+    "published": "2026-10-03T17:39:00.000Z",
+    "summary": "",
+    "score": 8,
+    "matched": [
+      "ClickFix"
+    ],
+    "kind": "technique",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "289771d56894",
     "title": "Warlock Exploits SharePoint Flaws to Disable Security Tools and Deploy Ransomware",
     "url": "https://thehackernews.com/2026/10/warlock-exploits-sharepoint-flaws-to.html",
@@ -494,28 +515,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "751077092345",
-    "title": "Beware the SparroWock: The backdoor that bites, the commands that catch",
-    "url": "https://www.welivesecurity.com/en/eset-research/beware-sparrowock-backdoor-bites-commands-catch/",
-    "source": "ESET Research",
-    "published": "2026-09-17T08:50:00.000Z",
-    "summary": "ESET researchers document SparroWocky, the new flagship backdoor of the FamousSparrow APT group",
-    "score": 7,
-    "matched": [
-      "APT",
-      "backdoor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 19,
-      "addresses": 18,
-      "heading": true,
-      "evidence": 42
     }
   },
   {
