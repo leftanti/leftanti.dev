@@ -1,5 +1,27 @@
 [
   {
+    "id": "453d2c5398a1",
+    "title": "China-Aligned TA419 Targets U.S. AI Policy Experts With Microsoft AitM Phishing",
+    "url": "https://thehackernews.com/2026/10/china-aligned-ta419-targets-us-ai.html",
+    "source": "The Hacker News",
+    "published": "2026-10-04T07:20:32.000Z",
+    "summary": "A new China-nexus cyber espionage group known as TA419 has been attributed to multiple credential phishing campaigns targeting artificial intelligence (AI) experts working for U.S. think tanks, universities, and legal…",
+    "score": 10,
+    "matched": [
+      "phishing",
+      "AiTM"
+    ],
+    "kind": "technique",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 1,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 1
+    }
+  },
+  {
     "id": "f0334488aea8",
     "title": "2026-09-30: SmartApeSG ClickFix pushes CNCmachineRMS RAT",
     "url": "https://www.malware-traffic-analysis.net/2026/09/30/index.html",
@@ -345,28 +367,6 @@
       "addresses": 2,
       "heading": true,
       "evidence": 70
-    }
-  },
-  {
-    "id": "b2d877fcb67a",
-    "title": "JADEPUFFER-Linked Attackers Used Compromised Service Principals to Delete Azure Resources",
-    "url": "https://thehackernews.com/2026/09/jadepuffer-linked-attackers-used.html",
-    "source": "The Hacker News",
-    "published": "2026-09-28T09:08:21.000Z",
-    "summary": "The threat actor known as JADEPUFFER has been observed orchestrating destructive actions within a Microsoft Azure environment using compromised service principals. Microsoft, which is tracking the activity under the…",
-    "score": 8,
-    "matched": [
-      "threat actor",
-      "compromised"
-    ],
-    "kind": "campaign",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 1,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 1
     }
   },
   {
