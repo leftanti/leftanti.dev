@@ -1,5 +1,26 @@
 [
   {
+    "id": "8a494d145a3a",
+    "title": "How Huntress Detects and Responds to a ClickFix Attack",
+    "url": "https://www.huntress.com/blog/fix-for-clickfix",
+    "source": "Huntress",
+    "published": "2026-10-05T14:00:00.000Z",
+    "summary": "ClickFix attacks leave no file to scan or block, which is why most endpoint tools miss it. See how Huntress Attack Disruption kills the chain in under a second.",
+    "score": 8,
+    "matched": [
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 19,
+      "defanged": 3,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 22
+    }
+  },
+  {
     "id": "b828549ba278",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/10/04/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -171,28 +192,6 @@
       "addresses": 2,
       "heading": true,
       "evidence": 8
-    }
-  },
-  {
-    "id": "54143a9a3bed",
-    "title": "Huntress Tragic Quadrant: Top Cyber Threats Wrecking Businesses",
-    "url": "https://www.huntress.com/blog/huntress-tragic-quadrant-cyber-threats",
-    "source": "Huntress",
-    "published": "2026-10-01T13:00:00.000Z",
-    "summary": "The Huntress Tragic Quadrant ranks the cyber threats hitting businesses most, from RMM abuse to AiTM, ClickFix, using real SOC data.",
-    "score": 7,
-    "matched": [
-      "ClickFix",
-      "AiTM"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 19,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 19
     }
   },
   {
