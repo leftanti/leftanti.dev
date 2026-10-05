@@ -174,26 +174,25 @@
     }
   },
   {
-    "id": "376c054ae07c",
-    "title": "Fortinet warns of critical FortiMail flaw exploited in zero-day attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-fortimail-flaw-exploited-in-zero-day-attacks/",
-    "source": "BleepingComputer",
-    "published": "2026-10-01T22:42:49.000Z",
-    "summary": "Fortinet is warning customers of a critical FortiMail vulnerability, tracked as CVE-2026-104286, that is being actively exploited in zero-day attacks to execute unauthorized code or commands on vulnerable devices. [...]",
-    "score": 11,
+    "id": "54143a9a3bed",
+    "title": "Huntress Tragic Quadrant: Top Cyber Threats Wrecking Businesses",
+    "url": "https://www.huntress.com/blog/huntress-tragic-quadrant-cyber-threats",
+    "source": "Huntress",
+    "published": "2026-10-01T13:00:00.000Z",
+    "summary": "The Huntress Tragic Quadrant ranks the cyber threats hitting businesses most, from RMM abuse to AiTM, ClickFix, using real SOC data.",
+    "score": 7,
     "matched": [
-      "actively exploited",
-      "exploited in",
-      "zero-day"
+      "ClickFix",
+      "AiTM"
     ],
     "kind": "ioc",
     "indicators": {
       "v": 2,
-      "hashes": 9,
-      "defanged": 2,
-      "addresses": 3,
-      "heading": true,
-      "evidence": 17
+      "hashes": 19,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 19
     }
   },
   {
