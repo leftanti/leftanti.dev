@@ -1,5 +1,27 @@
 [
   {
+    "id": "15810e447b0d",
+    "title": "ClickFix Smuggles Payloads Through Browser Cache to Bypass Windows Run Limits",
+    "url": "https://thehackernews.com/2026/10/clickfix-smuggles-payloads-through.html",
+    "source": "The Hacker News",
+    "published": "2026-10-06T05:22:55.000Z",
+    "summary": "A new type of ClickFix attack is using compromised websites to trick users into executing a malicious payload cached in a web browser's cache. \"Instead of downloading and executing remote payloads like the typical…",
+    "score": 10,
+    "matched": [
+      "compromised",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 4,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 4
+    }
+  },
+  {
     "id": "8a494d145a3a",
     "title": "How Huntress Detects and Responds to a ClickFix Attack",
     "url": "https://www.huntress.com/blog/fix-for-clickfix",
@@ -1026,27 +1048,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 21
-    }
-  },
-  {
-    "id": "16b5d60ea281",
-    "title": "ClickFix to Cash-Out: Anatomy of a Mexican Banking-Fraud Toolkit",
-    "url": "https://www.elastic.co/security-labs/threat-command/mexican-banking-fraud-scmbanker-ref6045",
-    "source": "Elastic Security Labs",
-    "published": "2026-07-08T00:00:00.000Z",
-    "summary": "Elastic Security Labs tracks REF6045, an active operator-assisted banking fraud operation targeting customers of Mexican banks, fintech, payment processors, and cryptocurrency exchanges.",
-    "score": 8,
-    "matched": [
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 30,
-      "defanged": 76,
-      "addresses": 3,
-      "heading": false,
-      "evidence": 109
     }
   },
   {
