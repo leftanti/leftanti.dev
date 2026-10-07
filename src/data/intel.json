@@ -1,5 +1,27 @@
 [
   {
+    "id": "41f6ab9f31ba",
+    "title": "Phishing Campaign Abuses Microsoft Power BI to Deploy Rogue RMMs",
+    "url": "https://www.huntress.com/blog/screenconnect-power-bi",
+    "source": "Huntress",
+    "published": "2026-10-07T13:00:00.000Z",
+    "summary": "A recent phishing campaign abused Microsoft Power BI links to deliver multiple rogue ScreenConnect clients.",
+    "score": 12,
+    "matched": [
+      "campaign",
+      "phishing"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 32,
+      "defanged": 30,
+      "addresses": 0,
+      "heading": true,
+      "evidence": 65
+    }
+  },
+  {
     "id": "5c07cdbef377",
     "title": "Blinder Tunnel Campaign Targets Iraqi Infrastructure",
     "url": "https://unit42.paloaltonetworks.com/blinder-tunnel-targets-critical-infrastructure/",
@@ -345,28 +367,6 @@
     }
   },
   {
-    "id": "e71234950615",
-    "title": "US-Focused CSuite Phishing Steals Microsoft 365 Sessions and Deploys RMM Tools for Remote Access",
-    "url": "https://thehackernews.com/2026/09/us-focused-csuite-phishing-steals.html",
-    "source": "The Hacker News",
-    "published": "2026-09-30T10:45:00.000Z",
-    "summary": "ANY.RUN researchers traced a US-focused CSuite phishing campaign across 351 sandbox analyses, with 51% of submissions coming from the United States. Technology, manufacturing, government, and consulting organizations…",
-    "score": 14,
-    "matched": [
-      "campaign",
-      "phishing"
-    ],
-    "kind": "campaign",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 1,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 1
-    }
-  },
-  {
     "id": "5e35133b1276",
     "title": "Star Blizzard refines phishing and malware delivery with the RedFlick technique",
     "url": "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/",
@@ -559,6 +559,28 @@
     }
   },
   {
+    "id": "751077092345",
+    "title": "Beware the SparroWock: The backdoor that bites, the commands that catch",
+    "url": "https://www.welivesecurity.com/en/eset-research/beware-sparrowock-backdoor-bites-commands-catch/",
+    "source": "ESET Research",
+    "published": "2026-09-17T08:50:00.000Z",
+    "summary": "ESET researchers document SparroWocky, the new flagship backdoor of the FamousSparrow APT group",
+    "score": 7,
+    "matched": [
+      "APT",
+      "backdoor"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 19,
+      "addresses": 18,
+      "heading": true,
+      "evidence": 42
+    }
+  },
+  {
     "id": "8a3f8241ec08",
     "title": "Operation RapidRust: APT36 Deploys RUSTYSHADE, RUSTYMOVE, PSNATCH, and BASHNATCH",
     "url": "https://www.zscaler.com/blogs/security-research/operation-rapidrust-apt36-deploys-rustyshade-rustymove-psnatch-and",
@@ -624,74 +646,6 @@
       "addresses": 2,
       "heading": true,
       "evidence": 52
-    }
-  },
-  {
-    "id": "cdddae27cbea",
-    "title": "ClickFix moves into the browser: Cryptocurrency theft with Google-hosted C2",
-    "url": "https://blog.talosintelligence.com/clickfix-moves-into-the-browser/",
-    "source": "Cisco Talos",
-    "published": "2026-09-08T10:00:38.000Z",
-    "summary": "Cisco Talos is tracking a cryptocurrency-stealing campaign that abuses the Google Visualization API for command and control (C2), retrieving obfuscated JavaScript from a publicly published Google Sheets document and…",
-    "score": 12,
-    "matched": [
-      "campaign",
-      "ClickFix",
-      "command and control"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 20,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 20
-    }
-  },
-  {
-    "id": "ba1e0af3fb41",
-    "title": "DPRK APTs: Ted backdoor and curlRAT target South Korean media and automotive sectors",
-    "url": "https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors",
-    "source": "Rapid7",
-    "published": "2026-09-04T12:00:00.000Z",
-    "summary": "Overview A new Linux toolkit, identified by Rapid7 Labs, has been targeting organizations across South Korea’s automotive and media industries with minimal detection. The campaign made use of a HAProxy instance named…",
-    "score": 8,
-    "matched": [
-      "campaign",
-      "backdoor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 30,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": true,
-      "evidence": 33
-    }
-  },
-  {
-    "id": "a4323813a3bc",
-    "title": "Critical SonicWall SMA1000 Vulnerabilities CVE-2026-83548, CVE-2026-83549 Exploited in the Wild",
-    "url": "https://www.rapid7.com/blog/post/etr-critical-sonicwall-sma1000-vulnerabilities-cve-2026-83548-cve-2026-83549-exploited-in-the-wild",
-    "source": "Rapid7",
-    "published": "2026-09-02T16:58:45.000Z",
-    "summary": "Overview On September 1, 2026, SonicWall disclosed two vulnerabilities affecting SonicWall SMA1000 appliances that the vendor says are being actively exploited in the wild. The vulnerabilities, CVE-2026-83548 and…",
-    "score": 11,
-    "matched": [
-      "actively exploited",
-      "exploited in",
-      "in the wild"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": true,
-      "evidence": 3
     }
   },
   {
@@ -875,6 +829,29 @@
     }
   },
   {
+    "id": "4fb83d6f230e",
+    "title": "QuickFox Supply Chain Attack Used to Deploy FDMTP Implant",
+    "url": "https://feeds.fortinet.com/~/966214247/0/fortinet/blog/threat-research~QuickFox-Supply-Chain-Attack-Used-to-Deploy-FDMTP-Implant",
+    "source": "Fortinet",
+    "published": "2026-08-04T13:00:00.000Z",
+    "summary": "The FortiGuard Labs Incident Response team analyzes a QuickFox supply chain attack that used trojanized Windows installers, selective targeting, and an evolving FDMTP implant",
+    "score": 7,
+    "matched": [
+      "incident response",
+      "implant",
+      "supply chain"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 36,
+      "defanged": 625,
+      "addresses": 58,
+      "heading": true,
+      "evidence": 722
+    }
+  },
+  {
     "id": "9f0e9336b780",
     "title": "Credential Stuffing Campaign Hits SonicWall | Huntress SOC Tracking",
     "url": "https://www.huntress.com/blog/sonicwall-credential-stuffing-campaign",
@@ -1049,6 +1026,27 @@
       "addresses": 0,
       "heading": false,
       "evidence": 21
+    }
+  },
+  {
+    "id": "16b5d60ea281",
+    "title": "ClickFix to Cash-Out: Anatomy of a Mexican Banking-Fraud Toolkit",
+    "url": "https://www.elastic.co/security-labs/threat-command/mexican-banking-fraud-scmbanker-ref6045",
+    "source": "Elastic Security Labs",
+    "published": "2026-07-08T00:00:00.000Z",
+    "summary": "Elastic Security Labs tracks REF6045, an active operator-assisted banking fraud operation targeting customers of Mexican banks, fintech, payment processors, and cryptocurrency exchanges.",
+    "score": 8,
+    "matched": [
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 30,
+      "defanged": 76,
+      "addresses": 3,
+      "heading": false,
+      "evidence": 109
     }
   },
   {
