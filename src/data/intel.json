@@ -1,5 +1,28 @@
 [
   {
+    "id": "9882c305bcdb",
+    "title": "Eight Malicious npm Packages Downloaded 40,767 Times Deliver Overlord RAT and Stealer",
+    "url": "https://thehackernews.com/2026/10/eight-malicious-npm-packages-downloaded.html",
+    "source": "The Hacker News",
+    "published": "2026-10-07T17:43:20.000Z",
+    "summary": "Cybersecurity researchers have disclosed details of a long-running npm supply chain malware campaign that pushes information stealers and remote access trojans (RAT) to compromised hosts. The campaign has been codenamed…",
+    "score": 11,
+    "matched": [
+      "campaign",
+      "compromised",
+      "malware"
+    ],
+    "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "41f6ab9f31ba",
     "title": "Phishing Campaign Abuses Microsoft Power BI to Deploy Rogue RMMs",
     "url": "https://www.huntress.com/blog/screenconnect-power-bi",
@@ -321,28 +344,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 23
-    }
-  },
-  {
-    "id": "29c4859e9f3e",
-    "title": "Attackers Abuse ChatGPT Custom GPTs to Deliver RAT via ClickFix Lures",
-    "url": "https://thehackernews.com/2026/09/attackers-abuse-chatgpt-custom-gpts-to.html",
-    "source": "The Hacker News",
-    "published": "2026-09-30T15:00:15.000Z",
-    "summary": "Threat actors are abusing ChatGPT Custom GPTs to disguise them as legitimate product offerings and direct unsuspecting victims to malicious sites that employ ClickFix lures to deliver malware. Huntress, which observed…",
-    "score": 8,
-    "matched": [
-      "malware",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 3,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 5
     }
   },
   {
