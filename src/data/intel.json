@@ -1,5 +1,74 @@
 [
   {
+    "id": "2d98a21446b6",
+    "title": "Suspected TraderTraitor Group Uses Trojanized Terraform Provider to Deliver Cross-Platform Malware",
+    "url": "https://www.zscaler.com/blogs/security-research/suspected-tradertraitor-group-uses-trojanized-terraform-provider-deliver",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-10-08T19:49:04.000Z",
+    "summary": "IntroductionIn July 2026, Zscaler ThreatLabz uncovered a campaign linked to TraderTraitor (also tracked as Jade Sleet, UNC4899, Pressure Chollima, and Slow Pisces), an advanced persistent threat actor backed by the…",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "threat actor",
+      "malware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 13,
+      "defanged": 16,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 33
+    }
+  },
+  {
+    "id": "f8595042a198",
+    "title": "ThreatsDay: Ransomware Affiliate Betrayal, WhatsApp RAT, Exposed Hacker Tools and 12 More Stories",
+    "url": "https://thehackernews.com/2026/10/threatsday-ransomware-affiliate.html",
+    "source": "The Hacker News",
+    "published": "2026-10-08T17:58:02.000Z",
+    "summary": "The crooks have trust problems of their own. One ransomware affiliate decided to keep the profits for himself. Elsewhere, an attacker left a server exposed, complete with tools and traces of an intrusion. Apparently,…",
+    "score": 9,
+    "matched": [
+      "affiliate",
+      "intrusion",
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 6,
+      "addresses": 3,
+      "heading": false,
+      "evidence": 9
+    }
+  },
+  {
+    "id": "d2da43aacd92",
+    "title": "FakeGit malware campaign returns with 17,610 malicious GitHub repos",
+    "url": "https://www.bleepingcomputer.com/news/security/fakegit-malware-campaign-returns-with-17-610-malicious-github-repos/",
+    "source": "BleepingComputer",
+    "published": "2026-10-08T17:10:55.000Z",
+    "summary": "More than 17,000 fake repositories on GitHub are distributing the SmartLoader malware after the FakeGit campaign reactivated earlier this month to push the StealC infostealer. [...]",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "malware",
+      "infostealer"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
     "id": "c4e0f4d052d7",
     "title": "UAT-11985: AI-assisted event lures delivering real-time Google AitM phishing",
     "url": "https://blog.talosintelligence.com/uat-11985/",
@@ -328,27 +397,6 @@
     }
   },
   {
-    "id": "c698c79d197c",
-    "title": "OpenAI Disrupts Reasoning Extraction Campaign Linked to Moonshot AI Associates",
-    "url": "https://thehackernews.com/2026/10/openai-disrupts-reasoning-extraction.html",
-    "source": "The Hacker News",
-    "published": "2026-10-01T10:42:36.000Z",
-    "summary": "OpenAI on Wednesday said it identified and disrupted a coordinated distillation campaign that was designed to illicitly extract protected reasoning from its artificial intelligence (AI) models. A \"core cluster of the…",
-    "score": 8,
-    "matched": [
-      "campaign"
-    ],
-    "kind": "campaign",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 1,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 1
-    }
-  },
-  {
     "id": "db301593e724",
     "title": "Defender Exclusion Abuse: How Attackers Hide Malware from MDAV",
     "url": "https://www.huntress.com/blog/you-can-run-but-you-cant-hide-defender-exclusions",
@@ -454,69 +502,6 @@
       "addresses": 2,
       "heading": true,
       "evidence": 70
-    }
-  },
-  {
-    "id": "596df4519eeb",
-    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/09/27/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-    "source": "CISA",
-    "published": "2026-09-27T12:00:00.000Z",
-    "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-88771 Citrix NetScaler Improper Input Validation Vulnerability…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "f60fa8e7cf68",
-    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/09/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-    "source": "CISA",
-    "published": "2026-09-25T12:00:00.000Z",
-    "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-65660 Microsoft SharePoint Code Injection Vulnerability CVE-2026-67279…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "746dd1995123",
-    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/09/25/cisa-adds-one-known-exploited-vulnerability-catalog",
-    "source": "CISA",
-    "published": "2026-09-25T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-87902 WordPress Core Remote File Inclusion Vulnerability This type of…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
     }
   },
   {
@@ -850,6 +835,29 @@
       "addresses": 7,
       "heading": true,
       "evidence": 13
+    }
+  },
+  {
+    "id": "4fb83d6f230e",
+    "title": "QuickFox Supply Chain Attack Used to Deploy FDMTP Implant",
+    "url": "https://feeds.fortinet.com/~/966214247/0/fortinet/blog/threat-research~QuickFox-Supply-Chain-Attack-Used-to-Deploy-FDMTP-Implant",
+    "source": "Fortinet",
+    "published": "2026-08-04T13:00:00.000Z",
+    "summary": "The FortiGuard Labs Incident Response team analyzes a QuickFox supply chain attack that used trojanized Windows installers, selective targeting, and an evolving FDMTP implant",
+    "score": 7,
+    "matched": [
+      "incident response",
+      "implant",
+      "supply chain"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 36,
+      "defanged": 625,
+      "addresses": 58,
+      "heading": true,
+      "evidence": 722
     }
   },
   {
