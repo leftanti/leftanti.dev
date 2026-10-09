@@ -1,5 +1,47 @@
 [
   {
+    "id": "89b1c5b22d39",
+    "title": "Hackers abuse Google Ads, Bing redirects to push Claude ClickFix attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/hackers-abuse-google-ads-bing-redirects-to-push-claude-clickfix-attacks/",
+    "source": "BleepingComputer",
+    "published": "2026-10-09T20:31:37.000Z",
+    "summary": "Hackers are abusing legitimate Bing search-result redirects as click URLs in Google search ads to direct users to fake Claude installers that deliver ClickFix attacks. [...]",
+    "score": 8,
+    "matched": [
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 2,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 5
+    }
+  },
+  {
+    "id": "bf19c785a3f0",
+    "title": "Germany arrests alleged core Qilin ransomware member after extradition",
+    "url": "https://www.bleepingcomputer.com/news/security/germany-arrests-alleged-core-qilin-ransomware-member-after-extradition/",
+    "source": "BleepingComputer",
+    "published": "2026-10-09T15:38:56.000Z",
+    "summary": "Germany has arrested a Russian national suspected of being a leading member of the Qilin ransomware group following extradition from Japan earlier this month. [...]",
+    "score": 6,
+    "matched": [
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
     "id": "83f8612997a5",
     "title": "Flax Typhoon Exploits Five Flaws as CISA Sets October 11 Deadline for Federal Agencies",
     "url": "https://thehackernews.com/2026/10/flax-typhoon-exploits-five-flaws-as.html",
@@ -245,28 +287,6 @@
     }
   },
   {
-    "id": "453d2c5398a1",
-    "title": "China-Aligned TA419 Targets U.S. AI Policy Experts With Microsoft AitM Phishing",
-    "url": "https://thehackernews.com/2026/10/china-aligned-ta419-targets-us-ai.html",
-    "source": "The Hacker News",
-    "published": "2026-10-04T07:20:32.000Z",
-    "summary": "A new China-nexus cyber espionage group known as TA419 has been attributed to multiple credential phishing campaigns targeting artificial intelligence (AI) experts working for U.S. think tanks, universities, and legal…",
-    "score": 10,
-    "matched": [
-      "phishing",
-      "AiTM"
-    ],
-    "kind": "technique",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 1,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 1
-    }
-  },
-  {
     "id": "f0334488aea8",
     "title": "2026-09-30: SmartApeSG ClickFix pushes CNCmachineRMS RAT",
     "url": "https://www.malware-traffic-analysis.net/2026/09/30/index.html",
@@ -306,28 +326,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "289771d56894",
-    "title": "Warlock Exploits SharePoint Flaws to Disable Security Tools and Deploy Ransomware",
-    "url": "https://thehackernews.com/2026/10/warlock-exploits-sharepoint-flaws-to.html",
-    "source": "The Hacker News",
-    "published": "2026-10-03T14:36:33.000Z",
-    "summary": "The suspected China-linked threat actor known as Warlock is still continuing to weaponize Microsoft SharePoint vulnerabilities, likely both old and new, in attacks targeting organizations in Portuguese- and…",
-    "score": 10,
-    "matched": [
-      "threat actor",
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 3,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 3
     }
   },
   {
