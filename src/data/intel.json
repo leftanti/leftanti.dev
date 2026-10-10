@@ -21,27 +21,6 @@
     }
   },
   {
-    "id": "bf19c785a3f0",
-    "title": "Germany arrests alleged core Qilin ransomware member after extradition",
-    "url": "https://www.bleepingcomputer.com/news/security/germany-arrests-alleged-core-qilin-ransomware-member-after-extradition/",
-    "source": "BleepingComputer",
-    "published": "2026-10-09T15:38:56.000Z",
-    "summary": "Germany has arrested a Russian national suspected of being a leading member of the Qilin ransomware group following extradition from Japan earlier this month. [...]",
-    "score": 6,
-    "matched": [
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
     "id": "83f8612997a5",
     "title": "Flax Typhoon Exploits Five Flaws as CISA Sets October 11 Deadline for Federal Agencies",
     "url": "https://thehackernews.com/2026/10/flax-typhoon-exploits-five-flaws-as.html",
@@ -490,6 +469,27 @@
       "ClickFix"
     ],
     "kind": "technique",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "575bd49ea0e6",
+    "title": "TeamFiltration Campaign Compromises Seven Microsoft 365 Accounts Using Default Passwords",
+    "url": "https://www.proofpoint.com/us/newsroom/news/teamfiltration-campaign-compromises-seven-microsoft-365-accounts-using-default",
+    "source": "Proofpoint",
+    "published": "2026-09-24T16:16:23.000Z",
+    "summary": "",
+    "score": 14,
+    "matched": [
+      "campaign"
+    ],
+    "kind": "campaign",
     "indicators": {
       "v": 2,
       "hashes": 0,
