@@ -21,6 +21,27 @@
     }
   },
   {
+    "id": "bf19c785a3f0",
+    "title": "Germany arrests alleged core Qilin ransomware member after extradition",
+    "url": "https://www.bleepingcomputer.com/news/security/germany-arrests-alleged-core-qilin-ransomware-member-after-extradition/",
+    "source": "BleepingComputer",
+    "published": "2026-10-09T15:38:56.000Z",
+    "summary": "Germany has arrested a Russian national suspected of being a leading member of the Qilin ransomware group following extradition from Japan earlier this month. [...]",
+    "score": 6,
+    "matched": [
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
     "id": "83f8612997a5",
     "title": "Flax Typhoon Exploits Five Flaws as CISA Sets October 11 Deadline for Federal Agencies",
     "url": "https://thehackernews.com/2026/10/flax-typhoon-exploits-five-flaws-as.html",
@@ -86,29 +107,6 @@
       "addresses": 3,
       "heading": false,
       "evidence": 9
-    }
-  },
-  {
-    "id": "d2da43aacd92",
-    "title": "FakeGit malware campaign returns with 17,610 malicious GitHub repos",
-    "url": "https://www.bleepingcomputer.com/news/security/fakegit-malware-campaign-returns-with-17-610-malicious-github-repos/",
-    "source": "BleepingComputer",
-    "published": "2026-10-08T17:10:55.000Z",
-    "summary": "More than 17,000 fake repositories on GitHub are distributing the SmartLoader malware after the FakeGit campaign reactivated earlier this month to push the StealC infostealer. [...]",
-    "score": 8,
-    "matched": [
-      "campaign",
-      "malware",
-      "infostealer"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
     }
   },
   {
