@@ -327,6 +327,28 @@
     }
   },
   {
+    "id": "54143a9a3bed",
+    "title": "Huntress Tragic Quadrant: Top Cyber Threats Wrecking Businesses",
+    "url": "https://www.huntress.com/blog/huntress-tragic-quadrant-cyber-threats",
+    "source": "Huntress",
+    "published": "2026-10-01T13:00:00.000Z",
+    "summary": "The Huntress Tragic Quadrant ranks the cyber threats hitting businesses most, from RMM abuse to AiTM, ClickFix, using real SOC data.",
+    "score": 7,
+    "matched": [
+      "ClickFix",
+      "AiTM"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 19,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 19
+    }
+  },
+  {
     "id": "5e0e2bba1070",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/10/01/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -985,28 +1007,6 @@
       "addresses": 1,
       "heading": true,
       "evidence": 247
-    }
-  },
-  {
-    "id": "0502111c2751",
-    "title": "Threat Actors Achieve Persistence After SQL Injection",
-    "url": "https://www.huntress.com/blog/sql-injection-attacker-persistence",
-    "source": "Huntress",
-    "published": "2026-07-13T13:00:00.000Z",
-    "summary": "See how a threat actor used SQL injection and BadIIS to gain persistence, disable Windows Defender, and quietly install a cryptominer.",
-    "score": 9,
-    "matched": [
-      "threat actor",
-      "persistence"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 15,
-      "defanged": 6,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 21
     }
   },
   {
