@@ -1,5 +1,50 @@
 [
   {
+    "id": "eca51744407d",
+    "title": "Inside AvisLoader: A Windows Malware Loader Built to Resist Disruption",
+    "url": "https://www.bleepingcomputer.com/news/security/inside-avisloader-a-windows-malware-loader-built-to-resist-disruption/",
+    "source": "BleepingComputer",
+    "published": "2026-10-12T14:00:10.000Z",
+    "summary": "A new Windows malware loader called AvisLoader uses encrypted peer-to-peer communications to make command-and-control infrastructure harder to disrupt. Varonis researchers explain how the malware uses ClickFix delivery,…",
+    "score": 6,
+    "matched": [
+      "malware",
+      "loader",
+      "ClickFix"
+    ],
+    "kind": "technique",
+    "indicators": {
+      "v": 2,
+      "hashes": 1,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 2
+    }
+  },
+  {
+    "id": "d261b6b9e669",
+    "title": "CyberXero Uses Claude Code in Campaign That Stole Over 628,000 Ukrainian Records",
+    "url": "https://thehackernews.com/2026/10/cyberxero-uses-claude-code-in-campaign.html",
+    "source": "The Hacker News",
+    "published": "2026-10-12T07:26:12.000Z",
+    "summary": "Cybersecurity researchers have disclosed details of a two-pronged artificial intelligence (AI)-augmented initial access campaign targeting WordPress sites, e-commerce platforms, and critical infrastructure entities in…",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "initial access"
+    ],
+    "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 1,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 2
+    }
+  },
+  {
     "id": "89b1c5b22d39",
     "title": "Hackers abuse Google Ads, Bing redirects to push Claude ClickFix attacks",
     "url": "https://www.bleepingcomputer.com/news/security/hackers-abuse-google-ads-bing-redirects-to-push-claude-clickfix-attacks/",
@@ -18,27 +63,6 @@
       "addresses": 1,
       "heading": false,
       "evidence": 5
-    }
-  },
-  {
-    "id": "bf19c785a3f0",
-    "title": "Germany arrests alleged core Qilin ransomware member after extradition",
-    "url": "https://www.bleepingcomputer.com/news/security/germany-arrests-alleged-core-qilin-ransomware-member-after-extradition/",
-    "source": "BleepingComputer",
-    "published": "2026-10-09T15:38:56.000Z",
-    "summary": "Germany has arrested a Russian national suspected of being a leading member of the Qilin ransomware group following extradition from Japan earlier this month. [...]",
-    "score": 6,
-    "matched": [
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
     }
   },
   {
@@ -197,28 +221,6 @@
       "addresses": 4,
       "heading": true,
       "evidence": 58
-    }
-  },
-  {
-    "id": "15810e447b0d",
-    "title": "ClickFix Smuggles Payloads Through Browser Cache to Bypass Windows Run Limits",
-    "url": "https://thehackernews.com/2026/10/clickfix-smuggles-payloads-through.html",
-    "source": "The Hacker News",
-    "published": "2026-10-06T05:22:55.000Z",
-    "summary": "A new type of ClickFix attack is using compromised websites to trick users into executing a malicious payload cached in a web browser's cache. \"Instead of downloading and executing remote payloads like the typical…",
-    "score": 10,
-    "matched": [
-      "compromised",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 4,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 4
     }
   },
   {
