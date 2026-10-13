@@ -1,25 +1,91 @@
 [
   {
-    "id": "eca51744407d",
-    "title": "Inside AvisLoader: A Windows Malware Loader Built to Resist Disruption",
-    "url": "https://www.bleepingcomputer.com/news/security/inside-avisloader-a-windows-malware-loader-built-to-resist-disruption/",
+    "id": "cfe7be7dc896",
+    "title": "Microsoft October 2026 Patch Tuesday fixes 1,411 flaws, 3 zero-days",
+    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-october-2026-patch-tuesday-fixes-1-411-flaws-3-zero-days/",
     "source": "BleepingComputer",
-    "published": "2026-10-12T14:00:10.000Z",
-    "summary": "A new Windows malware loader called AvisLoader uses encrypted peer-to-peer communications to make command-and-control infrastructure harder to disrupt. Varonis researchers explain how the malware uses ClickFix delivery,…",
-    "score": 6,
+    "published": "2026-10-13T19:56:09.000Z",
+    "summary": "Today is Microsoft's October 2026 Patch Tuesday, with security updates addressing a record-breaking 1,411 flaws, including one actively exploited and two publicly disclosed zero-day vulnerabilities. [...]",
+    "score": 8,
     "matched": [
-      "malware",
-      "loader",
-      "ClickFix"
+      "actively exploited",
+      "zero-day"
     ],
-    "kind": "technique",
+    "kind": "ioc",
     "indicators": {
       "v": 2,
-      "hashes": 1,
+      "hashes": 2,
       "defanged": 0,
       "addresses": 1,
       "heading": false,
-      "evidence": 2
+      "evidence": 3
+    }
+  },
+  {
+    "id": "05b41d1861c0",
+    "title": "Ivanti Connect Secure zero-day exploited in the wild (CVE-2026-104935)",
+    "url": "https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935",
+    "source": "Rapid7",
+    "published": "2026-10-13T17:06:05.000Z",
+    "summary": "Overview On October 13, 2026, Ivanti published a security advisory for CVE-2026-104935 , a high-severity authentication bypass by spoofing ( CWE-290 ) affecting Ivanti Connect Secure (ICS). The vulnerability has a…",
+    "score": 12,
+    "matched": [
+      "exploited in",
+      "in the wild",
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 5,
+      "heading": true,
+      "evidence": 8
+    }
+  },
+  {
+    "id": "e66ecc6fe347",
+    "title": "Ivanti warns of Connect Secure zero-day exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/ivanti-warns-of-connect-secure-zero-day-exploited-in-attacks/",
+    "source": "BleepingComputer",
+    "published": "2026-10-13T15:45:50.000Z",
+    "summary": "Ivanti urged customers on Tuesday to immediately patch an actively exploited zero-day vulnerability in the Ivanti Connect Secure (ICS) remote access gateway. [...]",
+    "score": 11,
+    "matched": [
+      "actively exploited",
+      "exploited in",
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 3,
+      "heading": false,
+      "evidence": 5
+    }
+  },
+  {
+    "id": "6fc0afa0da6f",
+    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-10-13T12:00:00.000Z",
+    "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-96951 Microsoft Windows Command Injection Vulnerability CVE-2026-104935…",
+    "score": 11,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
     }
   },
   {
@@ -42,27 +108,6 @@
       "addresses": 1,
       "heading": false,
       "evidence": 2
-    }
-  },
-  {
-    "id": "89b1c5b22d39",
-    "title": "Hackers abuse Google Ads, Bing redirects to push Claude ClickFix attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/hackers-abuse-google-ads-bing-redirects-to-push-claude-clickfix-attacks/",
-    "source": "BleepingComputer",
-    "published": "2026-10-09T20:31:37.000Z",
-    "summary": "Hackers are abusing legitimate Bing search-result redirects as click URLs in Google search ads to direct users to fake Claude installers that deliver ClickFix attacks. [...]",
-    "score": 8,
-    "matched": [
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 2,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 5
     }
   },
   {
@@ -677,29 +722,6 @@
     }
   },
   {
-    "id": "2882c0e66491",
-    "title": "Spring Ring: An Inside Look at Voice Phishing Campaigns in Microsoft Teams",
-    "url": "https://unit42.paloaltonetworks.com/spring-ring-voice-phishing-campaigns/",
-    "source": "Unit 42",
-    "published": "2026-08-31T10:00:36.000Z",
-    "summary": "Learn how the Spring Ring campaign abuses Microsoft Teams and voice phishing to deploy malware and target enterprise domain controllers. The post Spring Ring: An Inside Look at Voice Phishing Campaigns in Microsoft…",
-    "score": 8,
-    "matched": [
-      "campaign",
-      "malware",
-      "phishing"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 1,
-      "defanged": 111,
-      "addresses": 16,
-      "heading": true,
-      "evidence": 131
-    }
-  },
-  {
     "id": "a8d17d82aec2",
     "title": "Next-Gen Phishing Tactics Users Aren’t Ready For | Huntress",
     "url": "https://www.huntress.com/blog/advanced-phishing-tradecraft",
@@ -988,27 +1010,6 @@
       "addresses": 2,
       "heading": true,
       "evidence": 67
-    }
-  },
-  {
-    "id": "bbf853ba6917",
-    "title": "ClaudeFix: Shared Claude Chats Meet ClickFix",
-    "url": "https://www.zscaler.com/blogs/security-research/claudefix-shared-claude-chats-meet-clickfix",
-    "source": "Zscaler ThreatLabz",
-    "published": "2026-07-15T14:39:45.000Z",
-    "summary": "IntroductionClickFix is a widely employed attack technique, first seen in 2024, where a victim is instructed to paste-and-run instructions on their system to “fix” a problem or install software. The seemingly benign…",
-    "score": 8,
-    "matched": [
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 10,
-      "defanged": 233,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 247
     }
   },
   {
