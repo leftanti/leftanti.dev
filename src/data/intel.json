@@ -1,5 +1,27 @@
 [
   {
+    "id": "ea83b23e1a8e",
+    "title": "CISA warns admins to immediately fix Ivanti flaw exploited as zero-day",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-admins-to-immediately-fix-ivanti-flaw-exploited-as-zero-day/",
+    "source": "BleepingComputer",
+    "published": "2026-10-14T12:58:07.000Z",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) urged security teams to immediately patch an Ivanti Connect Secure (ICS) flaw exploited in zero-day attacks since at least October 1st. [...]",
+    "score": 6,
+    "matched": [
+      "exploited in",
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 4,
+      "heading": false,
+      "evidence": 6
+    }
+  },
+  {
     "id": "cfe7be7dc896",
     "title": "Microsoft October 2026 Patch Tuesday fixes 1,411 flaws, 3 zero-days",
     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-october-2026-patch-tuesday-fixes-1-411-flaws-3-zero-days/",
@@ -42,29 +64,6 @@
       "addresses": 5,
       "heading": true,
       "evidence": 8
-    }
-  },
-  {
-    "id": "e66ecc6fe347",
-    "title": "Ivanti warns of Connect Secure zero-day exploited in attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/ivanti-warns-of-connect-secure-zero-day-exploited-in-attacks/",
-    "source": "BleepingComputer",
-    "published": "2026-10-13T15:45:50.000Z",
-    "summary": "Ivanti urged customers on Tuesday to immediately patch an actively exploited zero-day vulnerability in the Ivanti Connect Secure (ICS) remote access gateway. [...]",
-    "score": 11,
-    "matched": [
-      "actively exploited",
-      "exploited in",
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 3,
-      "heading": false,
-      "evidence": 5
     }
   },
   {
@@ -415,6 +414,29 @@
     }
   },
   {
+    "id": "39c0ec31805a",
+    "title": "Threat Brief: NetScaler Zero Days CVE-2026-88771 and CVE-2026-88772 Exploited in the Wild (Updated September 30)",
+    "url": "https://unit42.paloaltonetworks.com/netscaler-zero-days-exploited/",
+    "source": "Unit 42",
+    "published": "2026-09-30T20:00:04.000Z",
+    "summary": "Unit 42 is aware of possible 0-day activity against NetScaler devices. Citrix reports CVE-2026-88771, CVE-2026-88772 have been exploited in the wild. The post Threat Brief: NetScaler Zero Days CVE-2026-88771 and…",
+    "score": 6,
+    "matched": [
+      "exploited in",
+      "in the wild",
+      "0-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 5,
+      "defanged": 30,
+      "addresses": 18,
+      "heading": true,
+      "evidence": 56
+    }
+  },
+  {
     "id": "db301593e724",
     "title": "Defender Exclusion Abuse: How Attackers Hide Malware from MDAV",
     "url": "https://www.huntress.com/blog/you-can-run-but-you-cant-hide-defender-exclusions",
@@ -436,6 +458,28 @@
     }
   },
   {
+    "id": "a2c6481b2f81",
+    "title": "Critical Cisco Catalyst SD-WAN Manager API authentication bypass exploited in the wild (CVE-2026-76504)",
+    "url": "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504",
+    "source": "Rapid7",
+    "published": "2026-09-30T15:09:22.000Z",
+    "summary": "Overview On September 30, 2026, Cisco published a security advisory for CVE-2026-76504 , a critical API authentication bypass vulnerability affecting Cisco Catalyst SD-WAN Manager. The vulnerability has a CVSSv3.1 score…",
+    "score": 6,
+    "matched": [
+      "exploited in",
+      "in the wild"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 5,
+      "heading": true,
+      "evidence": 8
+    }
+  },
+  {
     "id": "b9461b17f146",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/09/30/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -454,29 +498,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "5e35133b1276",
-    "title": "Star Blizzard refines phishing and malware delivery with the RedFlick technique",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/",
-    "source": "Microsoft Security",
-    "published": "2026-09-29T15:00:00.000Z",
-    "summary": "Since January 2026, Microsoft has observed Russian state threat actor Star Blizzard evolve their detection evasion capabilities through large-scale phishing campaigns, the use of accounts on compromised websites, and a…",
-    "score": 8,
-    "matched": [
-      "threat actor",
-      "compromised",
-      "malware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 12,
-      "defanged": 24,
-      "addresses": 8,
-      "heading": true,
-      "evidence": 47
     }
   },
   {
@@ -963,29 +984,6 @@
       "addresses": 2,
       "heading": false,
       "evidence": 26
-    }
-  },
-  {
-    "id": "1dcde256e1f6",
-    "title": "The TTF Trap: A Global Campaign of a Low-Detection Lua Loader",
-    "url": "https://feeds.fortinet.com/~/960560447/0/fortinet/blog/threat-research~The-TTF-Trap-A-Global-Campaign-of-a-LowDetection-Lua-Loader",
-    "source": "Fortinet",
-    "published": "2026-07-16T13:00:00.000Z",
-    "summary": "FortiGuard Labs analyzes a global phishing campaign using obfuscated JScript, disguised .ttf files, and Lua loaders to deliver RATs and infostealers.",
-    "score": 10,
-    "matched": [
-      "campaign",
-      "loader",
-      "phishing"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 34,
-      "defanged": 17,
-      "addresses": 5,
-      "heading": false,
-      "evidence": 56
     }
   },
   {
