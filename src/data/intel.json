@@ -89,6 +89,27 @@
     }
   },
   {
+    "id": "bb1617835f71",
+    "title": "ClickFix to BEC in 24 Hours: Tragic Quadrant | Huntress",
+    "url": "https://www.huntress.com/blog/clickfix-bec-tragic-quadrant-doris",
+    "source": "Huntress",
+    "published": "2026-10-13T07:00:00.000Z",
+    "summary": "Doris searched for ChatGPT and ended up in a BEC scam. See how ClickFix, a stolen session cookie, and a hidden inbox rule chain into an OH $#!T moment.",
+    "score": 8,
+    "matched": [
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 19,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 19
+    }
+  },
+  {
     "id": "d261b6b9e669",
     "title": "CyberXero Uses Claude Code in Campaign That Stole Over 628,000 Ukrainian Records",
     "url": "https://thehackernews.com/2026/10/cyberxero-uses-claude-code-in-campaign.html",
@@ -202,26 +223,25 @@
     }
   },
   {
-    "id": "9882c305bcdb",
-    "title": "Eight Malicious npm Packages Downloaded 40,767 Times Deliver Overlord RAT and Stealer",
-    "url": "https://thehackernews.com/2026/10/eight-malicious-npm-packages-downloaded.html",
-    "source": "The Hacker News",
-    "published": "2026-10-07T17:43:20.000Z",
-    "summary": "Cybersecurity researchers have disclosed details of a long-running npm supply chain malware campaign that pushes information stealers and remote access trojans (RAT) to compromised hosts. The campaign has been codenamed…",
-    "score": 11,
+    "id": "0440d30269fc",
+    "title": "Evolution of Web3 in Cloud Supply Chain Attacks",
+    "url": "https://unit42.paloaltonetworks.com/web3-cloud-supply-chain-attacks/",
+    "source": "Unit 42",
+    "published": "2026-10-07T22:00:16.000Z",
+    "summary": "Unit 42 details how threat actors leverage Web3 infrastructure and open-source supply chain attacks to breach enterprise cloud environments The post Evolution of Web3 in Cloud Supply Chain Attacks appeared first on Unit…",
+    "score": 6,
     "matched": [
-      "campaign",
-      "compromised",
-      "malware"
+      "breach",
+      "supply chain"
     ],
-    "kind": "campaign",
+    "kind": "ioc",
     "indicators": {
       "v": 2,
       "hashes": 0,
       "defanged": 0,
       "addresses": 0,
-      "heading": false,
-      "evidence": 0
+      "heading": true,
+      "evidence": 3
     }
   },
   {
@@ -371,28 +391,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "54143a9a3bed",
-    "title": "Huntress Tragic Quadrant: Top Cyber Threats Wrecking Businesses",
-    "url": "https://www.huntress.com/blog/huntress-tragic-quadrant-cyber-threats",
-    "source": "Huntress",
-    "published": "2026-10-01T13:00:00.000Z",
-    "summary": "The Huntress Tragic Quadrant ranks the cyber threats hitting businesses most, from RMM abuse to AiTM, ClickFix, using real SOC data.",
-    "score": 7,
-    "matched": [
-      "ClickFix",
-      "AiTM"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 19,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 19
     }
   },
   {
