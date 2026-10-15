@@ -1,5 +1,27 @@
 [
   {
+    "id": "1ee0303eecea",
+    "title": "Threat Actor Abuses Agentic AI Pentesting Framework to Target South Korean Financial Institutions",
+    "url": "https://www.zscaler.com/blogs/security-research/threat-actor-abuses-agentic-ai-pentesting-framework-target-south-korean",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-10-14T23:20:22.000Z",
+    "summary": "IntroductionZscaler ThreatLabz analyzed a recently active exploitation campaign in which a threat actor abused ARTEX to target South Korean financial institutions. ARTEX is an open source agentic penetration testing…",
+    "score": 12,
+    "matched": [
+      "campaign",
+      "threat actor"
+    ],
+    "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 1,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 2
+    }
+  },
+  {
     "id": "0ac5ff547ef1",
     "title": "Cisco patches new Secure Email Gateway zero-day exploited in attacks",
     "url": "https://www.bleepingcomputer.com/news/security/cisco-patches-actively-exploited-secure-email-gateway-zero-day/",
@@ -254,28 +276,6 @@
       "campaign",
       "APT",
       "phishing"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": true,
-      "evidence": 3
-    }
-  },
-  {
-    "id": "0440d30269fc",
-    "title": "Evolution of Web3 in Cloud Supply Chain Attacks",
-    "url": "https://unit42.paloaltonetworks.com/web3-cloud-supply-chain-attacks/",
-    "source": "Unit 42",
-    "published": "2026-10-07T22:00:16.000Z",
-    "summary": "Unit 42 details how threat actors leverage Web3 infrastructure and open-source supply chain attacks to breach enterprise cloud environments The post Evolution of Web3 in Cloud Supply Chain Attacks appeared first on Unit…",
-    "score": 6,
-    "matched": [
-      "breach",
-      "supply chain"
     ],
     "kind": "ioc",
     "indicators": {
