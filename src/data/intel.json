@@ -88,28 +88,6 @@
     }
   },
   {
-    "id": "cfe7be7dc896",
-    "title": "Microsoft October 2026 Patch Tuesday fixes 1,411 flaws, 3 zero-days",
-    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-october-2026-patch-tuesday-fixes-1-411-flaws-3-zero-days/",
-    "source": "BleepingComputer",
-    "published": "2026-10-13T19:56:09.000Z",
-    "summary": "Today is Microsoft's October 2026 Patch Tuesday, with security updates addressing a record-breaking 1,411 flaws, including one actively exploited and two publicly disclosed zero-day vulnerabilities. [...]",
-    "score": 8,
-    "matched": [
-      "actively exploited",
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
     "id": "05b41d1861c0",
     "title": "Ivanti Connect Secure zero-day exploited in the wild (CVE-2026-104935)",
     "url": "https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935",
@@ -242,29 +220,6 @@
     }
   },
   {
-    "id": "f8595042a198",
-    "title": "ThreatsDay: Ransomware Affiliate Betrayal, WhatsApp RAT, Exposed Hacker Tools and 12 More Stories",
-    "url": "https://thehackernews.com/2026/10/threatsday-ransomware-affiliate.html",
-    "source": "The Hacker News",
-    "published": "2026-10-08T17:58:02.000Z",
-    "summary": "The crooks have trust problems of their own. One ransomware affiliate decided to keep the profits for himself. Elsewhere, an attacker left a server exposed, complete with tools and traces of an intrusion. Apparently,…",
-    "score": 9,
-    "matched": [
-      "affiliate",
-      "intrusion",
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 6,
-      "addresses": 3,
-      "heading": false,
-      "evidence": 9
-    }
-  },
-  {
     "id": "c4e0f4d052d7",
     "title": "UAT-11985: AI-assisted event lures delivering real-time Google AitM phishing",
     "url": "https://blog.talosintelligence.com/uat-11985/",
@@ -276,6 +231,28 @@
       "campaign",
       "APT",
       "phishing"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": true,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "0440d30269fc",
+    "title": "Evolution of Web3 in Cloud Supply Chain Attacks",
+    "url": "https://unit42.paloaltonetworks.com/web3-cloud-supply-chain-attacks/",
+    "source": "Unit 42",
+    "published": "2026-10-07T22:00:16.000Z",
+    "summary": "Unit 42 details how threat actors leverage Web3 infrastructure and open-source supply chain attacks to breach enterprise cloud environments The post Evolution of Web3 in Cloud Supply Chain Attacks appeared first on Unit…",
+    "score": 6,
+    "matched": [
+      "breach",
+      "supply chain"
     ],
     "kind": "ioc",
     "indicators": {
@@ -455,6 +432,29 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
+    }
+  },
+  {
+    "id": "39c0ec31805a",
+    "title": "Threat Brief: NetScaler Zero Days CVE-2026-88771 and CVE-2026-88772 Exploited in the Wild (Updated September 30)",
+    "url": "https://unit42.paloaltonetworks.com/netscaler-zero-days-exploited/",
+    "source": "Unit 42",
+    "published": "2026-09-30T20:00:04.000Z",
+    "summary": "Unit 42 is aware of possible 0-day activity against NetScaler devices. Citrix reports CVE-2026-88771, CVE-2026-88772 have been exploited in the wild. The post Threat Brief: NetScaler Zero Days CVE-2026-88771 and…",
+    "score": 6,
+    "matched": [
+      "exploited in",
+      "in the wild",
+      "0-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 5,
+      "defanged": 30,
+      "addresses": 18,
+      "heading": true,
+      "evidence": 56
     }
   },
   {
