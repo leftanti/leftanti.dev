@@ -1,5 +1,26 @@
 [
   {
+    "id": "6f0ecd5cfa13",
+    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/10/15/cisa-adds-one-known-exploited-vulnerability-catalog",
+    "source": "CISA",
+    "published": "2026-10-15T12:00:00.000Z",
+    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-21589 Atlassian Multiple Products Files or Directories Accessible to…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "1ee0303eecea",
     "title": "Threat Actor Abuses Agentic AI Pentesting Framework to Target South Korean Financial Institutions",
     "url": "https://www.zscaler.com/blogs/security-research/threat-actor-abuses-agentic-ai-pentesting-framework-target-south-korean",
@@ -41,28 +62,6 @@
       "defanged": 0,
       "addresses": 1,
       "heading": true,
-      "evidence": 6
-    }
-  },
-  {
-    "id": "ea83b23e1a8e",
-    "title": "CISA warns admins to immediately fix Ivanti flaw exploited as zero-day",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-warns-admins-to-immediately-fix-ivanti-flaw-exploited-as-zero-day/",
-    "source": "BleepingComputer",
-    "published": "2026-10-14T12:58:07.000Z",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) urged security teams to immediately patch an Ivanti Connect Secure (ICS) flaw exploited in zero-day attacks since at least October 1st. [...]",
-    "score": 6,
-    "matched": [
-      "exploited in",
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 4,
-      "heading": false,
       "evidence": 6
     }
   },
@@ -479,27 +478,6 @@
     }
   },
   {
-    "id": "b9461b17f146",
-    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/09/30/cisa-adds-one-known-exploited-vulnerability-catalog",
-    "source": "CISA",
-    "published": "2026-09-30T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-76504 Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability This type of…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
     "id": "bb10b0a59e1f",
     "title": "Ransomware Leverage is Growing by the Terabyte: Takeaways from ThreatLabz 2026 Ransomware Report",
     "url": "https://www.zscaler.com/blogs/security-research/ransomware-leverage-growing-terabyte-takeaways-threatlabz-2026-ransomware",
@@ -540,6 +518,27 @@
       "addresses": 2,
       "heading": true,
       "evidence": 70
+    }
+  },
+  {
+    "id": "651feb65201e",
+    "title": "Zero-Day Exploitation of Citrix NetScaler ADC and Gateway: CVE-2026-88771 and CVE-2026-88772",
+    "url": "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772",
+    "source": "Rapid7",
+    "published": "2026-09-28T10:05:00.000Z",
+    "summary": "Overview On September 27, 2026, Citrix disclosed eight new vulnerabilities affecting NetScaler ADC and NetScaler Gateway, including two critical remote code execution (RCE) vulnerabilities: CVE-2026-88771 and…",
+    "score": 6,
+    "matched": [
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 1,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 5
     }
   },
   {
