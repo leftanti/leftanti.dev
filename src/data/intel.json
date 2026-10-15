@@ -175,28 +175,6 @@
     }
   },
   {
-    "id": "83f8612997a5",
-    "title": "Flax Typhoon Exploits Five Flaws as CISA Sets October 11 Deadline for Federal Agencies",
-    "url": "https://thehackernews.com/2026/10/flax-typhoon-exploits-five-flaws-as.html",
-    "source": "The Hacker News",
-    "published": "2026-10-09T12:21:51.000Z",
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Thursday added five security flaws to its Known Exploited Vulnerabilities (KEV) catalog, following their abuse by a China-linked threat actor known as…",
-    "score": 9,
-    "matched": [
-      "known exploited",
-      "threat actor"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
     "id": "2d98a21446b6",
     "title": "Suspected TraderTraitor Group Uses Trojanized Terraform Provider to Deliver Cross-Platform Malware",
     "url": "https://www.zscaler.com/blogs/security-research/suspected-tradertraitor-group-uses-trojanized-terraform-provider-deliver",
@@ -479,6 +457,28 @@
     }
   },
   {
+    "id": "a2c6481b2f81",
+    "title": "Critical Cisco Catalyst SD-WAN Manager API authentication bypass exploited in the wild (CVE-2026-76504)",
+    "url": "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504",
+    "source": "Rapid7",
+    "published": "2026-09-30T15:09:22.000Z",
+    "summary": "Overview On September 30, 2026, Cisco published a security advisory for CVE-2026-76504 , a critical API authentication bypass vulnerability affecting Cisco Catalyst SD-WAN Manager. The vulnerability has a CVSSv3.1 score…",
+    "score": 6,
+    "matched": [
+      "exploited in",
+      "in the wild"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 5,
+      "heading": true,
+      "evidence": 8
+    }
+  },
+  {
     "id": "b9461b17f146",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/09/30/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -500,24 +500,24 @@
     }
   },
   {
-    "id": "82f3ad7505f6",
-    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/09/29/cisa-adds-one-known-exploited-vulnerability-catalog",
-    "source": "CISA",
-    "published": "2026-09-29T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-86950 Apple Multiple Products Out-of-Bounds Write Vulnerability This type of…",
-    "score": 10,
+    "id": "bb10b0a59e1f",
+    "title": "Ransomware Leverage is Growing by the Terabyte: Takeaways from ThreatLabz 2026 Ransomware Report",
+    "url": "https://www.zscaler.com/blogs/security-research/ransomware-leverage-growing-terabyte-takeaways-threatlabz-2026-ransomware",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-09-30T07:01:00.000Z",
+    "summary": "Ransomware is no longer defined only by how many organizations get hit. The most important shifts are happening beneath the headline victim counts; in how attackers gain access, who they target first, and how much data…",
+    "score": 6,
     "matched": [
-      "known exploited"
+      "ransomware"
     ],
-    "kind": "exploited",
+    "kind": "other",
     "indicators": {
       "v": 2,
-      "hashes": 0,
+      "hashes": 1,
       "defanged": 0,
-      "addresses": 0,
+      "addresses": 1,
       "heading": false,
-      "evidence": 0
+      "evidence": 2
     }
   },
   {
