@@ -1,5 +1,28 @@
 [
   {
+    "id": "d0e0e442d471",
+    "title": "AI-Powered Espionage Campaign Targets Government Linux Infrastructure",
+    "url": "https://unit42.paloaltonetworks.com/ai-campaign-targets-linux-infrastructure/",
+    "source": "Unit 42",
+    "published": "2026-10-15T22:00:09.000Z",
+    "summary": "Our analysis an AI-powered espionage campaign targeting government Linux infrastructure with custom malware, web shells, and advanced credential theft. The post AI-Powered Espionage Campaign Targets Government Linux…",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "malware",
+      "credential theft"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 10,
+      "defanged": 28,
+      "addresses": 17,
+      "heading": true,
+      "evidence": 58
+    }
+  },
+  {
     "id": "6f0ecd5cfa13",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/10/15/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -518,27 +541,6 @@
       "addresses": 2,
       "heading": true,
       "evidence": 70
-    }
-  },
-  {
-    "id": "651feb65201e",
-    "title": "Zero-Day Exploitation of Citrix NetScaler ADC and Gateway: CVE-2026-88771 and CVE-2026-88772",
-    "url": "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772",
-    "source": "Rapid7",
-    "published": "2026-09-28T10:05:00.000Z",
-    "summary": "Overview On September 27, 2026, Citrix disclosed eight new vulnerabilities affecting NetScaler ADC and NetScaler Gateway, including two critical remote code execution (RCE) vulnerabilities: CVE-2026-88771 and…",
-    "score": 6,
-    "matched": [
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 1,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 5
     }
   },
   {
