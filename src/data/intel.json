@@ -1,5 +1,50 @@
 [
   {
+    "id": "e70b33f08be1",
+    "title": "Hackers breach Microsoft 365 tenants via ConnectWise supply-chain attack",
+    "url": "https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/",
+    "source": "BleepingComputer",
+    "published": "2026-10-17T15:18:51.000Z",
+    "summary": "ConnectWise has shut down customer access to its Cloud Backup service (formerly SkyKick Cloud Backup) after hackers accessed application identities and compromised Microsoft 365 tenants. [...]",
+    "score": 6,
+    "matched": [
+      "compromised",
+      "breach"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 2,
+      "addresses": 2,
+      "heading": false,
+      "evidence": 6
+    }
+  },
+  {
+    "id": "1fae9cde44bf",
+    "title": "MALFEX npm Package 'imgdecode' Hides Shellcode Loader in Windows Native Addon",
+    "url": "https://thehackernews.com/2026/10/malfex-npm-package-imgdecode-hides.html",
+    "source": "The Hacker News",
+    "published": "2026-10-17T11:11:56.000Z",
+    "summary": "Cybersecurity researchers have discovered a malicious npm package that's part of a recently disclosed software supply chain attack campaign dubbed MALFEX. The package, named \"imgdecode,\" was uploaded to the package…",
+    "score": 9,
+    "matched": [
+      "campaign",
+      "loader",
+      "supply chain"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 3,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 4
+    }
+  },
+  {
     "id": "b3dabcb4d0c0",
     "title": "Hackers Use Compromised ConnectWise Credential to Sign In to 173 Microsoft 365 Tenants",
     "url": "https://thehackernews.com/2026/10/hackers-use-compromised-connectwise.html",
@@ -106,49 +151,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 1
-    }
-  },
-  {
-    "id": "1fd194e19c3d",
-    "title": "China-Linked Hackers Exploited BeyondTrust Zero-Day to Take Over Remote Support Servers",
-    "url": "https://thehackernews.com/2026/10/china-linked-hackers-exploited.html",
-    "source": "The Hacker News",
-    "published": "2026-10-16T06:55:55.000Z",
-    "summary": "The China-nexus cyber espionage group tracked as Armory Castle (previously UNC5221 or Warp Panda) exploited a newly disclosed security flaw in BeyondTrust Remote Support (formerly Bomgar) as a zero-day in late August…",
-    "score": 6,
-    "matched": [
-      "zero-day"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "2f73ed0f5689",
-    "title": "BeyondTrust patches zero-day exploited in attacks since August",
-    "url": "https://www.bleepingcomputer.com/news/security/beyondtrust-patches-zero-day-exploited-in-attacks-since-august/",
-    "source": "BleepingComputer",
-    "published": "2026-10-16T06:18:08.000Z",
-    "summary": "BeyondTrust warned customers on Thursday to patch a critical flaw in its Remote Support (RS) that has been exploited in zero-day attacks since late August. [...]",
-    "score": 6,
-    "matched": [
-      "exploited in",
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
     }
   },
   {
