@@ -1,5 +1,26 @@
 [
   {
+    "id": "952b3a6c7b9c",
+    "title": "ConnectWise Suspends Cloud Backup After Attackers Compromise Microsoft 365 Tenants",
+    "url": "https://thehackernews.com/2026/10/connectwise-suspends-cloud-backup-after.html",
+    "source": "The Hacker News",
+    "published": "2026-10-18T08:23:02.000Z",
+    "summary": "ConnectWise on Saturday said it has disabled seven ConnectWise application identities as it continues its investigation into an incident in which unknown threat actors obtained unauthorized access to the application…",
+    "score": 6,
+    "matched": [
+      "compromise"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 2,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
     "id": "e70b33f08be1",
     "title": "Hackers breach Microsoft 365 tenants via ConnectWise supply-chain attack",
     "url": "https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/",
@@ -64,28 +85,6 @@
       "addresses": 1,
       "heading": true,
       "evidence": 6
-    }
-  },
-  {
-    "id": "151140d7d23b",
-    "title": "Ransomware at Machine Speed: How GenAI Shrinks the Path after Initial Access",
-    "url": "https://www.zscaler.com/blogs/security-research/ransomware-machine-speed-how-genai-shrinks-path-after-initial-access",
-    "source": "Zscaler ThreatLabz",
-    "published": "2026-10-16T22:48:36.000Z",
-    "summary": "Artificial Intelligence technologies have made a huge impact on the security industry. But as with any public technology, adversaries have access to AI as well. They’re wasting no time incorporating AI into their…",
-    "score": 6,
-    "matched": [
-      "ransomware",
-      "initial access"
-    ],
-    "kind": "technique",
-    "indicators": {
-      "v": 2,
-      "hashes": 1,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 2
     }
   },
   {
