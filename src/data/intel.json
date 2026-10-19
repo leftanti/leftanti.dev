@@ -1,45 +1,47 @@
 [
   {
-    "id": "952b3a6c7b9c",
-    "title": "ConnectWise Suspends Cloud Backup After Attackers Compromise Microsoft 365 Tenants",
-    "url": "https://thehackernews.com/2026/10/connectwise-suspends-cloud-backup-after.html",
-    "source": "The Hacker News",
-    "published": "2026-10-18T08:23:02.000Z",
-    "summary": "ConnectWise on Saturday said it has disabled seven ConnectWise application identities as it continues its investigation into an incident in which unknown threat actors obtained unauthorized access to the application…",
+    "id": "c7fd768c926c",
+    "title": "CVE-2026-102764: Critical BeyondTrust Remote Support Authentication Bypass Exploited in the Wild",
+    "url": "https://www.rapid7.com/blog/post/etr-cve-2026-102764-critical-beyondtrust-remote-support-authentication-bypass-exploited-in-the-wild",
+    "source": "Rapid7",
+    "published": "2026-10-19T14:34:04.000Z",
+    "summary": "Overview On October 15, 2026, BeyondTrust disclosed a critical authentication bypass in Remote Support (RS) , its platform for remotely troubleshooting and administering endpoints. Tracked as CVE-2026-102764 and…",
     "score": 6,
     "matched": [
-      "compromise"
+      "exploited in",
+      "in the wild"
     ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 2,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
-    "id": "e70b33f08be1",
-    "title": "Hackers breach Microsoft 365 tenants via ConnectWise supply-chain attack",
-    "url": "https://www.bleepingcomputer.com/news/security/hackers-breach-microsoft-365-tenants-via-connectwise-supply-chain-attack/",
-    "source": "BleepingComputer",
-    "published": "2026-10-17T15:18:51.000Z",
-    "summary": "ConnectWise has shut down customer access to its Cloud Backup service (formerly SkyKick Cloud Backup) after hackers accessed application identities and compromised Microsoft 365 tenants. [...]",
-    "score": 6,
-    "matched": [
-      "compromised",
-      "breach"
-    ],
-    "kind": "ioc",
+    "kind": "exploited",
     "indicators": {
       "v": 2,
       "hashes": 2,
-      "defanged": 2,
-      "addresses": 2,
+      "defanged": 0,
+      "addresses": 0,
       "heading": false,
-      "evidence": 6
+      "evidence": 2
+    }
+  },
+  {
+    "id": "47f4fcfb349a",
+    "title": "GhostAction Attackers Plant Credential Stealer Disguised as Font in 94 GitHub Repositories",
+    "url": "https://thehackernews.com/2026/10/ghostaction-attackers-plant-credential.html",
+    "source": "The Hacker News",
+    "published": "2026-10-19T13:05:45.000Z",
+    "summary": "The threat actor behind the GhostAction supply chain attack has expanded beyond injecting malicious GitHub Actions workflows into compromised projects to phish open-source developers and deliver a stealer malware…",
+    "score": 11,
+    "matched": [
+      "threat actor",
+      "compromised",
+      "malware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 1,
+      "defanged": 6,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 8
     }
   },
   {
