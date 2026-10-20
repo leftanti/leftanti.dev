@@ -1,5 +1,28 @@
 [
   {
+    "id": "4fd8d5a31fd8",
+    "title": "ClickFix Attackers Exploit Siemens Software Center Flaw to Deploy Remote Access Trojan",
+    "url": "https://thehackernews.com/2026/10/clickfix-attackers-exploit-siemens.html",
+    "source": "The Hacker News",
+    "published": "2026-10-20T07:11:45.000Z",
+    "summary": "Siemens has addressed a DLL sideloading vulnerability impacting Siemens Software Center that it said has been exploited in ClickFix attacks. The high-severity vulnerability, tracked as CVE-2026-110936 (CVSS v4 score:…",
+    "score": 8,
+    "matched": [
+      "exploited in",
+      "remote access trojan",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 3,
+      "addresses": 4,
+      "heading": true,
+      "evidence": 10
+    }
+  },
+  {
     "id": "6c494d43a845",
     "title": "Hackers Use New ROMULUS ClickFix Platform to Deliver LegionLoader and Other Malware",
     "url": "https://thehackernews.com/2026/10/romulus-clickfix-platform-tricks-users.html",
@@ -1051,29 +1074,6 @@
       "addresses": 11,
       "heading": false,
       "evidence": 66
-    }
-  },
-  {
-    "id": "8159851e4eb4",
-    "title": "Flash Alert: EtherRat and TukTuk C2 End in The Gentleman Ransomware",
-    "url": "https://thedfirreport.com/2026/05/11/flash-alert-etherrat-and-tuktuk-c2-end-in-the-gentleman-ransomware/",
-    "source": "The DFIR Report",
-    "published": "2026-05-11T14:05:04.000Z",
-    "summary": "The EtherRAT malware family was first reported by Sysdig back in December 2025. At that time, the initial access vector was exploitation of CVE-2025-55182 (React2Shell) targeting Linux servers. In March 2026, a Windows…",
-    "score": 7,
-    "matched": [
-      "ransomware",
-      "malware",
-      "initial access"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 18,
-      "defanged": 1,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 23
     }
   },
   {
