@@ -1,23 +1,23 @@
 [
   {
-    "id": "0d304799e621",
-    "title": "Qilin and INC Ransomware Groups Exploit Palo Alto Networks Flaw to Bypass MFA",
-    "url": "https://thehackernews.com/2026/10/qilin-and-inc-ransomware-groups-exploit.html",
-    "source": "The Hacker News",
-    "published": "2026-10-20T15:32:27.000Z",
-    "summary": "Palo Alto Networks has disclosed that it's continuing to observe exploitation of a now-patched security flaw impacting PAN-OS and Prisma Access by ransomware actors. The activity relates to CVE-2026-0257 (CVSS score:…",
-    "score": 6,
+    "id": "01bce4066c34",
+    "title": "CISA Adds Six Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-10-20T12:00:00.000Z",
+    "summary": "CISA has added six new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-96652 Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability…",
+    "score": 10,
     "matched": [
-      "ransomware"
+      "known exploited"
     ],
-    "kind": "ioc",
+    "kind": "exploited",
     "indicators": {
       "v": 2,
       "hashes": 0,
       "defanged": 0,
       "addresses": 0,
-      "heading": true,
-      "evidence": 3
+      "heading": false,
+      "evidence": 0
     }
   },
   {
@@ -505,6 +505,28 @@
     }
   },
   {
+    "id": "54143a9a3bed",
+    "title": "Huntress Tragic Quadrant: Top Cyber Threats Wrecking Businesses",
+    "url": "https://www.huntress.com/blog/huntress-tragic-quadrant-cyber-threats",
+    "source": "Huntress",
+    "published": "2026-10-01T13:00:00.000Z",
+    "summary": "The Huntress Tragic Quadrant ranks the cyber threats hitting businesses most, from RMM abuse to AiTM, ClickFix, using real SOC data.",
+    "score": 7,
+    "matched": [
+      "ClickFix",
+      "AiTM"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 19,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 19
+    }
+  },
+  {
     "id": "db301593e724",
     "title": "Defender Exclusion Abuse: How Attackers Hide Malware from MDAV",
     "url": "https://www.huntress.com/blog/you-can-run-but-you-cant-hide-defender-exclusions",
@@ -943,28 +965,6 @@
       "addresses": 8,
       "heading": true,
       "evidence": 28
-    }
-  },
-  {
-    "id": "5dd78732982f",
-    "title": "Inside FakeAgent: How a Claude Desktop Malvertising Campaign Hit 29 Organizations with SectopRAT",
-    "url": "https://www.huntress.com/blog/fakeagent-claude-desktop-malvertising-ends-in-dotnet-rat",
-    "source": "Huntress",
-    "published": "2026-07-22T20:00:00.000Z",
-    "summary": "On July 21 and July 22, Huntress observed a number of attacks that started with a malicious public Claude Artifact hosted on a legitimate Claude domain, and ended in organizations being infected by the SectopRAT stealer.",
-    "score": 10,
-    "matched": [
-      "campaign",
-      "stealer"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 19,
-      "defanged": 31,
-      "addresses": 21,
-      "heading": false,
-      "evidence": 71
     }
   },
   {
