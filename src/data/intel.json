@@ -1,24 +1,25 @@
 [
   {
-    "id": "c7fd768c926c",
-    "title": "CVE-2026-102764: Critical BeyondTrust Remote Support Authentication Bypass Exploited in the Wild",
-    "url": "https://www.rapid7.com/blog/post/etr-cve-2026-102764-critical-beyondtrust-remote-support-authentication-bypass-exploited-in-the-wild",
-    "source": "Rapid7",
-    "published": "2026-10-19T14:34:04.000Z",
-    "summary": "Overview On October 15, 2026, BeyondTrust disclosed a critical authentication bypass in Remote Support (RS) , its platform for remotely troubleshooting and administering endpoints. Tracked as CVE-2026-102764 and…",
-    "score": 6,
+    "id": "6c494d43a845",
+    "title": "Hackers Use New ROMULUS ClickFix Platform to Deliver LegionLoader and Other Malware",
+    "url": "https://thehackernews.com/2026/10/romulus-clickfix-platform-tricks-users.html",
+    "source": "The Hacker News",
+    "published": "2026-10-20T04:05:58.000Z",
+    "summary": "Cybersecurity researchers have disclosed details of a ClickFix delivery platform called ROMULUS that's being used to distribute malware such as Legion Loader. According to Forescout Research - Vedere Labs, ROMULUS is…",
+    "score": 8,
     "matched": [
-      "exploited in",
-      "in the wild"
+      "malware",
+      "loader",
+      "ClickFix"
     ],
-    "kind": "exploited",
+    "kind": "ioc",
     "indicators": {
       "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 0,
+      "hashes": 0,
+      "defanged": 8,
+      "addresses": 6,
       "heading": false,
-      "evidence": 2
+      "evidence": 14
     }
   },
   {
