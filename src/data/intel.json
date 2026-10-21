@@ -1,5 +1,116 @@
 [
   {
+    "id": "1204de495376",
+    "title": "“Next Exploit Opportunities”: How a Threat Actor Used AI to Help Plan and Execute Multiple Types of Cybercrime Activities",
+    "url": "https://unit42.paloaltonetworks.com/ai-assisted-cybercrime-analysis/",
+    "source": "Unit 42",
+    "published": "2026-10-21T14:00:24.000Z",
+    "summary": "An investigation into a threat actor bypassing AI safety controls to coordinate credential theft, VoIP fraud planning, and database exfiltration. The post “Next Exploit Opportunities”: How a Threat Actor Used AI to Help…",
+    "score": 8,
+    "matched": [
+      "threat actor",
+      "credential theft",
+      "exfiltration"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 3,
+      "addresses": 2,
+      "heading": true,
+      "evidence": 8
+    }
+  },
+  {
+    "id": "a569785436fd",
+    "title": "ClickFix has never been bigger, and AI tools are its most convincing lure yet",
+    "url": "https://www.bleepingcomputer.com/news/security/clickfix-has-never-been-bigger-and-ai-tools-are-its-most-convincing-lure-yet/",
+    "source": "BleepingComputer",
+    "published": "2026-10-21T14:00:10.000Z",
+    "summary": "ClickFix attacks are surging as cybercriminals use fake AI installers, malicious search results, and trusted chatbot platforms to trick users into executing malware. Push Security examines how these attacks evade…",
+    "score": 8,
+    "matched": [
+      "malware",
+      "ClickFix"
+    ],
+    "kind": "technique",
+    "indicators": {
+      "v": 2,
+      "hashes": 1,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 2
+    }
+  },
+  {
+    "id": "f29fd7d40b5f",
+    "title": "Google Chrome Adds ClickFix Warnings to Stop Users From Running Malicious Commands",
+    "url": "https://thehackernews.com/2026/10/google-chrome-adds-clickfix-warnings-to.html",
+    "source": "The Hacker News",
+    "published": "2026-10-21T13:15:09.000Z",
+    "summary": "Google on Tuesday said it's rolling out improved safeguards in its Chrome browser to secure users against ClickFix attacks when Enhanced Protection is enabled. ClickFix is a popular social engineering technique in which…",
+    "score": 8,
+    "matched": [
+      "social engineering",
+      "ClickFix"
+    ],
+    "kind": "technique",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "52670261af47",
+    "title": "Amazon-Themed ClickFix Campaign Serves Up Finger-Licking Malware",
+    "url": "https://www.huntress.com/blog/amazon-clickfix-finger",
+    "source": "Huntress",
+    "published": "2026-10-21T13:00:00.000Z",
+    "summary": "A Google search for Amazon business led to a ClickFix lure that dropped multiple malicious payloads onto the victim machine, including versions of Lumma Stealer and NetSupport Client RMM.",
+    "score": 18,
+    "matched": [
+      "campaign",
+      "malware",
+      "stealer"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 44,
+      "defanged": 40,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 88
+    }
+  },
+  {
+    "id": "43e827d9b471",
+    "title": "Attack Reduction in Huntress Managed ESPM: Disrupting ClickFix",
+    "url": "https://www.huntress.com/blog/espm-attack-reduction-clickfix",
+    "source": "Huntress",
+    "published": "2026-10-21T13:00:00.000Z",
+    "summary": "ClickFix tricks users into pasting malicious commands into the Windows Run dialog. See how Attack Reduction in Huntress ESPM helps prevent that from happening.",
+    "score": 9,
+    "matched": [
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 30,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 30
+    }
+  },
+  {
     "id": "bd60f0eb51aa",
     "title": "Hackers Hid Vasilek Backdoor in VMware Tools During 2-Year Russian Healthcare Intrusion",
     "url": "https://thehackernews.com/2026/10/hackers-hid-vasilek-backdoor-in-vmware.html",
@@ -550,28 +661,6 @@
     }
   },
   {
-    "id": "54143a9a3bed",
-    "title": "Huntress Tragic Quadrant: Top Cyber Threats Wrecking Businesses",
-    "url": "https://www.huntress.com/blog/huntress-tragic-quadrant-cyber-threats",
-    "source": "Huntress",
-    "published": "2026-10-01T13:00:00.000Z",
-    "summary": "The Huntress Tragic Quadrant ranks the cyber threats hitting businesses most, from RMM abuse to AiTM, ClickFix, using real SOC data.",
-    "score": 7,
-    "matched": [
-      "ClickFix",
-      "AiTM"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 19,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 19
-    }
-  },
-  {
     "id": "db301593e724",
     "title": "Defender Exclusion Abuse: How Attackers Hide Malware from MDAV",
     "url": "https://www.huntress.com/blog/you-can-run-but-you-cant-hide-defender-exclusions",
@@ -696,28 +785,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "751077092345",
-    "title": "Beware the SparroWock: The backdoor that bites, the commands that catch",
-    "url": "https://www.welivesecurity.com/en/eset-research/beware-sparrowock-backdoor-bites-commands-catch/",
-    "source": "ESET Research",
-    "published": "2026-09-17T08:50:00.000Z",
-    "summary": "ESET researchers document SparroWocky, the new flagship backdoor of the FamousSparrow APT group",
-    "score": 7,
-    "matched": [
-      "APT",
-      "backdoor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 19,
-      "addresses": 18,
-      "heading": true,
-      "evidence": 42
     }
   },
   {
@@ -946,27 +1013,6 @@
     }
   },
   {
-    "id": "9f0e9336b780",
-    "title": "Credential Stuffing Campaign Hits SonicWall | Huntress SOC Tracking",
-    "url": "https://www.huntress.com/blog/sonicwall-credential-stuffing-campaign",
-    "source": "Huntress",
-    "published": "2026-07-28T13:00:00.000Z",
-    "summary": "The Huntress SOC is tracking an active credential stuffing campaign targeting SonicWall devices, compromising dozens of organizations since July 25.",
-    "score": 8,
-    "matched": [
-      "campaign"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 14,
-      "defanged": 10,
-      "addresses": 5,
-      "heading": true,
-      "evidence": 32
-    }
-  },
-  {
     "id": "62fcd066ad23",
     "title": "Helpdesk Hijackers: Teams Vishing, Quick Assist, and GoGRPC Backdoor",
     "url": "https://www.zscaler.com/blogs/security-research/helpdesk-hijackers-teams-vishing-quick-assist-and-gogrpc-backdoor",
@@ -1010,49 +1056,6 @@
       "addresses": 2,
       "heading": false,
       "evidence": 26
-    }
-  },
-  {
-    "id": "f6b8c91eb812",
-    "title": "TELEPUZ: a modular MaaS malware spreading via CLICKFIX-VIDAR chains",
-    "url": "https://www.elastic.co/security-labs/threat-command/telepuz-maas-malware-clickfix",
-    "source": "Elastic Security Labs",
-    "published": "2026-07-16T00:00:00.000Z",
-    "summary": "TELEPUZ is a modular malware that emerged through CLICKFIX-VIDAR attacks in April. We reverse-engineered it to show you the infrastructure and evasion techniques that matter.",
-    "score": 8,
-    "matched": [
-      "malware",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 17,
-      "defanged": 45,
-      "addresses": 2,
-      "heading": true,
-      "evidence": 67
-    }
-  },
-  {
-    "id": "16b5d60ea281",
-    "title": "ClickFix to Cash-Out: Anatomy of a Mexican Banking-Fraud Toolkit",
-    "url": "https://www.elastic.co/security-labs/threat-command/mexican-banking-fraud-scmbanker-ref6045",
-    "source": "Elastic Security Labs",
-    "published": "2026-07-08T00:00:00.000Z",
-    "summary": "Elastic Security Labs tracks REF6045, an active operator-assisted banking fraud operation targeting customers of Mexican banks, fintech, payment processors, and cryptocurrency exchanges.",
-    "score": 8,
-    "matched": [
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 30,
-      "defanged": 76,
-      "addresses": 3,
-      "heading": false,
-      "evidence": 109
     }
   },
   {
