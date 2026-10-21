@@ -1,5 +1,65 @@
 [
   {
+    "id": "7b9a4fec96c9",
+    "title": "Inside a Global AI-Assisted Hacking Campaign",
+    "url": "https://www.zscaler.com/blogs/security-research/inside-global-ai-assisted-hacking-campaign",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-10-21T20:25:54.000Z",
+    "summary": "IntroductionIn October 2026, Zscaler ThreatLabz investigated AI-assisted cyberattacks that combined the ARTEX penetration testing framework with AI coding assistants and custom automation scripts. Initial reporting of…",
+    "score": 8,
+    "matched": [
+      "campaign"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 1,
+      "defanged": 0,
+      "addresses": 10,
+      "heading": true,
+      "evidence": 14
+    }
+  },
+  {
+    "id": "307b575beaf0",
+    "title": "AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/",
+    "source": "Microsoft Security",
+    "published": "2026-10-21T18:23:55.000Z",
+    "summary": "Storm-0940 used ARTEX agentic AI to accelerate a ConnectWise supply chain compromise, enabling application credential abuse across Microsoft 365 environments. The post AI-driven, large-scale nation-state campaign using…",
+    "score": 17,
+    "matched": [
+      "campaign",
+      "nation-state",
+      "compromise"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 7,
+      "defanged": 8,
+      "addresses": 7,
+      "heading": true,
+      "evidence": 25
+    }
+  },
+  {
+    "id": "f5335e20393b",
+    "title": "LiteLLM Compromised in Supply Chain Attack Delivering Credential Stealer and Backdoor",
+    "url": "https://thehackernews.com/2026/10/litellm-compromised-in-supply-chain.html",
+    "source": "The Hacker News",
+    "published": "2026-10-21T18:01:57.000Z",
+    "summary": "The popular LiteLLM Python package has been compromised as part of a software supply chain attack that delivered a credential stealer and a backdoor, according to reports from SafeDep, Socket, StepSecurity, and Upwind.…",
+    "score": 14,
+    "matched": [
+      "compromised",
+      "backdoor",
+      "stealer"
+    ],
+    "kind": "technique",
+    "indicators": null
+  },
+  {
     "id": "1204de495376",
     "title": "“Next Exploit Opportunities”: How a Threat Actor Used AI to Help Plan and Execute Multiple Types of Cybercrime Activities",
     "url": "https://unit42.paloaltonetworks.com/ai-assisted-cybercrime-analysis/",
@@ -876,73 +936,6 @@
       "addresses": 2,
       "heading": true,
       "evidence": 60
-    }
-  },
-  {
-    "id": "a8d17d82aec2",
-    "title": "Next-Gen Phishing Tactics Users Aren’t Ready For | Huntress",
-    "url": "https://www.huntress.com/blog/advanced-phishing-tradecraft",
-    "source": "Huntress",
-    "published": "2026-08-28T16:00:00.000Z",
-    "summary": "Move past basic credential harvesting. Discover how modern attackers use ClickFix, BitB, and OAuth consent phishing—and how to train your users with Huntress SAT.",
-    "score": 8,
-    "matched": [
-      "phishing",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 14,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 14
-    }
-  },
-  {
-    "id": "64e9c45aa341",
-    "title": "From 88 lines to 1: Detecting DLL hijacking with Elastic Defend",
-    "url": "https://www.elastic.co/security-labs/threat-command/dll-search-order-hijacking-elastic-defend",
-    "source": "Elastic Security Labs",
-    "published": "2026-08-28T00:00:00.000Z",
-    "summary": "The ClickFix campaign that sideloads a malicious mscoree.dll also ships a driver to kill Elastic Endpoint. We rebuilt that DLL as a NativeAOT library, dropped it beside a signed Microsoft binary, and Elastic Defend…",
-    "score": 8,
-    "matched": [
-      "campaign",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 3,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
-    "id": "a1c38e14d19e",
-    "title": "Post-DEF CON Phishing Uses Malicious Google Doc to Deliver Malware",
-    "url": "https://www.huntress.com/blog/defcon-phishing-google-doc-malware",
-    "source": "Huntress",
-    "published": "2026-08-19T13:00:00.000Z",
-    "summary": "Huntress researcher uncovers post-Black Hat & DEF CON phishing campaign using X DMs & malicious documents to deliver AMOS, NetSupport RAT, and other malware.",
-    "score": 8,
-    "matched": [
-      "campaign",
-      "malware",
-      "phishing"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 20,
-      "defanged": 47,
-      "addresses": 3,
-      "heading": true,
-      "evidence": 73
     }
   },
   {
