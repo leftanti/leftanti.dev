@@ -1,5 +1,50 @@
 [
   {
+    "id": "b5839e211a21",
+    "title": "SEO Poisoning Campaign Delivers New Armorsteal Malware",
+    "url": "https://www.zscaler.com/blogs/security-research/seo-poisoning-campaign-delivers-new-armorsteal-malware",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-10-22T16:10:15.000Z",
+    "summary": "IntroductionIn September 2026, Zscaler Threat Hunting identified an SEO poisoning campaign that used fake websites impersonating the Chocolatey package manager and the Microsoft Activation Scripts (MAS) tool to…",
+    "score": 11,
+    "matched": [
+      "campaign",
+      "malware",
+      "threat hunting"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 12,
+      "defanged": 47,
+      "addresses": 7,
+      "heading": true,
+      "evidence": 69
+    }
+  },
+  {
+    "id": "0eee4d6ec3f6",
+    "title": "M365 Token Spray and Replay Campaign Compromises Business Email Accounts",
+    "url": "https://www.huntress.com/blog/token-replay-spray",
+    "source": "Huntress",
+    "published": "2026-10-22T13:00:00.000Z",
+    "summary": "Huntress tracked a 10-week Microsoft 365 campaign pairing AiTM relays with token replay, rogue Entra devices, MFA tampering, and hidden inbox rules.",
+    "score": 18,
+    "matched": [
+      "campaign",
+      "AiTM"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 31,
+      "defanged": 53,
+      "addresses": 12,
+      "heading": true,
+      "evidence": 99
+    }
+  },
+  {
     "id": "220c5a92b525",
     "title": "Google Chrome adds Gemini-powered scam detection, warns users of ClickFix attacks",
     "url": "https://www.bleepingcomputer.com/news/google/google-chrome-adds-gemini-powered-scam-detection-warns-users-of-clickfix-attacks/",
@@ -39,29 +84,6 @@
       "addresses": 10,
       "heading": true,
       "evidence": 14
-    }
-  },
-  {
-    "id": "307b575beaf0",
-    "title": "AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/",
-    "source": "Microsoft Security",
-    "published": "2026-10-21T18:23:55.000Z",
-    "summary": "Storm-0940 used ARTEX agentic AI to accelerate a ConnectWise supply chain compromise, enabling application credential abuse across Microsoft 365 environments. The post AI-driven, large-scale nation-state campaign using…",
-    "score": 17,
-    "matched": [
-      "campaign",
-      "nation-state",
-      "compromise"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 7,
-      "defanged": 8,
-      "addresses": 7,
-      "heading": true,
-      "evidence": 25
     }
   },
   {
@@ -221,29 +243,6 @@
     }
   },
   {
-    "id": "f7232bbb32a8",
-    "title": "Stolen UpdraftCentral keys used to backdoor WordPress sites",
-    "url": "https://www.bleepingcomputer.com/news/security/stolen-updraftcentral-keys-used-to-backdoor-wordpress-sites/",
-    "source": "BleepingComputer",
-    "published": "2026-10-21T01:01:50.000Z",
-    "summary": "A threat actor breached TeamUpdraft's website, a developer of popular WordPress backup and security plugins, potentially compromising UpdraftCentral connection keys that can send commands to connected websites. [...]",
-    "score": 8,
-    "matched": [
-      "threat actor",
-      "breached",
-      "backdoor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 6
-    }
-  },
-  {
     "id": "01bce4066c34",
     "title": "CISA Adds Six Known Exploited Vulnerabilities to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog",
@@ -354,28 +353,6 @@
       "addresses": 1,
       "heading": false,
       "evidence": 4
-    }
-  },
-  {
-    "id": "b3dabcb4d0c0",
-    "title": "Hackers Use Compromised ConnectWise Credential to Sign In to 173 Microsoft 365 Tenants",
-    "url": "https://thehackernews.com/2026/10/hackers-use-compromised-connectwise.html",
-    "source": "The Hacker News",
-    "published": "2026-10-17T06:16:46.000Z",
-    "summary": "Cybersecurity researchers are sounding the alarm related to an active campaign in which unknown threat actors are abusing a compromised Microsoft 365 (M365) credential belonging to ConnectWise Cloud Backup (formerly…",
-    "score": 10,
-    "matched": [
-      "campaign",
-      "compromised"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 2,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 6
     }
   },
   {
@@ -744,6 +721,29 @@
       "addresses": 0,
       "heading": false,
       "evidence": 23
+    }
+  },
+  {
+    "id": "5e35133b1276",
+    "title": "Star Blizzard refines phishing and malware delivery with the RedFlick technique",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/",
+    "source": "Microsoft Security",
+    "published": "2026-09-29T15:00:00.000Z",
+    "summary": "Since January 2026, Microsoft has observed Russian state threat actor Star Blizzard evolve their detection evasion capabilities through large-scale phishing campaigns, the use of accounts on compromised websites, and a…",
+    "score": 8,
+    "matched": [
+      "threat actor",
+      "compromised",
+      "malware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 12,
+      "defanged": 24,
+      "addresses": 8,
+      "heading": true,
+      "evidence": 47
     }
   },
   {
