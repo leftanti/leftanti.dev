@@ -379,29 +379,6 @@
     }
   },
   {
-    "id": "7ca539292393",
-    "title": "UAT-11985 Uses Fake Event Invites to Target Taiwan Research Affiliates With Google AitM Phishing",
-    "url": "https://thehackernews.com/2026/10/uat-11985-uses-fake-event-invites-to.html",
-    "source": "The Hacker News",
-    "published": "2026-10-16T16:16:44.000Z",
-    "summary": "Cybersecurity researchers have disclosed details of an advanced persistent threat (APT) spear-phishing campaign that has targeted individuals affiliated with Taiwan research organizations to direct victims to an…",
-    "score": 17,
-    "matched": [
-      "campaign",
-      "APT",
-      "phishing"
-    ],
-    "kind": "campaign",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
     "id": "ce00994aa82d",
     "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-adds-two-known-exploited-vulnerabilities-catalog",
@@ -873,6 +850,28 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
+    }
+  },
+  {
+    "id": "8a3f8241ec08",
+    "title": "Operation RapidRust: APT36 Deploys RUSTYSHADE, RUSTYMOVE, PSNATCH, and BASHNATCH",
+    "url": "https://www.zscaler.com/blogs/security-research/operation-rapidrust-apt36-deploys-rustyshade-rustymove-psnatch-and",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-09-16T15:13:12.000Z",
+    "summary": "IntroductionIn August 2026, Zscaler ThreatLabz observed new activity by the Pakistan-nexus threat actor APT36 in a campaign we’re tracking as Operation RapidRust. Since our last publication about the group’s activity in…",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "threat actor"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 13,
+      "defanged": 17,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 34
     }
   },
   {
