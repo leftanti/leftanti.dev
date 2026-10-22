@@ -1,5 +1,28 @@
 [
   {
+    "id": "f6b15d9a973a",
+    "title": "Arista patches new VeloCloud Orchestrator zero-day exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/arista-patches-new-velocloud-orchestrator-zero-day-exploited-in-attacks/",
+    "source": "BleepingComputer",
+    "published": "2026-10-22T17:18:22.000Z",
+    "summary": "Arista Networks released security updates to patch an actively exploited zero-day vulnerability affecting VeloCloud Orchestrator (VCO) On-Prem deployments. [...]",
+    "score": 11,
+    "matched": [
+      "actively exploited",
+      "exploited in",
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 2,
+      "addresses": 6,
+      "heading": false,
+      "evidence": 10
+    }
+  },
+  {
     "id": "b5839e211a21",
     "title": "SEO Poisoning Campaign Delivers New Armorsteal Malware",
     "url": "https://www.zscaler.com/blogs/security-research/seo-poisoning-campaign-delivers-new-armorsteal-malware",
@@ -87,6 +110,29 @@
     }
   },
   {
+    "id": "307b575beaf0",
+    "title": "AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/",
+    "source": "Microsoft Security",
+    "published": "2026-10-21T18:23:55.000Z",
+    "summary": "Storm-0940 used ARTEX agentic AI to accelerate a ConnectWise supply chain compromise, enabling application credential abuse across Microsoft 365 environments. The post AI-driven, large-scale nation-state campaign using…",
+    "score": 17,
+    "matched": [
+      "campaign",
+      "nation-state",
+      "compromise"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 7,
+      "defanged": 8,
+      "addresses": 7,
+      "heading": true,
+      "evidence": 25
+    }
+  },
+  {
     "id": "f5335e20393b",
     "title": "LiteLLM Compromised in Supply Chain Attack Delivering Credential Stealer and Backdoor",
     "url": "https://thehackernews.com/2026/10/litellm-compromised-in-supply-chain.html",
@@ -130,28 +176,6 @@
       "addresses": 2,
       "heading": true,
       "evidence": 8
-    }
-  },
-  {
-    "id": "a569785436fd",
-    "title": "ClickFix has never been bigger, and AI tools are its most convincing lure yet",
-    "url": "https://www.bleepingcomputer.com/news/security/clickfix-has-never-been-bigger-and-ai-tools-are-its-most-convincing-lure-yet/",
-    "source": "BleepingComputer",
-    "published": "2026-10-21T14:00:10.000Z",
-    "summary": "ClickFix attacks are surging as cybercriminals use fake AI installers, malicious search results, and trusted chatbot platforms to trick users into executing malware. Push Security examines how these attacks evade…",
-    "score": 8,
-    "matched": [
-      "malware",
-      "ClickFix"
-    ],
-    "kind": "technique",
-    "indicators": {
-      "v": 2,
-      "hashes": 1,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 2
     }
   },
   {
@@ -333,50 +357,6 @@
     }
   },
   {
-    "id": "1fae9cde44bf",
-    "title": "MALFEX npm Package 'imgdecode' Hides Shellcode Loader in Windows Native Addon",
-    "url": "https://thehackernews.com/2026/10/malfex-npm-package-imgdecode-hides.html",
-    "source": "The Hacker News",
-    "published": "2026-10-17T11:11:56.000Z",
-    "summary": "Cybersecurity researchers have discovered a malicious npm package that's part of a recently disclosed software supply chain attack campaign dubbed MALFEX. The package, named \"imgdecode,\" was uploaded to the package…",
-    "score": 9,
-    "matched": [
-      "campaign",
-      "loader",
-      "supply chain"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 3,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 4
-    }
-  },
-  {
-    "id": "ce00994aa82d",
-    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-    "source": "CISA",
-    "published": "2026-10-16T12:00:00.000Z",
-    "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2025-61624 Fortinet Multiple Products Path Traversal Vulnerability…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
     "id": "bb92e43802cb",
     "title": "Cyber Threat Actors Use a Variety of Techniques to Target Election and Campaign Officials",
     "url": "https://www.cisa.gov/resources-tools/resources/cyber-threat-actors-use-variety-techniques-target-election-and-campaign-officials",
@@ -421,27 +401,6 @@
     }
   },
   {
-    "id": "6f0ecd5cfa13",
-    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/10/15/cisa-adds-one-known-exploited-vulnerability-catalog",
-    "source": "CISA",
-    "published": "2026-10-15T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-21589 Atlassian Multiple Products Files or Directories Accessible to…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
     "id": "1ee0303eecea",
     "title": "Threat Actor Abuses Agentic AI Pentesting Framework to Target South Korean Financial Institutions",
     "url": "https://www.zscaler.com/blogs/security-research/threat-actor-abuses-agentic-ai-pentesting-framework-target-south-korean",
@@ -461,27 +420,6 @@
       "addresses": 1,
       "heading": false,
       "evidence": 2
-    }
-  },
-  {
-    "id": "bc568daccb1a",
-    "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/10/14/cisa-adds-four-known-exploited-vulnerabilities-catalog",
-    "source": "CISA",
-    "published": "2026-10-14T12:00:00.000Z",
-    "summary": "CISA has added four new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-0322 Palo Alto Networks PAN-OS Code Injection Vulnerability…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
     }
   },
   {
@@ -505,27 +443,6 @@
       "addresses": 5,
       "heading": true,
       "evidence": 8
-    }
-  },
-  {
-    "id": "6fc0afa0da6f",
-    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-    "source": "CISA",
-    "published": "2026-10-13T12:00:00.000Z",
-    "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-96951 Microsoft Windows Command Injection Vulnerability CVE-2026-104935…",
-    "score": 11,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
     }
   },
   {
@@ -724,29 +641,6 @@
     }
   },
   {
-    "id": "5e35133b1276",
-    "title": "Star Blizzard refines phishing and malware delivery with the RedFlick technique",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/",
-    "source": "Microsoft Security",
-    "published": "2026-09-29T15:00:00.000Z",
-    "summary": "Since January 2026, Microsoft has observed Russian state threat actor Star Blizzard evolve their detection evasion capabilities through large-scale phishing campaigns, the use of accounts on compromised websites, and a…",
-    "score": 8,
-    "matched": [
-      "threat actor",
-      "compromised",
-      "malware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 12,
-      "defanged": 24,
-      "addresses": 8,
-      "heading": true,
-      "evidence": 47
-    }
-  },
-  {
     "id": "625d808ffc99",
     "title": "Attackers Abuse ChatGPT Custom GPTs to Deliver RAT via ClickFix",
     "url": "https://www.huntress.com/blog/chatgpt-custom-gpts-clickfix-rat",
@@ -853,6 +747,28 @@
     }
   },
   {
+    "id": "751077092345",
+    "title": "Beware the SparroWock: The backdoor that bites, the commands that catch",
+    "url": "https://www.welivesecurity.com/en/eset-research/beware-sparrowock-backdoor-bites-commands-catch/",
+    "source": "ESET Research",
+    "published": "2026-09-17T08:50:00.000Z",
+    "summary": "ESET researchers document SparroWocky, the new flagship backdoor of the FamousSparrow APT group",
+    "score": 7,
+    "matched": [
+      "APT",
+      "backdoor"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 19,
+      "addresses": 18,
+      "heading": true,
+      "evidence": 42
+    }
+  },
+  {
     "id": "8a3f8241ec08",
     "title": "Operation RapidRust: APT36 Deploys RUSTYSHADE, RUSTYMOVE, PSNATCH, and BASHNATCH",
     "url": "https://www.zscaler.com/blogs/security-research/operation-rapidrust-apt36-deploys-rustyshade-rustymove-psnatch-and",
@@ -941,6 +857,50 @@
       "addresses": 2,
       "heading": true,
       "evidence": 60
+    }
+  },
+  {
+    "id": "a8d17d82aec2",
+    "title": "Next-Gen Phishing Tactics Users Aren’t Ready For | Huntress",
+    "url": "https://www.huntress.com/blog/advanced-phishing-tradecraft",
+    "source": "Huntress",
+    "published": "2026-08-28T16:00:00.000Z",
+    "summary": "Move past basic credential harvesting. Discover how modern attackers use ClickFix, BitB, and OAuth consent phishing—and how to train your users with Huntress SAT.",
+    "score": 8,
+    "matched": [
+      "phishing",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 19,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 19
+    }
+  },
+  {
+    "id": "64e9c45aa341",
+    "title": "From 88 lines to 1: Detecting DLL hijacking with Elastic Defend",
+    "url": "https://www.elastic.co/security-labs/threat-command/dll-search-order-hijacking-elastic-defend",
+    "source": "Elastic Security Labs",
+    "published": "2026-08-28T00:00:00.000Z",
+    "summary": "The ClickFix campaign that sideloads a malicious mscoree.dll also ships a driver to kill Elastic Endpoint. We rebuilt that DLL as a NativeAOT library, dropped it beside a signed Microsoft binary, and Elastic Defend…",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 3,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 3
     }
   },
   {
@@ -1054,6 +1014,49 @@
       "addresses": 2,
       "heading": false,
       "evidence": 26
+    }
+  },
+  {
+    "id": "f6b8c91eb812",
+    "title": "TELEPUZ: a modular MaaS malware spreading via CLICKFIX-VIDAR chains",
+    "url": "https://www.elastic.co/security-labs/threat-command/telepuz-maas-malware-clickfix",
+    "source": "Elastic Security Labs",
+    "published": "2026-07-16T00:00:00.000Z",
+    "summary": "TELEPUZ is a modular malware that emerged through CLICKFIX-VIDAR attacks in April. We reverse-engineered it to show you the infrastructure and evasion techniques that matter.",
+    "score": 8,
+    "matched": [
+      "malware",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 17,
+      "defanged": 45,
+      "addresses": 2,
+      "heading": true,
+      "evidence": 67
+    }
+  },
+  {
+    "id": "16b5d60ea281",
+    "title": "ClickFix to Cash-Out: Anatomy of a Mexican Banking-Fraud Toolkit",
+    "url": "https://www.elastic.co/security-labs/threat-command/mexican-banking-fraud-scmbanker-ref6045",
+    "source": "Elastic Security Labs",
+    "published": "2026-07-08T00:00:00.000Z",
+    "summary": "Elastic Security Labs tracks REF6045, an active operator-assisted banking fraud operation targeting customers of Mexican banks, fintech, payment processors, and cryptocurrency exchanges.",
+    "score": 8,
+    "matched": [
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 30,
+      "defanged": 76,
+      "addresses": 3,
+      "heading": false,
+      "evidence": 109
     }
   },
   {
