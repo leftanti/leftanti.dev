@@ -355,29 +355,6 @@
     }
   },
   {
-    "id": "47f4fcfb349a",
-    "title": "GhostAction Attackers Plant Credential Stealer Disguised as Font in 94 GitHub Repositories",
-    "url": "https://thehackernews.com/2026/10/ghostaction-attackers-plant-credential.html",
-    "source": "The Hacker News",
-    "published": "2026-10-19T13:05:45.000Z",
-    "summary": "The threat actor behind the GhostAction supply chain attack has expanded beyond injecting malicious GitHub Actions workflows into compromised projects to phish open-source developers and deliver a stealer malware…",
-    "score": 11,
-    "matched": [
-      "threat actor",
-      "compromised",
-      "malware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 1,
-      "defanged": 6,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 8
-    }
-  },
-  {
     "id": "bb92e43802cb",
     "title": "Cyber Threat Actors Use a Variety of Techniques to Target Election and Campaign Officials",
     "url": "https://www.cisa.gov/resources-tools/resources/cyber-threat-actors-use-variety-techniques-target-election-and-campaign-officials",
@@ -968,6 +945,29 @@
       "addresses": 7,
       "heading": true,
       "evidence": 13
+    }
+  },
+  {
+    "id": "4fb83d6f230e",
+    "title": "QuickFox Supply Chain Attack Used to Deploy FDMTP Implant",
+    "url": "https://feeds.fortinet.com/~/966214247/0/fortinet/blog/threat-research~QuickFox-Supply-Chain-Attack-Used-to-Deploy-FDMTP-Implant",
+    "source": "Fortinet",
+    "published": "2026-08-04T13:00:00.000Z",
+    "summary": "The FortiGuard Labs Incident Response team analyzes a QuickFox supply chain attack that used trojanized Windows installers, selective targeting, and an evolving FDMTP implant",
+    "score": 7,
+    "matched": [
+      "incident response",
+      "implant",
+      "supply chain"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 35,
+      "defanged": 625,
+      "addresses": 58,
+      "heading": true,
+      "evidence": 721
     }
   },
   {
