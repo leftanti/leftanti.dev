@@ -969,29 +969,6 @@
     }
   },
   {
-    "id": "62fcd066ad23",
-    "title": "Helpdesk Hijackers: Teams Vishing, Quick Assist, and GoGRPC Backdoor",
-    "url": "https://www.zscaler.com/blogs/security-research/helpdesk-hijackers-teams-vishing-quick-assist-and-gogrpc-backdoor",
-    "source": "Zscaler ThreatLabz",
-    "published": "2026-07-27T14:51:56.000Z",
-    "summary": "IntroductionZscaler ThreatLabz has been tracking attacks from a threat actor that is likely an initial access broker for ransomware attacks since January 2026. The threat actor targets organizations by leveraging…",
-    "score": 11,
-    "matched": [
-      "threat actor",
-      "ransomware",
-      "backdoor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 12,
-      "defanged": 5,
-      "addresses": 8,
-      "heading": true,
-      "evidence": 28
-    }
-  },
-  {
     "id": "869bb8555344",
     "title": "New North Korean campaign uses fake coding interviews to steal developer credentials",
     "url": "https://www.elastic.co/security-labs/threat-command/contagious-interview-malware-svg-steganography",
@@ -1077,6 +1054,29 @@
       "addresses": 11,
       "heading": false,
       "evidence": 66
+    }
+  },
+  {
+    "id": "8159851e4eb4",
+    "title": "Flash Alert: EtherRat and TukTuk C2 End in The Gentleman Ransomware",
+    "url": "https://thedfirreport.com/2026/05/11/flash-alert-etherrat-and-tuktuk-c2-end-in-the-gentleman-ransomware/",
+    "source": "The DFIR Report",
+    "published": "2026-05-11T14:05:04.000Z",
+    "summary": "The EtherRAT malware family was first reported by Sysdig back in December 2025. At that time, the initial access vector was exploitation of CVE-2025-55182 (React2Shell) targeting Linux servers. In March 2026, a Windows…",
+    "score": 7,
+    "matched": [
+      "ransomware",
+      "malware",
+      "initial access"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 18,
+      "defanged": 1,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 23
     }
   },
   {
