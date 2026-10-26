@@ -1,24 +1,47 @@
 [
   {
-    "id": "0ed9de79250d",
-    "title": "PHP2Shell security flaws now sucessfully exploited in the wild",
-    "url": "https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/",
-    "source": "BleepingComputer",
-    "published": "2026-10-26T09:19:57.000Z",
-    "summary": "Two critical RCE vulnerabilities (CVE-2026-109618 and CVE-2026-109619), collectively tracked as PHP2Shell, have been successfully exploited in the wild. [...]",
-    "score": 6,
+    "id": "961277245249",
+    "title": "Hackers Infect 953 Online Stores With Scanner-Evading JavaScript, Mostly on Magento",
+    "url": "https://thehackernews.com/2026/10/hackers-infect-953-online-stores-with.html",
+    "source": "The Hacker News",
+    "published": "2026-10-26T18:12:22.000Z",
+    "summary": "An unknown threat actor has infected 953 online stores, most of them running Magento, as part of a long-running campaign active since July 2025. According to Dutch e-commerce security company Sansec, the activity is…",
+    "score": 8,
     "matched": [
-      "exploited in",
-      "in the wild"
+      "campaign",
+      "threat actor"
     ],
     "kind": "ioc",
     "indicators": {
       "v": 2,
-      "hashes": 2,
-      "defanged": 0,
+      "hashes": 0,
+      "defanged": 10,
       "addresses": 1,
       "heading": false,
-      "evidence": 3
+      "evidence": 11
+    }
+  },
+  {
+    "id": "03f54c74f6fe",
+    "title": "Attackers Use Microsoft Teams IT Support Scams to Deploy Malware and Ransomware",
+    "url": "https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html",
+    "source": "The Hacker News",
+    "published": "2026-10-26T15:52:40.000Z",
+    "summary": "Cybersecurity researchers are calling attention to what they say is a \"recurring social engineering pattern\" across hundreds of cases in which threat actors use Microsoft Teams' external chat creation feature to conduct…",
+    "score": 6,
+    "matched": [
+      "ransomware",
+      "malware",
+      "social engineering"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 6,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 6
     }
   },
   {
@@ -149,29 +172,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "f6b15d9a973a",
-    "title": "Arista patches new VeloCloud Orchestrator zero-day exploited in attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/arista-patches-new-velocloud-orchestrator-zero-day-exploited-in-attacks/",
-    "source": "BleepingComputer",
-    "published": "2026-10-22T17:18:22.000Z",
-    "summary": "Arista Networks released security updates to patch an actively exploited zero-day vulnerability affecting VeloCloud Orchestrator (VCO) On-Prem deployments. [...]",
-    "score": 11,
-    "matched": [
-      "actively exploited",
-      "exploited in",
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 2,
-      "addresses": 6,
-      "heading": false,
-      "evidence": 10
     }
   },
   {
