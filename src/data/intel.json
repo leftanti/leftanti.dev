@@ -1,5 +1,47 @@
 [
   {
+    "id": "e5255ef8ffec",
+    "title": "UNM Health ransomware attack disrupts patient care, surgeries",
+    "url": "https://www.bleepingcomputer.com/news/security/unm-health-ransomware-attack-disrupts-patient-care-surgeries/",
+    "source": "BleepingComputer",
+    "published": "2026-10-27T22:07:34.000Z",
+    "summary": "The University of New Mexico Health Sciences Center disclosed a cyberattack that caused system outages and disrupted patient care and academic activities. [...]",
+    "score": 6,
+    "matched": [
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "9de4c840c98b",
+    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-10-27T12:00:00.000Z",
+    "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-48356 Adobe Commerce and Magento Unrestricted Upload of File with…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "0f3bafdfab2f",
     "title": "Apple backports CoreGraphics zero-day patches to older iPhones",
     "url": "https://www.bleepingcomputer.com/news/apple/apple-backports-coregraphics-zero-day-patches-to-older-iphones/",
@@ -41,50 +83,6 @@
       "addresses": 1,
       "heading": false,
       "evidence": 11
-    }
-  },
-  {
-    "id": "03f54c74f6fe",
-    "title": "Attackers Use Microsoft Teams IT Support Scams to Deploy Malware and Ransomware",
-    "url": "https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html",
-    "source": "The Hacker News",
-    "published": "2026-10-26T15:52:40.000Z",
-    "summary": "Cybersecurity researchers are calling attention to what they say is a \"recurring social engineering pattern\" across hundreds of cases in which threat actors use Microsoft Teams' external chat creation feature to conduct…",
-    "score": 6,
-    "matched": [
-      "ransomware",
-      "malware",
-      "social engineering"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 6,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 6
-    }
-  },
-  {
-    "id": "3576934612fc",
-    "title": "⚡ Weekly Recap: This2Shell, That2Shell, Everything's an RCE? Rogue AI, Supply Chain Chaos and More",
-    "url": "https://thehackernews.com/2026/10/weekly-recap-this2shell-that2shell.html",
-    "source": "The Hacker News",
-    "published": "2026-10-26T14:06:13.000Z",
-    "summary": "This2Shell, That2Shell, Everything2Shell. That's pretty much how the last week went. Critical bugs that let attackers run code remotely are showing up everywhere. Hackers are scanning for targets, some flaws are already…",
-    "score": 6,
-    "matched": [
-      "supply chain"
-    ],
-    "kind": "technique",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
     }
   },
   {
@@ -302,6 +300,29 @@
       "addresses": 10,
       "heading": true,
       "evidence": 14
+    }
+  },
+  {
+    "id": "307b575beaf0",
+    "title": "AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/",
+    "source": "Microsoft Security",
+    "published": "2026-10-21T18:23:55.000Z",
+    "summary": "Storm-0940 used ARTEX agentic AI to accelerate a ConnectWise supply chain compromise, enabling application credential abuse across Microsoft 365 environments. The post AI-driven, large-scale nation-state campaign using…",
+    "score": 17,
+    "matched": [
+      "campaign",
+      "nation-state",
+      "compromise"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 7,
+      "defanged": 8,
+      "addresses": 7,
+      "heading": true,
+      "evidence": 25
     }
   },
   {
@@ -632,29 +653,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 23
-    }
-  },
-  {
-    "id": "5e35133b1276",
-    "title": "Star Blizzard refines phishing and malware delivery with the RedFlick technique",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/",
-    "source": "Microsoft Security",
-    "published": "2026-09-29T15:00:00.000Z",
-    "summary": "Since January 2026, Microsoft has observed Russian state threat actor Star Blizzard evolve their detection evasion capabilities through large-scale phishing campaigns, the use of accounts on compromised websites, and a…",
-    "score": 8,
-    "matched": [
-      "threat actor",
-      "compromised",
-      "malware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 12,
-      "defanged": 24,
-      "addresses": 8,
-      "heading": true,
-      "evidence": 47
     }
   },
   {
