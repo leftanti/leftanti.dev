@@ -22,26 +22,24 @@
     }
   },
   {
-    "id": "03f54c74f6fe",
-    "title": "Attackers Use Microsoft Teams IT Support Scams to Deploy Malware and Ransomware",
-    "url": "https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html",
-    "source": "The Hacker News",
-    "published": "2026-10-26T15:52:40.000Z",
-    "summary": "Cybersecurity researchers are calling attention to what they say is a \"recurring social engineering pattern\" across hundreds of cases in which threat actors use Microsoft Teams' external chat creation feature to conduct…",
-    "score": 6,
+    "id": "a7bcfa86d46f",
+    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-10-26T12:00:00.000Z",
+    "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog and updated the PHP Alert, Critical Vulnerabilities in PHP Require Immediate Patching : CVE-2026-109618 – PHP Memory Corruption…",
+    "score": 10,
     "matched": [
-      "ransomware",
-      "malware",
-      "social engineering"
+      "known exploited"
     ],
-    "kind": "ioc",
+    "kind": "exploited",
     "indicators": {
       "v": 2,
       "hashes": 0,
-      "defanged": 6,
+      "defanged": 0,
       "addresses": 0,
       "heading": false,
-      "evidence": 6
+      "evidence": 0
     }
   },
   {
