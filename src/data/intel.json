@@ -1,5 +1,27 @@
 [
   {
+    "id": "0f3bafdfab2f",
+    "title": "Apple backports CoreGraphics zero-day patches to older iPhones",
+    "url": "https://www.bleepingcomputer.com/news/apple/apple-backports-coregraphics-zero-day-patches-to-older-iphones/",
+    "source": "BleepingComputer",
+    "published": "2026-10-27T10:36:12.000Z",
+    "summary": "​Apple has backported security patches released last month to older iPhones and iPads, addressing a zero-day bug exploited in \"extremely sophisticated\" targeted attacks on iOS devices. [...]",
+    "score": 6,
+    "matched": [
+      "exploited in",
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
     "id": "961277245249",
     "title": "Hackers Infect 953 Online Stores With Scanner-Evading JavaScript, Mostly on Magento",
     "url": "https://thehackernews.com/2026/10/hackers-infect-953-online-stores-with.html",
@@ -305,28 +327,6 @@
       "addresses": 2,
       "heading": true,
       "evidence": 8
-    }
-  },
-  {
-    "id": "f29fd7d40b5f",
-    "title": "Google Chrome Adds ClickFix Warnings to Stop Users From Running Malicious Commands",
-    "url": "https://thehackernews.com/2026/10/google-chrome-adds-clickfix-warnings-to.html",
-    "source": "The Hacker News",
-    "published": "2026-10-21T13:15:09.000Z",
-    "summary": "Google on Tuesday said it's rolling out improved safeguards in its Chrome browser to secure users against ClickFix attacks when Enhanced Protection is enabled. ClickFix is a popular social engineering technique in which…",
-    "score": 8,
-    "matched": [
-      "social engineering",
-      "ClickFix"
-    ],
-    "kind": "technique",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
     }
   },
   {
