@@ -1,5 +1,50 @@
 [
   {
+    "id": "42a9e60af11b",
+    "title": "Adobe Fixes 8 Critical Campaign Classic Flaws Allowing Code Execution and Security Bypass",
+    "url": "https://thehackernews.com/2026/10/adobe-fixes-8-critical-campaign-classic.html",
+    "source": "The Hacker News",
+    "published": "2026-10-28T11:15:51.000Z",
+    "summary": "Adobe has released patches to address multiple critical security flaws in Campaign Classic that, if successfully exploited, could result in arbitrary code execution, security feature bypass, and privilege escalation.…",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "privilege escalation"
+    ],
+    "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "169a3a02ba4a",
+    "title": "American Organizations Under Attack: Skyw4lker Device Code Phishing Campaign Exposed",
+    "url": "https://thehackernews.com/2026/10/american-organizations-under-attack.html",
+    "source": "The Hacker News",
+    "published": "2026-10-28T10:30:00.000Z",
+    "summary": "Modern phishing campaigns can compromise American businesses without relying on traditional credential theft. Attackers can abuse legitimate cloud services, authentication mechanisms, and trusted business workflows to…",
+    "score": 12,
+    "matched": [
+      "campaign",
+      "compromise",
+      "phishing"
+    ],
+    "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 2,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 2
+    }
+  },
+  {
     "id": "4972d322c4e8",
     "title": "Japan's GMO urges customers to shut down PCs amid ransomware threat",
     "url": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/",
@@ -10,27 +55,6 @@
     "matched": [
       "threat actor",
       "breached",
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
-    "id": "e5255ef8ffec",
-    "title": "UNM Health ransomware attack disrupts patient care, surgeries",
-    "url": "https://www.bleepingcomputer.com/news/security/unm-health-ransomware-attack-disrupts-patient-care-surgeries/",
-    "source": "BleepingComputer",
-    "published": "2026-10-27T22:07:34.000Z",
-    "summary": "The University of New Mexico Health Sciences Center disclosed a cyberattack that caused system outages and disrupted patient care and academic activities. [...]",
-    "score": 6,
-    "matched": [
       "ransomware"
     ],
     "kind": "ioc",
@@ -762,29 +786,6 @@
       "addresses": 1,
       "heading": true,
       "evidence": 34
-    }
-  },
-  {
-    "id": "e55a80bc52c0",
-    "title": "NightEagle targets Russian companies",
-    "url": "https://securelist.com/tr/nighteagle-apt-ghostcontainer-and-tunneling/121323/",
-    "source": "Securelist",
-    "published": "2026-09-16T10:00:11.000Z",
-    "summary": "Kaspersky GERT experts have uncovered a new campaign by the NightEagle APT, featuring the GhostContainer backdoor and tools hosted on GitHub. The group is also exploiting vulnerabilities in Active Directory and RDP.",
-    "score": 9,
-    "matched": [
-      "campaign",
-      "APT",
-      "backdoor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 8,
-      "defanged": 5,
-      "addresses": 0,
-      "heading": true,
-      "evidence": 16
     }
   },
   {
