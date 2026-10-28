@@ -1,5 +1,28 @@
 [
   {
+    "id": "4972d322c4e8",
+    "title": "Japan's GMO urges customers to shut down PCs amid ransomware threat",
+    "url": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/",
+    "source": "BleepingComputer",
+    "published": "2026-10-27T23:35:51.000Z",
+    "summary": "The GMO Group has urged customers to disconnect their systems from the internet and shut down computers after a threat actor who breached the company's Onamae Desktop Cloud threatened to launch a ransomware attack…",
+    "score": 10,
+    "matched": [
+      "threat actor",
+      "breached",
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
     "id": "e5255ef8ffec",
     "title": "UNM Health ransomware attack disrupts patient care, surgeries",
     "url": "https://www.bleepingcomputer.com/news/security/unm-health-ransomware-attack-disrupts-patient-care-surgeries/",
@@ -39,28 +62,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "0f3bafdfab2f",
-    "title": "Apple backports CoreGraphics zero-day patches to older iPhones",
-    "url": "https://www.bleepingcomputer.com/news/apple/apple-backports-coregraphics-zero-day-patches-to-older-iphones/",
-    "source": "BleepingComputer",
-    "published": "2026-10-27T10:36:12.000Z",
-    "summary": "​Apple has backported security patches released last month to older iPhones and iPads, addressing a zero-day bug exploited in \"extremely sophisticated\" targeted attacks on iOS devices. [...]",
-    "score": 6,
-    "matched": [
-      "exploited in",
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
     }
   },
   {
