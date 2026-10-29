@@ -1,5 +1,92 @@
 [
   {
+    "id": "15844ab6f7ae",
+    "title": "Hugging Face malware campaign returns to hijack GPUs for crypto mining",
+    "url": "https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/",
+    "source": "BleepingComputer",
+    "published": "2026-10-29T22:09:24.000Z",
+    "summary": "A crypto-mining campaign abusing Hugging Face models returned days after takedown, hijacking GPU servers and planting backdoors, with one model downloaded over 28,000 times. Separately, a fake Solana starter kit on…",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "malware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 3,
+      "defanged": 2,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 6
+    }
+  },
+  {
+    "id": "49b887ef0581",
+    "title": "Tracking AI adoption in North Korean threat actor tradecraft",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/",
+    "source": "Microsoft Security",
+    "published": "2026-10-29T16:00:00.000Z",
+    "summary": "As Microsoft Threat Intelligence continues to track how threat actors operationalize AI to increase the speed and efficiency of attacks, we’ve identified North Korean threat actors expanding their use of AI with varying…",
+    "score": 8,
+    "matched": [
+      "threat actor"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 6,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 7
+    }
+  },
+  {
+    "id": "08252db330fb",
+    "title": "IR trends Q3 2026: Actors impersonate IT help desks in vishing attacks as ransomware activity increases",
+    "url": "https://blog.talosintelligence.com/ir-trends-q3-2026/",
+    "source": "Cisco Talos",
+    "published": "2026-10-29T14:00:00.000Z",
+    "summary": "Phishing remained the leading initial access technique, while percentage of ransomware and pre-ransomware cases increased. Finance and public administration tied as the top-targeted industries.",
+    "score": 8,
+    "matched": [
+      "ransomware",
+      "phishing",
+      "vishing"
+    ],
+    "kind": "technique",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "9b9000acef06",
+    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-10-29T12:00:00.000Z",
+    "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-97229 GitLab Community Edition and Enterprise Edition Integer Overflow or…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "083a1ea7d205",
     "title": "Cisco Patches Actively Exploited ASA and FTD VPN Flaw That Can Crash Firewalls",
     "url": "https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html",
@@ -66,27 +153,6 @@
     }
   },
   {
-    "id": "95f24b8f8f14",
-    "title": "Microsoft urges Entra ID admins to migrate users to passkeys",
-    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-reminds-entra-id-admins-to-migrate-users-to-passkeys/",
-    "source": "BleepingComputer",
-    "published": "2026-10-28T14:48:32.000Z",
-    "summary": "Microsoft again asked Entra ID administrators to migrate users to phishing-resistant methods to avoid sign-in disruptions before it retires SMS and voice authentication in February 2027. [...]",
-    "score": 10,
-    "matched": [
-      "phishing"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
     "id": "f28c390e8f2d",
     "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/10/28/cisa-adds-two-known-exploited-vulnerabilities-catalog",
@@ -150,29 +216,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 2
-    }
-  },
-  {
-    "id": "4972d322c4e8",
-    "title": "Japan's GMO urges customers to shut down PCs amid ransomware threat",
-    "url": "https://www.bleepingcomputer.com/news/security/japans-gmo-urges-customers-to-shut-down-pcs-amid-ransomware-threat/",
-    "source": "BleepingComputer",
-    "published": "2026-10-27T23:35:51.000Z",
-    "summary": "The GMO Group has urged customers to disconnect their systems from the internet and shut down computers after a threat actor who breached the company's Onamae Desktop Cloud threatened to launch a ransomware attack…",
-    "score": 10,
-    "matched": [
-      "threat actor",
-      "breached",
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
     }
   },
   {
@@ -263,12 +306,12 @@
     }
   },
   {
-    "id": "57a05936dd71",
+    "id": "d887f828b459",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog-0",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog",
     "source": "CISA",
     "published": "2026-10-23T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-110447 Collabora Online – Built-in CODE Server OS Command Injection…",
+    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-114625 Arista VeloCloud Orchestrator SQL Injection Vulnerability This type…",
     "score": 10,
     "matched": [
       "known exploited"
@@ -284,12 +327,12 @@
     }
   },
   {
-    "id": "d887f828b459",
+    "id": "57a05936dd71",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog-0",
     "source": "CISA",
     "published": "2026-10-23T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-114625 Arista VeloCloud Orchestrator SQL Injection Vulnerability This type…",
+    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-110447 Collabora Online – Built-in CODE Server OS Command Injection…",
     "score": 10,
     "matched": [
       "known exploited"
@@ -1008,49 +1051,6 @@
       "addresses": 2,
       "heading": false,
       "evidence": 26
-    }
-  },
-  {
-    "id": "f6b8c91eb812",
-    "title": "TELEPUZ: a modular MaaS malware spreading via CLICKFIX-VIDAR chains",
-    "url": "https://www.elastic.co/security-labs/threat-command/telepuz-maas-malware-clickfix",
-    "source": "Elastic Security Labs",
-    "published": "2026-07-16T00:00:00.000Z",
-    "summary": "TELEPUZ is a modular malware that emerged through CLICKFIX-VIDAR attacks in April. We reverse-engineered it to show you the infrastructure and evasion techniques that matter.",
-    "score": 8,
-    "matched": [
-      "malware",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 17,
-      "defanged": 45,
-      "addresses": 2,
-      "heading": true,
-      "evidence": 67
-    }
-  },
-  {
-    "id": "16b5d60ea281",
-    "title": "ClickFix to Cash-Out: Anatomy of a Mexican Banking-Fraud Toolkit",
-    "url": "https://www.elastic.co/security-labs/threat-command/mexican-banking-fraud-scmbanker-ref6045",
-    "source": "Elastic Security Labs",
-    "published": "2026-07-08T00:00:00.000Z",
-    "summary": "Elastic Security Labs tracks REF6045, an active operator-assisted banking fraud operation targeting customers of Mexican banks, fintech, payment processors, and cryptocurrency exchanges.",
-    "score": 8,
-    "matched": [
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 30,
-      "defanged": 76,
-      "addresses": 3,
-      "heading": false,
-      "evidence": 109
     }
   },
   {
