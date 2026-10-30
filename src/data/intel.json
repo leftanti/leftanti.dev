@@ -1,5 +1,27 @@
 [
   {
+    "id": "5100bc6323f0",
+    "title": "CISA Adds Actively Exploited GitLab RCE and Cisco Firewall DoS Flaws to KEV",
+    "url": "https://thehackernews.com/2026/10/cisa-adds-actively-exploited-gitlab-rce.html",
+    "source": "The Hacker News",
+    "published": "2026-10-30T07:27:05.000Z",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Thursday added two security flaws impacting Cisco and GitLab software to its Known Exploited Vulnerabilities (KEV), citing evidence of active…",
+    "score": 15,
+    "matched": [
+      "actively exploited",
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "15844ab6f7ae",
     "title": "Hugging Face malware campaign returns to hijack GPUs for crypto mining",
     "url": "https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/",
@@ -19,6 +41,27 @@
       "addresses": 1,
       "heading": false,
       "evidence": 6
+    }
+  },
+  {
+    "id": "49b887ef0581",
+    "title": "Tracking AI adoption in North Korean threat actor tradecraft",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/",
+    "source": "Microsoft Security",
+    "published": "2026-10-29T16:00:00.000Z",
+    "summary": "As Microsoft Threat Intelligence continues to track how threat actors operationalize AI to increase the speed and efficiency of attacks, we’ve identified North Korean threat actors expanding their use of AI with varying…",
+    "score": 8,
+    "matched": [
+      "threat actor"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 6,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 7
     }
   },
   {
@@ -262,29 +305,6 @@
     }
   },
   {
-    "id": "35a2887f8653",
-    "title": "Microsoft 365 Token-Replay Attacks Compromise 97 Accounts at 79 Organizations",
-    "url": "https://thehackernews.com/2026/10/microsoft-365-token-replay-attacks.html",
-    "source": "The Hacker News",
-    "published": "2026-10-26T08:35:51.000Z",
-    "summary": "Cybersecurity researchers have disclosed a Microsoft 365 campaign that has been observed leveraging an adversary-in-the-middle (AitM) relay to capture sign-in sessions and then replay the stolen tokens to break into…",
-    "score": 13,
-    "matched": [
-      "campaign",
-      "compromise",
-      "adversary-in-the-middle"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 5,
-      "addresses": 2,
-      "heading": false,
-      "evidence": 7
-    }
-  },
-  {
     "id": "d887f828b459",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -411,6 +431,29 @@
       "addresses": 10,
       "heading": true,
       "evidence": 14
+    }
+  },
+  {
+    "id": "307b575beaf0",
+    "title": "AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/",
+    "source": "Microsoft Security",
+    "published": "2026-10-21T18:23:55.000Z",
+    "summary": "Storm-0940 used ARTEX agentic AI to accelerate a ConnectWise supply chain compromise, enabling application credential abuse across Microsoft 365 environments. The post AI-driven, large-scale nation-state campaign using…",
+    "score": 17,
+    "matched": [
+      "campaign",
+      "nation-state",
+      "compromise"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 7,
+      "defanged": 8,
+      "addresses": 7,
+      "heading": true,
+      "evidence": 25
     }
   },
   {
@@ -744,29 +787,6 @@
     }
   },
   {
-    "id": "5e35133b1276",
-    "title": "Star Blizzard refines phishing and malware delivery with the RedFlick technique",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/",
-    "source": "Microsoft Security",
-    "published": "2026-09-29T15:00:00.000Z",
-    "summary": "Since January 2026, Microsoft has observed Russian state threat actor Star Blizzard evolve their detection evasion capabilities through large-scale phishing campaigns, the use of accounts on compromised websites, and a…",
-    "score": 8,
-    "matched": [
-      "threat actor",
-      "compromised",
-      "malware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 12,
-      "defanged": 24,
-      "addresses": 8,
-      "heading": true,
-      "evidence": 47
-    }
-  },
-  {
     "id": "625d808ffc99",
     "title": "Attackers Abuse ChatGPT Custom GPTs to Deliver RAT via ClickFix",
     "url": "https://www.huntress.com/blog/chatgpt-custom-gpts-clickfix-rat",
@@ -1030,28 +1050,6 @@
       "addresses": 2,
       "heading": false,
       "evidence": 26
-    }
-  },
-  {
-    "id": "f6b8c91eb812",
-    "title": "TELEPUZ: a modular MaaS malware spreading via CLICKFIX-VIDAR chains",
-    "url": "https://www.elastic.co/security-labs/threat-command/telepuz-maas-malware-clickfix",
-    "source": "Elastic Security Labs",
-    "published": "2026-07-16T00:00:00.000Z",
-    "summary": "TELEPUZ is a modular malware that emerged through CLICKFIX-VIDAR attacks in April. We reverse-engineered it to show you the infrastructure and evasion techniques that matter.",
-    "score": 8,
-    "matched": [
-      "malware",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 17,
-      "defanged": 45,
-      "addresses": 2,
-      "heading": true,
-      "evidence": 67
     }
   },
   {
