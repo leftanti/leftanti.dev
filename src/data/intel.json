@@ -1,5 +1,26 @@
 [
   {
+    "id": "4760f9242e3b",
+    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-10-30T12:00:00.000Z",
+    "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-111357 Ivanti Connect Secure Missing Authentication for Critical Function…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "5100bc6323f0",
     "title": "CISA Adds Actively Exploited GitLab RCE and Cisco Firewall DoS Flaws to KEV",
     "url": "https://thehackernews.com/2026/10/cisa-adds-actively-exploited-gitlab-rce.html",
@@ -262,28 +283,6 @@
     }
   },
   {
-    "id": "961277245249",
-    "title": "Hackers Infect 953 Online Stores With Scanner-Evading JavaScript, Mostly on Magento",
-    "url": "https://thehackernews.com/2026/10/hackers-infect-953-online-stores-with.html",
-    "source": "The Hacker News",
-    "published": "2026-10-26T18:12:22.000Z",
-    "summary": "An unknown threat actor has infected 953 online stores, most of them running Magento, as part of a long-running campaign active since July 2025. According to Dutch e-commerce security company Sansec, the activity is…",
-    "score": 8,
-    "matched": [
-      "campaign",
-      "threat actor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 10,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 11
-    }
-  },
-  {
     "id": "a7bcfa86d46f",
     "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog",
@@ -305,12 +304,12 @@
     }
   },
   {
-    "id": "d887f828b459",
+    "id": "57a05936dd71",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog-0",
     "source": "CISA",
     "published": "2026-10-23T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-114625 Arista VeloCloud Orchestrator SQL Injection Vulnerability This type…",
+    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-110447 Collabora Online – Built-in CODE Server OS Command Injection…",
     "score": 10,
     "matched": [
       "known exploited"
@@ -326,12 +325,12 @@
     }
   },
   {
-    "id": "57a05936dd71",
+    "id": "d887f828b459",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog-0",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog",
     "source": "CISA",
     "published": "2026-10-23T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-110447 Collabora Online – Built-in CODE Server OS Command Injection…",
+    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-114625 Arista VeloCloud Orchestrator SQL Injection Vulnerability This type…",
     "score": 10,
     "matched": [
       "known exploited"
