@@ -635,29 +635,6 @@
     }
   },
   {
-    "id": "c4e0f4d052d7",
-    "title": "UAT-11985: AI-assisted event lures delivering real-time Google AitM phishing",
-    "url": "https://blog.talosintelligence.com/uat-11985/",
-    "source": "Cisco Talos",
-    "published": "2026-10-08T10:01:06.000Z",
-    "summary": "Cisco Talos identified an APT spear-phishing campaign against individuals affiliated with Taiwan research organizations. The operation leveraged legitimate public event themes and impersonated reputable academic and…",
-    "score": 17,
-    "matched": [
-      "campaign",
-      "APT",
-      "phishing"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": true,
-      "evidence": 3
-    }
-  },
-  {
     "id": "41f6ab9f31ba",
     "title": "Phishing Campaign Abuses Microsoft Power BI to Deploy Rogue RMMs",
     "url": "https://www.huntress.com/blog/screenconnect-power-bi",
@@ -1049,6 +1026,28 @@
       "addresses": 2,
       "heading": false,
       "evidence": 26
+    }
+  },
+  {
+    "id": "f6b8c91eb812",
+    "title": "TELEPUZ: a modular MaaS malware spreading via CLICKFIX-VIDAR chains",
+    "url": "https://www.elastic.co/security-labs/threat-command/telepuz-maas-malware-clickfix",
+    "source": "Elastic Security Labs",
+    "published": "2026-07-16T00:00:00.000Z",
+    "summary": "TELEPUZ is a modular malware that emerged through CLICKFIX-VIDAR attacks in April. We reverse-engineered it to show you the infrastructure and evasion techniques that matter.",
+    "score": 8,
+    "matched": [
+      "malware",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 17,
+      "defanged": 45,
+      "addresses": 2,
+      "heading": true,
+      "evidence": 67
     }
   },
   {
