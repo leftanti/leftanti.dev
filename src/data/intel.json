@@ -1,5 +1,27 @@
 [
   {
+    "id": "39749d757eb1",
+    "title": "DarkBlinders Compromises Israeli Target and Iraqi Kurdish Government Cloud Environment",
+    "url": "https://thehackernews.com/2026/11/darkblinders-compromises-israeli-target.html",
+    "source": "The Hacker News",
+    "published": "2026-11-02T14:46:05.000Z",
+    "summary": "Cybersecurity researchers have disclosed details of a cyber espionage campaign targeting Israel and the Kurdistan Region of Iraq by an Iran state-aligned threat actor between August and October 2026. According to a…",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "threat actor"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 7,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 8
+    }
+  },
+  {
     "id": "1f2870fb86df",
     "title": "Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data",
     "url": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html",
@@ -1026,28 +1048,6 @@
       "addresses": 2,
       "heading": false,
       "evidence": 26
-    }
-  },
-  {
-    "id": "f6b8c91eb812",
-    "title": "TELEPUZ: a modular MaaS malware spreading via CLICKFIX-VIDAR chains",
-    "url": "https://www.elastic.co/security-labs/threat-command/telepuz-maas-malware-clickfix",
-    "source": "Elastic Security Labs",
-    "published": "2026-07-16T00:00:00.000Z",
-    "summary": "TELEPUZ is a modular malware that emerged through CLICKFIX-VIDAR attacks in April. We reverse-engineered it to show you the infrastructure and evasion techniques that matter.",
-    "score": 8,
-    "matched": [
-      "malware",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 17,
-      "defanged": 45,
-      "addresses": 2,
-      "heading": true,
-      "evidence": 67
     }
   },
   {
