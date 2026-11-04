@@ -1,5 +1,50 @@
 [
   {
+    "id": "b8eac1cafee6",
+    "title": "CISA flags WordPress RCE flaw as actively exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-wordpress-rce-flaw-as-actively-exploited-in-attacks/",
+    "source": "BleepingComputer",
+    "published": "2026-11-04T12:11:05.000Z",
+    "summary": "The US Cybersecurity and Infrastructure Security Agency (CISA) warned federal agencies that attackers have started exploiting a recently patched high-severity WordPress vulnerability in the wild. [...]",
+    "score": 13,
+    "matched": [
+      "actively exploited",
+      "exploited in",
+      "in the wild"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "8384c224e801",
+    "title": "China-Aligned Hackers Hijack Sogou Input Method DNS Requests to Deploy DarkVigil Backdoor",
+    "url": "https://thehackernews.com/2026/11/china-aligned-hackers-hijack-sogou.html",
+    "source": "The Hacker News",
+    "published": "2026-11-04T11:24:31.000Z",
+    "summary": "A China-aligned threat actor known as SlippyNunchucks has been attributed to a Domain Name System (DNS) hijacking operation abusing insecure HTTP communications in Windows versions of Sogou Input Method as part of a…",
+    "score": 9,
+    "matched": [
+      "threat actor",
+      "backdoor"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 5,
+      "addresses": 2,
+      "heading": false,
+      "evidence": 7
+    }
+  },
+  {
     "id": "c0bc88a0bf65",
     "title": "Fake-download campaign uses trojanized installers to deliver monetization payloads",
     "url": "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/",
@@ -191,28 +236,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "083a1ea7d205",
-    "title": "Cisco Patches Actively Exploited ASA and FTD VPN Flaw That Can Crash Firewalls",
-    "url": "https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html",
-    "source": "The Hacker News",
-    "published": "2026-10-29T10:44:46.000Z",
-    "summary": "Cisco has released patches to address a high-severity security flaw in Secure Firewall Adaptive Security Appliance (ASA) Software and Secure Firewall Threat Defense (FTD) Software that it said has been exploited in the…",
-    "score": 10,
-    "matched": [
-      "actively exploited",
-      "exploited in"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 7,
-      "heading": false,
-      "evidence": 7
     }
   },
   {
@@ -1023,27 +1046,6 @@
       "addresses": 2,
       "heading": true,
       "evidence": 67
-    }
-  },
-  {
-    "id": "16b5d60ea281",
-    "title": "ClickFix to Cash-Out: Anatomy of a Mexican Banking-Fraud Toolkit",
-    "url": "https://www.elastic.co/security-labs/threat-command/mexican-banking-fraud-scmbanker-ref6045",
-    "source": "Elastic Security Labs",
-    "published": "2026-07-08T00:00:00.000Z",
-    "summary": "Elastic Security Labs tracks REF6045, an active operator-assisted banking fraud operation targeting customers of Mexican banks, fintech, payment processors, and cryptocurrency exchanges.",
-    "score": 8,
-    "matched": [
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 30,
-      "defanged": 76,
-      "addresses": 3,
-      "heading": false,
-      "evidence": 109
     }
   },
   {
