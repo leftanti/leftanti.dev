@@ -1,5 +1,27 @@
 [
   {
+    "id": "a665869d02d2",
+    "title": "Zyxel GS1900 Patch Fails to Block Zero-Day Exploit Allowing Root Command Execution",
+    "url": "https://thehackernews.com/2026/11/zyxel-gs1900-patch-fails-to-block-zero.html",
+    "source": "The Hacker News",
+    "published": "2026-11-05T07:06:33.000Z",
+    "summary": "Zyxel GS1900 network switches that received the vendor's earlier fix for an actively exploited flaw are still open to the exploit attackers used, researchers at Binarly found. The exploit lets anyone who can reach a…",
+    "score": 11,
+    "matched": [
+      "actively exploited",
+      "zero-day"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "8d92a234083d",
     "title": "Zyxel fixes zero-day exploited to hack nearly 1,000 network switches",
     "url": "https://www.bleepingcomputer.com/news/security/zyxel-fixes-zero-day-exploited-to-hack-nearly-1-000-network-switches/",
@@ -88,26 +110,24 @@
     }
   },
   {
-    "id": "b8eac1cafee6",
-    "title": "CISA flags WordPress RCE flaw as actively exploited in attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-wordpress-rce-flaw-as-actively-exploited-in-attacks/",
-    "source": "BleepingComputer",
-    "published": "2026-11-04T12:11:05.000Z",
-    "summary": "The US Cybersecurity and Infrastructure Security Agency (CISA) warned federal agencies that attackers have started exploiting a recently patched high-severity WordPress vulnerability in the wild. [...]",
-    "score": 13,
+    "id": "3a3aab10d663",
+    "title": "Modernising threat hunting: Using Semantic Search to Find Risky AI Agent Behavior",
+    "url": "https://www.elastic.co/security-labs/blog/ai-agent-session-monitoring-embedding-models",
+    "source": "Elastic Security Labs",
+    "published": "2026-11-04T12:45:02.000Z",
+    "summary": "I tested vector search on 7,454 turns of my own agent sessions. One in seven sessions needed review, the agent’s reasoning carried more signal than the prompt, and the stored vectors answer questions nobody thought to…",
+    "score": 6,
     "matched": [
-      "actively exploited",
-      "exploited in",
-      "in the wild"
+      "threat hunting"
     ],
-    "kind": "ioc",
+    "kind": "other",
     "indicators": {
       "v": 2,
-      "hashes": 2,
+      "hashes": 1,
       "defanged": 0,
-      "addresses": 1,
+      "addresses": 0,
       "heading": false,
-      "evidence": 3
+      "evidence": 1
     }
   },
   {
@@ -130,27 +150,6 @@
       "addresses": 2,
       "heading": false,
       "evidence": 7
-    }
-  },
-  {
-    "id": "3a3aab10d663",
-    "title": "Monitoring AI agent sessions: Leveraging embedding models to aid threat hunting and attack discovery workflows",
-    "url": "https://www.elastic.co/security-labs/blog/ai-agent-session-monitoring-embedding-models",
-    "source": "Elastic Security Labs",
-    "published": "2026-11-04T00:00:00.000Z",
-    "summary": "I tested vector search on 7,454 turns of my own agent sessions. One in seven sessions needed review, the agent’s reasoning carried more signal than the prompt, and the stored vectors answer questions nobody thought to…",
-    "score": 6,
-    "matched": [
-      "threat hunting"
-    ],
-    "kind": "other",
-    "indicators": {
-      "v": 2,
-      "hashes": 1,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 1
     }
   },
   {
@@ -306,27 +305,6 @@
     }
   },
   {
-    "id": "a2cfff4ef640",
-    "title": "From help desk impersonation to AD CS abuse: Investigating ESC1 and ESC8 intrusion paths",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/",
-    "source": "Microsoft Security",
-    "published": "2026-10-30T16:11:44.000Z",
-    "summary": "Teams support impersonation led to remote access, malicious runtime execution, and Certificate Services abuse through authentication relay and Kerberos. The post From help desk impersonation to AD CS abuse:…",
-    "score": 6,
-    "matched": [
-      "intrusion"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 9,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 13
-    }
-  },
-  {
     "id": "49b887ef0581",
     "title": "Tracking AI adoption in North Korean threat actor tradecraft",
     "url": "https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/",
@@ -371,71 +349,6 @@
     }
   },
   {
-    "id": "e9b8120f4fdc",
-    "title": "Unknown APT uses NetamLoader to attack a Win10 OS customized for governments in Asia",
-    "url": "https://securelist.com/netamloader/121676/",
-    "source": "Securelist",
-    "published": "2026-10-29T08:00:15.000Z",
-    "summary": "Kaspersky researchers analyze a complex targeted attack employing NetamLoader, a sophisticated malicious framework and targeting a customized government OS.",
-    "score": 6,
-    "matched": [
-      "APT"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 26,
-      "defanged": 5,
-      "addresses": 3,
-      "heading": true,
-      "evidence": 37
-    }
-  },
-  {
-    "id": "660400b4cfcc",
-    "title": "ESET APT Activity Report Q2 2026–Q3 2026",
-    "url": "https://www.welivesecurity.com/en/eset-research/eset-apt-activity-report-q2-2026-q3-2026/",
-    "source": "ESET Research",
-    "published": "2026-10-28T09:45:00.000Z",
-    "summary": "An overview of the activities of selected APT groups investigated and analyzed by ESET Research in Q2 2026 and Q3 2026",
-    "score": 6,
-    "matched": [
-      "APT"
-    ],
-    "kind": "campaign",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "466b721cdbac",
-    "title": "Inside the LiteLLM 1.107.0 supply chain compromise: Credential theft through Python startup hooks",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/",
-    "source": "Microsoft Security",
-    "published": "2026-10-23T18:12:19.000Z",
-    "summary": "Microsoft Threat Intelligence analyzes the LiteLLM 1.107.0 compromise, including Python startup hooks, credential theft, remote code loading, detections, and mitigations. The post Inside the LiteLLM 1.107.0 supply chain…",
-    "score": 6,
-    "matched": [
-      "compromise",
-      "supply chain",
-      "credential theft"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 26,
-      "defanged": 14,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 44
-    }
-  },
-  {
     "id": "1af85e4dd8b5",
     "title": "2026-10-09: Pcap of infection from Macfinger Clickfix activity",
     "url": "https://www.malware-traffic-analysis.net/2026/10/09/index.html",
@@ -454,6 +367,29 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
+    }
+  },
+  {
+    "id": "b5839e211a21",
+    "title": "SEO Poisoning Campaign Delivers New Armorsteal Malware",
+    "url": "https://www.zscaler.com/blogs/security-research/seo-poisoning-campaign-delivers-new-armorsteal-malware",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-10-22T16:10:15.000Z",
+    "summary": "IntroductionIn September 2026, Zscaler Threat Hunting identified an SEO poisoning campaign that used fake websites impersonating the Chocolatey package manager and the Microsoft Activation Scripts (MAS) tool to…",
+    "score": 11,
+    "matched": [
+      "campaign",
+      "malware",
+      "threat hunting"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 12,
+      "defanged": 47,
+      "addresses": 7,
+      "heading": true,
+      "evidence": 69
     }
   },
   {
@@ -479,26 +415,24 @@
     }
   },
   {
-    "id": "307b575beaf0",
-    "title": "AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/",
-    "source": "Microsoft Security",
-    "published": "2026-10-21T18:23:55.000Z",
-    "summary": "Storm-0940 used ARTEX agentic AI to accelerate a ConnectWise supply chain compromise, enabling application credential abuse across Microsoft 365 environments. The post AI-driven, large-scale nation-state campaign using…",
-    "score": 17,
+    "id": "7b9a4fec96c9",
+    "title": "Inside a Global AI-Assisted Hacking Campaign",
+    "url": "https://www.zscaler.com/blogs/security-research/inside-global-ai-assisted-hacking-campaign",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-10-21T20:25:54.000Z",
+    "summary": "IntroductionIn October 2026, Zscaler ThreatLabz investigated AI-assisted cyberattacks that combined the ARTEX penetration testing framework with AI coding assistants and custom automation scripts. Initial reporting of…",
+    "score": 8,
     "matched": [
-      "campaign",
-      "nation-state",
-      "compromise"
+      "campaign"
     ],
     "kind": "ioc",
     "indicators": {
       "v": 2,
-      "hashes": 7,
-      "defanged": 8,
-      "addresses": 7,
+      "hashes": 1,
+      "defanged": 0,
+      "addresses": 10,
       "heading": true,
-      "evidence": 25
+      "evidence": 14
     }
   },
   {
@@ -569,28 +503,6 @@
     }
   },
   {
-    "id": "c7fd768c926c",
-    "title": "CVE-2026-102764: Critical BeyondTrust Remote Support Authentication Bypass Exploited in the Wild",
-    "url": "https://www.rapid7.com/blog/post/etr-cve-2026-102764-critical-beyondtrust-remote-support-authentication-bypass-exploited-in-the-wild",
-    "source": "Rapid7",
-    "published": "2026-10-19T14:34:04.000Z",
-    "summary": "Overview On October 15, 2026, BeyondTrust disclosed a critical authentication bypass in Remote Support (RS) , its platform for remotely troubleshooting and administering endpoints. Tracked as CVE-2026-102764 and…",
-    "score": 6,
-    "matched": [
-      "exploited in",
-      "in the wild"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 2
-    }
-  },
-  {
     "id": "d0e0e442d471",
     "title": "AI-Powered Espionage Campaign Targets Government Linux Infrastructure",
     "url": "https://unit42.paloaltonetworks.com/ai-campaign-targets-linux-infrastructure/",
@@ -611,6 +523,28 @@
       "addresses": 17,
       "heading": true,
       "evidence": 58
+    }
+  },
+  {
+    "id": "1ee0303eecea",
+    "title": "Threat Actor Abuses Agentic AI Pentesting Framework to Target South Korean Financial Institutions",
+    "url": "https://www.zscaler.com/blogs/security-research/threat-actor-abuses-agentic-ai-pentesting-framework-target-south-korean",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-10-14T23:20:22.000Z",
+    "summary": "IntroductionZscaler ThreatLabz analyzed a recently active exploitation campaign in which a threat actor abused ARTEX to target South Korean financial institutions. ARTEX is an open source agentic penetration testing…",
+    "score": 12,
+    "matched": [
+      "campaign",
+      "threat actor"
+    ],
+    "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 1,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 2
     }
   },
   {
@@ -635,25 +569,26 @@
     }
   },
   {
-    "id": "0440d30269fc",
-    "title": "Evolution of Web3 in Cloud Supply Chain Attacks",
-    "url": "https://unit42.paloaltonetworks.com/web3-cloud-supply-chain-attacks/",
-    "source": "Unit 42",
-    "published": "2026-10-07T22:00:16.000Z",
-    "summary": "Unit 42 details how threat actors leverage Web3 infrastructure and open-source supply chain attacks to breach enterprise cloud environments The post Evolution of Web3 in Cloud Supply Chain Attacks appeared first on Unit…",
-    "score": 6,
+    "id": "2d98a21446b6",
+    "title": "Suspected TraderTraitor Group Uses Trojanized Terraform Provider to Deliver Cross-Platform Malware",
+    "url": "https://www.zscaler.com/blogs/security-research/suspected-tradertraitor-group-uses-trojanized-terraform-provider-deliver",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-10-08T19:49:04.000Z",
+    "summary": "IntroductionIn July 2026, Zscaler ThreatLabz uncovered a campaign linked to TraderTraitor (also tracked as Jade Sleet, UNC4899, Pressure Chollima, and Slow Pisces), an advanced persistent threat actor backed by the…",
+    "score": 8,
     "matched": [
-      "breach",
-      "supply chain"
+      "campaign",
+      "threat actor",
+      "malware"
     ],
     "kind": "ioc",
     "indicators": {
       "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
+      "hashes": 13,
+      "defanged": 16,
+      "addresses": 1,
       "heading": true,
-      "evidence": 3
+      "evidence": 33
     }
   },
   {
@@ -764,29 +699,6 @@
     }
   },
   {
-    "id": "39c0ec31805a",
-    "title": "Threat Brief: NetScaler Zero Days CVE-2026-88771 and CVE-2026-88772 Exploited in the Wild (Updated September 30)",
-    "url": "https://unit42.paloaltonetworks.com/netscaler-zero-days-exploited/",
-    "source": "Unit 42",
-    "published": "2026-09-30T20:00:04.000Z",
-    "summary": "Unit 42 is aware of possible 0-day activity against NetScaler devices. Citrix reports CVE-2026-88771, CVE-2026-88772 have been exploited in the wild. The post Threat Brief: NetScaler Zero Days CVE-2026-88771 and…",
-    "score": 6,
-    "matched": [
-      "exploited in",
-      "in the wild",
-      "0-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 5,
-      "defanged": 30,
-      "addresses": 18,
-      "heading": true,
-      "evidence": 56
-    }
-  },
-  {
     "id": "db301593e724",
     "title": "Defender Exclusion Abuse: How Attackers Hide Malware from MDAV",
     "url": "https://www.huntress.com/blog/you-can-run-but-you-cant-hide-defender-exclusions",
@@ -894,6 +806,51 @@
     }
   },
   {
+    "id": "8a3f8241ec08",
+    "title": "Operation RapidRust: APT36 Deploys RUSTYSHADE, RUSTYMOVE, PSNATCH, and BASHNATCH",
+    "url": "https://www.zscaler.com/blogs/security-research/operation-rapidrust-apt36-deploys-rustyshade-rustymove-psnatch-and",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-09-16T15:13:12.000Z",
+    "summary": "IntroductionIn August 2026, Zscaler ThreatLabz observed new activity by the Pakistan-nexus threat actor APT36 in a campaign we’re tracking as Operation RapidRust. Since our last publication about the group’s activity in…",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "threat actor"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 13,
+      "defanged": 17,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 34
+    }
+  },
+  {
+    "id": "93d3be6534b8",
+    "title": "SloppyRAT: A New Tool For Ransomware Attacks",
+    "url": "https://www.zscaler.com/blogs/security-research/sloppyrat-new-tool-ransomware-attacks",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-09-10T14:43:37.000Z",
+    "summary": "IntroductionIn June 2026, Zscaler ThreatLabz identified a new malware family, tracked as SloppyRAT, that is likely leveraged by a ransomware-related threat actor. ThreatLabz observed SloppyRAT being delivered through a…",
+    "score": 10,
+    "matched": [
+      "threat actor",
+      "ransomware",
+      "malware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 24,
+      "defanged": 23,
+      "addresses": 2,
+      "heading": true,
+      "evidence": 52
+    }
+  },
+  {
     "id": "be1cd6ed484b",
     "title": "Inside Knight Office, a New M365 AiTM Phishing Kit",
     "url": "https://www.huntress.com/blog/inside-knight-office-m365-aitm-attack",
@@ -961,6 +918,29 @@
     }
   },
   {
+    "id": "34135e380428",
+    "title": "C2Looper: A New Backdoor Likely Tied To Ransomware With GitHub C2",
+    "url": "https://www.zscaler.com/blogs/security-research/c2looper-new-backdoor-likely-tied-ransomware-github-c2",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-08-17T14:06:04.000Z",
+    "summary": "IntroductionIn July 2026, Zscaler ThreatLabz identified a new Rust-based malware family that we track as C2Looper, which is likely leveraged by a ransomware-related threat actor. Furthermore, ThreatLabz assesses with…",
+    "score": 14,
+    "matched": [
+      "threat actor",
+      "ransomware",
+      "malware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 4,
+      "defanged": 1,
+      "addresses": 3,
+      "heading": true,
+      "evidence": 11
+    }
+  },
+  {
     "id": "df218795e276",
     "title": "Akira Hits Safe Mode: Ransomware Rebooting Around EDR",
     "url": "https://www.huntress.com/blog/akira-hits-safe-mode-ransomware-rebooting-around-edr",
@@ -980,6 +960,28 @@
       "addresses": 1,
       "heading": true,
       "evidence": 21
+    }
+  },
+  {
+    "id": "0d98e098f937",
+    "title": "CaptiveCrunch: Midnight Blizzard Weaponizes Hotel Wi-Fi Captive Portals to Steal Microsoft 365 Credentials",
+    "url": "https://www.zscaler.com/blogs/security-research/captivecrunch-midnight-blizzard-weaponizes-hotel-wi-fi-captive-portals",
+    "source": "Zscaler ThreatLabz",
+    "published": "2026-08-11T22:06:00.000Z",
+    "summary": "IntroductionOn July 31, Microsoft Threat Intelligence reported an ongoing credential theft campaign tracked as CaptiveCrunch. Microsoft attributes this activity to Storm-2945, a sub-cluster of Midnight Blizzard (also…",
+    "score": 10,
+    "matched": [
+      "campaign",
+      "credential theft"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 3,
+      "defanged": 0,
+      "addresses": 7,
+      "heading": true,
+      "evidence": 13
     }
   },
   {
