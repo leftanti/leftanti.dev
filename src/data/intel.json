@@ -1,5 +1,49 @@
 [
   {
+    "id": "7bdf0c6dc5dc",
+    "title": "Bitter Hackers Deploy New PapRAT Backdoor in Cyberespionage Campaign Targeting South Asia",
+    "url": "https://thehackernews.com/2026/11/bitter-hackers-deploy-new-paprat.html",
+    "source": "The Hacker News",
+    "published": "2026-11-09T14:31:29.000Z",
+    "summary": "The South Asian cyber espionage group known as Bitter (aka APT-C-08, APT-Q-37, Hazy Tiger, Orange Yali, T-APT-17, and TA397) has been observed targeting South Asian organizations with a previously unreported remote…",
+    "score": 15,
+    "matched": [
+      "campaign",
+      "APT",
+      "backdoor"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 3,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "8f6133c5e5ae",
+    "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/11/09/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-11-09T12:00:00.000Z",
+    "summary": "CISA has added four new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-102895 GPUStack Improper Authentication Vulnerability CVE-2026-116779…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "c776d35c062b",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/11/06/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -148,28 +192,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "39749d757eb1",
-    "title": "DarkBlinders Compromises Israeli Target and Iraqi Kurdish Government Cloud Environment",
-    "url": "https://thehackernews.com/2026/11/darkblinders-compromises-israeli-target.html",
-    "source": "The Hacker News",
-    "published": "2026-11-02T14:46:05.000Z",
-    "summary": "Cybersecurity researchers have disclosed details of a cyber espionage campaign targeting Israel and the Kurdistan Region of Iraq by an Iran state-aligned threat actor between August and October 2026. According to a…",
-    "score": 8,
-    "matched": [
-      "campaign",
-      "threat actor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 7,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 8
     }
   },
   {
@@ -954,28 +976,6 @@
       "addresses": 1,
       "heading": true,
       "evidence": 21
-    }
-  },
-  {
-    "id": "0d98e098f937",
-    "title": "CaptiveCrunch: Midnight Blizzard Weaponizes Hotel Wi-Fi Captive Portals to Steal Microsoft 365 Credentials",
-    "url": "https://www.zscaler.com/blogs/security-research/captivecrunch-midnight-blizzard-weaponizes-hotel-wi-fi-captive-portals",
-    "source": "Zscaler ThreatLabz",
-    "published": "2026-08-11T22:06:00.000Z",
-    "summary": "IntroductionOn July 31, Microsoft Threat Intelligence reported an ongoing credential theft campaign tracked as CaptiveCrunch. Microsoft attributes this activity to Storm-2945, a sub-cluster of Midnight Blizzard (also…",
-    "score": 10,
-    "matched": [
-      "campaign",
-      "credential theft"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 3,
-      "defanged": 0,
-      "addresses": 7,
-      "heading": true,
-      "evidence": 13
     }
   },
   {
