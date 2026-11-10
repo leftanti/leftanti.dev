@@ -1,5 +1,96 @@
 [
   {
+    "id": "fb904ba6593c",
+    "title": "Microsoft November 2026 Patch Tuesday fixes 1,235 flaws, Outlook zero-day",
+    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/",
+    "source": "BleepingComputer",
+    "published": "2026-11-10T19:07:36.000Z",
+    "summary": "Today is Microsoft's November 2026 Patch Tuesday, with security updates addressing a record-breaking 1,235 flaws, including one actively exploited Microsoft Outlook zero-day vulnerability. [...]",
+    "score": 11,
+    "matched": [
+      "actively exploited",
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "9398616ade4d",
+    "title": "Hackers Exploit Critical Xen Orchestra Auth Bypass Flaw to Gain Admin Access",
+    "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html",
+    "source": "The Hacker News",
+    "published": "2026-11-10T18:12:21.000Z",
+    "summary": "French software company Vates VMS has warned of a critical security vulnerability in Xen Orchestra that it said is being actively exploited in the wild. The authentication bypass flaw, which does not yet have a CVE…",
+    "score": 8,
+    "matched": [
+      "actively exploited",
+      "exploited in",
+      "in the wild"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 2,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 6
+    }
+  },
+  {
+    "id": "7e413807cc2f",
+    "title": "Blind Eagle Uses Fake Court Notices to Deliver Remote Access Trojan Across Latin America",
+    "url": "https://thehackernews.com/2026/11/blind-eagle-uses-fake-court-notices-to.html",
+    "source": "The Hacker News",
+    "published": "2026-11-10T15:58:44.000Z",
+    "summary": "The threat actor known as Blind Eagle has resurfaced with a new campaign targeting organizations in Latin America through judicial and administrative-themed phishing lures to deliver a remote access trojan (RAT) that…",
+    "score": 10,
+    "matched": [
+      "campaign",
+      "threat actor",
+      "remote access trojan"
+    ],
+    "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "9844bc61915e",
+    "title": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
+    "url": "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html",
+    "source": "The Hacker News",
+    "published": "2026-11-10T06:52:54.000Z",
+    "summary": "Google on Monday released updates to patch nine security vulnerabilities, including one that has come under active exploitation in the wild. The high-severity vulnerability, assigned the CVE identifier CVE-2026-125350…",
+    "score": 19,
+    "matched": [
+      "actively exploited",
+      "in the wild",
+      "zero-day"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "7bdf0c6dc5dc",
     "title": "Bitter Hackers Deploy New PapRAT Backdoor in Cyberespionage Campaign Targeting South Asia",
     "url": "https://thehackernews.com/2026/11/bitter-hackers-deploy-new-paprat.html",
@@ -87,29 +178,6 @@
     }
   },
   {
-    "id": "5e99d13bfbb2",
-    "title": "APT29-Linked Hackers Hijack Web Analytics Script to Deliver iOS and Android Exploits",
-    "url": "https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html",
-    "source": "The Hacker News",
-    "published": "2026-11-04T14:27:52.000Z",
-    "summary": "The Russia-linked threat actor known as APT29 is presumed to be behind a large-scale watering hole campaign targeting iOS and Android users through compromised websites, fake domains, and a supply chain attack involving…",
-    "score": 11,
-    "matched": [
-      "campaign",
-      "threat actor",
-      "compromised"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 4,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 4
-    }
-  },
-  {
     "id": "eb87294c0988",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/11/04/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -128,28 +196,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "8384c224e801",
-    "title": "China-Aligned Hackers Hijack Sogou Input Method DNS Requests to Deploy DarkVigil Backdoor",
-    "url": "https://thehackernews.com/2026/11/china-aligned-hackers-hijack-sogou.html",
-    "source": "The Hacker News",
-    "published": "2026-11-04T11:24:31.000Z",
-    "summary": "A China-aligned threat actor known as SlippyNunchucks has been attributed to a Domain Name System (DNS) hijacking operation abusing insecure HTTP communications in Windows versions of Sogou Input Method as part of a…",
-    "score": 9,
-    "matched": [
-      "threat actor",
-      "backdoor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 5,
-      "addresses": 2,
-      "heading": false,
-      "evidence": 7
     }
   },
   {
@@ -800,28 +846,6 @@
     }
   },
   {
-    "id": "751077092345",
-    "title": "Beware the SparroWock: The backdoor that bites, the commands that catch",
-    "url": "https://www.welivesecurity.com/en/eset-research/beware-sparrowock-backdoor-bites-commands-catch/",
-    "source": "ESET Research",
-    "published": "2026-09-17T08:50:00.000Z",
-    "summary": "ESET researchers document SparroWocky, the new flagship backdoor of the FamousSparrow APT group",
-    "score": 7,
-    "matched": [
-      "APT",
-      "backdoor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 19,
-      "addresses": 18,
-      "heading": true,
-      "evidence": 42
-    }
-  },
-  {
     "id": "8a3f8241ec08",
     "title": "Operation RapidRust: APT36 Deploys RUSTYSHADE, RUSTYMOVE, PSNATCH, and BASHNATCH",
     "url": "https://www.zscaler.com/blogs/security-research/operation-rapidrust-apt36-deploys-rustyshade-rustymove-psnatch-and",
@@ -934,6 +958,29 @@
     }
   },
   {
+    "id": "a1c38e14d19e",
+    "title": "Post-DEF CON Phishing Uses Malicious Google Doc to Deliver Malware",
+    "url": "https://www.huntress.com/blog/defcon-phishing-google-doc-malware",
+    "source": "Huntress",
+    "published": "2026-08-19T13:00:00.000Z",
+    "summary": "Huntress researcher uncovers post-Black Hat & DEF CON phishing campaign using X DMs & malicious documents to deliver AMOS, NetSupport RAT, and other malware.",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "malware",
+      "phishing"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 819,
+      "defanged": 47,
+      "addresses": 3,
+      "heading": true,
+      "evidence": 872
+    }
+  },
+  {
     "id": "34135e380428",
     "title": "C2Looper: A New Backdoor Likely Tied To Ransomware With GitHub C2",
     "url": "https://www.zscaler.com/blogs/security-research/c2looper-new-backdoor-likely-tied-ransomware-github-c2",
@@ -954,28 +1001,6 @@
       "addresses": 3,
       "heading": true,
       "evidence": 11
-    }
-  },
-  {
-    "id": "df218795e276",
-    "title": "Akira Hits Safe Mode: Ransomware Rebooting Around EDR",
-    "url": "https://www.huntress.com/blog/akira-hits-safe-mode-ransomware-rebooting-around-edr",
-    "source": "Huntress",
-    "published": "2026-08-12T13:00:00.000Z",
-    "summary": "An Akira affiliate rebooted into Safe Mode to kill EDR and Defender, then Safe Mode broke their own ransomware. Here’s the full attack chain.",
-    "score": 10,
-    "matched": [
-      "affiliate",
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 16,
-      "defanged": 1,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 21
     }
   },
   {
@@ -1043,29 +1068,6 @@
       "addresses": 11,
       "heading": false,
       "evidence": 66
-    }
-  },
-  {
-    "id": "8159851e4eb4",
-    "title": "Flash Alert: EtherRat and TukTuk C2 End in The Gentleman Ransomware",
-    "url": "https://thedfirreport.com/2026/05/11/flash-alert-etherrat-and-tuktuk-c2-end-in-the-gentleman-ransomware/",
-    "source": "The DFIR Report",
-    "published": "2026-05-11T14:05:04.000Z",
-    "summary": "The EtherRAT malware family was first reported by Sysdig back in December 2025. At that time, the initial access vector was exploitation of CVE-2025-55182 (React2Shell) targeting Linux servers. In March 2026, a Windows…",
-    "score": 7,
-    "matched": [
-      "ransomware",
-      "malware",
-      "initial access"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 18,
-      "defanged": 1,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 23
     }
   },
   {
