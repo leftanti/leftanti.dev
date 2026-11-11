@@ -1,5 +1,28 @@
 [
   {
+    "id": "adc02191d594",
+    "title": "Hackers exploit trusted AWS access to breach multiple cloud environments",
+    "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-trusted-aws-access-to-breach-multiple-cloud-environments/",
+    "source": "BleepingComputer",
+    "published": "2026-11-10T19:31:11.000Z",
+    "summary": "A threat actor used compromised identity and access management (IAM) credentials for a Qubole big data platform's AWS account to access and exfiltrate data from multiple customers' AWS environments. [...]",
+    "score": 6,
+    "matched": [
+      "threat actor",
+      "compromised",
+      "breach"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
     "id": "fb904ba6593c",
     "title": "Microsoft November 2026 Patch Tuesday fixes 1,235 flaws, Outlook zero-day",
     "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/",
@@ -58,6 +81,27 @@
       "remote access trojan"
     ],
     "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "193a689f6d04",
+    "title": "CISA Adds Six Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/11/10/cisa-adds-six-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-11-10T12:00:00.000Z",
+    "summary": "CISA has added six new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-20320 Cisco BroadWorks Improper Restriction of XML External Entity…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
     "indicators": {
       "v": 2,
       "hashes": 0,
@@ -411,27 +455,6 @@
     }
   },
   {
-    "id": "1af85e4dd8b5",
-    "title": "2026-10-09: Pcap of infection from Macfinger Clickfix activity",
-    "url": "https://www.malware-traffic-analysis.net/2026/10/09/index.html",
-    "source": "Malware Traffic Analysis",
-    "published": "2026-10-22T23:06:00.000Z",
-    "summary": "",
-    "score": 8,
-    "matched": [
-      "ClickFix"
-    ],
-    "kind": "technique",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
     "id": "b5839e211a21",
     "title": "SEO Poisoning Campaign Delivers New Armorsteal Malware",
     "url": "https://www.zscaler.com/blogs/security-research/seo-poisoning-campaign-delivers-new-armorsteal-malware",
@@ -719,48 +742,6 @@
     }
   },
   {
-    "id": "f0334488aea8",
-    "title": "2026-09-30: SmartApeSG ClickFix pushes CNCmachineRMS RAT",
-    "url": "https://www.malware-traffic-analysis.net/2026/09/30/index.html",
-    "source": "Malware Traffic Analysis",
-    "published": "2026-10-04T01:05:00.000Z",
-    "summary": "",
-    "score": 8,
-    "matched": [
-      "ClickFix"
-    ],
-    "kind": "technique",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 1,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 2
-    }
-  },
-  {
-    "id": "d0de9f0b66ea",
-    "title": "2026-09-29: Macfinger ClickFix activity",
-    "url": "https://www.malware-traffic-analysis.net/2026/09/29/index.html",
-    "source": "Malware Traffic Analysis",
-    "published": "2026-10-03T17:39:00.000Z",
-    "summary": "",
-    "score": 8,
-    "matched": [
-      "ClickFix"
-    ],
-    "kind": "technique",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
     "id": "db301593e724",
     "title": "Defender Exclusion Abuse: How Attackers Hide Malware from MDAV",
     "url": "https://www.huntress.com/blog/you-can-run-but-you-cant-hide-defender-exclusions",
@@ -804,27 +785,6 @@
     }
   },
   {
-    "id": "e3589523daea",
-    "title": "2026-09-24: Files for an ISC Diary (Macfinger ClickFix activity)",
-    "url": "https://www.malware-traffic-analysis.net/2026/09/24/index.html",
-    "source": "Malware Traffic Analysis",
-    "published": "2026-09-25T06:36:00.000Z",
-    "summary": "",
-    "score": 8,
-    "matched": [
-      "ClickFix"
-    ],
-    "kind": "technique",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
     "id": "3068205b2bb6",
     "title": "The Not So Silent Miner: Threat Actor Compiles Cryptominer on the Endpoint",
     "url": "https://www.huntress.com/blog/threat-actor-compiles-cryptominer",
@@ -843,6 +803,28 @@
       "addresses": 1,
       "heading": true,
       "evidence": 21
+    }
+  },
+  {
+    "id": "751077092345",
+    "title": "Beware the SparroWock: The backdoor that bites, the commands that catch",
+    "url": "https://www.welivesecurity.com/en/eset-research/beware-sparrowock-backdoor-bites-commands-catch/",
+    "source": "ESET Research",
+    "published": "2026-09-17T08:50:00.000Z",
+    "summary": "ESET researchers document SparroWocky, the new flagship backdoor of the FamousSparrow APT group",
+    "score": 7,
+    "matched": [
+      "APT",
+      "backdoor"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 19,
+      "addresses": 18,
+      "heading": true,
+      "evidence": 42
     }
   },
   {
@@ -1068,6 +1050,29 @@
       "addresses": 11,
       "heading": false,
       "evidence": 66
+    }
+  },
+  {
+    "id": "8159851e4eb4",
+    "title": "Flash Alert: EtherRat and TukTuk C2 End in The Gentleman Ransomware",
+    "url": "https://thedfirreport.com/2026/05/11/flash-alert-etherrat-and-tuktuk-c2-end-in-the-gentleman-ransomware/",
+    "source": "The DFIR Report",
+    "published": "2026-05-11T14:05:04.000Z",
+    "summary": "The EtherRAT malware family was first reported by Sysdig back in December 2025. At that time, the initial access vector was exploitation of CVE-2025-55182 (React2Shell) targeting Linux servers. In March 2026, a Windows…",
+    "score": 7,
+    "matched": [
+      "ransomware",
+      "malware",
+      "initial access"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 18,
+      "defanged": 1,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 23
     }
   },
   {
