@@ -1,16 +1,15 @@
 [
   {
-    "id": "adc02191d594",
-    "title": "Hackers exploit trusted AWS access to breach multiple cloud environments",
-    "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-trusted-aws-access-to-breach-multiple-cloud-environments/",
+    "id": "742ef24db4b6",
+    "title": "CISA flags Cisco BroadWorks flaw as actively exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/",
     "source": "BleepingComputer",
-    "published": "2026-11-10T19:31:11.000Z",
-    "summary": "A threat actor used compromised identity and access management (IAM) credentials for a Qubole big data platform's AWS account to access and exfiltrate data from multiple customers' AWS environments. [...]",
-    "score": 6,
+    "published": "2026-11-11T10:12:08.000Z",
+    "summary": "The US Cybersecurity and Infrastructure Security Agency (CISA) warned on Tuesday that hackers are now exploiting a high-severity Cisco BroadWorks vulnerability in attacks. [...]",
+    "score": 10,
     "matched": [
-      "threat actor",
-      "compromised",
-      "breach"
+      "actively exploited",
+      "exploited in"
     ],
     "kind": "ioc",
     "indicators": {
@@ -20,6 +19,50 @@
       "addresses": 1,
       "heading": false,
       "evidence": 3
+    }
+  },
+  {
+    "id": "d3c47f2647b7",
+    "title": "Citrus Ransomware: VLESS for traffic, Sn00py for encryption, and LLMs lending a hand",
+    "url": "https://securelist.com/citrus-ransomware/121879/",
+    "source": "Securelist",
+    "published": "2026-11-11T10:00:25.000Z",
+    "summary": "We break down the Citrus Ransomware group's attacks: the attackers' TTPs and tooling, including VLESS traffic tunneling and LLM use, plus their links to Toy Ghouls.",
+    "score": 10,
+    "matched": [
+      "ransomware",
+      "TTPs"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 11,
+      "defanged": 6,
+      "addresses": 2,
+      "heading": true,
+      "evidence": 22
+    }
+  },
+  {
+    "id": "cd6455aacef5",
+    "title": "Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches",
+    "url": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html",
+    "source": "The Hacker News",
+    "published": "2026-11-11T06:04:02.000Z",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) Tuesday added two security flaws impacting Cisco BroadWorks and Openwave Messaging Webtop Media Transcoder to its Known Exploited Vulnerabilities (KEV)…",
+    "score": 15,
+    "matched": [
+      "actively exploited",
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
     }
   },
   {
@@ -88,6 +131,28 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
+    }
+  },
+  {
+    "id": "7053d8e9d808",
+    "title": "Beyond the clipboard: The evolving tradecraft of ClickFix",
+    "url": "https://www.huntress.com/blog/the-evolving-tradecraft-of-clickfix",
+    "source": "Huntress",
+    "published": "2026-11-10T14:00:00.000Z",
+    "summary": "ClickFix techniques are evolving. Huntress breaks down four attack chains: lateral movement, hidden PNG payloads, Node.js RATs and cache seeing.",
+    "score": 8,
+    "matched": [
+      "ClickFix",
+      "lateral movement"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 674,
+      "defanged": 15,
+      "addresses": 3,
+      "heading": true,
+      "evidence": 695
     }
   },
   {
@@ -188,28 +253,6 @@
     "score": 10,
     "matched": [
       "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "a665869d02d2",
-    "title": "Zyxel GS1900 Patch Fails to Block Zero-Day Exploit Allowing Root Command Execution",
-    "url": "https://thehackernews.com/2026/11/zyxel-gs1900-patch-fails-to-block-zero.html",
-    "source": "The Hacker News",
-    "published": "2026-11-05T07:06:33.000Z",
-    "summary": "Zyxel GS1900 network switches that received the vendor's earlier fix for an actively exploited flaw are still open to the exploit attackers used, researchers at Binarly found. The exploit lets anyone who can reach a…",
-    "score": 11,
-    "matched": [
-      "actively exploited",
-      "zero-day"
     ],
     "kind": "exploited",
     "indicators": {
@@ -940,29 +983,6 @@
     }
   },
   {
-    "id": "a1c38e14d19e",
-    "title": "Post-DEF CON Phishing Uses Malicious Google Doc to Deliver Malware",
-    "url": "https://www.huntress.com/blog/defcon-phishing-google-doc-malware",
-    "source": "Huntress",
-    "published": "2026-08-19T13:00:00.000Z",
-    "summary": "Huntress researcher uncovers post-Black Hat & DEF CON phishing campaign using X DMs & malicious documents to deliver AMOS, NetSupport RAT, and other malware.",
-    "score": 8,
-    "matched": [
-      "campaign",
-      "malware",
-      "phishing"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 819,
-      "defanged": 47,
-      "addresses": 3,
-      "heading": true,
-      "evidence": 872
-    }
-  },
-  {
     "id": "34135e380428",
     "title": "C2Looper: A New Backdoor Likely Tied To Ransomware With GitHub C2",
     "url": "https://www.zscaler.com/blogs/security-research/c2looper-new-backdoor-likely-tied-ransomware-github-c2",
@@ -1050,29 +1070,6 @@
       "addresses": 11,
       "heading": false,
       "evidence": 66
-    }
-  },
-  {
-    "id": "8159851e4eb4",
-    "title": "Flash Alert: EtherRat and TukTuk C2 End in The Gentleman Ransomware",
-    "url": "https://thedfirreport.com/2026/05/11/flash-alert-etherrat-and-tuktuk-c2-end-in-the-gentleman-ransomware/",
-    "source": "The DFIR Report",
-    "published": "2026-05-11T14:05:04.000Z",
-    "summary": "The EtherRAT malware family was first reported by Sysdig back in December 2025. At that time, the initial access vector was exploitation of CVE-2025-55182 (React2Shell) targeting Linux servers. In March 2026, a Windows…",
-    "score": 7,
-    "matched": [
-      "ransomware",
-      "malware",
-      "initial access"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 18,
-      "defanged": 1,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 23
     }
   },
   {
