@@ -1,5 +1,28 @@
 [
   {
+    "id": "249ea37fc92b",
+    "title": "Maersk confirms data breach as WhiteArmor ransomware demands $5 million",
+    "url": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/",
+    "source": "BleepingComputer",
+    "published": "2026-11-11T16:24:18.000Z",
+    "summary": "Maersk announced that a threat actor gained unauthorized access to a local legacy system inherited through an earlier acquisition and extracted data from it. [...]",
+    "score": 10,
+    "matched": [
+      "threat actor",
+      "breach",
+      "ransomware"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
     "id": "742ef24db4b6",
     "title": "CISA flags Cisco BroadWorks flaw as actively exploited in attacks",
     "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/",
@@ -63,28 +86,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "fb904ba6593c",
-    "title": "Microsoft November 2026 Patch Tuesday fixes 1,235 flaws, Outlook zero-day",
-    "url": "https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/",
-    "source": "BleepingComputer",
-    "published": "2026-11-10T19:07:36.000Z",
-    "summary": "Today is Microsoft's November 2026 Patch Tuesday, with security updates addressing a record-breaking 1,235 flaws, including one actively exploited Microsoft Outlook zero-day vulnerability. [...]",
-    "score": 11,
-    "matched": [
-      "actively exploited",
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
     }
   },
   {
@@ -742,28 +743,6 @@
     }
   },
   {
-    "id": "5c07cdbef377",
-    "title": "Blinder Tunnel Campaign Targets Iraqi Infrastructure",
-    "url": "https://unit42.paloaltonetworks.com/blinder-tunnel-targets-critical-infrastructure/",
-    "source": "Unit 42",
-    "published": "2026-10-06T10:00:33.000Z",
-    "summary": "Analysis of Blinder Tunnel, an Iran-nexus campaign using fake Dubai Airports recruitment lures and GitHub C2 malware to target critical infrastructure. The post Blinder Tunnel Campaign Targets Iraqi Infrastructure…",
-    "score": 8,
-    "matched": [
-      "campaign",
-      "malware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 8,
-      "defanged": 43,
-      "addresses": 4,
-      "heading": true,
-      "evidence": 58
-    }
-  },
-  {
     "id": "8a494d145a3a",
     "title": "How Huntress Detects and Responds to a ClickFix Attack",
     "url": "https://www.huntress.com/blog/fix-for-clickfix",
@@ -1070,6 +1049,29 @@
       "addresses": 11,
       "heading": false,
       "evidence": 66
+    }
+  },
+  {
+    "id": "8159851e4eb4",
+    "title": "Flash Alert: EtherRat and TukTuk C2 End in The Gentleman Ransomware",
+    "url": "https://thedfirreport.com/2026/05/11/flash-alert-etherrat-and-tuktuk-c2-end-in-the-gentleman-ransomware/",
+    "source": "The DFIR Report",
+    "published": "2026-05-11T14:05:04.000Z",
+    "summary": "The EtherRAT malware family was first reported by Sysdig back in December 2025. At that time, the initial access vector was exploitation of CVE-2025-55182 (React2Shell) targeting Linux servers. In March 2026, a Windows…",
+    "score": 7,
+    "matched": [
+      "ransomware",
+      "malware",
+      "initial access"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 18,
+      "defanged": 1,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 23
     }
   },
   {
