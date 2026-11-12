@@ -1,5 +1,90 @@
 [
   {
+    "id": "1acaa8e77a2e",
+    "title": "New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access",
+    "url": "https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html",
+    "source": "The Hacker News",
+    "published": "2026-11-12T17:50:27.000Z",
+    "summary": "Public exploit code released earlier this week claims that a local Windows user can gain SYSTEM privileges through the Common Log File System driver. The proof of concept, called SignDrop, targets a log-authentication…",
+    "score": 8,
+    "matched": [
+      "zero-day"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "1db6496180d4",
+    "title": "Trained to betray: How post-training supply chain attacks hijack coding agents",
+    "url": "https://www.microsoft.com/en-us/security/blog/2026/11/12/trained-to-betray-how-post-training-supply-chain-attacks-hijack-coding-agents/",
+    "source": "Microsoft Security",
+    "published": "2026-11-12T17:00:00.000Z",
+    "summary": "Microsoft Defender Research and the AI Red Team discuss how poisoned datasets and poisoned model checkpoints can trigger remote code execution and other malicious activities. The post Trained to betray: How…",
+    "score": 10,
+    "matched": [
+      "supply chain"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 6,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 7
+    }
+  },
+  {
+    "id": "1fe252b0a65e",
+    "title": "New Windows SignDrop zero-day gives hackers SYSTEM privileges",
+    "url": "https://www.bleepingcomputer.com/news/security/new-windows-signdrop-zero-day-gives-hackers-system-privileges/",
+    "source": "BleepingComputer",
+    "published": "2026-11-12T16:04:00.000Z",
+    "summary": "Security researcher Abdelhamid Naceri (also known as Nightmare Eclipse) has released a new Windows zero-day exploit that can let attackers gain SYSTEM privileges. [...]",
+    "score": 8,
+    "matched": [
+      "zero-day"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "50b7d482cfd7",
+    "title": "186 Fake AI Domains Redirect Users to ClickFix Lures, Browser Malware, and Search Hijackers",
+    "url": "https://thehackernews.com/2026/11/186-fake-ai-domains-redirect-users-to.html",
+    "source": "The Hacker News",
+    "published": "2026-11-12T15:15:40.000Z",
+    "summary": "Cybersecurity researchers have found that lookalike domains masquerading as artificial intelligence (AI) tools are being used to serve ClickFix-style lures, browser-hijacking malware, and a set of extensions that hijack…",
+    "score": 8,
+    "matched": [
+      "malware",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 16,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 16
+    }
+  },
+  {
     "id": "f7cf57082e20",
     "title": "Calendar Invites and Live Proxies: Inside a Google Session Hijacking Campaign",
     "url": "https://thehackernews.com/2026/11/calendar-invites-and-live-proxies.html",
@@ -19,51 +104,6 @@
       "defanged": 0,
       "addresses": 0,
       "heading": true,
-      "evidence": 3
-    }
-  },
-  {
-    "id": "249ea37fc92b",
-    "title": "Maersk confirms data breach as WhiteArmor ransomware demands $5 million",
-    "url": "https://www.bleepingcomputer.com/news/security/maersk-confirms-data-breach-as-whitearmor-ransomware-demands-5-million/",
-    "source": "BleepingComputer",
-    "published": "2026-11-11T16:24:18.000Z",
-    "summary": "Maersk announced that a threat actor gained unauthorized access to a local legacy system inherited through an earlier acquisition and extracted data from it. [...]",
-    "score": 10,
-    "matched": [
-      "threat actor",
-      "breach",
-      "ransomware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
-    "id": "742ef24db4b6",
-    "title": "CISA flags Cisco BroadWorks flaw as actively exploited in attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-cisco-broadworks-flaw-as-actively-exploited-in-attacks/",
-    "source": "BleepingComputer",
-    "published": "2026-11-11T10:12:08.000Z",
-    "summary": "The US Cybersecurity and Infrastructure Security Agency (CISA) warned on Tuesday that hackers are now exploiting a high-severity Cisco BroadWorks vulnerability in attacks. [...]",
-    "score": 10,
-    "matched": [
-      "actively exploited",
-      "exploited in"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
       "evidence": 3
     }
   },
@@ -307,27 +347,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "c0bc88a0bf65",
-    "title": "Fake-download campaign uses trojanized installers to deliver monetization payloads",
-    "url": "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/",
-    "source": "Microsoft Security",
-    "published": "2026-11-03T17:32:47.000Z",
-    "summary": "Microsoft Threat Intelligence tracks a fake-download campaign that uses trojanized Inno installers to deliver multiple monetization offers and provides detection and investigation guidance across the complete installer…",
-    "score": 8,
-    "matched": [
-      "campaign"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 13,
-      "defanged": 5,
-      "addresses": 1,
-      "heading": true,
-      "evidence": 22
     }
   },
   {
@@ -848,28 +867,6 @@
       "addresses": 1,
       "heading": true,
       "evidence": 21
-    }
-  },
-  {
-    "id": "751077092345",
-    "title": "Beware the SparroWock: The backdoor that bites, the commands that catch",
-    "url": "https://www.welivesecurity.com/en/eset-research/beware-sparrowock-backdoor-bites-commands-catch/",
-    "source": "ESET Research",
-    "published": "2026-09-17T08:50:00.000Z",
-    "summary": "ESET researchers document SparroWocky, the new flagship backdoor of the FamousSparrow APT group",
-    "score": 7,
-    "matched": [
-      "APT",
-      "backdoor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 19,
-      "addresses": 18,
-      "heading": true,
-      "evidence": 42
     }
   },
   {
