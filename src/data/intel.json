@@ -1,5 +1,50 @@
 [
   {
+    "id": "6b2047aad824",
+    "title": "Macfinger ClickFix campaign sends DownTheDRAIN infostealer for macOS, (Fri, Nov 13th)",
+    "url": "https://isc.sans.edu/diary/rss/33518",
+    "source": "SANS ISC",
+    "published": "2026-11-13T03:41:41.000Z",
+    "summary": "Introduction",
+    "score": 16,
+    "matched": [
+      "campaign",
+      "infostealer",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 7,
+      "defanged": 11,
+      "addresses": 3,
+      "heading": false,
+      "evidence": 21
+    }
+  },
+  {
+    "id": "c74aba33998d",
+    "title": "2026-11-12: SmartApeSG ClickFix campaign pushes CNCmachineRMS RAT",
+    "url": "https://www.malware-traffic-analysis.net/2026/11/12/index.html",
+    "source": "Malware Traffic Analysis",
+    "published": "2026-11-13T00:38:00.000Z",
+    "summary": "",
+    "score": 16,
+    "matched": [
+      "campaign",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 12,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 15
+    }
+  },
+  {
     "id": "1acaa8e77a2e",
     "title": "New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access",
     "url": "https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html",
@@ -960,28 +1005,6 @@
     }
   },
   {
-    "id": "64e9c45aa341",
-    "title": "From 88 lines to 1: Detecting DLL hijacking with Elastic Defend",
-    "url": "https://www.elastic.co/security-labs/threat-command/dll-search-order-hijacking-elastic-defend",
-    "source": "Elastic Security Labs",
-    "published": "2026-08-28T00:00:00.000Z",
-    "summary": "The ClickFix campaign that sideloads a malicious mscoree.dll also ships a driver to kill Elastic Endpoint. We rebuilt that DLL as a NativeAOT library, dropped it beside a signed Microsoft binary, and Elastic Defend…",
-    "score": 8,
-    "matched": [
-      "campaign",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 3,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
     "id": "34135e380428",
     "title": "C2Looper: A New Backdoor Likely Tied To Ransomware With GitHub C2",
     "url": "https://www.zscaler.com/blogs/security-research/c2looper-new-backdoor-likely-tied-ransomware-github-c2",
@@ -1025,28 +1048,6 @@
       "addresses": 2,
       "heading": false,
       "evidence": 26
-    }
-  },
-  {
-    "id": "f6b8c91eb812",
-    "title": "TELEPUZ: a modular MaaS malware spreading via CLICKFIX-VIDAR chains",
-    "url": "https://www.elastic.co/security-labs/threat-command/telepuz-maas-malware-clickfix",
-    "source": "Elastic Security Labs",
-    "published": "2026-07-16T00:00:00.000Z",
-    "summary": "TELEPUZ is a modular malware that emerged through CLICKFIX-VIDAR attacks in April. We reverse-engineered it to show you the infrastructure and evasion techniques that matter.",
-    "score": 8,
-    "matched": [
-      "malware",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 17,
-      "defanged": 45,
-      "addresses": 2,
-      "heading": true,
-      "evidence": 67
     }
   },
   {
