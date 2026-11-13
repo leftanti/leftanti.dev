@@ -1,5 +1,28 @@
 [
   {
+    "id": "c0eea237828e",
+    "title": "Hackers Exploit PHP2Shell Flaws in Check Point Gateways to Deploy TSGA Backdoor and Wipe ESXi Files",
+    "url": "https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html",
+    "source": "The Hacker News",
+    "published": "2026-11-13T08:05:49.000Z",
+    "summary": "An unknown threat actor has been observed targeting unpatched Check Point Security Gateways to obtain initial access via the PHP2Shell vulnerabilities and then a previously unreported local privilege escalation flaw in…",
+    "score": 8,
+    "matched": [
+      "threat actor",
+      "backdoor",
+      "initial access"
+    ],
+    "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 1,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 2
+    }
+  },
+  {
     "id": "6b2047aad824",
     "title": "Macfinger ClickFix campaign sends DownTheDRAIN infostealer for macOS, (Fri, Nov 13th)",
     "url": "https://isc.sans.edu/diary/rss/33518",
@@ -306,29 +329,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "7bdf0c6dc5dc",
-    "title": "Bitter Hackers Deploy New PapRAT Backdoor in Cyberespionage Campaign Targeting South Asia",
-    "url": "https://thehackernews.com/2026/11/bitter-hackers-deploy-new-paprat.html",
-    "source": "The Hacker News",
-    "published": "2026-11-09T14:31:29.000Z",
-    "summary": "The South Asian cyber espionage group known as Bitter (aka APT-C-08, APT-Q-37, Hazy Tiger, Orange Yali, T-APT-17, and TA397) has been observed targeting South Asian organizations with a previously unreported remote…",
-    "score": 15,
-    "matched": [
-      "campaign",
-      "APT",
-      "backdoor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 3,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 3
     }
   },
   {
