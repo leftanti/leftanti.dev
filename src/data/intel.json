@@ -1,5 +1,47 @@
 [
   {
+    "id": "d3744b009208",
+    "title": "GeoVision Camera Software Abused to Deploy XMRig Cryptominer",
+    "url": "https://www.huntress.com/blog/geovision-camera-software-xmrig-cryptominer",
+    "source": "Huntress",
+    "published": "2026-11-13T14:00:00.000Z",
+    "summary": "Attackers abused publicly exposed GeoVision camera software at 13 organizations, tried to disable Defender, and deployed XMRig. Get the IoCs and next steps.",
+    "score": 9,
+    "matched": [
+      "IOCs"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 610,
+      "defanged": 19,
+      "addresses": 6,
+      "heading": true,
+      "evidence": 638
+    }
+  },
+  {
+    "id": "1671c4ae2d79",
+    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/11/13/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-11-13T12:00:00.000Z",
+    "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-114713 UnrealIRCd Improper Neutralization of Delimiters Vulnerability…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "c0eea237828e",
     "title": "Hackers Exploit PHP2Shell Flaws in Check Point Gateways to Deploy TSGA Backdoor and Wipe ESXi Files",
     "url": "https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html",
@@ -544,27 +586,6 @@
     }
   },
   {
-    "id": "57a05936dd71",
-    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog-0",
-    "source": "CISA",
-    "published": "2026-10-23T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-110447 Collabora Online – Built-in CODE Server OS Command Injection…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
     "id": "d887f828b459",
     "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog",
@@ -980,28 +1001,6 @@
       "addresses": 2,
       "heading": true,
       "evidence": 60
-    }
-  },
-  {
-    "id": "a8d17d82aec2",
-    "title": "Next-Gen Phishing Tactics Users Aren’t Ready For | Huntress",
-    "url": "https://www.huntress.com/blog/advanced-phishing-tradecraft",
-    "source": "Huntress",
-    "published": "2026-08-28T16:00:00.000Z",
-    "summary": "Move past basic credential harvesting. Discover how modern attackers use ClickFix, BitB, and OAuth consent phishing—and how to train your users with Huntress SAT.",
-    "score": 8,
-    "matched": [
-      "phishing",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 19,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 19
     }
   },
   {
