@@ -1,5 +1,27 @@
 [
   {
+    "id": "4118a50de290",
+    "title": "US disrupts North Korean campaign behind $400 million crypto theft",
+    "url": "https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/",
+    "source": "BleepingComputer",
+    "published": "2026-11-14T15:15:49.000Z",
+    "summary": "The U.S. government has disrupted a North Korean social engineering campaign called 'FaceStealer', responsible for stealing more than $400 million in cryptocurrency. [...]",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "social engineering"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
     "id": "d3744b009208",
     "title": "GeoVision Camera Software Abused to Deploy XMRig Cryptominer",
     "url": "https://www.huntress.com/blog/geovision-camera-software-xmrig-cryptominer",
@@ -149,27 +171,6 @@
       "addresses": 1,
       "heading": false,
       "evidence": 7
-    }
-  },
-  {
-    "id": "1fe252b0a65e",
-    "title": "New Windows SignDrop zero-day gives hackers SYSTEM privileges",
-    "url": "https://www.bleepingcomputer.com/news/security/new-windows-signdrop-zero-day-gives-hackers-system-privileges/",
-    "source": "BleepingComputer",
-    "published": "2026-11-12T16:04:00.000Z",
-    "summary": "Security researcher Abdelhamid Naceri (also known as Nightmare Eclipse) has released a new Windows zero-day exploit that can let attackers gain SYSTEM privileges. [...]",
-    "score": 8,
-    "matched": [
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
     }
   },
   {
@@ -339,29 +340,6 @@
     "score": 10,
     "matched": [
       "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "9844bc61915e",
-    "title": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
-    "url": "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html",
-    "source": "The Hacker News",
-    "published": "2026-11-10T06:52:54.000Z",
-    "summary": "Google on Monday released updates to patch nine security vulnerabilities, including one that has come under active exploitation in the wild. The high-severity vulnerability, assigned the CVE identifier CVE-2026-125350…",
-    "score": 19,
-    "matched": [
-      "actively exploited",
-      "in the wild",
-      "zero-day"
     ],
     "kind": "exploited",
     "indicators": {
@@ -1001,6 +979,28 @@
       "addresses": 2,
       "heading": true,
       "evidence": 60
+    }
+  },
+  {
+    "id": "64e9c45aa341",
+    "title": "From 88 lines to 1: Detecting DLL hijacking with Elastic Defend",
+    "url": "https://www.elastic.co/security-labs/threat-command/dll-search-order-hijacking-elastic-defend",
+    "source": "Elastic Security Labs",
+    "published": "2026-08-28T00:00:00.000Z",
+    "summary": "The ClickFix campaign that sideloads a malicious mscoree.dll also ships a driver to kill Elastic Endpoint. We rebuilt that DLL as a NativeAOT library, dropped it beside a signed Microsoft binary, and Elastic Defend…",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 3,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 3
     }
   },
   {
