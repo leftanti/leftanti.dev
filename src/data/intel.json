@@ -1026,29 +1026,6 @@
     }
   },
   {
-    "id": "34135e380428",
-    "title": "C2Looper: A New Backdoor Likely Tied To Ransomware With GitHub C2",
-    "url": "https://www.zscaler.com/blogs/security-research/c2looper-new-backdoor-likely-tied-ransomware-github-c2",
-    "source": "Zscaler ThreatLabz",
-    "published": "2026-08-17T14:06:04.000Z",
-    "summary": "IntroductionIn July 2026, Zscaler ThreatLabz identified a new Rust-based malware family that we track as C2Looper, which is likely leveraged by a ransomware-related threat actor. Furthermore, ThreatLabz assesses with…",
-    "score": 14,
-    "matched": [
-      "threat actor",
-      "ransomware",
-      "malware"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 4,
-      "defanged": 1,
-      "addresses": 3,
-      "heading": true,
-      "evidence": 11
-    }
-  },
-  {
     "id": "e83c171f1737",
     "title": "From Bing Search to Ransomware: Bumblebee and AdaptixC2 Deliver Akira",
     "url": "https://thedfirreport.com/2026/06/29/from-bing-search-to-ransomware-bumblebee-and-adaptixc2-deliver-akira-3/",
@@ -1068,6 +1045,29 @@
       "addresses": 11,
       "heading": false,
       "evidence": 66
+    }
+  },
+  {
+    "id": "8159851e4eb4",
+    "title": "Flash Alert: EtherRat and TukTuk C2 End in The Gentleman Ransomware",
+    "url": "https://thedfirreport.com/2026/05/11/flash-alert-etherrat-and-tuktuk-c2-end-in-the-gentleman-ransomware/",
+    "source": "The DFIR Report",
+    "published": "2026-05-11T14:05:04.000Z",
+    "summary": "The EtherRAT malware family was first reported by Sysdig back in December 2025. At that time, the initial access vector was exploitation of CVE-2025-55182 (React2Shell) targeting Linux servers. In March 2026, a Windows…",
+    "score": 7,
+    "matched": [
+      "ransomware",
+      "malware",
+      "initial access"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 18,
+      "defanged": 1,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 23
     }
   },
   {
