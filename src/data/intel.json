@@ -914,6 +914,28 @@
     }
   },
   {
+    "id": "751077092345",
+    "title": "Beware the SparroWock: The backdoor that bites, the commands that catch",
+    "url": "https://www.welivesecurity.com/en/eset-research/beware-sparrowock-backdoor-bites-commands-catch/",
+    "source": "ESET Research",
+    "published": "2026-09-17T08:50:00.000Z",
+    "summary": "ESET researchers document SparroWocky, the new flagship backdoor of the FamousSparrow APT group",
+    "score": 7,
+    "matched": [
+      "APT",
+      "backdoor"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 19,
+      "addresses": 18,
+      "heading": true,
+      "evidence": 42
+    }
+  },
+  {
     "id": "8a3f8241ec08",
     "title": "Operation RapidRust: APT36 Deploys RUSTYSHADE, RUSTYMOVE, PSNATCH, and BASHNATCH",
     "url": "https://www.zscaler.com/blogs/security-research/operation-rapidrust-apt36-deploys-rustyshade-rustymove-psnatch-and",
@@ -1024,29 +1046,6 @@
       "addresses": 3,
       "heading": true,
       "evidence": 11
-    }
-  },
-  {
-    "id": "869bb8555344",
-    "title": "New North Korean campaign uses fake coding interviews to steal developer credentials",
-    "url": "https://www.elastic.co/security-labs/threat-command/contagious-interview-malware-svg-steganography",
-    "source": "Elastic Security Labs",
-    "published": "2026-07-18T00:00:00.000Z",
-    "summary": "DPRK-aligned hackers hid malware inside SVG flag images to backdoor developer job interview coding tests. Not one antivirus vendor caught it.",
-    "score": 10,
-    "matched": [
-      "campaign",
-      "malware",
-      "backdoor"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 10,
-      "defanged": 14,
-      "addresses": 2,
-      "heading": false,
-      "evidence": 26
     }
   },
   {
