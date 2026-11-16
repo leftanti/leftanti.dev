@@ -1,24 +1,44 @@
 [
   {
-    "id": "4118a50de290",
-    "title": "US disrupts North Korean campaign behind $400 million crypto theft",
-    "url": "https://www.bleepingcomputer.com/news/security/us-disrupts-north-korean-campaign-behind-400-million-crypto-theft/",
-    "source": "BleepingComputer",
-    "published": "2026-11-14T15:15:49.000Z",
-    "summary": "The U.S. government has disrupted a North Korean social engineering campaign called 'FaceStealer', responsible for stealing more than $400 million in cryptocurrency. [...]",
+    "id": "f159cf23a7b2",
+    "title": "Amazon Uncovers AI Agent Campaign Targeting LiteLLM, Dify, and Other Apps for API Keys",
+    "url": "https://thehackernews.com/2026/11/amazon-uncovers-ai-agent-campaign.html",
+    "source": "The Hacker News",
+    "published": "2026-11-16T07:34:21.000Z",
+    "summary": "Attackers' AI agents have been hunting for weak spots in internet-exposed AI apps such as LiteLLM, One API, and Dify to steal the AI provider keys stored inside, according to the agents' own records. The records, which…",
     "score": 8,
     "matched": [
-      "campaign",
-      "social engineering"
+      "campaign"
+    ],
+    "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "04d39ddabcc8",
+    "title": "56 AWS API calls in 141 milliseconds: Inside an AI-run intrusion",
+    "url": "https://www.elastic.co/security-labs/threat-command/cyberstrikeai-aws-cloudtrail-intrusion",
+    "source": "Elastic Security Labs",
+    "published": "2026-11-13T15:27:20.000Z",
+    "summary": "A CyberStrikeAI server spent 16 days in four AWS accounts using eight identities, and the CloudTrail record shows why six detection rules each caught only part of it.",
+    "score": 6,
+    "matched": [
+      "intrusion"
     ],
     "kind": "ioc",
     "indicators": {
       "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
+      "hashes": 3,
+      "defanged": 45,
+      "addresses": 3,
+      "heading": true,
+      "evidence": 54
     }
   },
   {
@@ -283,29 +303,6 @@
       "addresses": 1,
       "heading": true,
       "evidence": 6
-    }
-  },
-  {
-    "id": "7e413807cc2f",
-    "title": "Blind Eagle Uses Fake Court Notices to Deliver Remote Access Trojan Across Latin America",
-    "url": "https://thehackernews.com/2026/11/blind-eagle-uses-fake-court-notices-to.html",
-    "source": "The Hacker News",
-    "published": "2026-11-10T15:58:44.000Z",
-    "summary": "The threat actor known as Blind Eagle has resurfaced with a new campaign targeting organizations in Latin America through judicial and administrative-themed phishing lures to deliver a remote access trojan (RAT) that…",
-    "score": 10,
-    "matched": [
-      "campaign",
-      "threat actor",
-      "remote access trojan"
-    ],
-    "kind": "campaign",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
     }
   },
   {
