@@ -1,5 +1,47 @@
 [
   {
+    "id": "e975666d955a",
+    "title": "Microsoft Entra Connect Health flaw exploited to steal tenant data",
+    "url": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/",
+    "source": "BleepingComputer",
+    "published": "2026-11-21T18:01:58.000Z",
+    "summary": "Microsoft is warning organizations that it suffered a data breach after attackers exploited a vulnerability in its Entra Connect Health service to gain unauthorized access to administrator email addresses and tenant…",
+    "score": 8,
+    "matched": [
+      "breach"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "16765aea3bd9",
+    "title": "Attackers' AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access",
+    "url": "https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html",
+    "source": "The Hacker News",
+    "published": "2026-11-21T11:03:17.000Z",
+    "summary": "Suspected China-linked hackers used autonomous AI agents to find a previously unknown flaw in MONAI Label, an open-source medical imaging server, and gain root access to a university server, Amazon Threat Intelligence…",
+    "score": 6,
+    "matched": [
+      "zero-day"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "dc09fdfd19a0",
     "title": "Hackers use autonomous AI tool Cairn to find zero-day, take over server",
     "url": "https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/",
@@ -149,29 +191,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "9b100eaa6e09",
-    "title": "Five warning signs of ransomware breach before encryption or data theft",
-    "url": "https://www.bleepingcomputer.com/news/security/five-warning-signs-of-ransomware-breach-before-encryption-or-data-theft/",
-    "source": "BleepingComputer",
-    "published": "2026-11-19T15:00:10.000Z",
-    "summary": "Ransomware attacks often involve credential theft, lateral movement, and attempts to disable security controls long before encryption begins. Acronis examines five warning signs that can help defenders detect intrusions…",
-    "score": 6,
-    "matched": [
-      "breach",
-      "data theft",
-      "ransomware"
-    ],
-    "kind": "technique",
-    "indicators": {
-      "v": 2,
-      "hashes": 1,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 2
     }
   },
   {
@@ -365,27 +384,6 @@
       "addresses": 2,
       "heading": true,
       "evidence": 54
-    }
-  },
-  {
-    "id": "f159cf23a7b2",
-    "title": "Amazon Uncovers AI Agent Campaign Targeting LiteLLM, Dify, and Other Apps for API Keys",
-    "url": "https://thehackernews.com/2026/11/amazon-uncovers-ai-agent-campaign.html",
-    "source": "The Hacker News",
-    "published": "2026-11-16T07:34:21.000Z",
-    "summary": "Attackers' AI agents have been hunting for weak spots in internet-exposed AI apps such as LiteLLM, One API, and Dify to steal the AI provider keys stored inside, according to the agents' own records. The records, which…",
-    "score": 8,
-    "matched": [
-      "campaign"
-    ],
-    "kind": "campaign",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
     }
   },
   {
