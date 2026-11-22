@@ -128,28 +128,6 @@
     }
   },
   {
-    "id": "9b755754b5ef",
-    "title": "VMware patches vCenter zero-day exploited in attacks since September",
-    "url": "https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/",
-    "source": "BleepingComputer",
-    "published": "2026-11-20T00:26:25.000Z",
-    "summary": "Broadcom has released security updates to fix a critical VMware vCenter Server authentication bypass vulnerability that Chinese-linked hackers have exploited in zero-day attacks since September 2026. [...]",
-    "score": 6,
-    "matched": [
-      "exploited in",
-      "zero-day"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
     "id": "7008c485fa38",
     "title": "Critical VMware vCenter Zero-Day Flaw Lets Network Attackers Bypass Authentication",
     "url": "https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html",
@@ -233,6 +211,29 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
+    }
+  },
+  {
+    "id": "816d68936508",
+    "title": "The forced audit: how AuditTeam’s OpsAgent framework masks ransomware as consulting",
+    "url": "https://securelist.com/auditteam-opsagent-forced-audit/122031/",
+    "source": "Securelist",
+    "published": "2026-11-18T07:00:07.000Z",
+    "summary": "How does a ransomware gang sell a “forced audit”? We break down AuditTeam’s OpsAgent implant, its Rust rewrite, and the extortion model demanding a consulting fee to delete stolen data.",
+    "score": 6,
+    "matched": [
+      "extortion",
+      "ransomware",
+      "implant"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 13,
+      "defanged": 9,
+      "addresses": 1,
+      "heading": true,
+      "evidence": 26
     }
   },
   {
