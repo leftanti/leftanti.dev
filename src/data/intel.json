@@ -1,5 +1,49 @@
 [
   {
+    "id": "12b4ad14dd49",
+    "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/11/23/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-11-23T12:00:00.000Z",
+    "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-133968 Project MONAI MONAI Label Path Traversal Vulnerability…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "fa64bc0af999",
+    "title": "CISA flags critical Cisco RCE flaw as actively exploited in attacks",
+    "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-critical-cisco-expressway-rce-flaw-as-actively-exploited/",
+    "source": "BleepingComputer",
+    "published": "2026-11-23T07:44:19.000Z",
+    "summary": "The US Cybersecurity and Infrastructure Security Agency (CISA) warned federal agencies that attackers are now exploiting a recently patched critical Cisco Expressway vulnerability in the wild. [...]",
+    "score": 13,
+    "matched": [
+      "actively exploited",
+      "exploited in",
+      "in the wild"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
     "id": "e975666d955a",
     "title": "Microsoft Entra Connect Health flaw exploited to steal tenant data",
     "url": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/",
@@ -42,24 +86,24 @@
     }
   },
   {
-    "id": "dc09fdfd19a0",
-    "title": "Hackers use autonomous AI tool Cairn to find zero-day, take over server",
-    "url": "https://www.bleepingcomputer.com/news/security/hackers-use-autonomous-ai-tool-cairn-to-find-zero-day-take-over-server/",
-    "source": "BleepingComputer",
-    "published": "2026-11-20T17:30:00.000Z",
-    "summary": "Threat actors used the open-source AI penetration-testing framework Cairn to find a previously unknown vulnerability in a medical imaging application. [...]",
-    "score": 6,
+    "id": "a3eac34b29cf",
+    "title": "Hackers Exploit Critical VMware, Cisco, and Apache Flaws as Espionage Attacks Emerge",
+    "url": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html",
+    "source": "The Hacker News",
+    "published": "2026-11-21T08:49:13.000Z",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added four flaws impacting Apache Roller, Cisco Expressway, SAP NetWeaver, and Broadcom VMware vCenter to its Known Exploited Vulnerabilities…",
+    "score": 5,
     "matched": [
-      "zero-day"
+      "known exploited"
     ],
-    "kind": "ioc",
+    "kind": "exploited",
     "indicators": {
       "v": 2,
-      "hashes": 2,
-      "defanged": 2,
-      "addresses": 3,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
       "heading": false,
-      "evidence": 7
+      "evidence": 0
     }
   },
   {
@@ -318,28 +362,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "5e43b1695ab6",
-    "title": "New GitDoor and GraphDoor Backdoors Turn GitHub and SharePoint Into Covert C2 Channels",
-    "url": "https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html",
-    "source": "The Hacker News",
-    "published": "2026-11-17T11:20:18.000Z",
-    "summary": "Government sectors in Asia and Africa have been targeted by an active cyber intrusion campaign that delivers to previously undocumented backdoors that leverage legitimate services like Microsoft SharePoint and GitHub…",
-    "score": 7,
-    "matched": [
-      "campaign",
-      "intrusion"
-    ],
-    "kind": "campaign",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 1,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 2
     }
   },
   {
@@ -661,27 +683,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 1
-    }
-  },
-  {
-    "id": "eb87294c0988",
-    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/11/04/cisa-adds-one-known-exploited-vulnerability-catalog",
-    "source": "CISA",
-    "published": "2026-11-04T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2024-27834 Apple Multiple Products Improper Authentication Vulnerability This…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
     }
   },
   {
