@@ -1,5 +1,70 @@
 [
   {
+    "id": "8673f1f5116a",
+    "title": "New Inception extortion gang launches large-scale vishing campaign",
+    "url": "https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/",
+    "source": "BleepingComputer",
+    "published": "2026-11-24T20:21:20.000Z",
+    "summary": "A newly formed data extortion group named 'Inception' has been linked to a large-scale campaign that targets single sign-on (SSO) credentials of multiple global brands and firms. [...]",
+    "score": 8,
+    "matched": [
+      "campaign",
+      "extortion",
+      "vishing"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 2,
+      "defanged": 0,
+      "addresses": 1,
+      "heading": false,
+      "evidence": 3
+    }
+  },
+  {
+    "id": "db22ce6bdf49",
+    "title": "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation",
+    "url": "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html",
+    "source": "The Hacker News",
+    "published": "2026-11-24T13:28:26.000Z",
+    "summary": "Broadcom has shipped patches to address 23 vulnerabilities impacting VMware ESX, vCenter, Workstation, Fusion, and Avi Load Balancer, including one critical bug that could be abused to bypass authentication. The…",
+    "score": 6,
+    "matched": [
+      "zero-day"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
+    "id": "a0ae3cb09c40",
+    "title": "CISA Adds Three Known Exploited Vulnerabilities to Catalog",
+    "url": "https://www.cisa.gov/news-events/alerts/2026/11/24/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+    "source": "CISA",
+    "published": "2026-11-24T12:00:00.000Z",
+    "summary": "CISA has added three new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-131914 Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability…",
+    "score": 10,
+    "matched": [
+      "known exploited"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "14a00d8221c4",
     "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
     "url": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
@@ -22,6 +87,27 @@
     }
   },
   {
+    "id": "d776fb99c1e5",
+    "title": "A Buffet of ClickFix: Lures, Infrastructure & Payloads",
+    "url": "https://www.huntress.com/blog/tradecraft-tuesday-clickfix-lures-and-infrastructure",
+    "source": "Huntress",
+    "published": "2026-11-23T14:00:00.000Z",
+    "summary": "Tradecraft Tuesday recap: convincing ClickFix lures, the infrastructure behind fake verification pages, varied payloads, and how to stop the paste.",
+    "score": 8,
+    "matched": [
+      "ClickFix"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 605,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 605
+    }
+  },
+  {
     "id": "12b4ad14dd49",
     "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
     "url": "https://www.cisa.gov/news-events/alerts/2026/11/23/cisa-adds-two-known-exploited-vulnerabilities-catalog",
@@ -40,50 +126,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "fa64bc0af999",
-    "title": "CISA flags critical Cisco RCE flaw as actively exploited in attacks",
-    "url": "https://www.bleepingcomputer.com/news/security/cisa-flags-critical-cisco-expressway-rce-flaw-as-actively-exploited/",
-    "source": "BleepingComputer",
-    "published": "2026-11-23T07:44:19.000Z",
-    "summary": "The US Cybersecurity and Infrastructure Security Agency (CISA) warned federal agencies that attackers are now exploiting a recently patched critical Cisco Expressway vulnerability in the wild. [...]",
-    "score": 13,
-    "matched": [
-      "actively exploited",
-      "exploited in",
-      "in the wild"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
-    }
-  },
-  {
-    "id": "e975666d955a",
-    "title": "Microsoft Entra Connect Health flaw exploited to steal tenant data",
-    "url": "https://www.bleepingcomputer.com/news/security/microsoft-entra-connect-health-flaw-exploited-to-steal-tenant-data/",
-    "source": "BleepingComputer",
-    "published": "2026-11-21T18:01:58.000Z",
-    "summary": "Microsoft is warning organizations that it suffered a data breach after attackers exploited a vulnerability in its Entra Connect Health service to gain unauthorized access to administrator email addresses and tenant…",
-    "score": 8,
-    "matched": [
-      "breach"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 2,
-      "defanged": 0,
-      "addresses": 1,
-      "heading": false,
-      "evidence": 3
     }
   },
   {
@@ -411,6 +453,27 @@
     }
   },
   {
+    "id": "04d39ddabcc8",
+    "title": "56 AWS API calls in 141 milliseconds: Inside an AI-run intrusion",
+    "url": "https://www.elastic.co/security-labs/threat-command/cyberstrikeai-aws-cloudtrail-intrusion",
+    "source": "Elastic Security Labs",
+    "published": "2026-11-13T15:27:20.000Z",
+    "summary": "A CyberStrikeAI server spent 16 days in four AWS accounts using eight identities, and the CloudTrail record shows why six detection rules each caught only part of it.",
+    "score": 6,
+    "matched": [
+      "intrusion"
+    ],
+    "kind": "ioc",
+    "indicators": {
+      "v": 2,
+      "hashes": 3,
+      "defanged": 45,
+      "addresses": 3,
+      "heading": true,
+      "evidence": 54
+    }
+  },
+  {
     "id": "d3744b009208",
     "title": "GeoVision Camera Software Abused to Deploy XMRig Cryptominer",
     "url": "https://www.huntress.com/blog/geovision-camera-software-xmrig-cryptominer",
@@ -546,48 +609,6 @@
     "source": "CISA",
     "published": "2026-11-10T12:00:00.000Z",
     "summary": "CISA has added six new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-20320 Cisco BroadWorks Improper Restriction of XML External Entity…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "8f6133c5e5ae",
-    "title": "CISA Adds Four Known Exploited Vulnerabilities to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/11/09/cisa-adds-four-known-exploited-vulnerabilities-catalog",
-    "source": "CISA",
-    "published": "2026-11-09T12:00:00.000Z",
-    "summary": "CISA has added four new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-102895 GPUStack Improper Authentication Vulnerability CVE-2026-116779…",
-    "score": 10,
-    "matched": [
-      "known exploited"
-    ],
-    "kind": "exploited",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 0,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 0
-    }
-  },
-  {
-    "id": "c776d35c062b",
-    "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-    "url": "https://www.cisa.gov/news-events/alerts/2026/11/06/cisa-adds-one-known-exploited-vulnerability-catalog",
-    "source": "CISA",
-    "published": "2026-11-06T12:00:00.000Z",
-    "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-19868 SonicWall SonicOS SSLVPN Use of Single-factor Authentication…",
     "score": 10,
     "matched": [
       "known exploited"
@@ -886,28 +907,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 23
-    }
-  },
-  {
-    "id": "625d808ffc99",
-    "title": "Attackers Abuse ChatGPT Custom GPTs to Deliver RAT via ClickFix",
-    "url": "https://www.huntress.com/blog/chatgpt-custom-gpts-clickfix-rat",
-    "source": "Huntress",
-    "published": "2026-09-28T20:00:00.000Z",
-    "summary": "Huntress researchers reveal how attackers are exploiting ChatGPT Custom GPTs to spread ClickFix lures and DLL-sideloaded malware. See the full breakdown.",
-    "score": 8,
-    "matched": [
-      "malware",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 39,
-      "defanged": 26,
-      "addresses": 2,
-      "heading": true,
-      "evidence": 70
     }
   },
   {
