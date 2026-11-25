@@ -1,5 +1,28 @@
 [
   {
+    "id": "be8229fa8688",
+    "title": "Hackers Compromise 24 Check Point Management Servers in Suspected AI-Driven Attack Campaign",
+    "url": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html",
+    "source": "The Hacker News",
+    "published": "2026-11-25T06:50:19.000Z",
+    "summary": "An unknown threat actor has been using artificial intelligence (AI)-driven offensive tooling in a campaign targeting Check Point Security Management servers, impacting 22 distinct organizations across the world. The…",
+    "score": 12,
+    "matched": [
+      "campaign",
+      "threat actor",
+      "compromise"
+    ],
+    "kind": "campaign",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "8673f1f5116a",
     "title": "New Inception extortion gang launches large-scale vishing campaign",
     "url": "https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/",
@@ -448,27 +471,6 @@
       "hashes": 6,
       "defanged": 43,
       "addresses": 2,
-      "heading": true,
-      "evidence": 54
-    }
-  },
-  {
-    "id": "04d39ddabcc8",
-    "title": "56 AWS API calls in 141 milliseconds: Inside an AI-run intrusion",
-    "url": "https://www.elastic.co/security-labs/threat-command/cyberstrikeai-aws-cloudtrail-intrusion",
-    "source": "Elastic Security Labs",
-    "published": "2026-11-13T15:27:20.000Z",
-    "summary": "A CyberStrikeAI server spent 16 days in four AWS accounts using eight identities, and the CloudTrail record shows why six detection rules each caught only part of it.",
-    "score": 6,
-    "matched": [
-      "intrusion"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 3,
-      "defanged": 45,
-      "addresses": 3,
       "heading": true,
       "evidence": 54
     }
