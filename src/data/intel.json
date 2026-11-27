@@ -1,5 +1,26 @@
 [
   {
+    "id": "706168821faa",
+    "title": "Unpatched Cacti Zero-Day Enables RCE in Just Four HTTP Requests via Guest Access",
+    "url": "https://thehackernews.com/2026/11/unpatched-cacti-zero-day-enables-rce-in.html",
+    "source": "The Hacker News",
+    "published": "2026-11-27T05:48:20.000Z",
+    "summary": "Details have emerged about a new zero-day vulnerability in Cacti, an open-source network monitoring tool, that could be exploited to achieve remote code execution. The proof-of-concept (PoC) exploit, which has yet to be…",
+    "score": 6,
+    "matched": [
+      "zero-day"
+    ],
+    "kind": "exploited",
+    "indicators": {
+      "v": 2,
+      "hashes": 0,
+      "defanged": 0,
+      "addresses": 0,
+      "heading": false,
+      "evidence": 0
+    }
+  },
+  {
     "id": "06ce8cc99253",
     "title": "Fake paid expert interviews impersonate brands to steal Google logins",
     "url": "https://www.bleepingcomputer.com/news/apple/fake-paid-expert-interviews-impersonate-brands-to-steal-google-logins/",
@@ -274,29 +295,6 @@
       "addresses": 0,
       "heading": false,
       "evidence": 0
-    }
-  },
-  {
-    "id": "ba74506a96ac",
-    "title": "ROMULUS ClickFix Attacks Deliver RAT That Can Spy on Users and Control PCs",
-    "url": "https://thehackernews.com/2026/11/romulus-clickfix-attacks-deliver-rat.html",
-    "source": "The Hacker News",
-    "published": "2026-11-20T07:11:39.000Z",
-    "summary": "Threat actors have been observed using the ROMULUS ClickFix malware delivery platform to deliver a previously undocumented remote access trojan (RAT) that shares similarities with CNCMachineRMS. \"ROMULUS likely operates…",
-    "score": 8,
-    "matched": [
-      "malware",
-      "remote access trojan",
-      "ClickFix"
-    ],
-    "kind": "ioc",
-    "indicators": {
-      "v": 2,
-      "hashes": 0,
-      "defanged": 6,
-      "addresses": 0,
-      "heading": false,
-      "evidence": 6
     }
   },
   {
